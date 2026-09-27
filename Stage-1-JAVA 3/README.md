@@ -1,8 +1,6 @@
 # Stage 1 – Implementación en Java
 
 Implementación en Java de la capa de datos del buscador (Big Data, GCID – ULPGC).
-Sigue las mismas reglas de preprocesado que la versión en Go (rama `GO`) para que
-las salidas de todos los lenguajes sean equivalentes y comparables.
 
 ## Requisitos
 
