@@ -120,16 +120,22 @@ func (s *State) Known(id int) bool {
 	return s.downloaded.has[id] || s.failed.has[id]
 }
 
+// ClearIndexed olvida qué libros están indexados: todos los descargados
+// vuelven a quedar pendientes.
+func (s *State) ClearIndexed() error { return s.indexed.replace(nil) }
+
 // Report resume lo que ha habido que corregir al arrancar.
 type Report struct {
 	TempFiles     int   // .tmp borrados
 	Unregistered  []int // en el datalake pero sin marcar como descargados
 	Missing       []int // marcados como descargados pero no están en el datalake
 	OrphanIndexed []int // marcados como indexados pero no están en el datalake
+	Reindex       int   // marcados como indexados pero el índice está vacío
 }
 
 func (r Report) Clean() bool {
-	return r.TempFiles == 0 && len(r.Unregistered) == 0 && len(r.Missing) == 0 && len(r.OrphanIndexed) == 0
+	return r.TempFiles == 0 && len(r.Unregistered) == 0 && len(r.Missing) == 0 &&
+		len(r.OrphanIndexed) == 0 && r.Reindex == 0
 }
 
 // Reconcile alinea los ficheros de control con lo que hay realmente en el
