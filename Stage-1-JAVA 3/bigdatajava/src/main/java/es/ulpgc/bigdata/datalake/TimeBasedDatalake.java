@@ -1,32 +1,49 @@
 package es.ulpgc.bigdata.datalake;
 
-import es.ulpgc.bigdata.ingestion.BookParts;
+import es.ulpgc.bigdata.util.FileUtils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.time.Clock;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
-import java.util.stream.Stream;
+import java.util.function.Supplier;
 
-/** datalake_time/YYYYMMDD/HH/<id>.header.txt y <id>.body.txt */
-public class TimeBasedDatalake extends FileDatalake {
+/**
+ * datalake_time/YYYYMMDD/HH/&lt;id&gt;.header.txt y &lt;id&gt;.body.txt
+ * <p>
+ * La ruta depende de cuándo se guardó el libro, así que se mantiene el índice auxiliar
+ * _locations.tsv (id\tYYYYMMDD/HH) para poder localizarlo sin recorrer el árbol.
+ */
+public class TimeBasedDatalake implements DatalakeStore {
 
-    private static final DateTimeFormatter DAY = DateTimeFormatter.ofPattern("yyyyMMdd");
-    private static final DateTimeFormatter HOUR = DateTimeFormatter.ofPattern("HH");
+    static final String LOCATIONS_FILE = "_locations.tsv";
+    private static final DateTimeFormatter FOLDER_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd/HH");
 
-    private final Clock clock;
+    private final Path root;
+    private final Supplier<LocalDateTime> now;
+    private final Map<Integer, String> locations = new HashMap<>();
 
-    public TimeBasedDatalake(Path root) {
-        this(root, Clock.systemDefaultZone());
+    public TimeBasedDatalake(Path root) throws IOException {
+        this(root, LocalDateTime::now);
     }
 
-    public TimeBasedDatalake(Path root, Clock clock) {
-        super(root);
-        this.clock = clock;
+    TimeBasedDatalake(Path root, Supplier<LocalDateTime> now) throws IOException {
+        this.root = root;
+        this.now = now;
+        for (String line : FileUtils.loadLines(root.resolve(LOCATIONS_FILE))) {
+            int tab = line.indexOf('\t');
+            if (tab < 0) {
+                continue;
+            }
+            String folder = line.substring(tab + 1);
+            DatalakeStore.parseId(line.substring(0, tab)).ifPresent(id -> locations.put(id, folder));
+        }
     }
 
     @Override
@@ -35,30 +52,56 @@ public class TimeBasedDatalake extends FileDatalake {
     }
 
     @Override
-    public BookLocation save(BookParts book) throws IOException {
-        LocalDateTime now = LocalDateTime.now(clock);
-        Path dir = root.resolve(DAY.format(now)).resolve(HOUR.format(now));
-        String id = book.bookId();
-        return write(new BookLocation(id, dir.resolve(id + HEADER_SUFFIX), dir.resolve(id + BODY_SUFFIX)), book);
+    public Path root() {
+        return root;
     }
 
-    /** No se sabe cuándo se descargó el libro, así que hay que recorrer las carpetas. */
+    private BookLocation location(int id, String folder) {
+        Path dir = root;
+        for (String part : folder.split("/")) {
+            dir = dir.resolve(part);
+        }
+        return BookLocation.flat(dir, id);
+    }
+
+    /**
+     * Registra la carpeta antes de escribir los ficheros: si el proceso se corta a mitad,
+     * al reanudar el libro vuelve a la misma carpeta aunque haya cambiado la hora, y no
+     * queda duplicado en dos sitios.
+     */
     @Override
-    public Optional<BookLocation> locate(String bookId) throws IOException {
-        if (!Files.isDirectory(root)) {
+    public BookLocation save(int id, String header, String body) throws IOException {
+        String folder = locations.get(id);
+        if (folder == null) {
+            folder = now.get().format(FOLDER_FORMAT);
+            Files.createDirectories(root);
+            FileUtils.appendLine(root.resolve(LOCATIONS_FILE), id + "\t" + folder);
+            locations.put(id, folder);
+        }
+        BookLocation location = location(id, folder);
+        DatalakeStore.write(location, header, body);
+        return location;
+    }
+
+    @Override
+    public Optional<BookLocation> locate(int id) {
+        String folder = locations.get(id);
+        if (folder == null) {
             return Optional.empty();
         }
-        String bodyName = bookId + BODY_SUFFIX;
-        try (Stream<Path> files = Files.walk(root, 3)) {
-            return files.filter(p -> p.getFileName().toString().equals(bodyName))
-                        .findFirst()
-                        .flatMap(body -> ifComplete(new BookLocation(bookId,
-                                body.resolveSibling(bookId + HEADER_SUFFIX), body)));
-        }
+        BookLocation location = location(id, folder);
+        return DatalakeStore.complete(location) ? Optional.of(location) : Optional.empty();
     }
 
     @Override
-    public Set<String> listBookIds() throws IOException {
-        return scanFlatFiles(3);
+    public List<Integer> list() {
+        List<Integer> ids = new ArrayList<>();
+        for (int id : locations.keySet()) {
+            if (locate(id).isPresent()) {
+                ids.add(id);
+            }
+        }
+        ids.sort(null);
+        return ids;
     }
 }

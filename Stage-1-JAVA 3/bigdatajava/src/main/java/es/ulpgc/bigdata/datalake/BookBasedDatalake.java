@@ -1,20 +1,20 @@
 package es.ulpgc.bigdata.datalake;
 
-import es.ulpgc.bigdata.ingestion.BookParts;
+import es.ulpgc.bigdata.util.FileUtils;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.stream.Stream;
 
-/** datalake_book/<id>/header.txt y body.txt (misma estructura que el prototipo Go). */
-public class BookBasedDatalake extends FileDatalake {
+/** datalake_book/&lt;id&gt;/header.txt y body.txt */
+public class BookBasedDatalake implements DatalakeStore {
+
+    private final Path root;
 
     public BookBasedDatalake(Path root) {
-        super(root);
+        this.root = root;
     }
 
     @Override
@@ -22,33 +22,38 @@ public class BookBasedDatalake extends FileDatalake {
         return "book";
     }
 
-    private BookLocation pathsFor(String bookId) {
-        Path dir = root.resolve(bookId);
-        return new BookLocation(bookId, dir.resolve("header.txt"), dir.resolve("body.txt"));
+    @Override
+    public Path root() {
+        return root;
+    }
+
+    private BookLocation location(int id) {
+        Path dir = root.resolve(String.valueOf(id));
+        return new BookLocation(dir.resolve("header.txt"), dir.resolve("body.txt"));
     }
 
     @Override
-    public BookLocation save(BookParts book) throws IOException {
-        return write(pathsFor(book.bookId()), book);
+    public BookLocation save(int id, String header, String body) throws IOException {
+        BookLocation location = location(id);
+        DatalakeStore.write(location, header, body);
+        return location;
     }
 
     @Override
-    public Optional<BookLocation> locate(String bookId) {
-        return ifComplete(pathsFor(bookId));
+    public Optional<BookLocation> locate(int id) {
+        BookLocation location = location(id);
+        return DatalakeStore.complete(location) ? Optional.of(location) : Optional.empty();
     }
 
     @Override
-    public Set<String> listBookIds() throws IOException {
-        Set<String> ids = new TreeSet<>();
-        if (!Files.isDirectory(root)) {
-            return ids;
+    public List<Integer> list() throws IOException {
+        List<Integer> ids = new ArrayList<>();
+        for (Path entry : FileUtils.sortedEntries(root)) {
+            DatalakeStore.parseId(entry.getFileName().toString())
+                    .filter(id -> locate(id).isPresent())
+                    .ifPresent(ids::add);
         }
-        try (Stream<Path> dirs = Files.list(root)) {
-            dirs.filter(Files::isDirectory)
-                .map(d -> d.getFileName().toString())
-                .filter(id -> locate(id).isPresent())
-                .forEach(ids::add);
-        }
+        ids.sort(null);
         return ids;
     }
 }

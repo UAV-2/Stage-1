@@ -1,155 +1,160 @@
 # Stage 1 – Implementación en Java
 
-Implementación en Java de la capa de datos del buscador (Big Data, GCID – ULPGC).
+Implementación en Java de la capa de datos del buscador (Big Data, GCID – ULPGC). Tiene la
+misma funcionalidad, comandos, formatos de fichero y salida por consola que las versiones de
+Python y Go, para que los benchmarks comparen solo el lenguaje y la estructura de datos.
 
 ## Requisitos
 
-- Java 17 o superior
-- Maven 3.8 o superior
-- Conexión a Internet (descarga desde Project Gutenberg)
+- Java 17 o superior y Maven 3.8 o superior
+- Conexión a Internet para descargar de Project Gutenberg (o `--offline` con `cache/`)
+- MongoDB solo si se usa `--index=mongo` (por defecto `mongodb://localhost:27017`)
+
+## Estructura de carpetas
+
+```
+.
+├── shared/            común a los tres lenguajes: book_ids.txt, stopwords.txt, queries.txt
+├── cache/             .txt crudos descargados (se crea solo; lo usa --offline)
+├── output/java/       todo lo que genera esta implementación
+│   ├── datalake_time/ | datalake_book/ | datalake_range/
+│   ├── datamarts/     metadata.db, inverted_index.json, inverted_index/
+│   ├── control/       downloaded_books.txt, indexed_books.txt, failed_books.txt
+│   └── dumps/<índice>/metadata.tsv e index.tsv
+└── bigdatajava/       proyecto Maven
+```
+
+Los comandos se ejecutan desde `bigdatajava/`; `--root` (por defecto `..`) apunta a la carpeta
+que contiene `shared/`, `cache/` y `output/`. `shared/stopwords.txt` y `shared/queries.txt`
+tienen que ser los mismos ficheros que usan Python y Go.
 
 ## Compilación y ejecución
 
-El proyecto está en la carpeta `bigdatajava/`. Todos los comandos se ejecutan desde ahí:
-
 ```bash
 cd bigdatajava
-mvn compile
-mvn exec:java -Dexec.args="<comando> [ids...] [opciones]"
+mvn -q compile
+mvn -q exec:java -Dexec.args="pipeline --datalake=time --index=json"
+
+# O con un jar autocontenido (recomendado para los benchmarks: sin el arranque de Maven)
+mvn -q package
+java -jar target/stage1-java.jar pipeline --datalake=range --index=folders
 ```
 
 Ejemplos:
 
 ```bash
-# Descargar libros concretos en el datalake book-based
-mvn exec:java -Dexec.args="download 1342 84 11"
-
-# Ejecutar el pipeline con la lista común de IDs y el datalake por fecha
-mvn exec:java -Dexec.args="pipeline --ids=data/book_ids.txt --steps=50 --datalake=time"
-
-# Pipeline con IDs aleatorios reproducibles
-mvn exec:java -Dexec.args="pipeline --steps=20 --seed=7 --datalake=batch"
-
-# Consultar dónde está un libro y el estado del pipeline
-mvn exec:java -Dexec.args="lookup 1342 --datalake=time"
-mvn exec:java -Dexec.args="status --datalake=time"
+java -jar target/stage1-java.jar pipeline --n=50                 # primeros 50 IDs de la lista
+java -jar target/stage1-java.jar download 1342 84 11             # libros concretos
+java -jar target/stage1-java.jar pipeline --offline --index=mongo
+java -jar target/stage1-java.jar index --rebuild --index=folders # reconstruir un índice
+java -jar target/stage1-java.jar query pride prejudice
+java -jar target/stage1-java.jar query                           # consultas de shared/queries.txt
+java -jar target/stage1-java.jar dump --index=json
+java -jar target/stage1-java.jar lookup 1342 --datalake=time
+java -jar target/stage1-java.jar status
 ```
 
 | Comando | Descripción |
 |---|---|
-| `pipeline` | Ciclo del control layer: indexa lo pendiente o descarga un libro nuevo |
-| `download <id...>` | Descarga libros concretos (por defecto 1342) |
-| `lookup <id...>` | Localiza header y body de cada libro |
-| `status` | Resumen: libros en el datalake, descargados, indexados, pendientes y descartados |
-| `recover` | Alinea los ficheros de control con el contenido real del datalake |
+| `pipeline [ids...]` | Ciclo completo: indexa lo pendiente, descarga los libros nuevos y los indexa por lotes |
+| `download [ids...]` | Guarda en el datalake los libros que falten (sin IDs: los de la lista) |
+| `index` | Indexa los libros descargados que aún no están indexados |
+| `query [texto...]` | Busca en el índice (AND de todos los términos) |
+| `dump` | Exporta `metadata.tsv` e `index.tsv` en formato canónico |
+| `lookup <ids...>` | Localiza header y body de cada libro |
+| `status` | Resumen del estado del pipeline |
+| `recover` | Alinea los ficheros de control con el datalake |
 
-| Opción | Valor por defecto | Descripción |
+| Opción | Por defecto | Descripción |
 |---|---|---|
-| `--datalake=time\|book\|batch` | `book` | Estructura del datalake |
-| `--out=DIR` | `output/java` | Carpeta de salida |
-| `--steps=N` | `10` | Número máximo de pasos del pipeline |
-| `--ids=FICHERO` | – | Lista fija de IDs (una por línea, `#` para comentarios) |
-| `--seed=N` | `42` | Semilla para la selección aleatoria de IDs |
+| `--datalake=time\|book\|range` | `book` | Estructura del datalake |
+| `--index=json\|folders\|mongo` | `json` | Estructura del índice invertido |
+| `--offline` | – | Leer los libros de `cache/` en vez de descargarlos |
+| `--n=N` | `0` (todos) | Usar solo los primeros N IDs de la lista |
+| `--batch=N` | `100` | Libros por lote de indexación (0 = todos) |
+| `--rebuild` | – | Con `index`: vaciar índice y metadatos y reconstruirlos |
+| `--ids=FICHERO` | `<root>/shared/book_ids.txt` | Lista de IDs |
+| `--delay=1s` | `1s` | Espera entre peticiones a Gutenberg (`500ms`, `2s`...) |
+| `--mongo=URI` | `mongodb://localhost:27017` | Servidor de MongoDB |
+| `--root=DIR` | `..` | Carpeta con `shared/`, `cache/` y `output/` |
 
-## Estructura del proyecto
+## Código
 
 ```
-bigdatajava/
-├── pom.xml
-├── data/book_ids.txt             dataset común para todos los lenguajes
-└── src/main/java/es/ulpgc/bigdata/
-├── Main.java                     CLI
-├── ingestion/                    descarga y separación header/body
-│   ├── BookSource.java
-│   ├── GutenbergDownloader.java
-│   ├── BookParts.java
-│   └── BookUnavailableException.java
-├── datalake/                     las tres organizaciones del datalake
-│   ├── DatalakeStore.java        interfaz común
-│   ├── FileDatalake.java         lógica compartida
-│   ├── TimeBasedDatalake.java
-│   ├── BookBasedDatalake.java
-│   ├── BatchDatalake.java
-│   └── DatalakeFactory.java
-├── control/                      control layer
-│   ├── ControlPipeline.java
-│   ├── ControlState.java
-│   ├── CandidateProvider.java
-│   ├── RecoveryReport.java
-│   └── StepResult.java
-├── indexing/
-│   └── BookIndexer.java          punto de enganche del índice invertido
-└── util/
-    └── FileUtils.java            escritura atómica
+bigdatajava/src/main/java/es/ulpgc/bigdata/
+├── Main.java                  CLI
+├── ingestion/                 fuente de libros y separación header/body
+│   ├── BookSource.java, GutenbergSource.java, CacheSource.java
+│   ├── BookSplitter.java, Book.java, BookUnavailableException.java
+├── datalake/                  las tres organizaciones del datalake
+│   ├── DatalakeStore.java     interfaz común y factoría
+│   ├── TimeBasedDatalake.java, BookBasedDatalake.java, RangeDatalake.java
+│   └── BookLocation.java
+├── metadata/                  datamart de metadatos (SQLite)
+│   ├── MetadataExtractor.java, MetadataDatabase.java, BookMetadata.java
+├── tokenizer/Tokenizer.java   normalización común a los tres lenguajes
+├── index/                     las tres estructuras del índice invertido
+│   ├── InvertedIndex.java     interfaz común y factoría
+│   ├── JsonIndex.java, FolderIndex.java, MongoIndex.java
+│   └── Postings.java          merge, intersección, búsqueda y dump
+├── control/                   capa de control
+│   ├── ControlPipeline.java, ControlState.java, BookList.java
+│   ├── BookIds.java, RecoveryReport.java, Summary.java
+└── util/                      FileUtils (escritura atómica), Text (trim/lower como Go)
 ```
 
-## Ingesta
+Tests: `mvn test`. El de MongoDB solo se ejecuta si está definida `MONGO_URI`.
 
-Cada libro se descarga de `https://www.gutenberg.org/cache/epub/<id>/pg<id>.txt` y se
-procesa con estas reglas, idénticas a las de Go:
+## Reglas comunes con Python y Go
 
-1. Se normalizan los saltos de línea `\r\n` a `\n`.
-2. Se buscan los marcadores sin distinguir mayúsculas:
-   `*** START OF (THE|THIS) PROJECT GUTENBERG EBOOK` y `*** END OF (THE|THIS) PROJECT GUTENBERG EBOOK`.
-3. El header es todo lo anterior al marcador START; el body va desde el final de la línea
-   START hasta el marcador END. Ambos se guardan sin espacios al inicio ni al final.
+**Ingesta.** Se normalizan `\r\n` a `\n` y se buscan, sin distinguir mayúsculas,
+`*** START OF (THE|THIS) PROJECT GUTENBERG EBOOK` y `*** END OF ...` (el espacio tras `***` es
+opcional). El header es todo lo anterior al START; el body, lo que hay entre el final de la
+línea START y el END. Un 404 o la falta de marcadores descartan el libro para siempre
+(`failed_books.txt`); cualquier otro error detiene la ejecución, que se puede reanudar.
 
-Un 404 o la ausencia de marcadores lanza `BookUnavailableException` y el libro se descarta
-de forma permanente. Cualquier otro error de red no se registra y el libro se reintentará.
+**Metadatos.** Primera línea que cumple `^Title:`, `^Author:` y `^Language:` (sin distinguir
+mayúsculas). English/Spanish/French/German pasan a `en/es/fr/de`; el resto, a minúsculas. Los
+campos ausentes se guardan como `NULL`. Tabla `books(book_id, title, author, language,
+body_path)` con índices en `author` y `title`; `body_path` es relativo a `output/java`.
+
+**Tokenizador.** Byte a byte: A-Z pasa a minúsculas, un término es una secuencia `[a-z]+`, se
+descartan los de menos de 2 letras y las stopwords, y cada término cuenta una vez por libro.
+Las consultas pasan por el mismo tokenizador.
+
+**Dumps.** `metadata.tsv` (`book_id\ttitle\tauthor\tlanguage`, por ID) e `index.tsv`
+(`término\tid1,id2,...`, por término). Si los tres lenguajes procesan los mismos libros, sus
+dumps tienen que ser idénticos:
+
+```bash
+diff output/python/dumps/json/index.tsv output/java/dumps/json/index.tsv
+```
 
 ## Estructuras del datalake
 
-Las tres implementan `DatalakeStore`, así que el resto del sistema no depende de la elegida.
-
 | Tipo | Ruta | Lookup |
 |---|---|---|
-| `time` | `datalake_time/YYYYMMDD/HH/<id>.header.txt` y `<id>.body.txt` | Recorrido de carpetas (la fecha no se deduce del ID) |
-| `book` | `datalake_book/<id>/header.txt` y `body.txt` | Directo, O(1) |
-| `batch` | `datalake_batch/001000-001999/<id>.header.txt` y `<id>.body.txt` | Directo, carpeta calculada con `id / 1000` |
+| `time` | `datalake_time/YYYYMMDD/HH/<id>.header.txt` y `<id>.body.txt` | Índice auxiliar `_locations.tsv` (id → carpeta) |
+| `book` | `datalake_book/<id>/header.txt` y `body.txt` | Directo |
+| `range` | `datalake_range/1000-1999/<id>.header.txt` y `<id>.body.txt` | Directo, carpeta `id / 1000` |
 
-Resumen de trade-offs:
+## Estructuras del índice invertido
 
-- **time**: trazabilidad y procesamiento incremental natural (basta con leer las carpetas
-  más recientes), pero localizar un libro concreto obliga a recorrer el árbol.
-- **book**: lookup inmediato y fácil de depurar, pero una carpeta por libro produce muchos
-  directorios en un mismo nivel cuando el dataset crece.
-- **batch**: lookup directo y como máximo 1000 libros (2000 ficheros) por carpeta. Pierde
-  la información temporal, que queda en los ficheros de control.
-
-## Control layer
-
-Los ficheros de control se guardan en `bigdatajava/output/java/control/<tipo>/`, uno por estructura
-para que los experimentos no se mezclen:
-
-- `downloaded_books.txt`: libros descargados y guardados correctamente
-- `indexed_books.txt`: libros indexados
-- `failed_books.txt`: IDs descartados (no existen o no tienen marcadores)
-
-Cada paso del pipeline sigue la sección 5.2 del enunciado:
-
-1. Si hay libros descargados y no indexados, se indexa el primero.
-2. Si no, se elige un ID nuevo (de la lista con `--ids`, o aleatorio con hasta 10 intentos)
-   que no esté ni descargado ni descartado, se descarga y se guarda.
-3. Se actualiza el fichero de control correspondiente.
-
-El indexador todavía es un `BookIndexer.noOp()`. Se sustituirá por los índices invertidos
-sin cambiar el control layer.
+| Tipo | Dónde | Actualización |
+|---|---|---|
+| `json` | `datamarts/inverted_index.json`, claves ordenadas y sin espacios | Carga, fusiona y reescribe el fichero entero |
+| `folders` | `datamarts/inverted_index/<LETRA>/<término>.txt`, un ID por línea | Solo reescribe los términos afectados |
+| `mongo` | Colección `search_engine.inverted_index_java`, `{term, postings}` con índice único en `term` | `$addToSet` por término en un bulk write |
 
 ## Recuperación ante interrupciones
 
-- Header y body se escriben primero en `.tmp` y después se renombran de forma atómica,
-  así que nunca queda un fichero final a medias.
-- El body se escribe después del header: un libro solo se considera completo si existen
-  los dos.
-- Un libro solo se registra en `downloaded_books.txt` después de estar guardado.
-- Al arrancar, `recover()` borra los `.tmp` sobrantes y reconcilia el estado con el datalake:
-  - libros guardados pero no registrados (caída entre la escritura y el registro) → se registran;
-  - IDs registrados sin fichero (por ejemplo una línea cortada) → se eliminan;
-  - IDs indexados que ya no están en el datalake → se eliminan.
-
-Con esto el pipeline se puede reanudar sin duplicar ni perder libros.
-
-## Dataset común
-
-`bigdatajava/data/book_ids.txt` contiene la lista de IDs que deben usar todos los lenguajes en los
-benchmarks, para que la comparación dependa solo de la implementación y no de los datos.
+- Todos los ficheros se escriben en `.tmp` y se renombran; el body se escribe después del
+  header y su existencia marca el libro como completo.
+- En `time`, la carpeta se registra en `_locations.tsv` antes de escribir, así que al reanudar
+  el libro vuelve a la misma carpeta aunque haya cambiado la hora.
+- Un libro se registra como descargado después de guardarlo, y como indexado después de
+  escribir los dos datamarts. Repetir un lote no duplica nada (`INSERT OR REPLACE` y fusión
+  de postings).
+- Una última línea de control sin `\n` (append cortado) se descarta y se recorta.
+- Al arrancar se borran los `.tmp` y se reconcilia el control con el datalake. El control es
+  único: si el índice o los metadatos elegidos están vacíos, los libros se vuelven a indexar.

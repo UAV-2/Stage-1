@@ -1,17 +1,24 @@
 package es.ulpgc.bigdata.control;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-public record RecoveryReport(Set<String> recovered, Set<String> droppedDownloads,
-                             Set<String> droppedIndexed) {
+/** Resume lo que ha habido que corregir al arrancar. */
+public class RecoveryReport {
+
+    /** .tmp borrados. */
+    public int tempFiles;
+    /** En el datalake pero sin marcar como descargados. */
+    public final List<Integer> unregistered = new ArrayList<>();
+    /** Marcados como descargados pero no están en el datalake. */
+    public final List<Integer> missing = new ArrayList<>();
+    /** Marcados como indexados pero no están en el datalake. */
+    public final List<Integer> orphanIndexed = new ArrayList<>();
+    /** Marcados como indexados pero el índice está vacío. */
+    public int reindex;
 
     public boolean isClean() {
-        return recovered.isEmpty() && droppedDownloads.isEmpty() && droppedIndexed.isEmpty();
-    }
-
-    @Override
-    public String toString() {
-        return "recuperados=" + recovered + ", descargas sin fichero=" + droppedDownloads
-                + ", indexados sin fichero=" + droppedIndexed;
+        return tempFiles == 0 && unregistered.isEmpty() && missing.isEmpty()
+                && orphanIndexed.isEmpty() && reindex == 0;
     }
 }
