@@ -1,0 +1,21 @@
+# Datos generados: nunca se suben
+cache/
+output/
+*.db
+*.tmp
+
+# Binarios y ficheros de prueba de Go
+go/stage1_go
+*.test
+*.prof
+
+# Entornos de los otros lenguajes
+__pycache__/
+.pytest_cache/
+.venv/
+target/
+
+# Editores
+.vscode/
+.idea/
+.DS_Store
