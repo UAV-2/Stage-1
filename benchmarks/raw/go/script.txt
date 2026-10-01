@@ -1,0 +1,66 @@
+[SCRIPT] storage time n=100: 202 ficheros, 4 carpetas, 58601953 bytes
+[SCRIPT] storage time n=250: 502 ficheros, 4 carpetas, 133346064 bytes
+[SCRIPT] storage book n=100: 201 ficheros, 102 carpetas, 58600458 bytes
+[SCRIPT] storage book n=250: 501 ficheros, 252 carpetas, 133342169 bytes
+[SCRIPT] storage range n=100: 201 ficheros, 3 carpetas, 58600458 bytes
+[SCRIPT] storage range n=250: 501 ficheros, 3 carpetas, 133342169 bytes
+[SCRIPT] recovery time n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] footprint json n=100 rep=1: 58.7 MB de pico (VmHWM), 3308094 bytes en disco
+[SCRIPT] footprint json n=100 rep=2: 61.3 MB de pico (VmHWM), 3308094 bytes en disco
+[SCRIPT] footprint json n=100 rep=3: 62.0 MB de pico (VmHWM), 3308094 bytes en disco
+[SCRIPT] footprint json n=100 rep=4: 62.8 MB de pico (VmHWM), 3308094 bytes en disco
+[SCRIPT] footprint json n=100 rep=5: 60.4 MB de pico (VmHWM), 3308094 bytes en disco
+[SCRIPT] footprint json n=250 rep=1: 115.4 MB de pico (VmHWM), 8137605 bytes en disco
+[SCRIPT] footprint json n=250 rep=2: 115.0 MB de pico (VmHWM), 8137605 bytes en disco
+[SCRIPT] footprint json n=250 rep=3: 113.3 MB de pico (VmHWM), 8137605 bytes en disco
+[SCRIPT] footprint json n=250 rep=4: 116.1 MB de pico (VmHWM), 8137605 bytes en disco
+[SCRIPT] footprint json n=250 rep=5: 113.4 MB de pico (VmHWM), 8137605 bytes en disco
+[SCRIPT] footprint folders n=100 rep=1: 48.9 MB de pico (VmHWM), 1939169 bytes en disco
+[SCRIPT] footprint folders n=100 rep=2: 49.9 MB de pico (VmHWM), 1939169 bytes en disco
+[SCRIPT] footprint folders n=100 rep=3: 48.6 MB de pico (VmHWM), 1939169 bytes en disco
+[SCRIPT] footprint folders n=100 rep=4: 46.8 MB de pico (VmHWM), 1939169 bytes en disco
+[SCRIPT] footprint folders n=100 rep=5: 48.1 MB de pico (VmHWM), 1939169 bytes en disco
+[SCRIPT] footprint folders n=250 rep=1: 83.9 MB de pico (VmHWM), 5771541 bytes en disco
+[SCRIPT] footprint folders n=250 rep=2: 83.4 MB de pico (VmHWM), 5771541 bytes en disco
+[SCRIPT] footprint folders n=250 rep=3: 83.6 MB de pico (VmHWM), 5771541 bytes en disco
+[SCRIPT] footprint folders n=250 rep=4: 84.0 MB de pico (VmHWM), 5771541 bytes en disco
+[SCRIPT] footprint folders n=250 rep=5: 81.3 MB de pico (VmHWM), 5771541 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=1: 221.5 MB de pico (VmHWM), 5595136 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=2: 218.8 MB de pico (VmHWM), 5611520 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=3: 222.4 MB de pico (VmHWM), 5599232 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=4: 215.5 MB de pico (VmHWM), 5582848 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=5: 220.2 MB de pico (VmHWM), 5599232 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=1: 359.2 MB de pico (VmHWM), 12738560 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=2: 359.7 MB de pico (VmHWM), 12791808 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=3: 381.5 MB de pico (VmHWM), 15470592 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=4: 361.7 MB de pico (VmHWM), 12791808 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=5: 348.3 MB de pico (VmHWM), 12767232 bytes en disco
