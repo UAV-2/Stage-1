@@ -3,6 +3,7 @@ package metadata
 import (
 	"os"
 	"path/filepath"
+	"slices"
 	"testing"
 )
 
@@ -99,6 +100,37 @@ func TestDB(t *testing.T) {
 	}
 	if nulls != 1 {
 		t.Errorf("filas con NULL = %d, se esperaba 1", nulls)
+	}
+
+	// Consultas: por ID (para llegar al body) y por campos.
+	if book, ok, err := db.ByID(1342); err != nil || !ok || book.BodyPath != "datalake_book/1342/body.txt" {
+		t.Errorf("ByID(1342) = %+v, %v, %v", book, ok, err)
+	}
+	if _, ok, err := db.ByID(999); err != nil || ok {
+		t.Errorf("ByID(999) = %v, %v", ok, err)
+	}
+	for _, tt := range []struct {
+		filter Filter
+		want   []int
+	}{
+		{Filter{Author: "Jane Austen"}, []int{1342}},
+		{Filter{Title: "Alice"}, []int{11}},
+		{Filter{Language: "en"}, []int{1342}},
+		{Filter{Author: "Jane Austen", Title: "Alice"}, nil},
+		{Filter{Author: "jane austen"}, nil},
+		{Filter{}, []int{11, 1342}},
+	} {
+		found, err := db.Find(tt.filter)
+		if err != nil {
+			t.Fatal(err)
+		}
+		var ids []int
+		for _, book := range found {
+			ids = append(ids, book.ID)
+		}
+		if !slices.Equal(ids, tt.want) {
+			t.Errorf("Find(%+v) = %v, se esperaba %v", tt.filter, ids, tt.want)
+		}
 	}
 
 	dump := filepath.Join(dir, "metadata.tsv")

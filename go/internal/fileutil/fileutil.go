@@ -87,3 +87,30 @@ func RemoveTemp(root string) (int, error) {
 	})
 	return removed, err
 }
+
+// TreeStats cuenta los ficheros y carpetas que hay bajo root (sin contar
+// root) y suma el tamaño de los ficheros. Si root no existe, todo es cero.
+func TreeStats(root string) (files, dirs int, size int64, err error) {
+	err = filepath.WalkDir(root, func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			if errors.Is(err, fs.ErrNotExist) {
+				return nil
+			}
+			return err
+		}
+		if d.IsDir() {
+			if path != root {
+				dirs++
+			}
+			return nil
+		}
+		info, err := d.Info()
+		if err != nil {
+			return err
+		}
+		files++
+		size += info.Size()
+		return nil
+	})
+	return files, dirs, size, err
+}

@@ -117,6 +117,30 @@ func (m *mongoIndex) Empty() (bool, error) {
 	return count == 0, err
 }
 
+// DiskUsage es el storageSize de la colección: los datos comprimidos en el
+// servidor, sin contar el índice sobre term. Antes se fuerza un checkpoint,
+// porque WiredTiger tarda hasta un minuto en volcar a disco lo último escrito.
+func (m *mongoIndex) DiskUsage() (int64, error) {
+	ctx := context.Background()
+	if err := m.client.Database("admin").RunCommand(ctx, bson.D{{Key: "fsync", Value: 1}}).Err(); err != nil {
+		return 0, err
+	}
+	var stats bson.M
+	command := bson.D{{Key: "collStats", Value: m.coll.Name()}}
+	if err := m.coll.Database().RunCommand(ctx, command).Decode(&stats); err != nil {
+		return 0, err
+	}
+	switch size := stats["storageSize"].(type) {
+	case int32:
+		return int64(size), nil
+	case int64:
+		return size, nil
+	case float64:
+		return int64(size), nil
+	}
+	return 0, fmt.Errorf("collStats no devuelve storageSize")
+}
+
 func (m *mongoIndex) Reset() error {
 	if err := m.coll.Drop(context.Background()); err != nil {
 		return err

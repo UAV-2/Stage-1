@@ -89,6 +89,17 @@ func (j *jsonIndex) Empty() (bool, error) {
 	return len(j.postings) == 0, nil
 }
 
+func (j *jsonIndex) DiskUsage() (int64, error) {
+	info, err := os.Stat(j.path)
+	if errors.Is(err, fs.ErrNotExist) {
+		return 0, nil
+	}
+	if err != nil {
+		return 0, err
+	}
+	return info.Size(), nil
+}
+
 func (j *jsonIndex) Reset() error {
 	if err := os.Remove(j.path); err != nil && !errors.Is(err, fs.ErrNotExist) {
 		return err

@@ -25,6 +25,8 @@ type Index interface {
 	// Each recorre el índice entero en orden alfabético de término.
 	Each(fn func(term string, ids []int) error) error
 	Empty() (bool, error)
+	// DiskUsage devuelve los bytes que ocupa el índice.
+	DiskUsage() (int64, error)
 	// Reset borra el índice para reconstruirlo desde cero.
 	Reset() error
 	Close() error

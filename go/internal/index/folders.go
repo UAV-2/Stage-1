@@ -117,6 +117,13 @@ func (f *folderIndex) Empty() (bool, error) {
 	return len(letters) == 0, nil
 }
 
+// DiskUsage suma el tamaño de los ficheros; el espacio real es mayor, porque
+// cada fichero ocupa al menos un bloque del sistema de ficheros.
+func (f *folderIndex) DiskUsage() (int64, error) {
+	_, _, size, err := fileutil.TreeStats(f.root)
+	return size, err
+}
+
 func (f *folderIndex) Reset() error { return os.RemoveAll(f.root) }
 
 func (f *folderIndex) Close() error { return nil }

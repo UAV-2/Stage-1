@@ -77,9 +77,10 @@ func nullable(value string) any {
 	return value
 }
 
-// All devuelve todos los libros ordenados por ID.
-func (d *DB) All() ([]Book, error) {
-	rows, err := d.db.Query(`SELECT book_id, COALESCE(title, ''), COALESCE(author, ''), COALESCE(language, ''), body_path FROM books ORDER BY book_id`)
+const selectBooks = `SELECT book_id, COALESCE(title, ''), COALESCE(author, ''), COALESCE(language, ''), body_path FROM books`
+
+func (d *DB) query(where string, args ...any) ([]Book, error) {
+	rows, err := d.db.Query(selectBooks+where+` ORDER BY book_id`, args...)
 	if err != nil {
 		return nil, err
 	}
@@ -94,6 +95,50 @@ func (d *DB) All() ([]Book, error) {
 		books = append(books, book)
 	}
 	return books, rows.Err()
+}
+
+// All devuelve todos los libros ordenados por ID.
+func (d *DB) All() ([]Book, error) {
+	return d.query("")
+}
+
+// ByID devuelve un libro; con él se obtiene la ruta de su body.
+func (d *DB) ByID(id int) (Book, bool, error) {
+	books, err := d.query(` WHERE book_id = ?`, id)
+	if err != nil || len(books) == 0 {
+		return Book{}, false, err
+	}
+	return books[0], true, nil
+}
+
+// Filter selecciona libros por coincidencia exacta. Un campo vacío no
+// filtra; si hay varios, se tienen que cumplir todos.
+type Filter struct {
+	Title    string
+	Author   string
+	Language string
+}
+
+func (f Filter) Empty() bool { return f == Filter{} }
+
+// Find devuelve los libros que cumplen el filtro, ordenados por ID.
+func (d *DB) Find(filter Filter) ([]Book, error) {
+	var conditions []string
+	var args []any
+	for _, field := range []struct{ column, value string }{
+		{"title", filter.Title},
+		{"author", filter.Author},
+		{"language", filter.Language},
+	} {
+		if field.value != "" {
+			conditions = append(conditions, field.column+" = ?")
+			args = append(args, field.value)
+		}
+	}
+	if len(conditions) == 0 {
+		return d.All()
+	}
+	return d.query(" WHERE "+strings.Join(conditions, " AND "), args...)
 }
 
 func (d *DB) Empty() (bool, error) {

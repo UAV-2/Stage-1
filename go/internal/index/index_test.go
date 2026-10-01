@@ -94,6 +94,10 @@ func TestContenidoComun(t *testing.T) {
 				}
 			}
 
+			if size, err := idx.DiskUsage(); err != nil || size <= 0 {
+				t.Errorf("DiskUsage = %d, %v", size, err)
+			}
+
 			dump := filepath.Join(dir, "index.tsv")
 			if err := DumpTSV(idx, dump); err != nil {
 				t.Fatal(err)

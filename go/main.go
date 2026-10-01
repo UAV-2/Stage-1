@@ -8,6 +8,7 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
+	"slices"
 	"strconv"
 	"strings"
 	"time"
@@ -29,6 +30,7 @@ Comandos:
   download [ids...]   guarda en el datalake los libros que falten (sin IDs: los de la lista)
   index               indexa los libros descargados que aún no están indexados
   query [texto...]    busca en el índice (sin texto: las consultas de shared/queries.txt)
+  books [ids...]      consulta los metadatos por ID o con --author, --title y --language
   dump                exporta metadata.tsv e index.tsv a output/go/dumps/<índice>/
   lookup <ids...>     localiza header y body de cada libro
   status              resumen del estado del pipeline
@@ -38,9 +40,12 @@ Opciones:
   --datalake=time|book|range   estructura del datalake (por defecto book)
   --index=json|folders|mongo   estructura del índice invertido (por defecto json)
   --offline                    leer los libros de cache/ en vez de descargarlos
+  --sample                     usar el dataset de muestra: sample_data/ y book_ids_sample.txt, sin red
   --n=N                        usar solo los primeros N IDs de la lista (0 = todos)
   --batch=N                    libros por lote de indexación (por defecto 100; 0 = todos)
   --rebuild                    con index: vaciar índice y metadatos y reconstruirlos
+  --author=A --title=T         con books y query: solo los libros con ese autor, título
+  --language=L                 o idioma (coincidencia exacta)
   --ids=FICHERO                lista de IDs (por defecto <root>/shared/book_ids.txt)
   --delay=1s                   espera entre peticiones a Gutenberg
   --mongo=URI                  servidor de MongoDB (por defecto mongodb://localhost:27017)
@@ -51,17 +56,38 @@ type options struct {
 	datalake string
 	index    string
 	offline  bool
+	sample   bool
 	rebuild  bool
 	n        int
 	batch    int
 	idsFile  string
 	delay    time.Duration
 	mongoURI string
+	filter   metadata.Filter
 }
 
 func (o options) output() string            { return filepath.Join(o.root, "output", lang) }
 func (o options) datamarts() string         { return filepath.Join(o.output(), "datamarts") }
 func (o options) shared(name string) string { return filepath.Join(o.root, "shared", name) }
+
+// cacheDir es de donde se leen los libros crudos sin red: la caché completa
+// o los pocos libros de muestra que sí están en el repositorio.
+func (o options) cacheDir() string {
+	if o.sample {
+		return filepath.Join(o.root, "sample_data")
+	}
+	return filepath.Join(o.root, "cache")
+}
+
+func (o options) idsPath() string {
+	switch {
+	case o.idsFile != "":
+		return o.idsFile
+	case o.sample:
+		return o.shared("book_ids_sample.txt")
+	}
+	return o.shared("book_ids.txt")
+}
 
 func main() {
 	if err := run(os.Args[1:]); err != nil {
@@ -78,12 +104,16 @@ func run(args []string) error {
 	flags.StringVar(&opts.datalake, "datalake", "book", "")
 	flags.StringVar(&opts.index, "index", "json", "")
 	flags.BoolVar(&opts.offline, "offline", false, "")
+	flags.BoolVar(&opts.sample, "sample", false, "")
 	flags.BoolVar(&opts.rebuild, "rebuild", false, "")
 	flags.IntVar(&opts.n, "n", 0, "")
 	flags.IntVar(&opts.batch, "batch", 100, "")
 	flags.StringVar(&opts.idsFile, "ids", "", "")
 	flags.DurationVar(&opts.delay, "delay", time.Second, "")
 	flags.StringVar(&opts.mongoURI, "mongo", "mongodb://localhost:27017", "")
+	flags.StringVar(&opts.filter.Author, "author", "", "")
+	flags.StringVar(&opts.filter.Title, "title", "", "")
+	flags.StringVar(&opts.filter.Language, "language", "", "")
 
 	// El paquete flag se para en el primer argumento que no es una opción;
 	// se repite para admitir opciones y argumentos en cualquier orden.
@@ -107,6 +137,10 @@ func run(args []string) error {
 		return nil
 	}
 
+	if opts.sample {
+		opts.offline = true
+	}
+
 	command, args := positional[0], positional[1:]
 	switch command {
 	case "pipeline":
@@ -117,6 +151,8 @@ func run(args []string) error {
 		return indexPending(opts)
 	case "query":
 		return query(opts, args)
+	case "books":
+		return books(opts, args)
 	case "dump":
 		return dump(opts)
 	case "lookup":
@@ -154,11 +190,10 @@ func newPipeline(opts options) (*control.Pipeline, error) {
 }
 
 func setSource(pipeline *control.Pipeline, opts options) {
-	cacheDir := filepath.Join(opts.root, "cache")
 	if opts.offline {
-		pipeline.Source = ingestion.Cache{Dir: cacheDir}
+		pipeline.Source = ingestion.Cache{Dir: opts.cacheDir()}
 	} else {
-		pipeline.Source = ingestion.NewGutenberg(cacheDir, opts.delay)
+		pipeline.Source = ingestion.NewGutenberg(opts.cacheDir(), opts.delay)
 	}
 }
 
@@ -223,18 +258,15 @@ func parseIDs(args []string) ([]int, error) {
 }
 
 // targetIDs son los libros con los que trabaja el comando: los que se pasan
-// como argumento o, si no hay, los primeros --n de la lista compartida.
+// como argumento o, si no hay, los de la lista compartida. Con --n, solo los
+// N primeros.
 func targetIDs(opts options, args []string) ([]int, error) {
 	ids, err := parseIDs(args)
 	if err != nil {
 		return nil, err
 	}
 	if len(ids) == 0 {
-		idsFile := opts.idsFile
-		if idsFile == "" {
-			idsFile = opts.shared("book_ids.txt")
-		}
-		if ids, err = control.ReadIDs(idsFile); err != nil {
+		if ids, err = control.ReadIDs(opts.idsPath()); err != nil {
 			return nil, err
 		}
 	}
@@ -351,15 +383,90 @@ func query(opts options, words []string) error {
 		return err
 	}
 	defer idx.Close()
+	allowed, err := filteredIDs(opts)
+	if err != nil {
+		return err
+	}
 
 	for _, text := range queries {
 		ids, err := index.Search(idx, text, stop)
 		if err != nil {
 			return err
 		}
+		if allowed != nil {
+			ids = slices.DeleteFunc(slices.Clone(ids), func(id int) bool { return !allowed[id] })
+		}
 		fmt.Printf("[QUERY:%s] %s -> %d libros %v\n", idx.Name(), text, len(ids), ids)
 	}
 	return nil
+}
+
+// filteredIDs devuelve los libros que cumplen el filtro de metadatos, o nil
+// si no se ha pedido ningún filtro.
+func filteredIDs(opts options) (map[int]bool, error) {
+	if opts.filter.Empty() {
+		return nil, nil
+	}
+	db, err := openMetadata(opts)
+	if err != nil {
+		return nil, err
+	}
+	defer db.Close()
+	found, err := db.Find(opts.filter)
+	if err != nil {
+		return nil, err
+	}
+	allowed := make(map[int]bool, len(found))
+	for _, book := range found {
+		allowed[book.ID] = true
+	}
+	return allowed, nil
+}
+
+// books consulta el datamart de metadatos: por ID, o por título, autor e
+// idioma. Cada línea incluye la ruta del body en el datalake.
+func books(opts options, args []string) error {
+	ids, err := parseIDs(args)
+	if err != nil {
+		return err
+	}
+	db, err := openMetadata(opts)
+	if err != nil {
+		return err
+	}
+	defer db.Close()
+
+	var found []metadata.Book
+	if len(ids) == 0 {
+		if found, err = db.Find(opts.filter); err != nil {
+			return err
+		}
+	}
+	for _, id := range ids {
+		book, ok, err := db.ByID(id)
+		if err != nil {
+			return err
+		}
+		if !ok {
+			fmt.Printf("[BOOKS] %d -> no está en los metadatos\n", id)
+			continue
+		}
+		found = append(found, book)
+	}
+
+	for _, book := range found {
+		fmt.Printf("[BOOKS] %d | %s | %s | %s | %s\n", book.ID,
+			orDash(book.Title), orDash(book.Author), orDash(book.Language), book.BodyPath)
+	}
+	fmt.Printf("[BOOKS] %d libros\n", len(found))
+	return nil
+}
+
+func orDash(value string) string {
+	if value == "" {
+		return "-"
+	}
+	return value
 }
 
 // dump exporta el contenido de los datamarts en el formato canónico que se
