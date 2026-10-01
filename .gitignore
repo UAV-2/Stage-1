@@ -6,6 +6,7 @@ output/
 
 # Binarios y ficheros de prueba de Go
 go/stage1_go
+go/stage1_go.exe
 *.test
 *.prof
 

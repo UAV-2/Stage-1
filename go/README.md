@@ -91,7 +91,7 @@ go/
 - **Recuperación al arrancar.** Se borran los `.tmp` y el control se alinea con el datalake: los libros escritos pero sin registrar se registran, y los registrados sin libro se vuelven a pedir. Una línea de control cortada a mitad se descarta. Esto se ha probado matando el proceso con `kill -9` en mitad de la ingesta y de la indexación.
 - **Indexación por lotes.** Cada lote se lleva a los metadatos y al índice, y solo después se marca en `indexed_books.txt`. Si se corta, el lote se repite entero; metadatos (`INSERT OR REPLACE`) e índice (fusión de conjuntos) admiten la repetición sin duplicar nada.
 - **Un único `control/`**, como dice el SPEC, para todas las variantes. Si se cambia a una variante de índice vacía, los libros ya descargados se reindexan solos; si se cambia de datalake, el control se realinea con el nuevo.
-- **Libros descartados.** Un libro sin marcadores START/END o que no existe se anota en `control/failed_books.txt` para no volver a pedirlo (no está en el SPEC; es lo mismo que hace la versión Java).
+- **Libros descartados.** Un libro sin marcadores START/END o que no existe se anota en `control/failed_books.txt` para no volver a pedirlo (SPEC §4).
 
 ## Benchmarks
 

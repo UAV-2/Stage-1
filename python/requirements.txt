@@ -1,0 +1,4 @@
+# Solo para el índice en MongoDB; json y folders usan la biblioteca estándar.
+pymongo>=4.6
+# Tests
+pytest>=8.0

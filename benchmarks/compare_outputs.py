@@ -24,11 +24,12 @@ from pathlib import Path
 DUMPS = ("metadata.tsv", "index.tsv")
 
 
-def find_dumps(output: Path) -> dict[str, list[Path]]:
-    """Devuelve, para cada nombre de dump, las rutas encontradas."""
+def find_dumps(output: Path, langs: list[str] | None = None) -> dict[str, list[Path]]:
+    """Devuelve, para cada nombre de dump, las rutas encontradas (solo las de
+    langs, si se indica)."""
     found = {name: [] for name in DUMPS}
     for path in sorted(output.glob("*/dumps/*/*.tsv")):
-        if path.name in found:
+        if path.name in found and (langs is None or path.relative_to(output).parts[0] in langs):
             found[path.name].append(path)
     return found
 
@@ -52,23 +53,18 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent,
-                        help="raíz del repositorio (por defecto, la carpeta padre de benchmarks/)")
-    parser.add_argument("--reference", default="python",
-                        help="lenguaje de referencia (por defecto python; si no hay, el primero que aparezca)")
-    args = parser.parse_args()
-
-    output = args.root / "output"
+def compare(root: Path, reference_lang: str = "python", langs: list[str] | None = None) -> int:
+    """Compara los dumps de root/output (de todos los lenguajes o solo de langs)
+    y devuelve 0 si coinciden."""
+    output = root / "output"
     all_equal = True
-    for name, paths in find_dumps(output).items():
+    for name, paths in find_dumps(output, langs).items():
         if not paths:
             print(f"[{name}] no hay ningún dump en {output}/<lang>/dumps/<índice>/")
             all_equal = False
             continue
 
-        preferred = [p for p in paths if label(p, output).startswith(args.reference + "/")]
+        preferred = [p for p in paths if label(p, output).startswith(reference_lang + "/")]
         reference = (preferred or paths)[0]
         reference_digest = digest(reference)
         lines = sum(1 for _ in reference.open(encoding="utf-8"))
@@ -83,10 +79,21 @@ def main() -> int:
                 all_equal = False
                 print(f"    DISTINTO  {label(path, output)}: {first_difference(reference, path)}")
 
-    langs = sorted({p.relative_to(output).parts[0] for paths in find_dumps(output).values() for p in paths})
-    print(f"\nLenguajes con dumps: {', '.join(langs) or 'ninguno'}")
+    found = sorted({p.relative_to(output).parts[0] for paths in find_dumps(output, langs).values() for p in paths})
+    print(f"\nLenguajes con dumps: {', '.join(found) or 'ninguno'}")
     print("TODOS LOS DUMPS COINCIDEN" if all_equal else "HAY DIFERENCIAS: no se mide hasta que coincidan (SPEC §12)")
     return 0 if all_equal else 1
+
+
+def main() -> int:
+    sys.stdout.reconfigure(encoding="utf-8")
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parent.parent,
+                        help="raíz del repositorio (por defecto, la carpeta padre de benchmarks/)")
+    parser.add_argument("--reference", default="python",
+                        help="lenguaje de referencia (por defecto python; si no hay, el primero que aparezca)")
+    args = parser.parse_args()
+    return compare(args.root, args.reference)
 
 
 if __name__ == "__main__":
