@@ -120,15 +120,15 @@ Con N=100 y 250 tarda unos 40 minutos en un portátil con un i5 de 13.ª generac
 | `query_time` | Una consulta de `shared/queries.txt` sobre el índice ya abierto (µs) |
 | `update_time` | Abrir un índice de N libros y añadir 50 (ms); en JSON incluye cargar y reescribir el fichero |
 | `disk_usage` | Bytes de los ficheros del índice; en MongoDB, `storageSize` tras forzar un checkpoint |
-| `peak_memory` | `runtime.MemStats.Sys` de un proceso nuevo que construye el índice (MB) |
+| `peak_memory` | Pico de memoria residente (`VmHWM`) de un proceso nuevo que construye el índice (MB) |
 | `download_throughput` | Descargar 50 libros de Gutenberg con 1 s entre peticiones (libros/s) |
 
-Configuración, igual que en los otros lenguajes: 5 iteraciones de calentamiento que se descartan y 10 medidas (`-count=15`), y 5 repeticiones en las métricas de script. Las medidas que tardan segundos se hacen con una operación por iteración (`-benchtime=1x`); el resto, con el segundo por iteración que usa Go por defecto. Lo que no forma parte de la medida (borrar la salida anterior, preparar el datalake o el índice de partida) queda fuera del cronómetro con `b.StopTimer()`.
+Las definiciones exactas, comunes a los tres lenguajes, están en `SPEC.md` §11. Configuración: 5 iteraciones de calentamiento que se descartan y 10 medidas (`-count=15`), y 5 repeticiones en las métricas de script. Las medidas que tardan segundos se hacen con una operación por iteración (`-benchtime=1x`); el resto, con el segundo por iteración que usa Go por defecto. Lo que no forma parte de la medida (borrar la salida anterior, preparar el datalake o el índice de partida) queda fuera del cronómetro con `b.StopTimer()`.
 
 Al interpretar los resultados hay que tener en cuenta:
 
 - `disk_usage` suma el tamaño de los ficheros. En `folders` el espacio real en disco es bastante mayor, porque cada término ocupa al menos un bloque del sistema de ficheros.
-- `peak_memory` es la memoria del proceso de Go. En `mongo` no incluye la del servidor.
+- `peak_memory` es el pico de memoria residente del proceso de Go, que se lee de `/proc`, así que la medida es válida en Linux (en otro sistema se usa la memoria del runtime y la salida cruda lo indica). En `mongo` no incluye la del servidor.
 - `metadata_query_time` se reporta en dos filas, por autor y por ID, porque el SPEC pide medir los dos casos.
 
 ## Tests

@@ -513,8 +513,7 @@ func verifyIngest(kind, out string, ids []int) string {
 }
 
 // indexFootprint: para cada índice y cada N, un proceso nuevo lo construye y
-// devuelve la memoria que ha pedido al sistema (runtime.MemStats.Sys) y lo
-// que ocupa el índice en disco.
+// devuelve su pico de memoria residente y lo que ocupa el índice en disco.
 func (s *script) indexFootprint() ([]row, error) {
 	if _, err := s.env.Source(); err != nil {
 		return nil, err
@@ -535,13 +534,14 @@ func (s *script) indexFootprint() ([]row, error) {
 				if err != nil {
 					return nil, fmt.Errorf("índice %s n=%d: %w", kind, n, err)
 				}
-				var sys, size int64
-				if _, err := fmt.Sscan(string(output), &sys, &size); err != nil {
+				var peak, size int64
+				var source string
+				if _, err := fmt.Sscan(string(output), &peak, &size, &source); err != nil {
 					return nil, fmt.Errorf("índice %s n=%d: salida inesperada %q", kind, n, output)
 				}
-				memory = append(memory, float64(sys)/(1<<20))
+				memory = append(memory, float64(peak)/(1<<20))
 				disk = append(disk, float64(size))
-				s.logf("footprint %s n=%d rep=%d: %.1f MB de memoria, %d bytes en disco", kind, n, rep+1, float64(sys)/(1<<20), size)
+				s.logf("footprint %s n=%d rep=%d: %.1f MB de pico (%s), %d bytes en disco", kind, n, rep+1, float64(peak)/(1<<20), source, size)
 			}
 			rows = append(rows,
 				row{"index", kind, n, "peak_memory", memory, "MB"},
@@ -637,18 +637,41 @@ func runChild(opts options) error {
 		if err != nil {
 			return err
 		}
-		var stats runtime.MemStats
-		runtime.ReadMemStats(&stats)
-		fmt.Println(stats.Sys, size)
+		peak, source := peakMemory()
+		fmt.Println(peak, size, source)
 		return idx.Reset()
 	}
 	return fmt.Errorf("modo hijo desconocido %q", opts.child)
 }
 
-// writeEnvironment guarda la máquina y la configuración, que el SPEC pide
-// anotar junto a los resultados.
+// peakMemory devuelve el pico de memoria residente del proceso (VmHWM), que
+// es lo que miden los tres lenguajes (SPEC §11). Fuera de Linux no existe
+// /proc y se usa la memoria pedida por el runtime de Go, que se anota en la
+// salida cruda para no mezclarla con la otra.
+func peakMemory() (int64, string) {
+	if data, err := os.ReadFile("/proc/self/status"); err == nil {
+		for _, line := range strings.Split(string(data), "\n") {
+			if value, ok := strings.CutPrefix(line, "VmHWM:"); ok {
+				var kb int64
+				if _, err := fmt.Sscan(strings.TrimSuffix(strings.TrimSpace(value), " kB"), &kb); err == nil {
+					return kb * 1024, "VmHWM"
+				}
+			}
+		}
+	}
+	var stats runtime.MemStats
+	runtime.ReadMemStats(&stats)
+	return int64(stats.Sys), "MemStats.Sys"
+}
+
+// writeEnvironment anota la máquina y la configuración, que el SPEC pide
+// guardar junto a los resultados. Cada ejecución añade un bloque, así que el
+// fichero refleja todas las que han aportado filas al CSV.
 func writeEnvironment(path string, opts options) error {
 	var sb strings.Builder
+	if info, err := os.Stat(path); err == nil && info.Size() > 0 {
+		sb.WriteString("\n")
+	}
 	fmt.Fprintf(&sb, "fecha: %s\n", time.Now().Format(time.RFC3339))
 	fmt.Fprintf(&sb, "go: %s %s/%s\n", runtime.Version(), runtime.GOOS, runtime.GOARCH)
 	fmt.Fprintf(&sb, "cpus: %d\n", runtime.NumCPU())
@@ -666,5 +689,14 @@ func writeEnvironment(path string, opts options) error {
 	fmt.Fprintf(&sb, "tamaños: %s\nmedidas: %s\niteraciones: %d de calentamiento + %d medidas\nrepeticiones de script: %d\nmongo: %s\n",
 		opts.sizes, opts.only, opts.warmup, opts.count, opts.reps, opts.mongo)
 	fmt.Fprintln(&sb, "disco: anotar a mano (SSD/HDD) y el sistema de ficheros")
-	return os.WriteFile(path, []byte(sb.String()), 0644)
+
+	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	if _, err := f.WriteString(sb.String()); err != nil {
+		f.Close()
+		return err
+	}
+	return f.Close()
 }
