@@ -1,0 +1,11 @@
+fecha: 2026-10-01T10:01:05+01:00
+go: go1.26.8-X:nodwarf5 linux/amd64
+cpus: 12
+cpu: 13th Gen Intel(R) Core(TM) i5-1335U
+ram: 7790920 kB
+tamaños: 100,250
+medidas: micro,script
+iteraciones: 5 de calentamiento + 10 medidas
+repeticiones de script: 5
+mongo: mongodb://localhost:27018
+disco: anotar a mano (SSD/HDD) y el sistema de ficheros
