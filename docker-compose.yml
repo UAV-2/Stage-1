@@ -1,0 +1,17 @@
+# MongoDB para el índice invertido de los tres lenguajes (SPEC §8.3).
+# Base de datos search_engine; cada lenguaje usa su colección
+# inverted_index_<lang>. Sin autenticación y con la versión fijada.
+#
+#   docker compose up -d      # arrancar
+#   docker compose down       # parar (los datos se conservan en el volumen)
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: stage1-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
