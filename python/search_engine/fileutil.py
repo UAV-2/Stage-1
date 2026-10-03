@@ -1,6 +1,8 @@
 """Operaciones de fichero que comparten el datalake, los datamarts y el control."""
 
 import os
+import sys
+import time
 from pathlib import Path
 
 from .text import trim_space
@@ -25,7 +27,24 @@ def atomic_write(path: Path, data: bytes) -> None:
     tmp = path.with_name(path.name + ".tmp")
     with open(tmp, "wb") as f:
         f.write(data)
-    os.replace(tmp, path)
+    replace(tmp, path)
+
+
+RENAME_ATTEMPTS = 10
+
+
+def replace(source: Path, target: Path) -> None:
+    """os.replace. En Windows, el antivirus o el indexador pueden tener abierto
+    el destino un instante y el renombrado falla con PermissionError: se
+    reintenta unas cuantas veces antes de dar el error."""
+    for attempt in range(RENAME_ATTEMPTS):
+        try:
+            os.replace(source, target)
+            return
+        except PermissionError:
+            if sys.platform != "win32" or attempt == RENAME_ATTEMPTS - 1:
+                raise
+            time.sleep(0.01 * (attempt + 1))
 
 
 def append_line(path: Path, line: str) -> None:

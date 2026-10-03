@@ -8,7 +8,9 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
+	"time"
 )
 
 // AtomicWrite escribe en "<path>.tmp" y renombra al final: si el proceso se
@@ -18,7 +20,22 @@ func AtomicWrite(path string, data []byte) error {
 	if err := os.WriteFile(tmpPath, data, 0644); err != nil {
 		return err
 	}
-	return os.Rename(tmpPath, path)
+	return Rename(tmpPath, path)
+}
+
+const renameAttempts = 10
+
+// Rename es os.Rename. En Windows, el antivirus o el indexador pueden tener
+// abierto el destino un instante y el renombrado falla con "acceso denegado":
+// se reintenta unas cuantas veces antes de dar el error.
+func Rename(source, target string) error {
+	for attempt := 1; ; attempt++ {
+		err := os.Rename(source, target)
+		if err == nil || runtime.GOOS != "windows" || !errors.Is(err, fs.ErrPermission) || attempt == renameAttempts {
+			return err
+		}
+		time.Sleep(time.Duration(attempt) * 10 * time.Millisecond)
+	}
 }
 
 // AppendLine añade una línea al final de un fichero de registro, creándolo si

@@ -3,6 +3,7 @@ package es.ulpgc.bigdata.util;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.AccessDeniedException;
 import java.nio.file.AtomicMoveNotSupportedException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -27,10 +28,37 @@ public final class FileUtils {
     public static void atomicWrite(Path path, byte[] data) throws IOException {
         Path tmp = path.resolveSibling(path.getFileName() + ".tmp");
         Files.write(tmp, data);
-        try {
-            Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
-        } catch (AtomicMoveNotSupportedException e) {
-            Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
+        replace(tmp, path);
+    }
+
+    private static final int RENAME_ATTEMPTS = 10;
+    private static final boolean WINDOWS = System.getProperty("os.name", "").startsWith("Windows");
+
+    /**
+     * Renombra source a target sustituyéndolo. En Windows, el antivirus o el indexador pueden
+     * tener abierto el destino un instante y el renombrado falla con "acceso denegado": se
+     * reintenta unas cuantas veces antes de dar el error.
+     */
+    public static void replace(Path source, Path target) throws IOException {
+        for (int attempt = 1; ; attempt++) {
+            try {
+                try {
+                    Files.move(source, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+                } catch (AtomicMoveNotSupportedException e) {
+                    Files.move(source, target, StandardCopyOption.REPLACE_EXISTING);
+                }
+                return;
+            } catch (AccessDeniedException e) {
+                if (!WINDOWS || attempt == RENAME_ATTEMPTS) {
+                    throw e;
+                }
+                try {
+                    Thread.sleep(10L * attempt);
+                } catch (InterruptedException interrupted) {
+                    Thread.currentThread().interrupt();
+                    throw e;
+                }
+            }
         }
     }
 
