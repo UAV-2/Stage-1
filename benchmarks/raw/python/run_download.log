@@ -1,0 +1,6 @@
+[SCRIPT] download book rep=1: 50 libros, 0.539 libros/s
+[SCRIPT] download book rep=2: 50 libros, 0.544 libros/s
+[SCRIPT] download book rep=3: 50 libros, 0.545 libros/s
+[SCRIPT] download book rep=4: 50 libros, 0.548 libros/s
+[SCRIPT] download book rep=5: 50 libros, 0.543 libros/s
+[BENCH] 1 filas actualizadas en C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\results\python.csv

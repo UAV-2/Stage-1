@@ -1,0 +1,38 @@
+goos: windows
+goarch: amd64
+pkg: stage1_go
+cpu: Intel(R) Core(TM) i7-14700K
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	52167700000 ns/op	391579032 B/op	 2860836 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	53834370900 ns/op	390648760 B/op	 2855533 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	54964844600 ns/op	390933352 B/op	 2855566 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	54275064400 ns/op	391398096 B/op	 2855563 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	94249404700 ns/op	810320480 B/op	 5407690 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	94227682200 ns/op	810632920 B/op	 5407701 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	93956188000 ns/op	810419024 B/op	 5407686 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	92254221700 ns/op	810308864 B/op	 5407659 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	116366235800 ns/op	1265396688 B/op	 7702989 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	115545656000 ns/op	1266471576 B/op	 7703032 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	115305864300 ns/op	1266040256 B/op	 7703024 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	114166122800 ns/op	1266656568 B/op	 7703050 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199122817200 ns/op	2472831088 B/op	14150544 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	200596947800 ns/op	2472892184 B/op	14150557 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199545048700 ns/op	2472932080 B/op	14150552 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199026222300 ns/op	2473696368 B/op	14150606 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35322298800 ns/op	451035696 B/op	 2744208 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35397118600 ns/op	261587656 B/op	 1832302 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35437183800 ns/op	261653224 B/op	 1832312 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35510241900 ns/op	261543608 B/op	 1832298 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	41633806200 ns/op	738973672 B/op	 4100508 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31723522000 ns/op	270645632 B/op	 1664882 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31478000300 ns/op	270590960 B/op	 1664876 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31157965700 ns/op	270754208 B/op	 1664878 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	66306292700 ns/op	1290605200 B/op	 6685653 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	48835750500 ns/op	454666248 B/op	 2444388 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	48165357100 ns/op	454829992 B/op	 2444403 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	47324782300 ns/op	454775992 B/op	 2444406 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	64694781600 ns/op	2286729960 B/op	10148241 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	40812689200 ns/op	575498360 B/op	 2052840 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	41901766300 ns/op	575257816 B/op	 2052828 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	40224828400 ns/op	575105560 B/op	 2052832 allocs/op
+PASS
+ok  	stage1_go	3501.595s

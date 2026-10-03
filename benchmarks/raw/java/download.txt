@@ -1,0 +1,5 @@
+[SCRIPT] download book rep=1: 50 libros, 0.679 libros/s
+[SCRIPT] download book rep=2: 50 libros, 0.701 libros/s
+[SCRIPT] download book rep=3: 50 libros, 0.651 libros/s
+[SCRIPT] download book rep=4: 50 libros, 0.697 libros/s
+[SCRIPT] download book rep=5: 50 libros, 0.682 libros/s

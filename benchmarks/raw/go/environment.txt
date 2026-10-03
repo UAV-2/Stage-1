@@ -1,23 +1,11 @@
-fecha: 2026-10-01T10:01:05+01:00
-go: go1.26.8-X:nodwarf5 linux/amd64
-cpus: 12
-cpu: 13th Gen Intel(R) Core(TM) i5-1335U
-ram: 7790920 kB
-tamaños: 100,250
-medidas: micro,script
-iteraciones: 5 de calentamiento + 10 medidas
+fecha: 2026-10-02T14:25:20+01:00
+go: go1.27.1 windows/amd64
+cpus: 28
+cpu: Intel(R) Core(TM) i7-14700K
+ram: 33231044 kB
+tamaños: 100,250,500,1000
+medidas: micro,script,download
+iteraciones: 5 de calentamiento + 10 medidas (folders con N >= 100: construcción, actualización y memoria con 1 + 3)
 repeticiones de script: 5
-mongo: mongodb://localhost:27018
-disco: anotar a mano (SSD/HDD) y el sistema de ficheros
-
-fecha: 2026-10-01T10:54:14+01:00
-go: go1.26.8-X:nodwarf5 linux/amd64
-cpus: 12
-cpu: 13th Gen Intel(R) Core(TM) i5-1335U
-ram: 7790920 kB
-tamaños: 100,250
-medidas: script
-iteraciones: 5 de calentamiento + 10 medidas
-repeticiones de script: 5
-mongo: mongodb://localhost:27018
+mongo: mongodb://localhost:27017
 disco: anotar a mano (SSD/HDD) y el sistema de ficheros

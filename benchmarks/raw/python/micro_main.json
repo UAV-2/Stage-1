@@ -1,0 +1,4974 @@
+{
+    "machine_info": {
+        "node": "hugoamador",
+        "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+        "machine": "AMD64",
+        "python_compiler": "MSC v.1938 64 bit (AMD64)",
+        "python_implementation": "CPython",
+        "python_implementation_version": "3.11.9",
+        "python_version": "3.11.9",
+        "python_build": [
+            "tags/v3.11.9:de54cf5",
+            "Apr  2 2024 10:12:12"
+        ],
+        "release": "10",
+        "system": "Windows",
+        "cpu": {
+            "python_version": "3.11.9.final.0 (64 bit)",
+            "cpuinfo_version": [
+                10,
+                1,
+                1
+            ],
+            "cpuinfo_version_string": "10.1.1",
+            "arch": "X86_64",
+            "bits": 64,
+            "count": 28,
+            "arch_string_raw": "AMD64",
+            "vendor_id_raw": "GenuineIntel",
+            "brand_raw": "Intel(R) Core(TM) i7-14700K",
+            "hz_advertised_friendly": "3.4180 GHz",
+            "hz_actual_friendly": "3.4180 GHz",
+            "hz_advertised": [
+                3418000000,
+                0
+            ],
+            "hz_actual": [
+                3418000000,
+                0
+            ],
+            "flags": [
+                "3dnow",
+                "3dnowprefetch",
+                "abm",
+                "acpi",
+                "adx",
+                "aes",
+                "apic",
+                "avx",
+                "avx2",
+                "bmi1",
+                "bmi2",
+                "clflush",
+                "clflushopt",
+                "clwb",
+                "cmov",
+                "cx16",
+                "cx8",
+                "de",
+                "dts",
+                "erms",
+                "est",
+                "f16c",
+                "fma",
+                "fpu",
+                "fxsr",
+                "gfni",
+                "ht",
+                "hypervisor",
+                "ia64",
+                "intel_pt",
+                "invpcid",
+                "lahf_lm",
+                "mca",
+                "mce",
+                "mmx",
+                "monitor",
+                "movbe",
+                "msr",
+                "mtrr",
+                "osxsave",
+                "pae",
+                "pat",
+                "pbe",
+                "pcid",
+                "pclmulqdq",
+                "pdcm",
+                "pge",
+                "pni",
+                "popcnt",
+                "pse",
+                "pse36",
+                "rdpid",
+                "rdrnd",
+                "rdseed",
+                "sep",
+                "serial",
+                "sha",
+                "smap",
+                "smep",
+                "ss",
+                "sse",
+                "sse2",
+                "sse4_1",
+                "sse4_2",
+                "ssse3",
+                "tm",
+                "tm2",
+                "tsc",
+                "tscdeadline",
+                "umip",
+                "vaes",
+                "vme",
+                "vpclmulqdq",
+                "x2apic",
+                "xsave",
+                "xtpr"
+            ],
+            "l2_cache_size": 65536,
+            "l2_cache_line_size": 2048,
+            "l2_cache_associativity": 7,
+            "stepping": 1,
+            "model": 183,
+            "family": 6
+        }
+    },
+    "commit_info": {
+        "id": "294d15d0e672e06b5bc9959f015284c9f0d5a95e",
+        "time": "2026-10-01T13:58:24+01:00",
+        "author_time": "2026-10-01T13:58:24+01:00",
+        "dirty": true,
+        "project": "Stage-1",
+        "branch": "main"
+    },
+    "benchmarks": [
+        {
+            "group": null,
+            "name": "test_write_throughput[time-100]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[time-100]",
+            "params": {
+                "kind": "time",
+                "n": 100
+            },
+            "param": "time-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 100,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.35540149999724235,
+                "max": 0.36736289999680594,
+                "mean": 0.3604982999982894,
+                "stddev": 0.003919942253399674,
+                "rounds": 10,
+                "median": 0.35907249999581836,
+                "iqr": 0.005663499978254549,
+                "q1": 0.35805040001287125,
+                "q3": 0.3637138999911258,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.35540149999724235,
+                "hd15iqr": 0.36736289999680594,
+                "ops": 2.77393818501986,
+                "total": 3.6049829999828944,
+                "data": [
+                    0.35805040001287125,
+                    0.35540149999724235,
+                    0.36736289999680594,
+                    0.3580545000004349,
+                    0.3565327999967849,
+                    0.3637138999911258,
+                    0.3640653999900678,
+                    0.35951909999130294,
+                    0.3586259000003338,
+                    0.3636566000059247
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[time-250]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[time-250]",
+            "params": {
+                "kind": "time",
+                "n": 250
+            },
+            "param": "time-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 250,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.8477208000113023,
+                "max": 0.8969873000023654,
+                "mean": 0.8796440600039205,
+                "stddev": 0.014587593648143701,
+                "rounds": 10,
+                "median": 0.8815505000020494,
+                "iqr": 0.0178479000023799,
+                "q1": 0.8744370000058552,
+                "q3": 0.8922849000082351,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.8477208000113023,
+                "hd15iqr": 0.8969873000023654,
+                "ops": 1.136823455609469,
+                "total": 8.796440600039205,
+                "data": [
+                    0.8477208000113023,
+                    0.8671680000115884,
+                    0.8922849000082351,
+                    0.8766738999984227,
+                    0.8835497999971267,
+                    0.8744370000058552,
+                    0.881838000001153,
+                    0.8969873000023654,
+                    0.8945179000002099,
+                    0.8812630000029458
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[time-500]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[time-500]",
+            "params": {
+                "kind": "time",
+                "n": 500
+            },
+            "param": "time-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 500,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.5698866000020644,
+                "max": 1.612060500003281,
+                "mean": 1.5932621099986135,
+                "stddev": 0.012817332670389215,
+                "rounds": 10,
+                "median": 1.5921091499913018,
+                "iqr": 0.016159199993126094,
+                "q1": 1.5866483999998309,
+                "q3": 1.602807599992957,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 1.5698866000020644,
+                "hd15iqr": 1.612060500003281,
+                "ops": 0.6276431189346932,
+                "total": 15.932621099986136,
+                "data": [
+                    1.612060500003281,
+                    1.602807599992957,
+                    1.605915099993581,
+                    1.5959374999947613,
+                    1.6022150000062538,
+                    1.5882807999878423,
+                    1.5698866000020644,
+                    1.5816207000025315,
+                    1.5872489000030328,
+                    1.5866483999998309
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[time-1000]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[time-1000]",
+            "params": {
+                "kind": "time",
+                "n": 1000
+            },
+            "param": "time-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 1000,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.1515209000062896,
+                "max": 3.2715445999929216,
+                "mean": 3.1963294200017116,
+                "stddev": 0.03786158362202301,
+                "rounds": 10,
+                "median": 3.1886461000103736,
+                "iqr": 0.03644250000070315,
+                "q1": 3.1659057999931974,
+                "q3": 3.2023482999939006,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 3.1515209000062896,
+                "hd15iqr": 3.2715445999929216,
+                "ops": 0.31285886671826973,
+                "total": 31.963294200017117,
+                "data": [
+                    3.1659057999931974,
+                    3.1836402000044473,
+                    3.251112900004955,
+                    3.1871403000113787,
+                    3.195032599993283,
+                    3.2715445999929216,
+                    3.1648967000073753,
+                    3.2023482999939006,
+                    3.1515209000062896,
+                    3.1901519000093685
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[book-100]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[book-100]",
+            "params": {
+                "kind": "book",
+                "n": 100
+            },
+            "param": "book-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 100,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.33595019999484066,
+                "max": 0.37600899999961257,
+                "mean": 0.34744027999986427,
+                "stddev": 0.011940316997901363,
+                "rounds": 10,
+                "median": 0.34364800000184914,
+                "iqr": 0.008765899983700365,
+                "q1": 0.34005090000573546,
+                "q3": 0.3488167999894358,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.33595019999484066,
+                "hd15iqr": 0.37600899999961257,
+                "ops": 2.878192476705322,
+                "total": 3.474402799998643,
+                "data": [
+                    0.3488167999894358,
+                    0.3592468999995617,
+                    0.33595019999484066,
+                    0.34005090000573546,
+                    0.3431274000031408,
+                    0.3441686000005575,
+                    0.33837149999453686,
+                    0.34231000000727363,
+                    0.3463515000039479,
+                    0.37600899999961257
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[book-250]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[book-250]",
+            "params": {
+                "kind": "book",
+                "n": 250
+            },
+            "param": "book-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 250,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.7710605000029318,
+                "max": 0.7988525999971898,
+                "mean": 0.7841108499997063,
+                "stddev": 0.00937779614389374,
+                "rounds": 10,
+                "median": 0.7823346000004676,
+                "iqr": 0.018364800009294413,
+                "q1": 0.7760256999899866,
+                "q3": 0.794390499999281,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 0.7710605000029318,
+                "hd15iqr": 0.7988525999971898,
+                "ops": 1.2753298847992915,
+                "total": 7.841108499997063,
+                "data": [
+                    0.79535109999415,
+                    0.774717199994484,
+                    0.7823663000017405,
+                    0.7760256999899866,
+                    0.794390499999281,
+                    0.7823028999991948,
+                    0.7988525999971898,
+                    0.7808364000084111,
+                    0.785205300009693,
+                    0.7710605000029318
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[book-500]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[book-500]",
+            "params": {
+                "kind": "book",
+                "n": 500
+            },
+            "param": "book-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 500,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.357846500002779,
+                "max": 1.4079831999988528,
+                "mean": 1.3783417999977245,
+                "stddev": 0.0169397446978748,
+                "rounds": 10,
+                "median": 1.3769371999951545,
+                "iqr": 0.02117899998847861,
+                "q1": 1.3618860999995377,
+                "q3": 1.3830650999880163,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 1.357846500002779,
+                "hd15iqr": 1.4079831999988528,
+                "ops": 0.7255094491088138,
+                "total": 13.783417999977246,
+                "data": [
+                    1.3788466000114568,
+                    1.3605169999937061,
+                    1.3776930999883916,
+                    1.3761813000019174,
+                    1.4079831999988528,
+                    1.357846500002779,
+                    1.3830650999880163,
+                    1.3618860999995377,
+                    1.404013199993642,
+                    1.3753858999989461
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[book-1000]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[book-1000]",
+            "params": {
+                "kind": "book",
+                "n": 1000
+            },
+            "param": "book-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 1000,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.7507745000038994,
+                "max": 2.8342135999992024,
+                "mean": 2.782925680000335,
+                "stddev": 0.024767612714542492,
+                "rounds": 10,
+                "median": 2.7792074999961187,
+                "iqr": 0.033703500012052245,
+                "q1": 2.764977699989686,
+                "q3": 2.798681200001738,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 2.7507745000038994,
+                "hd15iqr": 2.8342135999992024,
+                "ops": 0.35933406601065954,
+                "total": 27.82925680000335,
+                "data": [
+                    2.783911499995156,
+                    2.764977699989686,
+                    2.7745034999970812,
+                    2.7507745000038994,
+                    2.798681200001738,
+                    2.787385900010122,
+                    2.8051401000120677,
+                    2.8342135999992024,
+                    2.7696577000024263,
+                    2.7600110999919707
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[range-100]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[range-100]",
+            "params": {
+                "kind": "range",
+                "n": 100
+            },
+            "param": "range-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 100,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.33583259998704307,
+                "max": 0.34934879999491386,
+                "mean": 0.34241061999782685,
+                "stddev": 0.003975701506125456,
+                "rounds": 10,
+                "median": 0.3424682499971823,
+                "iqr": 0.0034891000104835257,
+                "q1": 0.3407472999970196,
+                "q3": 0.3442364000075031,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.33583259998704307,
+                "hd15iqr": 0.34934879999491386,
+                "ops": 2.9204701653422624,
+                "total": 3.4241061999782687,
+                "data": [
+                    0.3440130999952089,
+                    0.3372066000010818,
+                    0.34934879999491386,
+                    0.33583259998704307,
+                    0.3416247999994084,
+                    0.34201300000131596,
+                    0.3442364000075031,
+                    0.3407472999970196,
+                    0.34616010000172537,
+                    0.3429234999930486
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[range-250]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[range-250]",
+            "params": {
+                "kind": "range",
+                "n": 250
+            },
+            "param": "range-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 250,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.8053361000056611,
+                "max": 0.8345386000000872,
+                "mean": 0.8164835299976403,
+                "stddev": 0.00833546516470614,
+                "rounds": 10,
+                "median": 0.8155771999954595,
+                "iqr": 0.007209299990790896,
+                "q1": 0.810019900003681,
+                "q3": 0.8172291999944719,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 0.8053361000056611,
+                "hd15iqr": 0.8345386000000872,
+                "ops": 1.224764448099633,
+                "total": 8.164835299976403,
+                "data": [
+                    0.8254288999887649,
+                    0.8097897999978159,
+                    0.817157400000724,
+                    0.8172291999944719,
+                    0.814180999994278,
+                    0.8160822999925585,
+                    0.810019900003681,
+                    0.8053361000056611,
+                    0.8345386000000872,
+                    0.8150720999983605
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[range-500]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[range-500]",
+            "params": {
+                "kind": "range",
+                "n": 500
+            },
+            "param": "range-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 500,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.4652791999978945,
+                "max": 1.491007599994191,
+                "mean": 1.476900069999101,
+                "stddev": 0.008324833059067623,
+                "rounds": 10,
+                "median": 1.4778959500035853,
+                "iqr": 0.013645900005940348,
+                "q1": 1.4687646999955177,
+                "q3": 1.482410600001458,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 1.4652791999978945,
+                "hd15iqr": 1.491007599994191,
+                "ops": 0.6770938808342047,
+                "total": 14.769000699991011,
+                "data": [
+                    1.477639700009604,
+                    1.4652791999978945,
+                    1.4781521999975666,
+                    1.4687646999955177,
+                    1.4823802999890177,
+                    1.482410600001458,
+                    1.471233399992343,
+                    1.4680834000027971,
+                    1.491007599994191,
+                    1.4840496000106214
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_write_throughput[range-1000]",
+            "fullname": "bench/test_datalake.py::test_write_throughput[range-1000]",
+            "params": {
+                "kind": "range",
+                "n": 1000
+            },
+            "param": "range-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 1000,
+                "metric": "write_throughput",
+                "unit": "books/s",
+                "convert": "throughput"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.933099100002437,
+                "max": 3.021024599991506,
+                "mean": 2.974188570000115,
+                "stddev": 0.03247645557146925,
+                "rounds": 10,
+                "median": 2.982942650000041,
+                "iqr": 0.06554039999900851,
+                "q1": 2.935942399999476,
+                "q3": 3.0014827999984846,
+                "iqr_outliers": 0,
+                "stddev_outliers": 5,
+                "outliers": "5;0",
+                "ld15iqr": 2.933099100002437,
+                "hd15iqr": 3.021024599991506,
+                "ops": 0.33622615932518407,
+                "total": 29.74188570000115,
+                "data": [
+                    3.0014827999984846,
+                    2.9821489000023575,
+                    3.021024599991506,
+                    3.0072618999984115,
+                    2.9529806000064127,
+                    2.983736399997724,
+                    2.9355284000048414,
+                    2.933099100002437,
+                    2.9886805999994976,
+                    2.935942399999476
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[time-100]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[time-100]",
+            "params": {
+                "kind": "time",
+                "n": 100
+            },
+            "param": "time-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 100,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.947400000470225e-05,
+                "max": 4.3806999965454455e-05,
+                "mean": 4.051379999873461e-05,
+                "stddev": 1.3436372148457296e-06,
+                "rounds": 10,
+                "median": 3.991450001194607e-05,
+                "iqr": 1.4360000204760638e-06,
+                "q1": 3.9607999933650714e-05,
+                "q3": 4.104399995412678e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 3.947400000470225e-05,
+                "hd15iqr": 4.3806999965454455e-05,
+                "ops": 24682.94753963424,
+                "total": 0.0004051379999873461,
+                "data": [
+                    3.9711500066914594e-05,
+                    3.954550003982149e-05,
+                    3.9729999989503995e-05,
+                    3.947400000470225e-05,
+                    3.9607999933650714e-05,
+                    4.3806999965454455e-05,
+                    4.009900003438815e-05,
+                    4.0701000034459864e-05,
+                    4.141799996432383e-05,
+                    4.104399995412678e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[time-250]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[time-250]",
+            "params": {
+                "kind": "time",
+                "n": 250
+            },
+            "param": "time-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 250,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.319350002333522e-05,
+                "max": 5.204300003242679e-05,
+                "mean": 4.649135000363458e-05,
+                "stddev": 2.6273129323521837e-06,
+                "rounds": 10,
+                "median": 4.586349998135119e-05,
+                "iqr": 3.4444998891558495e-06,
+                "q1": 4.4355000063660555e-05,
+                "q3": 4.7799499952816404e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 4.319350002333522e-05,
+                "hd15iqr": 5.204300003242679e-05,
+                "ops": 21509.377549196193,
+                "total": 0.0004649135000363458,
+                "data": [
+                    4.7799499952816404e-05,
+                    4.750250001961831e-05,
+                    4.552749996946659e-05,
+                    4.61994999932358e-05,
+                    4.319350002333522e-05,
+                    5.204300003242679e-05,
+                    4.874599995673634e-05,
+                    4.4355000063660555e-05,
+                    4.552550002699718e-05,
+                    4.40214999980526e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[time-500]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[time-500]",
+            "params": {
+                "kind": "time",
+                "n": 500
+            },
+            "param": "time-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 500,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.1681500006234275e-05,
+                "max": 5.3807500007678756e-05,
+                "mean": 4.5043150006677024e-05,
+                "stddev": 3.7383603931280526e-06,
+                "rounds": 10,
+                "median": 4.354474996944191e-05,
+                "iqr": 4.1245000466005925e-06,
+                "q1": 4.23294999927748e-05,
+                "q3": 4.645400003937539e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 4.1681500006234275e-05,
+                "hd15iqr": 5.3807500007678756e-05,
+                "ops": 22200.933990002115,
+                "total": 0.00045043150006677027,
+                "data": [
+                    4.311199998483062e-05,
+                    4.6102000051178036e-05,
+                    4.8002500043367037e-05,
+                    4.185300000244751e-05,
+                    4.341549996752292e-05,
+                    4.1681500006234275e-05,
+                    4.36739999713609e-05,
+                    4.23294999927748e-05,
+                    5.3807500007678756e-05,
+                    4.645400003937539e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[time-1000]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[time-1000]",
+            "params": {
+                "kind": "time",
+                "n": 1000
+            },
+            "param": "time-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 1000,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.093550000106916e-05,
+                "max": 4.613149998476729e-05,
+                "mean": 4.375974999129539e-05,
+                "stddev": 1.706261638829328e-06,
+                "rounds": 10,
+                "median": 4.343650001828792e-05,
+                "iqr": 2.764499949989837e-06,
+                "q1": 4.2548999990685845e-05,
+                "q3": 4.531349994067568e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 4.093550000106916e-05,
+                "hd15iqr": 4.613149998476729e-05,
+                "ops": 22852.05011909159,
+                "total": 0.00043759749991295393,
+                "data": [
+                    4.5630500026163645e-05,
+                    4.093550000106916e-05,
+                    4.613149998476729e-05,
+                    4.531349994067568e-05,
+                    4.3790499985334465e-05,
+                    4.507149998971727e-05,
+                    4.2326999973738567e-05,
+                    4.2548999990685845e-05,
+                    4.3082500051241366e-05,
+                    4.2765999969560655e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[book-100]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[book-100]",
+            "params": {
+                "kind": "book",
+                "n": 100
+            },
+            "param": "book-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 100,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.759599996556062e-05,
+                "max": 4.088999994564801e-05,
+                "mean": 3.94918499951018e-05,
+                "stddev": 1.110562895832987e-06,
+                "rounds": 10,
+                "median": 3.9812750037526706e-05,
+                "iqr": 1.724499961710533e-06,
+                "q1": 3.862450001179241e-05,
+                "q3": 4.034899997350294e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 3.759599996556062e-05,
+                "hd15iqr": 4.088999994564801e-05,
+                "ops": 25321.68029920175,
+                "total": 0.000394918499951018,
+                "data": [
+                    4.047599999466911e-05,
+                    3.862450001179241e-05,
+                    4.0130500055965965e-05,
+                    3.873299996485003e-05,
+                    3.9495000019087454e-05,
+                    3.830050001852214e-05,
+                    4.032400000141934e-05,
+                    4.034899997350294e-05,
+                    4.088999994564801e-05,
+                    3.759599996556062e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[book-250]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[book-250]",
+            "params": {
+                "kind": "book",
+                "n": 250
+            },
+            "param": "book-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 250,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.905449993908405e-05,
+                "max": 4.454550005903002e-05,
+                "mean": 4.0606899994600096e-05,
+                "stddev": 1.7126405654111657e-06,
+                "rounds": 10,
+                "median": 4.0086999943014236e-05,
+                "iqr": 1.2650000280700575e-06,
+                "q1": 3.940449998481199e-05,
+                "q3": 4.066950001288205e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 3.905449993908405e-05,
+                "hd15iqr": 4.454550005903002e-05,
+                "ops": 24626.356607694255,
+                "total": 0.000406068999946001,
+                "data": [
+                    4.029649993753992e-05,
+                    3.905449993908405e-05,
+                    4.066950001288205e-05,
+                    3.940449998481199e-05,
+                    4.25629999517696e-05,
+                    3.975450003053993e-05,
+                    4.065400004037656e-05,
+                    3.924950004147831e-05,
+                    4.454550005903002e-05,
+                    3.987749994848855e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[book-500]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[book-500]",
+            "params": {
+                "kind": "book",
+                "n": 500
+            },
+            "param": "book-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 500,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.861450000840705e-05,
+                "max": 4.084450003574602e-05,
+                "mean": 3.9600400006747804e-05,
+                "stddev": 8.003813720696622e-07,
+                "rounds": 10,
+                "median": 3.931874998670537e-05,
+                "iqr": 1.571500033605846e-06,
+                "q1": 3.89290000020992e-05,
+                "q3": 4.0500500035705044e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 3.861450000840705e-05,
+                "hd15iqr": 4.084450003574602e-05,
+                "ops": 25252.270174786183,
+                "total": 0.000396004000067478,
+                "data": [
+                    4.0500500035705044e-05,
+                    4.084450003574602e-05,
+                    3.9930499988258815e-05,
+                    3.9301500000874514e-05,
+                    3.933599997253623e-05,
+                    3.884300000208895e-05,
+                    3.89290000020992e-05,
+                    3.861450000840705e-05,
+                    3.913950000423938e-05,
+                    4.056500001752284e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[book-1000]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[book-1000]",
+            "params": {
+                "kind": "book",
+                "n": 1000
+            },
+            "param": "book-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 1000,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.87734999821987e-05,
+                "max": 5.232050003542099e-05,
+                "mean": 4.092870001477422e-05,
+                "stddev": 4.080671937614083e-06,
+                "rounds": 10,
+                "median": 3.9596750029886605e-05,
+                "iqr": 5.935000081080911e-07,
+                "q1": 3.9236500015249476e-05,
+                "q3": 3.983000002335757e-05,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 3.87734999821987e-05,
+                "hd15iqr": 4.168100000242702e-05,
+                "ops": 24432.733012263416,
+                "total": 0.0004092870001477421,
+                "data": [
+                    3.955849999329075e-05,
+                    3.9503500011051075e-05,
+                    3.963500006648246e-05,
+                    3.87734999821987e-05,
+                    3.983000002335757e-05,
+                    3.9236500015249476e-05,
+                    3.982000001997221e-05,
+                    3.892849999829195e-05,
+                    4.168100000242702e-05,
+                    5.232050003542099e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[range-100]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[range-100]",
+            "params": {
+                "kind": "range",
+                "n": 100
+            },
+            "param": "range-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 100,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.869899999699555e-05,
+                "max": 5.5650000067544166e-05,
+                "mean": 4.1896500013535845e-05,
+                "stddev": 5.037308689831499e-06,
+                "rounds": 10,
+                "median": 4.0910750030889175e-05,
+                "iqr": 3.0104999314062295e-06,
+                "q1": 3.8931500021135435e-05,
+                "q3": 4.1941999952541665e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 3.869899999699555e-05,
+                "hd15iqr": 5.5650000067544166e-05,
+                "ops": 23868.34221657947,
+                "total": 0.0004189650001353585,
+                "data": [
+                    4.0136000025086104e-05,
+                    4.1941999952541665e-05,
+                    3.885099999024533e-05,
+                    4.168550003669225e-05,
+                    3.8931500021135435e-05,
+                    4.177700000582263e-05,
+                    3.9124000031733886e-05,
+                    5.5650000067544166e-05,
+                    4.216900000756141e-05,
+                    3.869899999699555e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[range-250]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[range-250]",
+            "params": {
+                "kind": "range",
+                "n": 250
+            },
+            "param": "range-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 250,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.8083999970695e-05,
+                "max": 4.248049997841008e-05,
+                "mean": 4.016774999763584e-05,
+                "stddev": 1.2850057566825753e-06,
+                "rounds": 10,
+                "median": 3.9667249984631775e-05,
+                "iqr": 1.6779999714344778e-06,
+                "q1": 3.95695000042906e-05,
+                "q3": 4.124749997572508e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 3.8083999970695e-05,
+                "hd15iqr": 4.248049997841008e-05,
+                "ops": 24895.59410369904,
+                "total": 0.0004016774999763584,
+                "data": [
+                    4.248049997841008e-05,
+                    3.97030000021914e-05,
+                    4.124749997572508e-05,
+                    3.963149996707216e-05,
+                    4.095950003829785e-05,
+                    3.95695000042906e-05,
+                    4.12520000099903e-05,
+                    3.8083999970695e-05,
+                    3.957950000767596e-05,
+                    3.917050002200995e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[range-500]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[range-500]",
+            "params": {
+                "kind": "range",
+                "n": 500
+            },
+            "param": "range-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 500,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.9130500008468514e-05,
+                "max": 4.8323500013793815e-05,
+                "mean": 4.233250001561828e-05,
+                "stddev": 2.8336137571746486e-06,
+                "rounds": 10,
+                "median": 4.222474999551196e-05,
+                "iqr": 4.042000000481494e-06,
+                "q1": 4.000150001957081e-05,
+                "q3": 4.4043500020052305e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 3.9130500008468514e-05,
+                "hd15iqr": 4.8323500013793815e-05,
+                "ops": 23622.512245462873,
+                "total": 0.0004233250001561828,
+                "data": [
+                    4.009100004623178e-05,
+                    4.191150001133792e-05,
+                    3.960150002967566e-05,
+                    4.000150001957081e-05,
+                    3.9130500008468514e-05,
+                    4.8323500013793815e-05,
+                    4.334249999374151e-05,
+                    4.253799997968599e-05,
+                    4.434150003362447e-05,
+                    4.4043500020052305e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_lookup_time[range-1000]",
+            "fullname": "bench/test_datalake.py::test_lookup_time[range-1000]",
+            "params": {
+                "kind": "range",
+                "n": 1000
+            },
+            "param": "range-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 1000,
+                "metric": "lookup_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.966700001910794e-05,
+                "max": 5.0645000010263173e-05,
+                "mean": 4.3569000008574226e-05,
+                "stddev": 3.2743829384602875e-06,
+                "rounds": 10,
+                "median": 4.298374999052612e-05,
+                "iqr": 4.158500014455055e-06,
+                "q1": 4.077450001204852e-05,
+                "q3": 4.493300002650358e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 3.966700001910794e-05,
+                "hd15iqr": 5.0645000010263173e-05,
+                "ops": 22952.098964933866,
+                "total": 0.0004356900000857422,
+                "data": [
+                    4.077450001204852e-05,
+                    4.066200002853293e-05,
+                    4.640949999156874e-05,
+                    4.2281999994884246e-05,
+                    3.966700001910794e-05,
+                    4.2048500035889446e-05,
+                    4.493300002650358e-05,
+                    4.3685499986168e-05,
+                    4.458299998077564e-05,
+                    5.0645000010263173e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[time-100]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[time-100]",
+            "params": {
+                "kind": "time",
+                "n": 100
+            },
+            "param": "time-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 100,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.006187419999332633,
+                "max": 0.006999679999717045,
+                "mean": 0.006407252000208245,
+                "stddev": 0.00023399135921505518,
+                "rounds": 10,
+                "median": 0.006351490000088233,
+                "iqr": 0.0002223899995442485,
+                "q1": 0.0062615900009404864,
+                "q3": 0.006483980000484735,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.006187419999332633,
+                "hd15iqr": 0.006999679999717045,
+                "ops": 156.0731496072729,
+                "total": 0.06407252000208245,
+                "data": [
+                    0.006448640000598971,
+                    0.006999679999717045,
+                    0.006483980000484735,
+                    0.006282300000020768,
+                    0.006187419999332633,
+                    0.0062615900009404864,
+                    0.006367990000580903,
+                    0.006218090000038501,
+                    0.006487840000772849,
+                    0.0063349899995955635
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[time-250]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[time-250]",
+            "params": {
+                "kind": "time",
+                "n": 250
+            },
+            "param": "time-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 250,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.012615419999929146,
+                "max": 0.01369845000008354,
+                "mean": 0.013110796999972082,
+                "stddev": 0.00032194094430517675,
+                "rounds": 10,
+                "median": 0.013120245000027352,
+                "iqr": 0.0005428299991763197,
+                "q1": 0.012815479999699165,
+                "q3": 0.013358309998875485,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.012615419999929146,
+                "hd15iqr": 0.01369845000008354,
+                "ops": 76.27301376126329,
+                "total": 0.13110796999972082,
+                "data": [
+                    0.012615419999929146,
+                    0.013010700000450015,
+                    0.012792959999933374,
+                    0.01369845000008354,
+                    0.013358309998875485,
+                    0.013383790000807494,
+                    0.012815479999699165,
+                    0.013192369999887887,
+                    0.013095679999969434,
+                    0.013144810000085272
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[time-500]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[time-500]",
+            "params": {
+                "kind": "time",
+                "n": 500
+            },
+            "param": "time-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 500,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.02348758000007365,
+                "max": 0.024914459999126847,
+                "mean": 0.024236816999909934,
+                "stddev": 0.0004355432020551415,
+                "rounds": 10,
+                "median": 0.02420364000063273,
+                "iqr": 0.0005794800003059188,
+                "q1": 0.024017649999586867,
+                "q3": 0.024597129999892785,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.02348758000007365,
+                "hd15iqr": 0.024914459999126847,
+                "ops": 41.259543280939745,
+                "total": 0.24236816999909933,
+                "data": [
+                    0.024134130000311414,
+                    0.024079779999738093,
+                    0.023740749999706167,
+                    0.024914459999126847,
+                    0.024273150000954046,
+                    0.024648570000135806,
+                    0.02447496999957366,
+                    0.02348758000007365,
+                    0.024597129999892785,
+                    0.024017649999586867
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[time-1000]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[time-1000]",
+            "params": {
+                "kind": "time",
+                "n": 1000
+            },
+            "param": "time-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "time",
+                "n_books": 1000,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04574177000031341,
+                "max": 0.04820821000030264,
+                "mean": 0.04676477199987858,
+                "stddev": 0.0008114724398480532,
+                "rounds": 10,
+                "median": 0.04661284499961767,
+                "iqr": 0.0010258399997837842,
+                "q1": 0.04622177999990527,
+                "q3": 0.04724761999968905,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.04574177000031341,
+                "hd15iqr": 0.04820821000030264,
+                "ops": 21.383617565859115,
+                "total": 0.46764771999878574,
+                "data": [
+                    0.04673050999990665,
+                    0.04674761999922339,
+                    0.04649517999932869,
+                    0.04574177000031341,
+                    0.04622177999990527,
+                    0.045954840000194966,
+                    0.04724761999968905,
+                    0.04636229000025196,
+                    0.04820821000030264,
+                    0.047937899999669756
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[book-100]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[book-100]",
+            "params": {
+                "kind": "book",
+                "n": 100
+            },
+            "param": "book-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 100,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00601600999943912,
+                "max": 0.006760350000695326,
+                "mean": 0.006312267000175779,
+                "stddev": 0.00023851932412790363,
+                "rounds": 10,
+                "median": 0.0062806150002870705,
+                "iqr": 0.00020370000129332766,
+                "q1": 0.006160309999540914,
+                "q3": 0.006364010000834241,
+                "iqr_outliers": 1,
+                "stddev_outliers": 4,
+                "outliers": "4;1",
+                "ld15iqr": 0.00601600999943912,
+                "hd15iqr": 0.006760350000695326,
+                "ops": 158.42168906545822,
+                "total": 0.0631226700017578,
+                "data": [
+                    0.006199790000391658,
+                    0.00601600999943912,
+                    0.006252640001184773,
+                    0.006160309999540914,
+                    0.0060706300006131645,
+                    0.006760350000695326,
+                    0.0066627899999730286,
+                    0.006327549999696203,
+                    0.006308589999389369,
+                    0.006364010000834241
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[book-250]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[book-250]",
+            "params": {
+                "kind": "book",
+                "n": 250
+            },
+            "param": "book-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 250,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.012437919998774305,
+                "max": 0.014214120000542608,
+                "mean": 0.01328277899985551,
+                "stddev": 0.000506927816811076,
+                "rounds": 10,
+                "median": 0.013271309999981894,
+                "iqr": 0.0006483999997726631,
+                "q1": 0.01294218999973964,
+                "q3": 0.013590589999512303,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.012437919998774305,
+                "hd15iqr": 0.014214120000542608,
+                "ops": 75.28545043253962,
+                "total": 0.13282778999855507,
+                "data": [
+                    0.01317257999908179,
+                    0.013555150000320282,
+                    0.013639850000618025,
+                    0.01294218999973964,
+                    0.013225219999731053,
+                    0.012437919998774305,
+                    0.013317400000232738,
+                    0.014214120000542608,
+                    0.013590589999512303,
+                    0.012732770000002346
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[book-500]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[book-500]",
+            "params": {
+                "kind": "book",
+                "n": 500
+            },
+            "param": "book-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 500,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.024467300000833348,
+                "max": 0.025944810001237783,
+                "mean": 0.025046287000150186,
+                "stddev": 0.0005355574733234282,
+                "rounds": 10,
+                "median": 0.024867570000060367,
+                "iqr": 0.0008881200003088459,
+                "q1": 0.024598249999689868,
+                "q3": 0.025486369999998714,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.024467300000833348,
+                "hd15iqr": 0.025944810001237783,
+                "ops": 39.92607766548406,
+                "total": 0.25046287000150186,
+                "data": [
+                    0.025725039999815635,
+                    0.024598249999689868,
+                    0.025486369999998714,
+                    0.024467480000748765,
+                    0.0247167299996363,
+                    0.025944810001237783,
+                    0.024467300000833348,
+                    0.025321749999420717,
+                    0.024880339999799616,
+                    0.02485480000032112
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[book-1000]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[book-1000]",
+            "params": {
+                "kind": "book",
+                "n": 1000
+            },
+            "param": "book-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "book",
+                "n_books": 1000,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04580130999966059,
+                "max": 0.04643751999974484,
+                "mean": 0.04608382600010373,
+                "stddev": 0.00019651013912808086,
+                "rounds": 10,
+                "median": 0.04605000500014285,
+                "iqr": 0.00015995000139810284,
+                "q1": 0.04596301999990828,
+                "q3": 0.046122970001306385,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 0.04580130999966059,
+                "hd15iqr": 0.046381139999721196,
+                "ops": 21.69958718266468,
+                "total": 0.4608382600010372,
+                "data": [
+                    0.04580130999966059,
+                    0.04643751999974484,
+                    0.04596301999990828,
+                    0.046088460000464695,
+                    0.046011549999821,
+                    0.045987049999530426,
+                    0.046122970001306385,
+                    0.04593316000100458,
+                    0.046381139999721196,
+                    0.04611207999987528
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[range-100]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[range-100]",
+            "params": {
+                "kind": "range",
+                "n": 100
+            },
+            "param": "range-100",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 100,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.006401270000787917,
+                "max": 0.007350050000241026,
+                "mean": 0.006966560000291793,
+                "stddev": 0.0002711774212589531,
+                "rounds": 10,
+                "median": 0.006961210000008577,
+                "iqr": 0.00030132999818306434,
+                "q1": 0.006815610000921879,
+                "q3": 0.007116939999104943,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.006401270000787917,
+                "hd15iqr": 0.007350050000241026,
+                "ops": 143.54286763598034,
+                "total": 0.06966560000291792,
+                "data": [
+                    0.0069741200000862594,
+                    0.007350050000241026,
+                    0.007116939999104943,
+                    0.006939240000792779,
+                    0.006815610000921879,
+                    0.006401270000787917,
+                    0.007283050000842195,
+                    0.006948299999930896,
+                    0.006770359999791253,
+                    0.0070666600004187785
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[range-250]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[range-250]",
+            "params": {
+                "kind": "range",
+                "n": 250
+            },
+            "param": "range-250",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 250,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.013168259999656585,
+                "max": 0.014572830000543036,
+                "mean": 0.013829738000058569,
+                "stddev": 0.00045089003572099454,
+                "rounds": 10,
+                "median": 0.013720124999963446,
+                "iqr": 0.0005236699988017783,
+                "q1": 0.013543500000378118,
+                "q3": 0.014067169999179896,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.013168259999656585,
+                "hd15iqr": 0.014572830000543036,
+                "ops": 72.3079497236871,
+                "total": 0.1382973800005857,
+                "data": [
+                    0.014067169999179896,
+                    0.0137789000000339,
+                    0.013661349999892991,
+                    0.014572830000543036,
+                    0.013168259999656585,
+                    0.013543500000378118,
+                    0.013469890000123996,
+                    0.014504290001059416,
+                    0.013963069999590516,
+                    0.013568120000127238
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[range-500]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[range-500]",
+            "params": {
+                "kind": "range",
+                "n": 500
+            },
+            "param": "range-500",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 500,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.024508619999687654,
+                "max": 0.02637962000007974,
+                "mean": 0.025699329000053693,
+                "stddev": 0.0006314620972415712,
+                "rounds": 10,
+                "median": 0.025940975000412436,
+                "iqr": 0.0008386999994399978,
+                "q1": 0.025251489999936892,
+                "q3": 0.02609018999937689,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.024508619999687654,
+                "hd15iqr": 0.02637962000007974,
+                "ops": 38.91152177544833,
+                "total": 0.25699329000053694,
+                "data": [
+                    0.02597935000085272,
+                    0.02637962000007974,
+                    0.02484425000002375,
+                    0.02609018999937689,
+                    0.025251489999936892,
+                    0.024508619999687654,
+                    0.02607797000091523,
+                    0.025902599999972152,
+                    0.025660680000146385,
+                    0.026298519999545533
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_incremental_detect_time[range-1000]",
+            "fullname": "bench/test_datalake.py::test_incremental_detect_time[range-1000]",
+            "params": {
+                "kind": "range",
+                "n": 1000
+            },
+            "param": "range-1000",
+            "extra_info": {
+                "component": "datalake",
+                "structure": "range",
+                "n_books": 1000,
+                "metric": "incremental_detect_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.04768191999901319,
+                "max": 0.049782009999034926,
+                "mean": 0.048326901999826075,
+                "stddev": 0.0006332678461544509,
+                "rounds": 10,
+                "median": 0.048120520000520625,
+                "iqr": 0.0006616299986490076,
+                "q1": 0.04792277000087779,
+                "q3": 0.048584399999526795,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.04768191999901319,
+                "hd15iqr": 0.049782009999034926,
+                "ops": 20.69240854718142,
+                "total": 0.4832690199982608,
+                "data": [
+                    0.04768191999901319,
+                    0.048584399999526795,
+                    0.04806663000053959,
+                    0.04817441000050167,
+                    0.048347849999845496,
+                    0.04784632999944734,
+                    0.04792277000087779,
+                    0.04893238999939058,
+                    0.04793031000008341,
+                    0.049782009999034926
+                ],
+                "iterations": 10
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[json-100]",
+            "fullname": "bench/test_index.py::test_index_build_time[json-100]",
+            "params": {
+                "kind": "json",
+                "n": 100
+            },
+            "param": "json-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 100,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.6955624999973224,
+                "max": 1.7413691999972798,
+                "mean": 1.711566949999542,
+                "stddev": 0.014040069625473686,
+                "rounds": 10,
+                "median": 1.7086296999987098,
+                "iqr": 0.015870699993683957,
+                "q1": 1.7009762000088813,
+                "q3": 1.7168469000025652,
+                "iqr_outliers": 1,
+                "stddev_outliers": 3,
+                "outliers": "3;1",
+                "ld15iqr": 1.6955624999973224,
+                "hd15iqr": 1.7413691999972798,
+                "ops": 0.5842599379476611,
+                "total": 17.11566949999542,
+                "data": [
+                    1.7009762000088813,
+                    1.7122481999977026,
+                    1.6955624999973224,
+                    1.7070929000037722,
+                    1.7168469000025652,
+                    1.7413691999972798,
+                    1.7060601999983191,
+                    1.7101664999936474,
+                    1.7274135000043316,
+                    1.697933399991598
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[json-250]",
+            "fullname": "bench/test_index.py::test_index_build_time[json-250]",
+            "params": {
+                "kind": "json",
+                "n": 250
+            },
+            "param": "json-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 250,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.9206792000040878,
+                "max": 4.095704099992872,
+                "mean": 4.03165166000108,
+                "stddev": 0.0489665535540103,
+                "rounds": 10,
+                "median": 4.038789899997937,
+                "iqr": 0.028869800007669255,
+                "q1": 4.0218129999993835,
+                "q3": 4.050682800007053,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 3.991126200009603,
+                "hd15iqr": 4.095704099992872,
+                "ops": 0.2480373019130656,
+                "total": 40.3165166000108,
+                "data": [
+                    4.0403561999992235,
+                    4.0218129999993835,
+                    4.030798100007814,
+                    4.095704099992872,
+                    4.084701599989785,
+                    3.9206792000040878,
+                    4.043431800004328,
+                    3.991126200009603,
+                    4.037223599996651,
+                    4.050682800007053
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[json-500]",
+            "fullname": "bench/test_index.py::test_index_build_time[json-500]",
+            "params": {
+                "kind": "json",
+                "n": 500
+            },
+            "param": "json-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 500,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 6.8670478999993065,
+                "max": 6.969350300001679,
+                "mean": 6.909948890001397,
+                "stddev": 0.0386767582555107,
+                "rounds": 10,
+                "median": 6.898148649997893,
+                "iqr": 0.06268240000645164,
+                "q1": 6.876138299994636,
+                "q3": 6.938820700001088,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 6.8670478999993065,
+                "hd15iqr": 6.969350300001679,
+                "ops": 0.14471887070640807,
+                "total": 69.09948890001397,
+                "data": [
+                    6.938820700001088,
+                    6.886840100007248,
+                    6.880809499998577,
+                    6.876138299994636,
+                    6.966452300010133,
+                    6.9289681000082055,
+                    6.969350300001679,
+                    6.9094571999885375,
+                    6.875604500004556,
+                    6.8670478999993065
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[json-1000]",
+            "fullname": "bench/test_index.py::test_index_build_time[json-1000]",
+            "params": {
+                "kind": "json",
+                "n": 1000
+            },
+            "param": "json-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 1000,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 14.484840899996925,
+                "max": 14.685432599988417,
+                "mean": 14.595362990000286,
+                "stddev": 0.07253507323462266,
+                "rounds": 10,
+                "median": 14.602895850002824,
+                "iqr": 0.1156848000100581,
+                "q1": 14.54252699999779,
+                "q3": 14.658211800007848,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 14.484840899996925,
+                "hd15iqr": 14.685432599988417,
+                "ops": 0.06851491125538499,
+                "total": 145.95362990000285,
+                "data": [
+                    14.56929189999937,
+                    14.484840899996925,
+                    14.656302400006098,
+                    14.658211800007848,
+                    14.609142700006487,
+                    14.661981299999752,
+                    14.59664899999916,
+                    14.54252699999779,
+                    14.685432599988417,
+                    14.489250300001004
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[folders-100]",
+            "fullname": "bench/test_index.py::test_index_build_time[folders-100]",
+            "params": {
+                "kind": "folders",
+                "n": 100
+            },
+            "param": "folders-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 100,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 56.935500499996124,
+                "max": 57.746406100006425,
+                "mean": 57.30828900000294,
+                "stddev": 0.40938104806544273,
+                "rounds": 3,
+                "median": 57.24296040000627,
+                "iqr": 0.6081792000077257,
+                "q1": 57.01236547499866,
+                "q3": 57.620544675006386,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 56.935500499996124,
+                "hd15iqr": 57.746406100006425,
+                "ops": 0.017449482744109648,
+                "total": 171.92486700000882,
+                "data": [
+                    57.746406100006425,
+                    56.935500499996124,
+                    57.24296040000627
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[folders-250]",
+            "fullname": "bench/test_index.py::test_index_build_time[folders-250]",
+            "params": {
+                "kind": "folders",
+                "n": 250
+            },
+            "param": "folders-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 250,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 98.61498959999881,
+                "max": 100.77253360000032,
+                "mean": 99.4575825999976,
+                "stddev": 1.153728992489748,
+                "rounds": 3,
+                "median": 98.98522459999367,
+                "iqr": 1.6181580000011309,
+                "q1": 98.70754834999752,
+                "q3": 100.32570634999865,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 98.61498959999881,
+                "hd15iqr": 100.77253360000032,
+                "ops": 0.010054537561221844,
+                "total": 298.3727477999928,
+                "data": [
+                    98.98522459999367,
+                    98.61498959999881,
+                    100.77253360000032
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[folders-500]",
+            "fullname": "bench/test_index.py::test_index_build_time[folders-500]",
+            "params": {
+                "kind": "folders",
+                "n": 500
+            },
+            "param": "folders-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 500,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 120.77963449999515,
+                "max": 124.00181139999768,
+                "mean": 122.45721106666315,
+                "stddev": 1.615199059775957,
+                "rounds": 3,
+                "median": 122.59018729999661,
+                "iqr": 2.4166326750018925,
+                "q1": 121.23227269999552,
+                "q3": 123.64890537499741,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 120.77963449999515,
+                "hd15iqr": 124.00181139999768,
+                "ops": 0.00816611770992907,
+                "total": 367.37163319998945,
+                "data": [
+                    124.00181139999768,
+                    122.59018729999661,
+                    120.77963449999515
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[folders-1000]",
+            "fullname": "bench/test_index.py::test_index_build_time[folders-1000]",
+            "params": {
+                "kind": "folders",
+                "n": 1000
+            },
+            "param": "folders-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 1000,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 208.00570710000466,
+                "max": 209.5016700999986,
+                "mean": 208.98827306667226,
+                "stddev": 0.8512143915296306,
+                "rounds": 3,
+                "median": 209.45744200001354,
+                "iqr": 1.1219722499954514,
+                "q1": 208.36864082500688,
+                "q3": 209.49061307500233,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 208.00570710000466,
+                "hd15iqr": 209.5016700999986,
+                "ops": 0.00478495747788191,
+                "total": 626.9648192000168,
+                "data": [
+                    208.00570710000466,
+                    209.5016700999986,
+                    209.45744200001354
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[mongo-100]",
+            "fullname": "bench/test_index.py::test_index_build_time[mongo-100]",
+            "params": {
+                "kind": "mongo",
+                "n": 100
+            },
+            "param": "mongo-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 100,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 5.631428399996366,
+                "max": 5.7731043999956455,
+                "mean": 5.709138309999252,
+                "stddev": 0.04886425020673966,
+                "rounds": 10,
+                "median": 5.717229649999354,
+                "iqr": 0.06544700000085868,
+                "q1": 5.66764559999865,
+                "q3": 5.733092599999509,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 5.631428399996366,
+                "hd15iqr": 5.7731043999956455,
+                "ops": 0.175157781385074,
+                "total": 57.09138309999253,
+                "data": [
+                    5.733092599999509,
+                    5.729459099995438,
+                    5.66764559999865,
+                    5.706542400002945,
+                    5.631428399996366,
+                    5.713081499998225,
+                    5.772921800002223,
+                    5.7731043999956455,
+                    5.642729500003043,
+                    5.721377800000482
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[mongo-250]",
+            "fullname": "bench/test_index.py::test_index_build_time[mongo-250]",
+            "params": {
+                "kind": "mongo",
+                "n": 250
+            },
+            "param": "mongo-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 250,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 10.730856199996197,
+                "max": 11.15880869999819,
+                "mean": 10.959808340000745,
+                "stddev": 0.1385108319862684,
+                "rounds": 10,
+                "median": 10.953398300000117,
+                "iqr": 0.2121468000113964,
+                "q1": 10.874286099991878,
+                "q3": 11.086432900003274,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 10.730856199996197,
+                "hd15iqr": 11.15880869999819,
+                "ops": 0.09124247149014761,
+                "total": 109.59808340000745,
+                "data": [
+                    11.15880869999819,
+                    11.028552800009493,
+                    11.11099820000527,
+                    11.086432900003274,
+                    10.994539899998927,
+                    10.88551720000396,
+                    10.874286099991878,
+                    10.730856199996197,
+                    10.912256700001308,
+                    10.815834699998959
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[mongo-500]",
+            "fullname": "bench/test_index.py::test_index_build_time[mongo-500]",
+            "params": {
+                "kind": "mongo",
+                "n": 500
+            },
+            "param": "mongo-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 500,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 15.364027100004023,
+                "max": 15.90580449999834,
+                "mean": 15.655070779997914,
+                "stddev": 0.1595489787272855,
+                "rounds": 10,
+                "median": 15.658594049993553,
+                "iqr": 0.2018250999826705,
+                "q1": 15.563154700008454,
+                "q3": 15.764979799991124,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 15.364027100004023,
+                "hd15iqr": 15.90580449999834,
+                "ops": 0.0638770666739926,
+                "total": 156.55070779997914,
+                "data": [
+                    15.747996799997054,
+                    15.563154700008454,
+                    15.567750300004263,
+                    15.8093164999882,
+                    15.661774199994397,
+                    15.510490000000573,
+                    15.764979799991124,
+                    15.90580449999834,
+                    15.655413899992709,
+                    15.364027100004023
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_index_build_time[mongo-1000]",
+            "fullname": "bench/test_index.py::test_index_build_time[mongo-1000]",
+            "params": {
+                "kind": "mongo",
+                "n": 1000
+            },
+            "param": "mongo-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 1000,
+                "metric": "index_build_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 28.378511399991112,
+                "max": 28.933845599996857,
+                "mean": 28.659632260000215,
+                "stddev": 0.174412712122347,
+                "rounds": 10,
+                "median": 28.639239800002542,
+                "iqr": 0.20282429999497253,
+                "q1": 28.603227700004936,
+                "q3": 28.80605199999991,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 28.378511399991112,
+                "hd15iqr": 28.933845599996857,
+                "ops": 0.034892283017730265,
+                "total": 286.59632260000217,
+                "data": [
+                    28.659577500002342,
+                    28.603227700004936,
+                    28.618902100002742,
+                    28.378511399991112,
+                    28.438368299990543,
+                    28.80605199999991,
+                    28.61460640000587,
+                    28.933845599996857,
+                    28.86438270000508,
+                    28.678848900002777
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[json-100]",
+            "fullname": "bench/test_index.py::test_query_time[json-100]",
+            "params": {
+                "kind": "json",
+                "n": 100
+            },
+            "param": "json-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 100,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.5370000114198775e-06,
+                "max": 4.074499956914224e-06,
+                "mean": 3.772599986405112e-06,
+                "stddev": 1.7153695724352725e-07,
+                "rounds": 10,
+                "median": 3.7577499824692493e-06,
+                "iqr": 1.1700001778081049e-07,
+                "q1": 3.695999985211529e-06,
+                "q3": 3.8130000029923393e-06,
+                "iqr_outliers": 2,
+                "stddev_outliers": 4,
+                "outliers": "4;2",
+                "ld15iqr": 3.5370000114198775e-06,
+                "hd15iqr": 4.018499967060052e-06,
+                "ops": 265069.1840119774,
+                "total": 3.7725999864051115e-05,
+                "data": [
+                    4.074499956914224e-06,
+                    4.018499967060052e-06,
+                    3.8084999687271193e-06,
+                    3.696999992826022e-06,
+                    3.5660000139614567e-06,
+                    3.8130000029923393e-06,
+                    3.763999993680045e-06,
+                    3.751499971258454e-06,
+                    3.695999985211529e-06,
+                    3.5370000114198775e-06
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[json-250]",
+            "fullname": "bench/test_index.py::test_query_time[json-250]",
+            "params": {
+                "kind": "json",
+                "n": 250
+            },
+            "param": "json-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 250,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 7.072000007610768e-06,
+                "max": 1.0914000013144687e-05,
+                "mean": 7.912350010883529e-06,
+                "stddev": 1.1446289133573551e-06,
+                "rounds": 10,
+                "median": 7.615000031364616e-06,
+                "iqr": 6.665000546490778e-07,
+                "q1": 7.2245000046677885e-06,
+                "q3": 7.891000059316866e-06,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 7.072000007610768e-06,
+                "hd15iqr": 1.0914000013144687e-05,
+                "ops": 126384.70222177841,
+                "total": 7.912350010883529e-05,
+                "data": [
+                    8.621000015409663e-06,
+                    7.891000059316866e-06,
+                    7.61400006012991e-06,
+                    7.20199997886084e-06,
+                    7.072000007610768e-06,
+                    1.0914000013144687e-05,
+                    7.646000012755394e-06,
+                    7.616000002599321e-06,
+                    7.2245000046677885e-06,
+                    7.322999954340048e-06
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[json-500]",
+            "fullname": "bench/test_index.py::test_query_time[json-500]",
+            "params": {
+                "kind": "json",
+                "n": 500
+            },
+            "param": "json-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 500,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 9.459499997319654e-06,
+                "max": 1.2107500006095505e-05,
+                "mean": 1.032370000029914e-05,
+                "stddev": 8.660968837674021e-07,
+                "rounds": 10,
+                "median": 1.0054999984276945e-05,
+                "iqr": 1.0065000242320825e-06,
+                "q1": 9.696999986772426e-06,
+                "q3": 1.0703500011004508e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 9.459499997319654e-06,
+                "hd15iqr": 1.2107500006095505e-05,
+                "ops": 96864.49625338048,
+                "total": 0.0001032370000029914,
+                "data": [
+                    1.0086999973282218e-05,
+                    1.1521000051288865e-05,
+                    1.0703500011004508e-05,
+                    9.9305000185268e-06,
+                    9.696999986772426e-06,
+                    9.619999982533045e-06,
+                    9.459499997319654e-06,
+                    1.2107500006095505e-05,
+                    1.008799998089671e-05,
+                    1.0022999995271674e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[json-1000]",
+            "fullname": "bench/test_index.py::test_query_time[json-1000]",
+            "params": {
+                "kind": "json",
+                "n": 1000
+            },
+            "param": "json-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 1000,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.472699994745199e-05,
+                "max": 4.044300003442913e-05,
+                "mean": 3.751864999503596e-05,
+                "stddev": 1.8234145613611655e-06,
+                "rounds": 10,
+                "median": 3.711850000399863e-05,
+                "iqr": 3.0595000134781036e-06,
+                "q1": 3.607200000260491e-05,
+                "q3": 3.913150001608301e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 3.472699994745199e-05,
+                "hd15iqr": 4.044300003442913e-05,
+                "ops": 26653.411040437455,
+                "total": 0.00037518649995035955,
+                "data": [
+                    3.87734999821987e-05,
+                    3.703750000568107e-05,
+                    3.7199500002316197e-05,
+                    3.607200000260491e-05,
+                    3.9243499995791355e-05,
+                    3.6961499936296605e-05,
+                    3.472699994745199e-05,
+                    3.913150001608301e-05,
+                    3.5597500027506615e-05,
+                    4.044300003442913e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[folders-100]",
+            "fullname": "bench/test_index.py::test_query_time[folders-100]",
+            "params": {
+                "kind": "folders",
+                "n": 100
+            },
+            "param": "folders-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 100,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 6.953749994863756e-05,
+                "max": 9.263500003726222e-05,
+                "mean": 7.590450000861892e-05,
+                "stddev": 6.86978933924545e-06,
+                "rounds": 10,
+                "median": 7.458975000190548e-05,
+                "iqr": 7.495500030927358e-06,
+                "q1": 7.059750001644715e-05,
+                "q3": 7.809300004737451e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 6.953749994863756e-05,
+                "hd15iqr": 9.263500003726222e-05,
+                "ops": 13174.449471196707,
+                "total": 0.0007590450000861892,
+                "data": [
+                    7.809300004737451e-05,
+                    7.676050001464318e-05,
+                    7.97259999671951e-05,
+                    9.263500003726222e-05,
+                    7.652799999050331e-05,
+                    6.953749994863756e-05,
+                    7.02945000375621e-05,
+                    7.265150001330767e-05,
+                    7.059750001644715e-05,
+                    7.222150001325645e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[folders-250]",
+            "fullname": "bench/test_index.py::test_query_time[folders-250]",
+            "params": {
+                "kind": "folders",
+                "n": 250
+            },
+            "param": "folders-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 250,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 8.08954999956768e-05,
+                "max": 9.8726500000339e-05,
+                "mean": 8.429659999092109e-05,
+                "stddev": 5.450419289534623e-06,
+                "rounds": 10,
+                "median": 8.22027500180411e-05,
+                "iqr": 3.596500027924784e-06,
+                "q1": 8.124349995341617e-05,
+                "q3": 8.483999998134096e-05,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 8.08954999956768e-05,
+                "hd15iqr": 9.8726500000339e-05,
+                "ops": 11862.874660516582,
+                "total": 0.0008429659999092109,
+                "data": [
+                    8.716999996977393e-05,
+                    8.193850000679958e-05,
+                    8.341349996044301e-05,
+                    9.8726500000339e-05,
+                    8.483999998134096e-05,
+                    8.246700002928264e-05,
+                    8.126050001010299e-05,
+                    8.101100000203587e-05,
+                    8.08954999956768e-05,
+                    8.124349995341617e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[folders-500]",
+            "fullname": "bench/test_index.py::test_query_time[folders-500]",
+            "params": {
+                "kind": "folders",
+                "n": 500
+            },
+            "param": "folders-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 500,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00010405350003566128,
+                "max": 0.00011661799995636101,
+                "mean": 0.00010744664999219822,
+                "stddev": 3.5066262420065236e-06,
+                "rounds": 10,
+                "median": 0.0001063839999915217,
+                "iqr": 1.8689999706111875e-06,
+                "q1": 0.00010574050000286661,
+                "q3": 0.0001076094999734778,
+                "iqr_outliers": 1,
+                "stddev_outliers": 1,
+                "outliers": "1;1",
+                "ld15iqr": 0.00010405350003566128,
+                "hd15iqr": 0.00011661799995636101,
+                "ops": 9306.944423791814,
+                "total": 0.0010744664999219821,
+                "data": [
+                    0.00010578399997029919,
+                    0.00010608550001052208,
+                    0.00010574050000286661,
+                    0.00011661799995636101,
+                    0.0001076094999734778,
+                    0.0001056935000087833,
+                    0.00010405350003566128,
+                    0.00010688000002119224,
+                    0.00010668249997252133,
+                    0.00010931949997029733
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[folders-1000]",
+            "fullname": "bench/test_index.py::test_query_time[folders-1000]",
+            "params": {
+                "kind": "folders",
+                "n": 1000
+            },
+            "param": "folders-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 1000,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00014740899998287206,
+                "max": 0.0001650550000340445,
+                "mean": 0.00015234995000355412,
+                "stddev": 6.504318046654361e-06,
+                "rounds": 10,
+                "median": 0.00014908674998878268,
+                "iqr": 7.015000010142088e-06,
+                "q1": 0.0001484889999846928,
+                "q3": 0.00015550399999483488,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 0.00014740899998287206,
+                "hd15iqr": 0.0001650550000340445,
+                "ops": 6563.835432677671,
+                "total": 0.001523499500035541,
+                "data": [
+                    0.0001650550000340445,
+                    0.00014740899998287206,
+                    0.0001484889999846928,
+                    0.0001498915000411216,
+                    0.00014917599997716025,
+                    0.00014899750000040512,
+                    0.00015550399999483488,
+                    0.0001626840000244556,
+                    0.00014760550002392847,
+                    0.00014868799997202586
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[mongo-100]",
+            "fullname": "bench/test_index.py::test_query_time[mongo-100]",
+            "params": {
+                "kind": "mongo",
+                "n": 100
+            },
+            "param": "mongo-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 100,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00024073649998172187,
+                "max": 0.0002728814999863971,
+                "mean": 0.0002546512499975506,
+                "stddev": 1.0302461522306704e-05,
+                "rounds": 10,
+                "median": 0.0002537762500287499,
+                "iqr": 1.757799996994437e-05,
+                "q1": 0.0002461195000068983,
+                "q3": 0.00026369749997684266,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00024073649998172187,
+                "hd15iqr": 0.0002728814999863971,
+                "ops": 3926.939294464954,
+                "total": 0.002546512499975506,
+                "data": [
+                    0.0002728814999863971,
+                    0.000252304500027094,
+                    0.0002552480000304058,
+                    0.00026369749997684266,
+                    0.0002560269999958109,
+                    0.00026621249999152495,
+                    0.0002461195000068983,
+                    0.00024822200000926384,
+                    0.00024073649998172187,
+                    0.0002450634999695467
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[mongo-250]",
+            "fullname": "bench/test_index.py::test_query_time[mongo-250]",
+            "params": {
+                "kind": "mongo",
+                "n": 250
+            },
+            "param": "mongo-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 250,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00022990799996478018,
+                "max": 0.00029501500001060776,
+                "mean": 0.00025878355000168087,
+                "stddev": 1.7470662631840955e-05,
+                "rounds": 10,
+                "median": 0.0002579387500009034,
+                "iqr": 1.7112999994424135e-05,
+                "q1": 0.00024893499998142945,
+                "q3": 0.0002660479999758536,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.00022990799996478018,
+                "hd15iqr": 0.00029501500001060776,
+                "ops": 3864.233255914082,
+                "total": 0.002587835500016809,
+                "data": [
+                    0.0002573744999972405,
+                    0.00026602149999234827,
+                    0.00029501500001060776,
+                    0.00024495249999745283,
+                    0.0002505685000505764,
+                    0.00025850300000456627,
+                    0.0002705095000419533,
+                    0.00024893499998142945,
+                    0.0002660479999758536,
+                    0.00022990799996478018
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[mongo-500]",
+            "fullname": "bench/test_index.py::test_query_time[mongo-500]",
+            "params": {
+                "kind": "mongo",
+                "n": 500
+            },
+            "param": "mongo-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 500,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00025660300001618453,
+                "max": 0.00027703700005076825,
+                "mean": 0.00026836325001204387,
+                "stddev": 7.562429856734572e-06,
+                "rounds": 10,
+                "median": 0.00027176374998816755,
+                "iqr": 1.2370499971439133e-05,
+                "q1": 0.00026080900002853016,
+                "q3": 0.0002731794999999693,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.00025660300001618453,
+                "hd15iqr": 0.00027703700005076825,
+                "ops": 3726.2926274559613,
+                "total": 0.0026836325001204386,
+                "data": [
+                    0.0002731794999999693,
+                    0.00026626250000845176,
+                    0.00027659200000925923,
+                    0.00027189699998416474,
+                    0.00025660300001618453,
+                    0.0002717449999909149,
+                    0.00027703700005076825,
+                    0.00026080900002853016,
+                    0.0002717824999854201,
+                    0.00025772500004677567
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_query_time[mongo-1000]",
+            "fullname": "bench/test_index.py::test_query_time[mongo-1000]",
+            "params": {
+                "kind": "mongo",
+                "n": 1000
+            },
+            "param": "mongo-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 1000,
+                "metric": "query_time",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.00028996649998589417,
+                "max": 0.0003069840000534896,
+                "mean": 0.0002966849000076763,
+                "stddev": 4.974726038019627e-06,
+                "rounds": 10,
+                "median": 0.00029644375001225854,
+                "iqr": 6.455499969888507e-06,
+                "q1": 0.0002926080000179354,
+                "q3": 0.0002990634999878239,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.00028996649998589417,
+                "hd15iqr": 0.0003069840000534896,
+                "ops": 3370.5793586870323,
+                "total": 0.0029668490000767634,
+                "data": [
+                    0.0003069840000534896,
+                    0.000300389499971061,
+                    0.00028996649998589417,
+                    0.0002959280000504805,
+                    0.00029671999996935485,
+                    0.0002926080000179354,
+                    0.0002909594999800902,
+                    0.0002961675000551622,
+                    0.0002980625000054715,
+                    0.0002990634999878239
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[json-100]",
+            "fullname": "bench/test_index.py::test_update_time[json-100]",
+            "params": {
+                "kind": "json",
+                "n": 100
+            },
+            "param": "json-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 100,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.0318067000043811,
+                "max": 1.217589300009422,
+                "mean": 1.1460186399999657,
+                "stddev": 0.06094037589680139,
+                "rounds": 10,
+                "median": 1.171041299996432,
+                "iqr": 0.0994319000019459,
+                "q1": 1.0831198999949265,
+                "q3": 1.1825517999968724,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 1.0318067000043811,
+                "hd15iqr": 1.217589300009422,
+                "ops": 0.8725861561902954,
+                "total": 11.460186399999657,
+                "data": [
+                    1.1825517999968724,
+                    1.1693429999868385,
+                    1.0831198999949265,
+                    1.1671875000029104,
+                    1.1850781999964966,
+                    1.0711512999987463,
+                    1.217589300009422,
+                    1.1727396000060253,
+                    1.0318067000043811,
+                    1.1796191000030376
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[json-250]",
+            "fullname": "bench/test_index.py::test_update_time[json-250]",
+            "params": {
+                "kind": "json",
+                "n": 250
+            },
+            "param": "json-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 250,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.9886185999930603,
+                "max": 1.156499699995038,
+                "mean": 1.082520890001615,
+                "stddev": 0.056207553482159764,
+                "rounds": 10,
+                "median": 1.0950863500038395,
+                "iqr": 0.07190019999688957,
+                "q1": 1.0478404000023147,
+                "q3": 1.1197405999992043,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.9886185999930603,
+                "hd15iqr": 1.156499699995038,
+                "ops": 0.9237697020318084,
+                "total": 10.82520890001615,
+                "data": [
+                    1.1140248000010615,
+                    1.062174300008337,
+                    1.156499699995038,
+                    1.1360715000046184,
+                    1.1186221000098158,
+                    1.1197405999992043,
+                    1.0761479000066174,
+                    1.0054689999960829,
+                    1.0478404000023147,
+                    0.9886185999930603
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[json-500]",
+            "fullname": "bench/test_index.py::test_update_time[json-500]",
+            "params": {
+                "kind": "json",
+                "n": 500
+            },
+            "param": "json-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 500,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 1.7033767999964766,
+                "max": 1.7893086999974912,
+                "mean": 1.7460986599995523,
+                "stddev": 0.031496541298082124,
+                "rounds": 10,
+                "median": 1.7513900500052841,
+                "iqr": 0.057938099998864345,
+                "q1": 1.7159052999923006,
+                "q3": 1.773843399991165,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 1.7033767999964766,
+                "hd15iqr": 1.7893086999974912,
+                "ops": 0.5727053246809413,
+                "total": 17.460986599995522,
+                "data": [
+                    1.706355700007407,
+                    1.7551967000035802,
+                    1.773843399991165,
+                    1.747583400006988,
+                    1.7244810999982292,
+                    1.7684580000059213,
+                    1.7764774999959627,
+                    1.7033767999964766,
+                    1.7893086999974912,
+                    1.7159052999923006
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[json-1000]",
+            "fullname": "bench/test_index.py::test_update_time[json-1000]",
+            "params": {
+                "kind": "json",
+                "n": 1000
+            },
+            "param": "json-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "json",
+                "n_books": 1000,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.314362800010713,
+                "max": 2.538326699999743,
+                "mean": 2.4426198100016334,
+                "stddev": 0.07298477963822265,
+                "rounds": 10,
+                "median": 2.4728295000022626,
+                "iqr": 0.08871809999982361,
+                "q1": 2.398222799994983,
+                "q3": 2.4869408999948064,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 2.314362800010713,
+                "hd15iqr": 2.538326699999743,
+                "ops": 0.409396499572044,
+                "total": 24.426198100016336,
+                "data": [
+                    2.4032214999897406,
+                    2.4851590000034776,
+                    2.5064782000117702,
+                    2.464306400011992,
+                    2.481352599992533,
+                    2.4869408999948064,
+                    2.398222799994983,
+                    2.314362800010713,
+                    2.538326699999743,
+                    2.347827200006577
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[folders-100]",
+            "fullname": "bench/test_index.py::test_update_time[folders-100]",
+            "params": {
+                "kind": "folders",
+                "n": 100
+            },
+            "param": "folders-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 100,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 139.2529241000011,
+                "max": 142.13971840000886,
+                "mean": 140.76882393333653,
+                "stddev": 1.4488496298478093,
+                "rounds": 3,
+                "median": 140.91382929999963,
+                "iqr": 2.1650957250058127,
+                "q1": 139.66815040000074,
+                "q3": 141.83324612500655,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 139.2529241000011,
+                "hd15iqr": 142.13971840000886,
+                "ops": 0.0071038456673728195,
+                "total": 422.3064718000096,
+                "data": [
+                    142.13971840000886,
+                    139.2529241000011,
+                    140.91382929999963
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[folders-250]",
+            "fullname": "bench/test_index.py::test_update_time[folders-250]",
+            "params": {
+                "kind": "folders",
+                "n": 250
+            },
+            "param": "folders-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 250,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 144.79792219999945,
+                "max": 148.1759155000036,
+                "mean": 146.03399956666786,
+                "stddev": 1.8622881934235334,
+                "rounds": 3,
+                "median": 145.12816100000055,
+                "iqr": 2.533494975003123,
+                "q1": 144.88048189999972,
+                "q3": 147.41397687500285,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 144.79792219999945,
+                "hd15iqr": 148.1759155000036,
+                "ops": 0.0068477204142003735,
+                "total": 438.1019987000036,
+                "data": [
+                    144.79792219999945,
+                    148.1759155000036,
+                    145.12816100000055
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[folders-1000]",
+            "fullname": "bench/test_index.py::test_update_time[folders-1000]",
+            "params": {
+                "kind": "folders",
+                "n": 1000
+            },
+            "param": "folders-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "folders",
+                "n_books": 1000,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 177.81243930000346,
+                "max": 180.64878119999776,
+                "mean": 178.82240210000114,
+                "stddev": 1.58464839147167,
+                "rounds": 3,
+                "median": 178.00598580000224,
+                "iqr": 2.1272564249957213,
+                "q1": 177.86082592500316,
+                "q3": 179.98808234999888,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 177.81243930000346,
+                "hd15iqr": 180.64878119999776,
+                "ops": 0.005592140516269206,
+                "total": 536.4672063000035,
+                "data": [
+                    178.00598580000224,
+                    177.81243930000346,
+                    180.64878119999776
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[mongo-100]",
+            "fullname": "bench/test_index.py::test_update_time[mongo-100]",
+            "params": {
+                "kind": "mongo",
+                "n": 100
+            },
+            "param": "mongo-100",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 100,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.1439083999866853,
+                "max": 3.35615510000207,
+                "mean": 3.209000149994972,
+                "stddev": 0.0687104305077345,
+                "rounds": 10,
+                "median": 3.1807585499918787,
+                "iqr": 0.10453480000433046,
+                "q1": 3.167800699986401,
+                "q3": 3.2723354999907315,
+                "iqr_outliers": 0,
+                "stddev_outliers": 1,
+                "outliers": "1;0",
+                "ld15iqr": 3.1439083999866853,
+                "hd15iqr": 3.35615510000207,
+                "ops": 0.3116235441751434,
+                "total": 32.09000149994972,
+                "data": [
+                    3.1760057999927085,
+                    3.1713381000008667,
+                    3.2723354999907315,
+                    3.167800699986401,
+                    3.185511299991049,
+                    3.1439083999866853,
+                    3.2731200999987777,
+                    3.193922399994335,
+                    3.149904100006097,
+                    3.35615510000207
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[mongo-250]",
+            "fullname": "bench/test_index.py::test_update_time[mongo-250]",
+            "params": {
+                "kind": "mongo",
+                "n": 250
+            },
+            "param": "mongo-250",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 250,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.6499874000001,
+                "max": 2.9395802000071853,
+                "mean": 2.7862742500015885,
+                "stddev": 0.08487800424036766,
+                "rounds": 10,
+                "median": 2.773231150000356,
+                "iqr": 0.10406629998760764,
+                "q1": 2.7301294000062626,
+                "q3": 2.83419569999387,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 2.6499874000001,
+                "hd15iqr": 2.9395802000071853,
+                "ops": 0.3589022150276233,
+                "total": 27.862742500015884,
+                "data": [
+                    2.7711653000005754,
+                    2.720653399999719,
+                    2.7301294000062626,
+                    2.6499874000001,
+                    2.775297000000137,
+                    2.83419569999387,
+                    2.890519699998549,
+                    2.9395802000071853,
+                    2.747648400007165,
+                    2.80356600000232
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[mongo-500]",
+            "fullname": "bench/test_index.py::test_update_time[mongo-500]",
+            "params": {
+                "kind": "mongo",
+                "n": 500
+            },
+            "param": "mongo-500",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 500,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.501674600003753,
+                "max": 4.833167099990533,
+                "mean": 4.720323879997887,
+                "stddev": 0.10942892721788894,
+                "rounds": 10,
+                "median": 4.7571985500035225,
+                "iqr": 0.08986469999945257,
+                "q1": 4.70747670000128,
+                "q3": 4.797341400000732,
+                "iqr_outliers": 2,
+                "stddev_outliers": 3,
+                "outliers": "3;2",
+                "ld15iqr": 4.70747670000128,
+                "hd15iqr": 4.833167099990533,
+                "ops": 0.21184986992893542,
+                "total": 47.20323879997886,
+                "data": [
+                    4.5490371999912895,
+                    4.728062199996202,
+                    4.501674600003753,
+                    4.773257499997271,
+                    4.7622719000064535,
+                    4.798824999990757,
+                    4.70747670000128,
+                    4.833167099990533,
+                    4.752125200000592,
+                    4.797341400000732
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_update_time[mongo-1000]",
+            "fullname": "bench/test_index.py::test_update_time[mongo-1000]",
+            "params": {
+                "kind": "mongo",
+                "n": 1000
+            },
+            "param": "mongo-1000",
+            "extra_info": {
+                "component": "index",
+                "structure": "mongo",
+                "n_books": 1000,
+                "metric": "update_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 4.389851300002192,
+                "max": 4.7614575999905355,
+                "mean": 4.557243659999221,
+                "stddev": 0.13925619869925718,
+                "rounds": 10,
+                "median": 4.484158600003866,
+                "iqr": 0.2617774999962421,
+                "q1": 4.469363099997281,
+                "q3": 4.731140599993523,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 4.389851300002192,
+                "hd15iqr": 4.7614575999905355,
+                "ops": 0.21943088292105295,
+                "total": 45.572436599992216,
+                "data": [
+                    4.471751099990797,
+                    4.495320000001811,
+                    4.731140599993523,
+                    4.472997200005921,
+                    4.5607457000005525,
+                    4.756609200005187,
+                    4.389851300002192,
+                    4.469363099997281,
+                    4.7614575999905355,
+                    4.463200800004415
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_insert_time[sqlite-100]",
+            "fullname": "bench/test_metadata.py::test_metadata_insert_time[sqlite-100]",
+            "params": {
+                "n": 100
+            },
+            "param": "sqlite-100",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 100,
+                "metric": "metadata_insert_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.001473299998906441,
+                "max": 0.0023560999979963526,
+                "mean": 0.001779769999848213,
+                "stddev": 0.0002840009996244952,
+                "rounds": 10,
+                "median": 0.0017011000018101186,
+                "iqr": 0.0004047999973408878,
+                "q1": 0.0015864000015426427,
+                "q3": 0.0019911999988835305,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.001473299998906441,
+                "hd15iqr": 0.0023560999979963526,
+                "ops": 561.870354082429,
+                "total": 0.01779769999848213,
+                "data": [
+                    0.001473299998906441,
+                    0.001737800004775636,
+                    0.0015121999895200133,
+                    0.0020902000105706975,
+                    0.001593900000443682,
+                    0.0017921999969985336,
+                    0.0016643999988446012,
+                    0.0023560999979963526,
+                    0.0019911999988835305,
+                    0.0015864000015426427
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_insert_time[sqlite-250]",
+            "fullname": "bench/test_metadata.py::test_metadata_insert_time[sqlite-250]",
+            "params": {
+                "n": 250
+            },
+            "param": "sqlite-250",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 250,
+                "metric": "metadata_insert_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0019043000065721571,
+                "max": 0.002857100000255741,
+                "mean": 0.002188460002071224,
+                "stddev": 0.00036062066835690533,
+                "rounds": 10,
+                "median": 0.001980799999728333,
+                "iqr": 0.0006236000044737011,
+                "q1": 0.0019351000082679093,
+                "q3": 0.0025587000127416104,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 0.0019043000065721571,
+                "hd15iqr": 0.002857100000255741,
+                "ops": 456.94232430730744,
+                "total": 0.02188460002071224,
+                "data": [
+                    0.0021293999889167026,
+                    0.0026633999950718135,
+                    0.0019351000082679093,
+                    0.0025587000127416104,
+                    0.0019762000010814518,
+                    0.0019339999998919666,
+                    0.0019410000095376745,
+                    0.0019043000065721571,
+                    0.002857100000255741,
+                    0.0019853999983752146
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_insert_time[sqlite-500]",
+            "fullname": "bench/test_metadata.py::test_metadata_insert_time[sqlite-500]",
+            "params": {
+                "n": 500
+            },
+            "param": "sqlite-500",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 500,
+                "metric": "metadata_insert_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0023856000043451786,
+                "max": 0.0031053999991854653,
+                "mean": 0.002592840000579599,
+                "stddev": 0.00022455144307712712,
+                "rounds": 10,
+                "median": 0.002529600002162624,
+                "iqr": 0.00017780000052880496,
+                "q1": 0.0024625999940326437,
+                "q3": 0.0026403999945614487,
+                "iqr_outliers": 1,
+                "stddev_outliers": 2,
+                "outliers": "2;1",
+                "ld15iqr": 0.0023856000043451786,
+                "hd15iqr": 0.0031053999991854653,
+                "ops": 385.67748097702196,
+                "total": 0.025928400005795993,
+                "data": [
+                    0.0025751000066520646,
+                    0.0026403999945614487,
+                    0.0028409999940777197,
+                    0.0031053999991854653,
+                    0.0024625999940326437,
+                    0.0025621999957365915,
+                    0.0023856000043451786,
+                    0.002387300002737902,
+                    0.0024970000085886568,
+                    0.002471800005878322
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_insert_time[sqlite-1000]",
+            "fullname": "bench/test_metadata.py::test_metadata_insert_time[sqlite-1000]",
+            "params": {
+                "n": 1000
+            },
+            "param": "sqlite-1000",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 1000,
+                "metric": "metadata_insert_time",
+                "unit": "ms",
+                "convert": "ms"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 0.0036217000015312806,
+                "max": 0.004193100001430139,
+                "mean": 0.0038523100010934286,
+                "stddev": 0.00017938755296746428,
+                "rounds": 10,
+                "median": 0.0038127000007079914,
+                "iqr": 0.00020039999799337238,
+                "q1": 0.0037478000012924895,
+                "q3": 0.003948199999285862,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 0.0036217000015312806,
+                "hd15iqr": 0.004193100001430139,
+                "ops": 259.58450896115914,
+                "total": 0.038523100010934286,
+                "data": [
+                    0.003948199999285862,
+                    0.0037478000012924895,
+                    0.004193100001430139,
+                    0.0036693000001832843,
+                    0.003842400008579716,
+                    0.0037818999990122393,
+                    0.0038271999947028235,
+                    0.0037982000067131594,
+                    0.0040932999982032925,
+                    0.0036217000015312806
+                ],
+                "iterations": 1
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_author[sqlite-100]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_author[sqlite-100]",
+            "params": {
+                "n": 100
+            },
+            "param": "sqlite-100",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 100,
+                "metric": "metadata_query_time_author",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.156350001518149e-05,
+                "max": 3.6029999973834494e-05,
+                "mean": 3.3368949996656736e-05,
+                "stddev": 1.3596538859695978e-06,
+                "rounds": 10,
+                "median": 3.3351250021951276e-05,
+                "iqr": 1.6679999680491159e-06,
+                "q1": 3.263250000600238e-05,
+                "q3": 3.430049997405149e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 3.156350001518149e-05,
+                "hd15iqr": 3.6029999973834494e-05,
+                "ops": 29967.979217212134,
+                "total": 0.00033368949996656736,
+                "data": [
+                    3.338399998028762e-05,
+                    3.170049996697344e-05,
+                    3.4662000034586525e-05,
+                    3.156350001518149e-05,
+                    3.6029999973834494e-05,
+                    3.337800000736024e-05,
+                    3.430049997405149e-05,
+                    3.263250000600238e-05,
+                    3.27139999717474e-05,
+                    3.3324500036542305e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_author[sqlite-250]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_author[sqlite-250]",
+            "params": {
+                "n": 250
+            },
+            "param": "sqlite-250",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 250,
+                "metric": "metadata_query_time_author",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.182649998052511e-05,
+                "max": 3.6065000022063034e-05,
+                "mean": 3.371469999547116e-05,
+                "stddev": 1.3044027786955734e-06,
+                "rounds": 10,
+                "median": 3.358375000971137e-05,
+                "iqr": 1.6730000788811586e-06,
+                "q1": 3.3020999981090424e-05,
+                "q3": 3.469400005997158e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 4,
+                "outliers": "4;0",
+                "ld15iqr": 3.182649998052511e-05,
+                "hd15iqr": 3.6065000022063034e-05,
+                "ops": 29660.652479017404,
+                "total": 0.00033714699995471167,
+                "data": [
+                    3.3167999936267735e-05,
+                    3.3851999978651294e-05,
+                    3.366249999089632e-05,
+                    3.3020999981090424e-05,
+                    3.6065000022063034e-05,
+                    3.2190499987336806e-05,
+                    3.350500002852641e-05,
+                    3.469400005997158e-05,
+                    3.182649998052511e-05,
+                    3.5162499989382924e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_author[sqlite-500]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_author[sqlite-500]",
+            "params": {
+                "n": 500
+            },
+            "param": "sqlite-500",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 500,
+                "metric": "metadata_query_time_author",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.470850002486259e-05,
+                "max": 3.9972500017029235e-05,
+                "mean": 3.6408149993803816e-05,
+                "stddev": 1.6649458834191227e-06,
+                "rounds": 10,
+                "median": 3.6010000003443564e-05,
+                "iqr": 2.1170000400161406e-06,
+                "q1": 3.512949995638337e-05,
+                "q3": 3.724649999639951e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 3.470850002486259e-05,
+                "hd15iqr": 3.9972500017029235e-05,
+                "ops": 27466.377725047456,
+                "total": 0.0003640814999380382,
+                "data": [
+                    3.512949995638337e-05,
+                    3.678199995192699e-05,
+                    3.493500000331551e-05,
+                    3.8086999993538483e-05,
+                    3.5200499987695365e-05,
+                    3.6248000033083375e-05,
+                    3.470850002486259e-05,
+                    3.577199997380376e-05,
+                    3.724649999639951e-05,
+                    3.9972500017029235e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_author[sqlite-1000]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_author[sqlite-1000]",
+            "params": {
+                "n": 1000
+            },
+            "param": "sqlite-1000",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 1000,
+                "metric": "metadata_query_time_author",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 3.822649996436667e-05,
+                "max": 5.735749997256789e-05,
+                "mean": 4.145929999504006e-05,
+                "stddev": 6.249746272184219e-06,
+                "rounds": 10,
+                "median": 3.8687000014760997e-05,
+                "iqr": 1.9885000074282313e-06,
+                "q1": 3.832099995634053e-05,
+                "q3": 4.030949996376876e-05,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 3.822649996436667e-05,
+                "hd15iqr": 4.743249999592081e-05,
+                "ops": 24120.04062103398,
+                "total": 0.00041459299995040056,
+                "data": [
+                    5.735749997256789e-05,
+                    4.743249999592081e-05,
+                    4.030949996376876e-05,
+                    3.889300001901574e-05,
+                    3.822649996436667e-05,
+                    3.836000003502704e-05,
+                    3.852000001643319e-05,
+                    3.831900001387112e-05,
+                    3.832099995634053e-05,
+                    3.8854000013088805e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_id[sqlite-100]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_id[sqlite-100]",
+            "params": {
+                "n": 100
+            },
+            "param": "sqlite-100",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 100,
+                "metric": "metadata_query_time_id",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.7421999984653666e-05,
+                "max": 3.39650000387337e-05,
+                "mean": 2.9350000018894207e-05,
+                "stddev": 2.398726974266476e-06,
+                "rounds": 10,
+                "median": 2.8004000014334452e-05,
+                "iqr": 2.6445000548847007e-06,
+                "q1": 2.7632999990601093e-05,
+                "q3": 3.0277500045485794e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 2,
+                "outliers": "2;0",
+                "ld15iqr": 2.7421999984653666e-05,
+                "hd15iqr": 3.39650000387337e-05,
+                "ops": 34071.550233602895,
+                "total": 0.0002935000001889421,
+                "data": [
+                    3.0277500045485794e-05,
+                    2.7632999990601093e-05,
+                    3.39650000387337e-05,
+                    3.292300003522541e-05,
+                    3.002999997988809e-05,
+                    2.825600000505801e-05,
+                    2.7421999984653666e-05,
+                    2.775200002361089e-05,
+                    2.7648000032058917e-05,
+                    2.7593500053626485e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_id[sqlite-250]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_id[sqlite-250]",
+            "params": {
+                "n": 250
+            },
+            "param": "sqlite-250",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 250,
+                "metric": "metadata_query_time_id",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.7514500034158117e-05,
+                "max": 6.17950000014389e-05,
+                "mean": 3.269975000876002e-05,
+                "stddev": 1.0471189077107067e-05,
+                "rounds": 10,
+                "median": 2.883075001591351e-05,
+                "iqr": 2.6575000083539602e-06,
+                "q1": 2.7914000020246023e-05,
+                "q3": 3.057150002859998e-05,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 2.7514500034158117e-05,
+                "hd15iqr": 3.518350000376813e-05,
+                "ops": 30581.273548944788,
+                "total": 0.0003269975000876002,
+                "data": [
+                    3.518350000376813e-05,
+                    6.17950000014389e-05,
+                    2.786649994959589e-05,
+                    2.7514500034158117e-05,
+                    2.8208000003360212e-05,
+                    2.7914000020246023e-05,
+                    2.8343500016489997e-05,
+                    3.0283000014605932e-05,
+                    2.9318000015337022e-05,
+                    3.057150002859998e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_id[sqlite-500]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_id[sqlite-500]",
+            "params": {
+                "n": 500
+            },
+            "param": "sqlite-500",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 500,
+                "metric": "metadata_query_time_id",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.7537999994819983e-05,
+                "max": 4.380950005725026e-05,
+                "mean": 3.072399999655318e-05,
+                "stddev": 4.920309672276565e-06,
+                "rounds": 10,
+                "median": 2.922124996985076e-05,
+                "iqr": 1.6830000095069392e-06,
+                "q1": 2.8176999985589647e-05,
+                "q3": 2.9859999995096586e-05,
+                "iqr_outliers": 2,
+                "stddev_outliers": 1,
+                "outliers": "1;2",
+                "ld15iqr": 2.7537999994819983e-05,
+                "hd15iqr": 3.364399999554735e-05,
+                "ops": 32547.84533629042,
+                "total": 0.0003072399999655317,
+                "data": [
+                    2.7537999994819983e-05,
+                    2.8176999985589647e-05,
+                    2.9859999995096586e-05,
+                    2.838099993823562e-05,
+                    3.364399999554735e-05,
+                    2.9070999953546562e-05,
+                    2.758700000413228e-05,
+                    4.380950005725026e-05,
+                    2.937149998615496e-05,
+                    2.980100005515851e-05
+                ],
+                "iterations": 200
+            }
+        },
+        {
+            "group": null,
+            "name": "test_metadata_query_time_id[sqlite-1000]",
+            "fullname": "bench/test_metadata.py::test_metadata_query_time_id[sqlite-1000]",
+            "params": {
+                "n": 1000
+            },
+            "param": "sqlite-1000",
+            "extra_info": {
+                "component": "metadata",
+                "structure": "sqlite",
+                "n_books": 1000,
+                "metric": "metadata_query_time_id",
+                "unit": "us",
+                "convert": "us"
+            },
+            "options": {
+                "disable_gc": false,
+                "timer": "perf_counter",
+                "min_rounds": 5,
+                "max_time": 1.0,
+                "min_time": 5e-06,
+                "precision": null,
+                "confidence": null,
+                "warmup": false
+            },
+            "stats": {
+                "min": 2.809799996612128e-05,
+                "max": 3.680550005810801e-05,
+                "mean": 3.097000000707339e-05,
+                "stddev": 2.6958292949318945e-06,
+                "rounds": 10,
+                "median": 3.044174998649396e-05,
+                "iqr": 3.7675000203307736e-06,
+                "q1": 2.88765000004787e-05,
+                "q3": 3.264400002080947e-05,
+                "iqr_outliers": 0,
+                "stddev_outliers": 3,
+                "outliers": "3;0",
+                "ld15iqr": 2.809799996612128e-05,
+                "hd15iqr": 3.680550005810801e-05,
+                "ops": 32289.312230274616,
+                "total": 0.000309700000070734,
+                "data": [
+                    2.8217500002938322e-05,
+                    2.809799996612128e-05,
+                    3.2690500011085535e-05,
+                    3.680550005810801e-05,
+                    2.88765000004787e-05,
+                    2.9545500001404435e-05,
+                    2.9494000045815483e-05,
+                    3.264400002080947e-05,
+                    3.1337999971583485e-05,
+                    3.199049999238923e-05
+                ],
+                "iterations": 200
+            }
+        }
+    ],
+    "datetime": "2026-10-02T18:25:21.627364+00:00",
+    "version": "5.3.0"
+}

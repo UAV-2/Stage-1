@@ -1,0 +1,25 @@
+[BENCH] C:\Users\hugoa\AppData\Local\Temp\claude\c--Users-hugoa-Documents-Stage1\1de37bd4-1db0-4123-956e-26196100a331\scratchpad\venv\Scripts\python.exe -m pytest bench -p no:cacheprovider --benchmark-only --benchmark-save-data --benchmark-json=C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\python\micro.json --benchmark-columns=mean,stddev,min,max,rounds -o testpaths=bench -k test_update_time and folders-500
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0
+benchmark: 5.3.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: C:\Users\hugoa\Documents\Stage1\stage_1\python
+configfile: pytest.ini
+plugins: benchmark-5.3.0
+collected 84 items / 83 deselected / 1 selected
+
+bench\test_index.py .                                                    [100%]
+Wrote benchmark data in: C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\python\micro.json
+
+
+
+----------------------------- benchmark: 1 tests -----------------------------
+Name (time in s)                      Mean  StdDev       Min       Max  Rounds
+------------------------------------------------------------------------------
+test_update_time[folders-500]     220.0394  4.1866  215.2228  222.8052       3
+------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+================ 1 passed, 83 deselected in 1073.10s (0:17:53) ================
+[BENCH] 1 filas actualizadas en C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\results\python.csv

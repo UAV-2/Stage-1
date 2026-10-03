@@ -1,3 +1,431 @@
+[BENCH] go test ^Benchmark(WriteThroughput|IndexBuildTime|UpdateTime)$ -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\go\micro_heavy.txt
+goos: windows
+goarch: amd64
+pkg: stage1_go
+cpu: Intel(R) Core(TM) i7-14700K
+BenchmarkWriteThroughput/time/n=100-28         	       1	1195984800 ns/op	        83.61 books/s	246056984 B/op	    7413 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 226840900 ns/op	       440.8 books/s	245972016 B/op	    7215 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 232968100 ns/op	       429.2 books/s	245992192 B/op	    7265 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 261533200 ns/op	       382.4 books/s	246048216 B/op	    7427 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 207244500 ns/op	       482.5 books/s	246017576 B/op	    7322 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 251114400 ns/op	       398.2 books/s	245977744 B/op	    7195 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 220507600 ns/op	       453.5 books/s	245983608 B/op	    7212 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 239719000 ns/op	       417.2 books/s	245972408 B/op	    7141 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 235633100 ns/op	       424.4 books/s	245995552 B/op	    7256 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 225537000 ns/op	       443.4 books/s	245948680 B/op	    7063 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 234121000 ns/op	       427.1 books/s	245973648 B/op	    7115 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 267390100 ns/op	       374.0 books/s	245981744 B/op	    7195 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 217541700 ns/op	       459.7 books/s	245990640 B/op	    7245 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 258657700 ns/op	       386.6 books/s	246053840 B/op	    7444 allocs/op
+BenchmarkWriteThroughput/time/n=100-28         	       1	 288897000 ns/op	       346.1 books/s	245991760 B/op	    7262 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	1746745300 ns/op	       143.1 books/s	561284632 B/op	   19034 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 659489500 ns/op	       379.1 books/s	561284608 B/op	   18956 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 591910900 ns/op	       422.4 books/s	561252600 B/op	   18909 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 540303700 ns/op	       462.7 books/s	561176000 B/op	   18541 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 557856800 ns/op	       448.1 books/s	561256168 B/op	   18835 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 560961300 ns/op	       445.7 books/s	561230840 B/op	   18768 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 541778400 ns/op	       461.4 books/s	561214832 B/op	   18769 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 520164000 ns/op	       480.6 books/s	561283016 B/op	   19014 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 527020600 ns/op	       474.4 books/s	561314024 B/op	   19009 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 579981300 ns/op	       431.0 books/s	561229016 B/op	   18785 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 556449900 ns/op	       449.3 books/s	561288280 B/op	   18985 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 584279400 ns/op	       427.9 books/s	561189120 B/op	   18590 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 525775500 ns/op	       475.5 books/s	561328544 B/op	   19118 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 520055800 ns/op	       480.7 books/s	561272464 B/op	   18988 allocs/op
+BenchmarkWriteThroughput/time/n=250-28         	       1	 569970200 ns/op	       438.6 books/s	561195912 B/op	   18621 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	2912652600 ns/op	       171.7 books/s	945228872 B/op	   38364 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1041260900 ns/op	       480.2 books/s	945109864 B/op	   38022 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1091759700 ns/op	       458.0 books/s	945145688 B/op	   38138 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1111659300 ns/op	       449.8 books/s	945321448 B/op	   38599 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1034903200 ns/op	       483.1 books/s	945080200 B/op	   37932 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1040009700 ns/op	       480.8 books/s	945102456 B/op	   37917 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1021535900 ns/op	       489.5 books/s	945207464 B/op	   38340 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1097091700 ns/op	       455.8 books/s	945142760 B/op	   38122 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1032642200 ns/op	       484.2 books/s	945179712 B/op	   38247 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1040787000 ns/op	       480.4 books/s	945121296 B/op	   38138 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1060005100 ns/op	       471.7 books/s	945231568 B/op	   38374 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1026747200 ns/op	       487.0 books/s	945205048 B/op	   38351 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1045926300 ns/op	       478.0 books/s	945104608 B/op	   37934 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1073425400 ns/op	       465.8 books/s	945130536 B/op	   38062 allocs/op
+BenchmarkWriteThroughput/time/n=500-28         	       1	1055282400 ns/op	       473.8 books/s	945273968 B/op	   38565 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	5925588100 ns/op	       168.8 books/s	1933815440 B/op	   77758 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2072108900 ns/op	       482.6 books/s	1933809000 B/op	   77841 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2178889000 ns/op	       458.9 books/s	1933572440 B/op	   76963 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2047432800 ns/op	       488.4 books/s	1933652128 B/op	   77171 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2077348200 ns/op	       481.4 books/s	1933615704 B/op	   77197 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2124099600 ns/op	       470.8 books/s	1933631528 B/op	   77316 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2158501800 ns/op	       463.3 books/s	1933658832 B/op	   77193 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2257716300 ns/op	       442.9 books/s	1933623304 B/op	   77037 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2254861300 ns/op	       443.5 books/s	1933795368 B/op	   77823 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2267663900 ns/op	       441.0 books/s	1933668848 B/op	   77391 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2261032500 ns/op	       442.3 books/s	1933600992 B/op	   77174 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2308074600 ns/op	       433.3 books/s	1933733920 B/op	   77547 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2218429300 ns/op	       450.8 books/s	1933682600 B/op	   77365 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2249184100 ns/op	       444.6 books/s	1933756168 B/op	   77582 allocs/op
+BenchmarkWriteThroughput/time/n=1000-28        	       1	2230405600 ns/op	       448.3 books/s	1933738952 B/op	   77558 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 212096400 ns/op	       471.5 books/s	245849848 B/op	    6139 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 209871600 ns/op	       476.5 books/s	245799336 B/op	    5955 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 227872500 ns/op	       438.8 books/s	245843464 B/op	    6116 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 221713400 ns/op	       451.0 books/s	245874096 B/op	    6223 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 229620700 ns/op	       435.5 books/s	245811384 B/op	    6035 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 216216500 ns/op	       462.5 books/s	245843600 B/op	    6118 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 213516000 ns/op	       468.3 books/s	245857496 B/op	    6180 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 239857900 ns/op	       416.9 books/s	245852568 B/op	    6166 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 217652300 ns/op	       459.4 books/s	245881112 B/op	    6254 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 203372400 ns/op	       491.7 books/s	245846288 B/op	    6142 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 224725400 ns/op	       445.0 books/s	245832576 B/op	    6088 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 195797000 ns/op	       510.7 books/s	245858592 B/op	    6181 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 218555200 ns/op	       457.6 books/s	245847776 B/op	    6123 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 194776600 ns/op	       513.4 books/s	245865992 B/op	    6221 allocs/op
+BenchmarkWriteThroughput/book/n=100-28         	       1	 201948900 ns/op	       495.2 books/s	245852600 B/op	    6165 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 497075800 ns/op	       502.9 books/s	560833496 B/op	   16050 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 513031300 ns/op	       487.3 books/s	560891344 B/op	   16195 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 471766600 ns/op	       529.9 books/s	560863104 B/op	   16143 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 496219300 ns/op	       503.8 books/s	560850384 B/op	   16098 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 493592900 ns/op	       506.5 books/s	560793536 B/op	   15847 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 517137900 ns/op	       483.4 books/s	560891424 B/op	   16153 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 489551200 ns/op	       510.7 books/s	560918472 B/op	   16266 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 533974700 ns/op	       468.2 books/s	560779176 B/op	   15828 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 492525700 ns/op	       507.6 books/s	560859440 B/op	   16112 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 501480300 ns/op	       498.5 books/s	560850880 B/op	   16027 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 516683900 ns/op	       483.9 books/s	560797736 B/op	   15898 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 501205700 ns/op	       498.8 books/s	560820080 B/op	   15955 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 470292700 ns/op	       531.6 books/s	560874408 B/op	   16101 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 473082700 ns/op	       528.4 books/s	560858368 B/op	   16061 allocs/op
+BenchmarkWriteThroughput/book/n=250-28         	       1	 491809000 ns/op	       508.3 books/s	560816152 B/op	   15922 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 978552800 ns/op	       511.0 books/s	944284992 B/op	   32132 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 903255400 ns/op	       553.6 books/s	944287824 B/op	   32152 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 920377000 ns/op	       543.3 books/s	944366192 B/op	   32449 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 971821200 ns/op	       514.5 books/s	944403976 B/op	   32479 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 929886300 ns/op	       537.7 books/s	944325608 B/op	   32289 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 949538500 ns/op	       526.6 books/s	944291456 B/op	   32073 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 958096100 ns/op	       521.9 books/s	944283352 B/op	   32116 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 936375300 ns/op	       534.0 books/s	944341952 B/op	   32374 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 942292100 ns/op	       530.6 books/s	944353928 B/op	   32331 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	1035073000 ns/op	       483.1 books/s	944421864 B/op	   32499 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	1003655000 ns/op	       498.2 books/s	944404912 B/op	   32553 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	1053259900 ns/op	       474.7 books/s	944379168 B/op	   32501 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 926654900 ns/op	       539.6 books/s	944404424 B/op	   32551 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 968418500 ns/op	       516.3 books/s	944353704 B/op	   32403 allocs/op
+BenchmarkWriteThroughput/book/n=500-28         	       1	 951577800 ns/op	       525.4 books/s	944508232 B/op	   32800 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1943501700 ns/op	       514.5 books/s	1931966144 B/op	   65462 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1932091700 ns/op	       517.6 books/s	1932038104 B/op	   65700 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1917237700 ns/op	       521.6 books/s	1932113976 B/op	   65897 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1902781600 ns/op	       525.5 books/s	1931883912 B/op	   65085 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1903202500 ns/op	       525.4 books/s	1932037872 B/op	   65692 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1950375300 ns/op	       512.7 books/s	1932052392 B/op	   65828 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1931603500 ns/op	       517.7 books/s	1931960424 B/op	   65463 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1906943500 ns/op	       524.4 books/s	1931858976 B/op	   65109 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	2051726100 ns/op	       487.4 books/s	1932002584 B/op	   65587 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	2013889300 ns/op	       496.6 books/s	1932036424 B/op	   65602 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1923672900 ns/op	       519.8 books/s	1931992624 B/op	   65560 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1877250900 ns/op	       532.7 books/s	1932022720 B/op	   65654 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1940118900 ns/op	       515.4 books/s	1931879632 B/op	   65110 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1886525700 ns/op	       530.1 books/s	1931970192 B/op	   65416 allocs/op
+BenchmarkWriteThroughput/book/n=1000-28        	       1	1903680200 ns/op	       525.3 books/s	1931901952 B/op	   65212 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 190756200 ns/op	       524.2 books/s	245837120 B/op	    5901 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 183794900 ns/op	       544.1 books/s	245810936 B/op	    5837 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 199254200 ns/op	       501.9 books/s	245866856 B/op	    6038 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 201101100 ns/op	       497.3 books/s	245842840 B/op	    5993 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 193142000 ns/op	       517.8 books/s	245818208 B/op	    5871 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 192174700 ns/op	       520.4 books/s	245809296 B/op	    5856 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 195750700 ns/op	       510.9 books/s	245863456 B/op	    6081 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 197235200 ns/op	       507.0 books/s	245842760 B/op	    5993 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 185831900 ns/op	       538.1 books/s	245843912 B/op	    5931 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 204162700 ns/op	       489.8 books/s	245824312 B/op	    5888 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 196379300 ns/op	       509.2 books/s	245844304 B/op	    5969 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 215448600 ns/op	       464.1 books/s	245824248 B/op	    5887 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 202047800 ns/op	       494.9 books/s	245869480 B/op	    6022 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 200695600 ns/op	       498.3 books/s	245886512 B/op	    6115 allocs/op
+BenchmarkWriteThroughput/range/n=100-28        	       1	 196799500 ns/op	       508.1 books/s	245816328 B/op	    5889 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 489534500 ns/op	       510.7 books/s	560905256 B/op	   15864 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 470047000 ns/op	       531.9 books/s	560885384 B/op	   15823 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 456637600 ns/op	       547.5 books/s	560892696 B/op	   15779 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 445055400 ns/op	       561.7 books/s	560941560 B/op	   16026 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 516975200 ns/op	       483.6 books/s	560870448 B/op	   15756 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 523192500 ns/op	       477.8 books/s	560926560 B/op	   15921 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 507528300 ns/op	       492.6 books/s	560881856 B/op	   15860 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 492376500 ns/op	       507.7 books/s	560888160 B/op	   15849 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 498941600 ns/op	       501.1 books/s	560925888 B/op	   15910 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 509533400 ns/op	       490.6 books/s	561002488 B/op	   16270 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 502124700 ns/op	       497.9 books/s	560875528 B/op	   15730 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 490853400 ns/op	       509.3 books/s	560981048 B/op	   16062 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 494020600 ns/op	       506.1 books/s	560832816 B/op	   15656 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 510836000 ns/op	       489.4 books/s	560897424 B/op	   15900 allocs/op
+BenchmarkWriteThroughput/range/n=250-28        	       1	 491929000 ns/op	       508.2 books/s	560885488 B/op	   15749 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1001083400 ns/op	       499.5 books/s	944445264 B/op	   32000 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 985713700 ns/op	       507.2 books/s	944322104 B/op	   31607 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1037653500 ns/op	       481.9 books/s	944453224 B/op	   32002 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 985713400 ns/op	       507.2 books/s	944436136 B/op	   32065 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1001411700 ns/op	       499.3 books/s	944447192 B/op	   31935 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 988714600 ns/op	       505.7 books/s	944384920 B/op	   31793 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1033740100 ns/op	       483.7 books/s	944443184 B/op	   32013 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1078874200 ns/op	       463.4 books/s	944425280 B/op	   31924 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 970658100 ns/op	       515.1 books/s	944447352 B/op	   32022 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 972517700 ns/op	       514.1 books/s	944529856 B/op	   32246 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 965085300 ns/op	       518.1 books/s	944484928 B/op	   32077 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 969610400 ns/op	       515.7 books/s	944480024 B/op	   32145 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 985844000 ns/op	       507.2 books/s	944408296 B/op	   31946 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	 990143500 ns/op	       505.0 books/s	944495440 B/op	   32179 allocs/op
+BenchmarkWriteThroughput/range/n=500-28        	       1	1011424300 ns/op	       494.4 books/s	944457888 B/op	   32088 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2068488300 ns/op	       483.4 books/s	1932231784 B/op	   64947 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	1994139100 ns/op	       501.5 books/s	1932358584 B/op	   65449 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2006756300 ns/op	       498.3 books/s	1932200192 B/op	   64986 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	1982485300 ns/op	       504.4 books/s	1932268832 B/op	   65302 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2000852000 ns/op	       499.8 books/s	1932166280 B/op	   64961 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2025112200 ns/op	       493.8 books/s	1932137064 B/op	   64677 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2042421700 ns/op	       489.6 books/s	1932182544 B/op	   64938 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2057853700 ns/op	       485.9 books/s	1932319808 B/op	   65233 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2048433400 ns/op	       488.2 books/s	1932168616 B/op	   64722 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2097586300 ns/op	       476.7 books/s	1932279840 B/op	   65304 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2036595000 ns/op	       491.0 books/s	1932134072 B/op	   64713 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2149445500 ns/op	       465.2 books/s	1932052480 B/op	   64498 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2120547200 ns/op	       471.6 books/s	1932212712 B/op	   65023 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2061094200 ns/op	       485.2 books/s	1932114816 B/op	   64681 allocs/op
+BenchmarkWriteThroughput/range/n=1000-28       	       1	2068643000 ns/op	       483.4 books/s	1932115520 B/op	   64583 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	3125065400 ns/op	2230094352 B/op	 1204074 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 482268500 ns/op	232594288 B/op	 1134848 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 500319500 ns/op	233261344 B/op	 1134872 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 490113900 ns/op	232670912 B/op	 1134846 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 487463100 ns/op	232747280 B/op	 1134860 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 493333900 ns/op	232864832 B/op	 1134871 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 486939700 ns/op	232354304 B/op	 1134826 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 488211100 ns/op	233185056 B/op	 1134879 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 482651900 ns/op	232943968 B/op	 1134866 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 496804400 ns/op	232306632 B/op	 1134827 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 481718800 ns/op	232652944 B/op	 1134855 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 487890400 ns/op	232780304 B/op	 1134853 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 496811700 ns/op	232736896 B/op	 1134860 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 480331600 ns/op	232463552 B/op	 1134835 allocs/op
+BenchmarkIndexBuildTime/json/n=100-28          	       1	 486696300 ns/op	232015600 B/op	 1134816 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1153652200 ns/op	550168304 B/op	 2445187 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1137127800 ns/op	550347352 B/op	 2445217 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1133504400 ns/op	550273296 B/op	 2445196 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1153764200 ns/op	550173016 B/op	 2445198 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1131436200 ns/op	550059208 B/op	 2445182 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1131103200 ns/op	550554472 B/op	 2445217 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1128802600 ns/op	550227648 B/op	 2445202 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1141811700 ns/op	550172888 B/op	 2445193 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1130317900 ns/op	550382800 B/op	 2445203 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1128091200 ns/op	550391128 B/op	 2445208 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1125064800 ns/op	550386800 B/op	 2445204 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1132736800 ns/op	550278560 B/op	 2445204 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1148163100 ns/op	549841072 B/op	 2445166 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1133727200 ns/op	549727552 B/op	 2445151 allocs/op
+BenchmarkIndexBuildTime/json/n=250-28          	       1	1134145400 ns/op	549895616 B/op	 2445172 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1984965200 ns/op	976207496 B/op	 4114345 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1967295200 ns/op	977678416 B/op	 4114401 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1954662600 ns/op	974543200 B/op	 4114253 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1965432500 ns/op	976683792 B/op	 4114371 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1947389900 ns/op	975373488 B/op	 4114279 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1970033000 ns/op	974891904 B/op	 4114296 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1962915900 ns/op	975803464 B/op	 4114306 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1963966100 ns/op	976857696 B/op	 4114385 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1955062400 ns/op	977033888 B/op	 4114354 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1948561700 ns/op	976750432 B/op	 4114352 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1934617100 ns/op	975973856 B/op	 4114320 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1954380700 ns/op	976906344 B/op	 4114370 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1949999200 ns/op	975929808 B/op	 4114317 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1948178200 ns/op	976628592 B/op	 4114368 allocs/op
+BenchmarkIndexBuildTime/json/n=500-28          	       1	1941777800 ns/op	975470960 B/op	 4114312 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4034562200 ns/op	1994534664 B/op	 8146241 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4076027800 ns/op	1995171816 B/op	 8146275 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4033300500 ns/op	1994953704 B/op	 8146268 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4035778800 ns/op	1994786096 B/op	 8146248 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4065991300 ns/op	1994899736 B/op	 8146258 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4042105500 ns/op	1995931968 B/op	 8146327 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4028063900 ns/op	1995058848 B/op	 8146263 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4027652300 ns/op	1994849600 B/op	 8146259 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4045420100 ns/op	1995297040 B/op	 8146306 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4063047400 ns/op	1994681288 B/op	 8146247 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4071604700 ns/op	1994295088 B/op	 8146217 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4042075700 ns/op	1994075472 B/op	 8146186 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4085522500 ns/op	1994527048 B/op	 8146242 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4039006900 ns/op	1995117256 B/op	 8146266 allocs/op
+BenchmarkIndexBuildTime/json/n=1000-28         	       1	4071565000 ns/op	1994681208 B/op	 8146245 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4298420000 ns/op	638540832 B/op	 5419089 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4298904100 ns/op	638461352 B/op	 5418937 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4269309200 ns/op	638578608 B/op	 5418954 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4239943000 ns/op	637739936 B/op	 5418960 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4304749400 ns/op	638033152 B/op	 5418928 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4311586000 ns/op	638129016 B/op	 5418935 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4220349200 ns/op	638309768 B/op	 5418944 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4169904900 ns/op	638735872 B/op	 5418955 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4202197100 ns/op	637010144 B/op	 5418929 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4329768200 ns/op	638119240 B/op	 5418902 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4195142200 ns/op	638525672 B/op	 5418962 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4273140100 ns/op	637198928 B/op	 5418932 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4289683500 ns/op	638035000 B/op	 5418923 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4240185300 ns/op	638892648 B/op	 5418948 allocs/op
+BenchmarkIndexBuildTime/mongo/n=100-28         	       1	4219700300 ns/op	639174224 B/op	 5418996 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7708610100 ns/op	1192602064 B/op	 9786322 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7606417800 ns/op	1192340320 B/op	 9786333 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7810300000 ns/op	1192706792 B/op	 9786338 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7714684300 ns/op	1192923288 B/op	 9786355 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7608340800 ns/op	1192657056 B/op	 9786336 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7509096600 ns/op	1192756512 B/op	 9786329 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7666402100 ns/op	1193099088 B/op	 9786371 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7604151600 ns/op	1192722224 B/op	 9786343 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7547900900 ns/op	1192615824 B/op	 9786336 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7706215100 ns/op	1192326408 B/op	 9786299 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7900730400 ns/op	1192434632 B/op	 9786312 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7791778600 ns/op	1192840080 B/op	 9786368 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7660202900 ns/op	1192872320 B/op	 9786344 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7727542400 ns/op	1193217496 B/op	 9786386 allocs/op
+BenchmarkIndexBuildTime/mongo/n=250-28         	       1	7793004900 ns/op	1192703544 B/op	 9786346 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10392177300 ns/op	1768808016 B/op	12959889 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10299133300 ns/op	1777911192 B/op	12959883 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10266080400 ns/op	1768080608 B/op	12959823 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10253270300 ns/op	1767809304 B/op	12959830 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10108563700 ns/op	1769287792 B/op	12959873 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10272026200 ns/op	1757488632 B/op	12959893 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10347948900 ns/op	1757614800 B/op	12959879 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10237766000 ns/op	1773318864 B/op	12959862 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10496041900 ns/op	1768973800 B/op	12959832 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10231324300 ns/op	1774400128 B/op	12959837 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10282227200 ns/op	1755501008 B/op	12959769 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10202032500 ns/op	1770757856 B/op	12959926 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10354074600 ns/op	1757874648 B/op	12959873 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10212031500 ns/op	1789939000 B/op	12959854 allocs/op
+BenchmarkIndexBuildTime/mongo/n=500-28         	       1	10151289500 ns/op	1757642752 B/op	12959877 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18532844100 ns/op	3291015880 B/op	22970280 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18875837000 ns/op	3266433704 B/op	22970433 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18976742700 ns/op	3298939192 B/op	22970375 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18547419600 ns/op	3319389176 B/op	22970310 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18848061600 ns/op	3322964240 B/op	22970424 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18552867200 ns/op	3291369136 B/op	22970398 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18916828100 ns/op	3279137944 B/op	22970425 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18725616200 ns/op	3305052000 B/op	22970325 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18704017000 ns/op	3316402392 B/op	22970355 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18908183000 ns/op	3309705976 B/op	22970342 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18697595500 ns/op	3298372344 B/op	22970421 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18713996700 ns/op	3295286216 B/op	22970327 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18746560700 ns/op	3331829304 B/op	22970393 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18555526500 ns/op	3299324160 B/op	22970404 allocs/op
+BenchmarkIndexBuildTime/mongo/n=1000-28        	       1	18709992800 ns/op	3322492288 B/op	22970427 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 742718800 ns/op	370541280 B/op	 1958087 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 333630700 ns/op	181299456 B/op	 1046210 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 336628600 ns/op	181441456 B/op	 1046212 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 342909000 ns/op	181244800 B/op	 1046204 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 341124600 ns/op	180643664 B/op	 1046174 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 338704600 ns/op	181026384 B/op	 1046188 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 336458400 ns/op	180538712 B/op	 1046171 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 343870600 ns/op	180899240 B/op	 1046191 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 332702200 ns/op	180993392 B/op	 1046191 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 336646700 ns/op	180840400 B/op	 1046183 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 336173900 ns/op	180964488 B/op	 1046197 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 337086400 ns/op	180589328 B/op	 1046175 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 342323800 ns/op	181070224 B/op	 1046189 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 351372300 ns/op	181343280 B/op	 1046210 allocs/op
+BenchmarkUpdateTime/json/n=100-28              	       1	 345991200 ns/op	180141056 B/op	 1046152 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	1366650200 ns/op	677258576 B/op	 3359957 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 359219800 ns/op	223782008 B/op	 1293282 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 357403800 ns/op	223714864 B/op	 1293269 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 359699300 ns/op	223727368 B/op	 1293278 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 350684500 ns/op	223782072 B/op	 1293284 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 349283400 ns/op	223765464 B/op	 1293272 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 354443500 ns/op	223945704 B/op	 1293293 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 363661100 ns/op	224000328 B/op	 1293298 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 362681100 ns/op	224000392 B/op	 1293299 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 377656100 ns/op	223828352 B/op	 1293282 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 362036000 ns/op	223727400 B/op	 1293278 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 349536100 ns/op	223983616 B/op	 1293285 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 360174500 ns/op	224000264 B/op	 1293297 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 351964000 ns/op	223945704 B/op	 1293293 allocs/op
+BenchmarkUpdateTime/json/n=250-28              	       1	 358402900 ns/op	224000376 B/op	 1293298 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	2308754900 ns/op	1175023840 B/op	 5298505 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 553614900 ns/op	359308680 B/op	 1637888 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 545382100 ns/op	360882488 B/op	 1637952 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 539038000 ns/op	359685928 B/op	 1637877 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 537925600 ns/op	360096040 B/op	 1637905 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 543685900 ns/op	360620776 B/op	 1637920 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 547119300 ns/op	359822472 B/op	 1637900 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 552878900 ns/op	360358184 B/op	 1637920 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 549737500 ns/op	360664280 B/op	 1637937 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 549012100 ns/op	360336072 B/op	 1637928 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 547192000 ns/op	360565576 B/op	 1637929 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 546154200 ns/op	360532968 B/op	 1637937 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 547643000 ns/op	361363736 B/op	 1637971 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 533722000 ns/op	359958872 B/op	 1637897 allocs/op
+BenchmarkUpdateTime/json/n=500-28              	       1	 540150200 ns/op	361167032 B/op	 1637962 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	4417649400 ns/op	2236381784 B/op	 9548502 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 775981400 ns/op	552535208 B/op	 2159410 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 760934300 ns/op	552611864 B/op	 2159406 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 756324500 ns/op	552666248 B/op	 2159407 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 758308100 ns/op	552272696 B/op	 2159391 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 778408600 ns/op	552174168 B/op	 2159385 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 764713200 ns/op	552272984 B/op	 2159391 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 775958400 ns/op	552480456 B/op	 2159405 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 764088100 ns/op	552622552 B/op	 2159406 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 760949500 ns/op	552622488 B/op	 2159409 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 769366000 ns/op	552928568 B/op	 2159423 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 755505200 ns/op	552655624 B/op	 2159404 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 761502700 ns/op	552163608 B/op	 2159381 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 763703300 ns/op	552830136 B/op	 2159420 allocs/op
+BenchmarkUpdateTime/json/n=1000-28             	       1	 755999500 ns/op	552163384 B/op	 2159382 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2874134800 ns/op	482274832 B/op	 3424188 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2467315100 ns/op	292721064 B/op	 2511383 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2484927200 ns/op	292876704 B/op	 2511389 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2554905100 ns/op	292815480 B/op	 2511403 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2517236400 ns/op	292690968 B/op	 2511516 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2446369700 ns/op	293275864 B/op	 2511429 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2491278100 ns/op	292955208 B/op	 2511385 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2478567800 ns/op	292136440 B/op	 2511489 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2436543600 ns/op	292757504 B/op	 2511397 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2494410700 ns/op	292872192 B/op	 2511393 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2438691700 ns/op	292765224 B/op	 2511403 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2533387900 ns/op	292769920 B/op	 2511387 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2549486000 ns/op	292632992 B/op	 2511509 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2446990400 ns/op	292821752 B/op	 2511412 allocs/op
+BenchmarkUpdateTime/mongo/n=100-28             	       1	2505512900 ns/op	293040752 B/op	 2511432 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	3398790500 ns/op	686862176 B/op	 4147841 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2400310500 ns/op	232275168 B/op	 2079967 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2398690500 ns/op	231945376 B/op	 2079954 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2435765900 ns/op	232327176 B/op	 2079979 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2456938000 ns/op	232276952 B/op	 2079972 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2454717900 ns/op	232326232 B/op	 2079962 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2404161000 ns/op	232434968 B/op	 2079996 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2443847500 ns/op	232111880 B/op	 2079951 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2375896600 ns/op	232012288 B/op	 2080087 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2453152300 ns/op	232446528 B/op	 2080104 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2421189000 ns/op	232338816 B/op	 2080106 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2459976800 ns/op	232329600 B/op	 2079969 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2439049800 ns/op	232437896 B/op	 2080083 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2405280400 ns/op	232215312 B/op	 2079954 allocs/op
+BenchmarkUpdateTime/mongo/n=250-28             	       1	2405716600 ns/op	232273176 B/op	 2079968 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	5840027300 ns/op	1157106304 B/op	 6739770 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4131669200 ns/op	343881680 B/op	 3077974 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4067489400 ns/op	343771296 B/op	 3077973 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4116185700 ns/op	343778352 B/op	 3078100 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4144640600 ns/op	343838256 B/op	 3078120 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4161220800 ns/op	343655096 B/op	 3077952 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4068021800 ns/op	343717816 B/op	 3077962 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4036207400 ns/op	343729664 B/op	 3078091 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4058337200 ns/op	344120888 B/op	 3078130 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4022853100 ns/op	343768160 B/op	 3077949 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4006083500 ns/op	291551656 B/op	 3077932 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4058579800 ns/op	344112840 B/op	 3078128 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4100023600 ns/op	343788000 B/op	 3078093 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4056651300 ns/op	343929584 B/op	 3077978 allocs/op
+BenchmarkUpdateTime/mongo/n=500-28             	       1	4039500100 ns/op	344044944 B/op	 3077989 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	8035143600 ns/op	1951949288 B/op	 9845620 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4327330100 ns/op	266677848 B/op	 2455264 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4257390900 ns/op	266671000 B/op	 2455278 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4361620900 ns/op	266853616 B/op	 2455266 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4348974200 ns/op	266423424 B/op	 2455231 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4332940100 ns/op	266995376 B/op	 2455285 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4238374200 ns/op	266774360 B/op	 2455265 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4288924400 ns/op	224698152 B/op	 2455224 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4361428900 ns/op	266531368 B/op	 2455244 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4300824700 ns/op	266791448 B/op	 2455401 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4367039300 ns/op	266475280 B/op	 2455375 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4365961700 ns/op	266406944 B/op	 2455357 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4287200900 ns/op	266701000 B/op	 2455372 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4398055000 ns/op	266566264 B/op	 2455361 allocs/op
+BenchmarkUpdateTime/mongo/n=1000-28            	       1	4349355200 ns/op	225039608 B/op	 2455336 allocs/op
+PASS
+ok  	stage1_go	1695.511s
+[BENCH] go test ^Benchmark(LookupTime|IncrementalDetectTime|MetadataInsertTime|MetadataQueryTimeAuthor|MetadataQueryTimeID|QueryTime)$ -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\go\micro_light.txt
 goos: windows
 goarch: amd64
 pkg: stage1_go
@@ -724,3 +1152,172 @@ BenchmarkQueryTime/mongo/n=1000-28                   	    4388	    267586 ns/op	
 BenchmarkQueryTime/mongo/n=1000-28                   	    4520	    264628 ns/op	  106036 B/op	     925 allocs/op
 PASS
 ok  	stage1_go	2003.836s
+[BENCH] go test ^Benchmark(IndexBuildTime|UpdateTime)$ -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\go\micro_heavy_folders.txt
+goos: windows
+goarch: amd64
+pkg: stage1_go
+cpu: Intel(R) Core(TM) i7-14700K
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	52167700000 ns/op	391579032 B/op	 2860836 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	53834370900 ns/op	390648760 B/op	 2855533 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	54964844600 ns/op	390933352 B/op	 2855566 allocs/op
+BenchmarkIndexBuildTime/folders/n=100-28         	       1	54275064400 ns/op	391398096 B/op	 2855563 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	94249404700 ns/op	810320480 B/op	 5407690 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	94227682200 ns/op	810632920 B/op	 5407701 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	93956188000 ns/op	810419024 B/op	 5407686 allocs/op
+BenchmarkIndexBuildTime/folders/n=250-28         	       1	92254221700 ns/op	810308864 B/op	 5407659 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	116366235800 ns/op	1265396688 B/op	 7702989 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	115545656000 ns/op	1266471576 B/op	 7703032 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	115305864300 ns/op	1266040256 B/op	 7703024 allocs/op
+BenchmarkIndexBuildTime/folders/n=500-28         	       1	114166122800 ns/op	1266656568 B/op	 7703050 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199122817200 ns/op	2472831088 B/op	14150544 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	200596947800 ns/op	2472892184 B/op	14150557 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199545048700 ns/op	2472932080 B/op	14150552 allocs/op
+BenchmarkIndexBuildTime/folders/n=1000-28        	       1	199026222300 ns/op	2473696368 B/op	14150606 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35322298800 ns/op	451035696 B/op	 2744208 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35397118600 ns/op	261587656 B/op	 1832302 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35437183800 ns/op	261653224 B/op	 1832312 allocs/op
+BenchmarkUpdateTime/folders/n=100-28             	       1	35510241900 ns/op	261543608 B/op	 1832298 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	41633806200 ns/op	738973672 B/op	 4100508 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31723522000 ns/op	270645632 B/op	 1664882 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31478000300 ns/op	270590960 B/op	 1664876 allocs/op
+BenchmarkUpdateTime/folders/n=250-28             	       1	31157965700 ns/op	270754208 B/op	 1664878 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	66306292700 ns/op	1290605200 B/op	 6685653 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	48835750500 ns/op	454666248 B/op	 2444388 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	48165357100 ns/op	454829992 B/op	 2444403 allocs/op
+BenchmarkUpdateTime/folders/n=500-28             	       1	47324782300 ns/op	454775992 B/op	 2444406 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	64694781600 ns/op	2286729960 B/op	10148241 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	40812689200 ns/op	575498360 B/op	 2052840 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	41901766300 ns/op	575257816 B/op	 2052828 allocs/op
+BenchmarkUpdateTime/folders/n=1000-28            	       1	40224828400 ns/op	575105560 B/op	 2052832 allocs/op
+PASS
+ok  	stage1_go	3501.595s
+[SCRIPT] storage time n=100: 202 ficheros, 4 carpetas, 58605186 bytes
+[SCRIPT] storage time n=250: 502 ficheros, 4 carpetas, 133349297 bytes
+[SCRIPT] storage time n=500: 1002 ficheros, 4 carpetas, 222900536 bytes
+[SCRIPT] storage time n=1000: 2002 ficheros, 4 carpetas, 456580568 bytes
+[SCRIPT] storage book n=100: 201 ficheros, 102 carpetas, 58603691 bytes
+[SCRIPT] storage book n=250: 501 ficheros, 252 carpetas, 133345402 bytes
+[SCRIPT] storage book n=500: 1001 ficheros, 502 carpetas, 222892641 bytes
+[SCRIPT] storage book n=1000: 2001 ficheros, 1002 carpetas, 456564610 bytes
+[SCRIPT] storage range n=100: 201 ficheros, 3 carpetas, 58603691 bytes
+[SCRIPT] storage range n=250: 501 ficheros, 3 carpetas, 133345402 bytes
+[SCRIPT] storage range n=500: 1001 ficheros, 3 carpetas, 222892641 bytes
+[SCRIPT] storage range n=1000: 2001 ficheros, 4 carpetas, 456564610 bytes
+[SCRIPT] recovery time n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=2: 1 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=3: 1 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] footprint json n=100 rep=1: 69.1 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=2: 70.1 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=3: 71.1 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=4: 70.7 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=5: 70.8 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=250 rep=1: 129.4 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=2: 134.0 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=3: 129.1 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=4: 129.8 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=5: 129.5 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=500 rep=1: 177.6 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=2: 204.8 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=3: 191.5 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=4: 220.7 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=5: 189.0 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=1000 rep=1: 357.7 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=2: 366.6 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=3: 336.1 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=4: 337.5 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=5: 333.6 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint folders n=100 rep=1: 58.7 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=2: 58.5 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=3: 58.1 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=250 rep=1: 87.7 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=2: 87.8 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=3: 88.1 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=500 rep=1: 125.1 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=2: 126.9 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=3: 125.0 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=1: 218.0 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=2: 218.0 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=3: 217.6 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=1: 239.9 MB de pico (PeakWorkingSetSize), 5570560 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=2: 239.9 MB de pico (PeakWorkingSetSize), 5586944 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=3: 236.7 MB de pico (PeakWorkingSetSize), 5611520 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=4: 232.5 MB de pico (PeakWorkingSetSize), 5627904 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=5: 238.1 MB de pico (PeakWorkingSetSize), 5619712 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=1: 369.6 MB de pico (PeakWorkingSetSize), 14450688 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=2: 374.4 MB de pico (PeakWorkingSetSize), 12742656 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=3: 384.3 MB de pico (PeakWorkingSetSize), 12726272 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=4: 378.8 MB de pico (PeakWorkingSetSize), 12759040 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=5: 380.1 MB de pico (PeakWorkingSetSize), 12750848 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=1: 527.0 MB de pico (PeakWorkingSetSize), 23285760 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=2: 523.0 MB de pico (PeakWorkingSetSize), 23224320 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=3: 526.1 MB de pico (PeakWorkingSetSize), 26550272 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=4: 494.8 MB de pico (PeakWorkingSetSize), 23191552 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=5: 515.1 MB de pico (PeakWorkingSetSize), 23281664 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=1: 892.5 MB de pico (PeakWorkingSetSize), 49885184 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=2: 869.9 MB de pico (PeakWorkingSetSize), 52674560 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=3: 870.9 MB de pico (PeakWorkingSetSize), 49860608 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=4: 842.8 MB de pico (PeakWorkingSetSize), 49897472 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=5: 834.9 MB de pico (PeakWorkingSetSize), 53460992 bytes en disco
+[SCRIPT] download book rep=1: 50 libros, 0.683 libros/s
+[SCRIPT] download book rep=2: 50 libros, 0.687 libros/s
+[SCRIPT] download book rep=3: 50 libros, 0.686 libros/s
+[SCRIPT] download book rep=4: 50 libros, 0.688 libros/s
+[SCRIPT] download book rep=5: 50 libros, 0.686 libros/s
+[BENCH] 145 filas actualizadas en C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\results\go.csv

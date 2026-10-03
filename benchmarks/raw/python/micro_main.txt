@@ -1,0 +1,179 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0
+benchmark: 5.3.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: C:\Users\hugoa\Documents\Stage1\stage_1\python
+configfile: pytest.ini
+plugins: benchmark-5.3.0
+collected 84 items
+
+bench\test_datalake.py ....................................              [ 42%]
+bench\test_index.py ..............................F.....                 [ 85%]
+bench\test_metadata.py ............                                      [100%]
+Wrote benchmark data in: C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\python\micro.json
+
+
+================================== FAILURES ===================================
+________________________ test_update_time[folders-500] ________________________
+
+benchmark = <pytest_benchmark.fixture.BenchmarkFixture object at 0x000001C5D8E29F50>
+record = <function record.<locals>.annotate at 0x000001C5F3B52020>
+env = <bench.benchkit.Env object at 0x000001C5D2D3A9D0>
+fixture = <bench.conftest.Fixture object at 0x000001C5D2D7DF50>
+kind = 'folders', n = 500
+
+    @pytest.mark.parametrize("kind, n", CASES)
+    def test_update_time(benchmark, record, env, fixture, kind, n):
+        """Abrir el índice de cero (en JSON, cargar el fichero), leer y tokenizar
+        los libros N+1 … N+50 y añadirlos. Fuera de la medida, el índice vuelve a
+        tener los N primeros."""
+        record("index", kind, n, "update_time", "ms", "ms")
+        store = env.source()
+        datamarts = env.work / "update"
+        open_index(env, kind, datamarts).close()  # si no hay MongoDB, se salta antes de preparar nada
+        base = fixture.get(("postings", n), lambda _: env.postings(store, env.books(n)))
+        added_ids = env.books(n + EXTRA)[n:]
+        state = {"index": None, "added": None}
+    
+        def setup():
+            if state["index"] is not None:
+                state["index"].close()
+            index = open_index(env, kind, datamarts)
+            if kind == "folders" and state["added"] is not None:
+                undo_folders(index.root, base, state["added"])
+            else:
+                index.reset()
+                index.add(base)
+            index.close()
+    
+        def update():
+            index = state["index"] = open_index(env, kind, datamarts)
+            postings = state["added"] = env.postings(store, added_ids)
+            index.add(postings)
+    
+        warmup, rounds = iterations(kind, n, heavy=True)
+>       benchmark.pedantic(update, setup=setup, rounds=rounds, warmup_rounds=warmup)
+
+bench\test_index.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\..\..\..\AppData\Local\Temp\claude\c--Users-hugoa-Documents-Stage1\1de37bd4-1db0-4123-956e-26196100a331\scratchpad\venv\Lib\site-packages\pytest_benchmark\fixture.py:206: in pedantic
+    return self._raw_pedantic(
+..\..\..\..\AppData\Local\Temp\claude\c--Users-hugoa-Documents-Stage1\1de37bd4-1db0-4123-956e-26196100a331\scratchpad\venv\Lib\site-packages\pytest_benchmark\fixture.py:344: in _raw_pedantic
+    duration, result = runner(loops_range)
+                       ^^^^^^^^^^^^^^^^^^^
+..\..\..\..\AppData\Local\Temp\claude\c--Users-hugoa-Documents-Stage1\1de37bd4-1db0-4123-956e-26196100a331\scratchpad\venv\Lib\site-packages\pytest_benchmark\fixture.py:152: in runner
+    result = function_to_benchmark(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bench\test_index.py:85: in update
+    index.add(postings)
+search_engine\index\folders.py:35: in add
+    atomic_write(path, content.encode("ascii"))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = WindowsPath('C:/Users/hugoa/Documents/Stage1/stage_1/output/python_bench/update/inverted_index/P/profound.txt')
+data = b'10\n14\n15\n16\n17\n18\n20\n22\n25\n26\n27\n30\n32\n33\n35\n38\n42\n43\n44\n45\n46\n47\n48\n51\n53\n54\n58\n60\n64\n...0\n541\n543\n546\n547\n549\n554\n555\n559\n560\n564\n565\n566\n567\n568\n569\n571\n575\n577\n579\n580\n581\n583\n586\n'
+
+    def atomic_write(path: Path, data: bytes) -> None:
+        """Escribe en "<path>.tmp" y renombra al final: si el proceso se corta a
+        mitad, nunca queda un fichero final a medias."""
+        tmp = path.with_name(path.name + ".tmp")
+        with open(tmp, "wb") as f:
+            f.write(data)
+>       os.replace(tmp, path)
+E       PermissionError: [WinError 5] Access is denied: 'C:\\Users\\hugoa\\Documents\\Stage1\\stage_1\\output\\python_bench\\update\\inverted_index\\P\\profound.txt.tmp' -> 'C:\\Users\\hugoa\\Documents\\Stage1\\stage_1\\output\\python_bench\\update\\inverted_index\\P\\profound.txt'
+
+search_engine\fileutil.py:28: PermissionError
+
+------------------------------------------------------------------------ benchmark: 83 tests ------------------------------------------------------------------------
+Name (time in us)                                            Mean                    StdDev                         Min                         Max            Rounds
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_query_time[json-100]                                  3.7726 (1.0)              0.1715 (1.0)                3.5370 (1.0)                4.0745 (1.0)          10
+test_query_time[json-250]                                  7.9124 (2.10)             1.1446 (6.67)               7.0720 (2.00)              10.9140 (2.68)         10
+test_query_time[json-500]                                 10.3237 (2.74)             0.8661 (5.05)               9.4595 (2.67)              12.1075 (2.97)         10
+test_metadata_query_time_id[sqlite-100]                   29.3500 (7.78)             2.3987 (13.98)             27.4220 (7.75)              33.9650 (8.34)         10
+test_metadata_query_time_id[sqlite-250]                   32.6998 (8.67)            10.4712 (61.04)             27.5145 (7.78)              61.7950 (15.17)        10
+test_metadata_query_time_id[sqlite-500]                   30.7240 (8.14)             4.9203 (28.68)             27.5380 (7.79)              43.8095 (10.75)        10
+test_metadata_query_time_id[sqlite-1000]                  30.9700 (8.21)             2.6958 (15.72)             28.0980 (7.94)              36.8055 (9.03)         10
+test_metadata_query_time_author[sqlite-100]               33.3689 (8.85)             1.3597 (7.93)              31.5635 (8.92)              36.0300 (8.84)         10
+test_metadata_query_time_author[sqlite-250]               33.7147 (8.94)             1.3044 (7.60)              31.8265 (9.00)              36.0650 (8.85)         10
+test_metadata_query_time_author[sqlite-500]               36.4081 (9.65)             1.6649 (9.71)              34.7085 (9.81)              39.9725 (9.81)         10
+test_query_time[json-1000]                                37.5186 (9.95)             1.8234 (10.63)             34.7270 (9.82)              40.4430 (9.93)         10
+test_lookup_time[book-100]                                39.4918 (10.47)            1.1106 (6.47)              37.5960 (10.63)             40.8900 (10.04)        10
+test_lookup_time[range-250]                               40.1677 (10.65)            1.2850 (7.49)              38.0840 (10.77)             42.4805 (10.43)        10
+test_metadata_query_time_author[sqlite-1000]              41.4593 (10.99)            6.2497 (36.43)             38.2265 (10.81)             57.3575 (14.08)        10
+test_lookup_time[book-500]                                39.6004 (10.50)            0.8004 (4.67)              38.6145 (10.92)             40.8445 (10.02)        10
+test_lookup_time[range-100]                               41.8965 (11.11)            5.0373 (29.37)             38.6990 (10.94)             55.6500 (13.66)        10
+test_lookup_time[book-1000]                               40.9287 (10.85)            4.0807 (23.79)             38.7735 (10.96)             52.3205 (12.84)        10
+test_lookup_time[book-250]                                40.6069 (10.76)            1.7126 (9.98)              39.0545 (11.04)             44.5455 (10.93)        10
+test_lookup_time[range-500]                               42.3325 (11.22)            2.8336 (16.52)             39.1305 (11.06)             48.3235 (11.86)        10
+test_lookup_time[time-100]                                40.5138 (10.74)            1.3436 (7.83)              39.4740 (11.16)             43.8070 (10.75)        10
+test_lookup_time[range-1000]                              43.5690 (11.55)            3.2744 (19.09)             39.6670 (11.21)             50.6450 (12.43)        10
+test_lookup_time[time-1000]                               43.7597 (11.60)            1.7063 (9.95)              40.9355 (11.57)             46.1315 (11.32)        10
+test_lookup_time[time-500]                                45.0432 (11.94)            3.7384 (21.79)             41.6815 (11.78)             53.8075 (13.21)        10
+test_lookup_time[time-250]                                46.4914 (12.32)            2.6273 (15.32)             43.1935 (12.21)             52.0430 (12.77)        10
+test_query_time[folders-100]                              75.9045 (20.12)            6.8698 (40.05)             69.5375 (19.66)             92.6350 (22.74)        10
+test_query_time[folders-250]                              84.2966 (22.34)            5.4504 (31.77)             80.8955 (22.87)             98.7265 (24.23)        10
+test_query_time[folders-500]                             107.4466 (28.48)            3.5066 (20.44)            104.0535 (29.42)            116.6180 (28.62)        10
+test_query_time[folders-1000]                            152.3500 (40.38)            6.5043 (37.92)            147.4090 (41.68)            165.0550 (40.51)        10
+test_query_time[mongo-250]                               258.7836 (68.60)           17.4707 (101.85)           229.9080 (65.00)            295.0150 (72.41)        10
+test_query_time[mongo-100]                               254.6512 (67.50)           10.3025 (60.06)            240.7365 (68.06)            272.8815 (66.97)        10
+test_query_time[mongo-500]                               268.3633 (71.13)            7.5624 (44.09)            256.6030 (72.55)            277.0370 (67.99)        10
+test_query_time[mongo-1000]                              296.6849 (78.64)            4.9747 (29.00)            289.9665 (81.98)            306.9840 (75.34)        10
+test_metadata_insert_time[sqlite-100]                  1,779.7700 (471.76)         284.0010 (>1000.0)        1,473.3000 (416.54)         2,356.1000 (578.26)       10
+test_metadata_insert_time[sqlite-250]                  2,188.4600 (580.09)         360.6207 (>1000.0)        1,904.3000 (538.39)         2,857.1000 (701.21)       10
+test_metadata_insert_time[sqlite-500]                  2,592.8400 (687.28)         224.5514 (>1000.0)        2,385.6000 (674.47)         3,105.4000 (762.15)       10
+test_metadata_insert_time[sqlite-1000]                 3,852.3100 (>1000.0)        179.3876 (>1000.0)        3,621.7000 (>1000.0)        4,193.1000 (>1000.0)      10
+test_incremental_detect_time[book-100]                 6,312.2670 (>1000.0)        238.5193 (>1000.0)        6,016.0100 (>1000.0)        6,760.3500 (>1000.0)      10
+test_incremental_detect_time[time-100]                 6,407.2520 (>1000.0)        233.9914 (>1000.0)        6,187.4200 (>1000.0)        6,999.6800 (>1000.0)      10
+test_incremental_detect_time[range-100]                6,966.5600 (>1000.0)        271.1774 (>1000.0)        6,401.2700 (>1000.0)        7,350.0500 (>1000.0)      10
+test_incremental_detect_time[book-250]                13,282.7790 (>1000.0)        506.9278 (>1000.0)       12,437.9200 (>1000.0)       14,214.1200 (>1000.0)      10
+test_incremental_detect_time[time-250]                13,110.7970 (>1000.0)        321.9409 (>1000.0)       12,615.4200 (>1000.0)       13,698.4500 (>1000.0)      10
+test_incremental_detect_time[range-250]               13,829.7380 (>1000.0)        450.8900 (>1000.0)       13,168.2600 (>1000.0)       14,572.8300 (>1000.0)      10
+test_incremental_detect_time[time-500]                24,236.8170 (>1000.0)        435.5432 (>1000.0)       23,487.5800 (>1000.0)       24,914.4600 (>1000.0)      10
+test_incremental_detect_time[book-500]                25,046.2870 (>1000.0)        535.5575 (>1000.0)       24,467.3000 (>1000.0)       25,944.8100 (>1000.0)      10
+test_incremental_detect_time[range-500]               25,699.3290 (>1000.0)        631.4621 (>1000.0)       24,508.6200 (>1000.0)       26,379.6200 (>1000.0)      10
+test_incremental_detect_time[time-1000]               46,764.7720 (>1000.0)        811.4724 (>1000.0)       45,741.7700 (>1000.0)       48,208.2100 (>1000.0)      10
+test_incremental_detect_time[book-1000]               46,083.8260 (>1000.0)        196.5101 (>1000.0)       45,801.3100 (>1000.0)       46,437.5200 (>1000.0)      10
+test_incremental_detect_time[range-1000]              48,326.9020 (>1000.0)        633.2678 (>1000.0)       47,681.9200 (>1000.0)       49,782.0100 (>1000.0)      10
+test_write_throughput[range-100]                     342,410.6200 (>1000.0)      3,975.7015 (>1000.0)      335,832.6000 (>1000.0)      349,348.8000 (>1000.0)      10
+test_write_throughput[book-100]                      347,440.2800 (>1000.0)     11,940.3170 (>1000.0)      335,950.2000 (>1000.0)      376,009.0000 (>1000.0)      10
+test_write_throughput[time-100]                      360,498.3000 (>1000.0)      3,919.9423 (>1000.0)      355,401.5000 (>1000.0)      367,362.9000 (>1000.0)      10
+test_write_throughput[book-250]                      784,110.8500 (>1000.0)      9,377.7961 (>1000.0)      771,060.5000 (>1000.0)      798,852.6000 (>1000.0)      10
+test_write_throughput[range-250]                     816,483.5300 (>1000.0)      8,335.4652 (>1000.0)      805,336.1000 (>1000.0)      834,538.6000 (>1000.0)      10
+test_write_throughput[time-250]                      879,644.0600 (>1000.0)     14,587.5936 (>1000.0)      847,720.8000 (>1000.0)      896,987.3000 (>1000.0)      10
+test_update_time[json-250]                         1,082,520.8900 (>1000.0)     56,207.5535 (>1000.0)      988,618.6000 (>1000.0)    1,156,499.7000 (>1000.0)      10
+test_update_time[json-100]                         1,146,018.6400 (>1000.0)     60,940.3759 (>1000.0)    1,031,806.7000 (>1000.0)    1,217,589.3000 (>1000.0)      10
+test_write_throughput[book-500]                    1,378,341.8000 (>1000.0)     16,939.7447 (>1000.0)    1,357,846.5000 (>1000.0)    1,407,983.2000 (>1000.0)      10
+test_write_throughput[range-500]                   1,476,900.0700 (>1000.0)      8,324.8331 (>1000.0)    1,465,279.2000 (>1000.0)    1,491,007.6000 (>1000.0)      10
+test_write_throughput[time-500]                    1,593,262.1100 (>1000.0)     12,817.3327 (>1000.0)    1,569,886.6000 (>1000.0)    1,612,060.5000 (>1000.0)      10
+test_index_build_time[json-100]                    1,711,566.9500 (>1000.0)     14,040.0696 (>1000.0)    1,695,562.5000 (>1000.0)    1,741,369.2000 (>1000.0)      10
+test_update_time[json-500]                         1,746,098.6600 (>1000.0)     31,496.5413 (>1000.0)    1,703,376.8000 (>1000.0)    1,789,308.7000 (>1000.0)      10
+test_update_time[json-1000]                        2,442,619.8100 (>1000.0)     72,984.7796 (>1000.0)    2,314,362.8000 (>1000.0)    2,538,326.7000 (>1000.0)      10
+test_update_time[mongo-250]                        2,786,274.2500 (>1000.0)     84,878.0042 (>1000.0)    2,649,987.4000 (>1000.0)    2,939,580.2000 (>1000.0)      10
+test_write_throughput[book-1000]                   2,782,925.6800 (>1000.0)     24,767.6127 (>1000.0)    2,750,774.5000 (>1000.0)    2,834,213.6000 (>1000.0)      10
+test_write_throughput[range-1000]                  2,974,188.5700 (>1000.0)     32,476.4556 (>1000.0)    2,933,099.1000 (>1000.0)    3,021,024.6000 (>1000.0)      10
+test_update_time[mongo-100]                        3,209,000.1500 (>1000.0)     68,710.4305 (>1000.0)    3,143,908.4000 (>1000.0)    3,356,155.1000 (>1000.0)      10
+test_write_throughput[time-1000]                   3,196,329.4200 (>1000.0)     37,861.5836 (>1000.0)    3,151,520.9000 (>1000.0)    3,271,544.6000 (>1000.0)      10
+test_index_build_time[json-250]                    4,031,651.6600 (>1000.0)     48,966.5536 (>1000.0)    3,920,679.2000 (>1000.0)    4,095,704.1000 (>1000.0)      10
+test_update_time[mongo-1000]                       4,557,243.6600 (>1000.0)    139,256.1987 (>1000.0)    4,389,851.3000 (>1000.0)    4,761,457.6000 (>1000.0)      10
+test_update_time[mongo-500]                        4,720,323.8800 (>1000.0)    109,428.9272 (>1000.0)    4,501,674.6000 (>1000.0)    4,833,167.1000 (>1000.0)      10
+test_index_build_time[mongo-100]                   5,709,138.3100 (>1000.0)     48,864.2502 (>1000.0)    5,631,428.4000 (>1000.0)    5,773,104.4000 (>1000.0)      10
+test_index_build_time[json-500]                    6,909,948.8900 (>1000.0)     38,676.7583 (>1000.0)    6,867,047.9000 (>1000.0)    6,969,350.3000 (>1000.0)      10
+test_index_build_time[mongo-250]                  10,959,808.3400 (>1000.0)    138,510.8320 (>1000.0)   10,730,856.2000 (>1000.0)   11,158,808.7000 (>1000.0)      10
+test_index_build_time[json-1000]                  14,595,362.9900 (>1000.0)     72,535.0732 (>1000.0)   14,484,840.9000 (>1000.0)   14,685,432.6000 (>1000.0)      10
+test_index_build_time[mongo-500]                  15,655,070.7800 (>1000.0)    159,548.9787 (>1000.0)   15,364,027.1000 (>1000.0)   15,905,804.5000 (>1000.0)      10
+test_index_build_time[mongo-1000]                 28,659,632.2600 (>1000.0)    174,412.7121 (>1000.0)   28,378,511.4000 (>1000.0)   28,933,845.6000 (>1000.0)      10
+test_index_build_time[folders-100]                57,308,289.0000 (>1000.0)    409,381.0481 (>1000.0)   56,935,500.5000 (>1000.0)   57,746,406.1000 (>1000.0)       3
+test_index_build_time[folders-250]                99,457,582.6000 (>1000.0)  1,153,728.9925 (>1000.0)   98,614,989.6000 (>1000.0)  100,772,533.6000 (>1000.0)       3
+test_index_build_time[folders-500]               122,457,211.0667 (>1000.0)  1,615,199.0598 (>1000.0)  120,779,634.5000 (>1000.0)  124,001,811.4000 (>1000.0)       3
+test_update_time[folders-100]                    140,768,823.9333 (>1000.0)  1,448,849.6298 (>1000.0)  139,252,924.1000 (>1000.0)  142,139,718.4000 (>1000.0)       3
+test_update_time[folders-250]                    146,033,999.5667 (>1000.0)  1,862,288.1934 (>1000.0)  144,797,922.2000 (>1000.0)  148,175,915.5000 (>1000.0)       3
+test_update_time[folders-1000]                   178,822,402.1000 (>1000.0)  1,584,648.3915 (>1000.0)  177,812,439.3000 (>1000.0)  180,648,781.2000 (>1000.0)       3
+test_index_build_time[folders-1000]              208,988,273.0667 (>1000.0)    851,214.3915 (>1000.0)  208,005,707.1000 (>1000.0)  209,501,670.1000 (>1000.0)       3
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ===========================
+FAILED bench/test_index.py::test_update_time[folders-500] - PermissionError: ...
+================== 1 failed, 83 passed in 8453.87s (2:20:53) ==================

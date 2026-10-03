@@ -1,0 +1,4776 @@
+[BENCH] JMH datalake -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_datalake.json
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = time, n = 100)
+
+# Run progress: 0.00% complete, ETA 00:18:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 4.410 ms/op
+# Warmup Iteration   2: 4.311 ms/op
+# Warmup Iteration   3: 4.207 ms/op
+# Warmup Iteration   4: 4.246 ms/op
+# Warmup Iteration   5: 4.337 ms/op
+Iteration   1: 4.259 ms/op
+Iteration   2: 4.218 ms/op
+Iteration   3: 4.281 ms/op
+Iteration   4: 4.182 ms/op
+Iteration   5: 4.219 ms/op
+Iteration   6: 4.147 ms/op
+Iteration   7: 4.209 ms/op
+Iteration   8: 4.148 ms/op
+Iteration   9: 4.150 ms/op
+Iteration  10: 4.207 ms/op
+
+# Run progress: 1.39% complete, ETA 00:19:33
+# Fork: 2 of 2
+# Warmup Iteration   1: 4.421 ms/op
+# Warmup Iteration   2: 4.234 ms/op
+# Warmup Iteration   3: 4.325 ms/op
+# Warmup Iteration   4: 4.234 ms/op
+# Warmup Iteration   5: 4.179 ms/op
+Iteration   1: 4.238 ms/op
+Iteration   2: 4.202 ms/op
+Iteration   3: 4.248 ms/op
+Iteration   4: 4.397 ms/op
+Iteration   5: 4.142 ms/op
+Iteration   6: 4.220 ms/op
+Iteration   7: 4.204 ms/op
+Iteration   8: 4.173 ms/op
+Iteration   9: 4.264 ms/op
+Iteration  10: 4.327 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  4.222 ±(99.9%) 0.055 ms/op [Average]
+  (min, avg, max) = (4.142, 4.222, 4.397), stdev = 0.064
+  CI (99.9%): [4.166, 4.277] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = time, n = 250)
+
+# Run progress: 2.78% complete, ETA 00:19:16
+# Fork: 1 of 2
+# Warmup Iteration   1: 9.161 ms/op
+# Warmup Iteration   2: 8.808 ms/op
+# Warmup Iteration   3: 8.653 ms/op
+# Warmup Iteration   4: 8.737 ms/op
+# Warmup Iteration   5: 8.748 ms/op
+Iteration   1: 8.739 ms/op
+Iteration   2: 8.662 ms/op
+Iteration   3: 8.700 ms/op
+Iteration   4: 8.717 ms/op
+Iteration   5: 8.589 ms/op
+Iteration   6: 8.491 ms/op
+Iteration   7: 8.775 ms/op
+Iteration   8: 8.720 ms/op
+Iteration   9: 8.971 ms/op
+Iteration  10: 8.768 ms/op
+
+# Run progress: 4.17% complete, ETA 00:19:17
+# Fork: 2 of 2
+# Warmup Iteration   1: 9.229 ms/op
+# Warmup Iteration   2: 8.969 ms/op
+# Warmup Iteration   3: 8.857 ms/op
+# Warmup Iteration   4: 8.889 ms/op
+# Warmup Iteration   5: 8.742 ms/op
+Iteration   1: 8.847 ms/op
+Iteration   2: 8.506 ms/op
+Iteration   3: 9.300 ms/op
+Iteration   4: 8.447 ms/op
+Iteration   5: 8.501 ms/op
+Iteration   6: 8.391 ms/op
+Iteration   7: 8.380 ms/op
+Iteration   8: 8.437 ms/op
+Iteration   9: 8.532 ms/op
+Iteration  10: 8.264 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  8.637 ±(99.9%) 0.206 ms/op [Average]
+  (min, avg, max) = (8.264, 8.637, 9.300), stdev = 0.237
+  CI (99.9%): [8.431, 8.843] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = time, n = 500)
+
+# Run progress: 5.56% complete, ETA 00:19:10
+# Fork: 1 of 2
+# Warmup Iteration   1: 16.855 ms/op
+# Warmup Iteration   2: 16.049 ms/op
+# Warmup Iteration   3: 16.587 ms/op
+# Warmup Iteration   4: 16.361 ms/op
+# Warmup Iteration   5: 15.927 ms/op
+Iteration   1: 15.806 ms/op
+Iteration   2: 16.113 ms/op
+Iteration   3: 15.999 ms/op
+Iteration   4: 15.894 ms/op
+Iteration   5: 16.181 ms/op
+Iteration   6: 15.890 ms/op
+Iteration   7: 15.993 ms/op
+Iteration   8: 16.450 ms/op
+Iteration   9: 15.681 ms/op
+Iteration  10: 15.686 ms/op
+
+# Run progress: 6.94% complete, ETA 00:19:19
+# Fork: 2 of 2
+# Warmup Iteration   1: 16.189 ms/op
+# Warmup Iteration   2: 16.212 ms/op
+# Warmup Iteration   3: 15.243 ms/op
+# Warmup Iteration   4: 15.664 ms/op
+# Warmup Iteration   5: 16.035 ms/op
+Iteration   1: 15.538 ms/op
+Iteration   2: 15.380 ms/op
+Iteration   3: 15.316 ms/op
+Iteration   4: 15.469 ms/op
+Iteration   5: 15.115 ms/op
+Iteration   6: 15.467 ms/op
+Iteration   7: 15.376 ms/op
+Iteration   8: 15.346 ms/op
+Iteration   9: 15.437 ms/op
+Iteration  10: 14.959 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  15.655 ±(99.9%) 0.331 ms/op [Average]
+  (min, avg, max) = (14.959, 15.655, 16.450), stdev = 0.381
+  CI (99.9%): [15.324, 15.986] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = time, n = 1000)
+
+# Run progress: 8.33% complete, ETA 00:19:18
+# Fork: 1 of 2
+# Warmup Iteration   1: 30.962 ms/op
+# Warmup Iteration   2: 29.884 ms/op
+# Warmup Iteration   3: 30.161 ms/op
+# Warmup Iteration   4: 29.516 ms/op
+# Warmup Iteration   5: 29.652 ms/op
+Iteration   1: 29.557 ms/op
+Iteration   2: 30.151 ms/op
+Iteration   3: 29.747 ms/op
+Iteration   4: 29.854 ms/op
+Iteration   5: 30.252 ms/op
+Iteration   6: 30.274 ms/op
+Iteration   7: 31.346 ms/op
+Iteration   8: 31.431 ms/op
+Iteration   9: 30.434 ms/op
+Iteration  10: 30.079 ms/op
+
+# Run progress: 9.72% complete, ETA 00:19:39
+# Fork: 2 of 2
+# Warmup Iteration   1: 29.794 ms/op
+# Warmup Iteration   2: 29.503 ms/op
+# Warmup Iteration   3: 28.914 ms/op
+# Warmup Iteration   4: 28.614 ms/op
+# Warmup Iteration   5: 28.871 ms/op
+Iteration   1: 28.697 ms/op
+Iteration   2: 28.850 ms/op
+Iteration   3: 29.152 ms/op
+Iteration   4: 28.660 ms/op
+Iteration   5: 29.040 ms/op
+Iteration   6: 28.769 ms/op
+Iteration   7: 28.655 ms/op
+Iteration   8: 28.718 ms/op
+Iteration   9: 29.067 ms/op
+Iteration  10: 29.020 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  29.588 ±(99.9%) 0.755 ms/op [Average]
+  (min, avg, max) = (28.655, 29.588, 31.431), stdev = 0.869
+  CI (99.9%): [28.833, 30.342] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = book, n = 100)
+
+# Run progress: 11.11% complete, ETA 00:19:50
+# Fork: 1 of 2
+# Warmup Iteration   1: 4.351 ms/op
+# Warmup Iteration   2: 3.998 ms/op
+# Warmup Iteration   3: 3.863 ms/op
+# Warmup Iteration   4: 3.869 ms/op
+# Warmup Iteration   5: 3.851 ms/op
+Iteration   1: 3.849 ms/op
+Iteration   2: 3.845 ms/op
+Iteration   3: 3.861 ms/op
+Iteration   4: 3.863 ms/op
+Iteration   5: 3.858 ms/op
+Iteration   6: 3.893 ms/op
+Iteration   7: 3.838 ms/op
+Iteration   8: 3.861 ms/op
+Iteration   9: 3.860 ms/op
+Iteration  10: 3.847 ms/op
+
+# Run progress: 12.50% complete, ETA 00:19:16
+# Fork: 2 of 2
+# Warmup Iteration   1: 4.255 ms/op
+# Warmup Iteration   2: 4.002 ms/op
+# Warmup Iteration   3: 3.902 ms/op
+# Warmup Iteration   4: 3.953 ms/op
+# Warmup Iteration   5: 3.975 ms/op
+Iteration   1: 3.900 ms/op
+Iteration   2: 3.955 ms/op
+Iteration   3: 3.947 ms/op
+Iteration   4: 3.969 ms/op
+Iteration   5: 3.902 ms/op
+Iteration   6: 3.891 ms/op
+Iteration   7: 3.873 ms/op
+Iteration   8: 3.809 ms/op
+Iteration   9: 3.804 ms/op
+Iteration  10: 3.870 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  3.875 ±(99.9%) 0.038 ms/op [Average]
+  (min, avg, max) = (3.804, 3.875, 3.969), stdev = 0.044
+  CI (99.9%): [3.837, 3.913] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = book, n = 250)
+
+# Run progress: 13.89% complete, ETA 00:18:46
+# Fork: 1 of 2
+# Warmup Iteration   1: 8.876 ms/op
+# Warmup Iteration   2: 8.244 ms/op
+# Warmup Iteration   3: 8.467 ms/op
+# Warmup Iteration   4: 8.047 ms/op
+# Warmup Iteration   5: 8.151 ms/op
+Iteration   1: 8.258 ms/op
+Iteration   2: 8.024 ms/op
+Iteration   3: 8.000 ms/op
+Iteration   4: 8.156 ms/op
+Iteration   5: 7.836 ms/op
+Iteration   6: 7.772 ms/op
+Iteration   7: 7.767 ms/op
+Iteration   8: 7.835 ms/op
+Iteration   9: 7.794 ms/op
+Iteration  10: 7.837 ms/op
+
+# Run progress: 15.28% complete, ETA 00:18:23
+# Fork: 2 of 2
+# Warmup Iteration   1: 9.236 ms/op
+# Warmup Iteration   2: 8.650 ms/op
+# Warmup Iteration   3: 8.521 ms/op
+# Warmup Iteration   4: 8.602 ms/op
+# Warmup Iteration   5: 8.601 ms/op
+Iteration   1: 8.409 ms/op
+Iteration   2: 8.449 ms/op
+Iteration   3: 8.598 ms/op
+Iteration   4: 8.666 ms/op
+Iteration   5: 8.479 ms/op
+Iteration   6: 8.569 ms/op
+Iteration   7: 8.883 ms/op
+Iteration   8: 8.493 ms/op
+Iteration   9: 8.784 ms/op
+Iteration  10: 8.754 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  8.268 ±(99.9%) 0.334 ms/op [Average]
+  (min, avg, max) = (7.767, 8.268, 8.883), stdev = 0.385
+  CI (99.9%): [7.934, 8.602] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = book, n = 500)
+
+# Run progress: 16.67% complete, ETA 00:18:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 17.347 ms/op
+# Warmup Iteration   2: 16.980 ms/op
+# Warmup Iteration   3: 16.608 ms/op
+# Warmup Iteration   4: 16.292 ms/op
+# Warmup Iteration   5: 16.294 ms/op
+Iteration   1: 16.239 ms/op
+Iteration   2: 15.964 ms/op
+Iteration   3: 16.540 ms/op
+Iteration   4: 16.017 ms/op
+Iteration   5: 15.582 ms/op
+Iteration   6: 15.403 ms/op
+Iteration   7: 15.400 ms/op
+Iteration   8: 15.393 ms/op
+Iteration   9: 15.009 ms/op
+Iteration  10: 14.996 ms/op
+
+# Run progress: 18.06% complete, ETA 00:17:44
+# Fork: 2 of 2
+# Warmup Iteration   1: 16.788 ms/op
+# Warmup Iteration   2: 15.691 ms/op
+# Warmup Iteration   3: 15.335 ms/op
+# Warmup Iteration   4: 15.266 ms/op
+# Warmup Iteration   5: 15.162 ms/op
+Iteration   1: 15.037 ms/op
+Iteration   2: 14.889 ms/op
+Iteration   3: 15.000 ms/op
+Iteration   4: 15.167 ms/op
+Iteration   5: 15.041 ms/op
+Iteration   6: 15.075 ms/op
+Iteration   7: 15.049 ms/op
+Iteration   8: 14.986 ms/op
+Iteration   9: 15.068 ms/op
+Iteration  10: 15.040 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  15.345 ±(99.9%) 0.416 ms/op [Average]
+  (min, avg, max) = (14.889, 15.345, 16.540), stdev = 0.479
+  CI (99.9%): [14.928, 15.761] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = book, n = 1000)
+
+# Run progress: 19.44% complete, ETA 00:17:28
+# Fork: 1 of 2
+# Warmup Iteration   1: 31.918 ms/op
+# Warmup Iteration   2: 30.902 ms/op
+# Warmup Iteration   3: 29.712 ms/op
+# Warmup Iteration   4: 29.662 ms/op
+# Warmup Iteration   5: 29.534 ms/op
+Iteration   1: 29.423 ms/op
+Iteration   2: 29.813 ms/op
+Iteration   3: 29.392 ms/op
+Iteration   4: 29.880 ms/op
+Iteration   5: 30.249 ms/op
+Iteration   6: 29.743 ms/op
+Iteration   7: 28.913 ms/op
+Iteration   8: 29.107 ms/op
+Iteration   9: 28.968 ms/op
+Iteration  10: 30.443 ms/op
+
+# Run progress: 20.83% complete, ETA 00:17:22
+# Fork: 2 of 2
+# Warmup Iteration   1: 32.376 ms/op
+# Warmup Iteration   2: 32.582 ms/op
+# Warmup Iteration   3: 31.013 ms/op
+# Warmup Iteration   4: 31.328 ms/op
+# Warmup Iteration   5: 30.527 ms/op
+Iteration   1: 31.279 ms/op
+Iteration   2: 31.703 ms/op
+Iteration   3: 30.798 ms/op
+Iteration   4: 30.804 ms/op
+Iteration   5: 30.066 ms/op
+Iteration   6: 29.412 ms/op
+Iteration   7: 29.228 ms/op
+Iteration   8: 28.887 ms/op
+Iteration   9: 29.525 ms/op
+Iteration  10: 29.112 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  29.837 ±(99.9%) 0.707 ms/op [Average]
+  (min, avg, max) = (28.887, 29.837, 31.703), stdev = 0.815
+  CI (99.9%): [29.130, 30.545] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = range, n = 100)
+
+# Run progress: 22.22% complete, ETA 00:17:14
+# Fork: 1 of 2
+# Warmup Iteration   1: 4.611 ms/op
+# Warmup Iteration   2: 4.250 ms/op
+# Warmup Iteration   3: 4.364 ms/op
+# Warmup Iteration   4: 4.100 ms/op
+# Warmup Iteration   5: 4.172 ms/op
+Iteration   1: 4.297 ms/op
+Iteration   2: 4.261 ms/op
+Iteration   3: 4.246 ms/op
+Iteration   4: 4.253 ms/op
+Iteration   5: 4.297 ms/op
+Iteration   6: 4.210 ms/op
+Iteration   7: 4.245 ms/op
+Iteration   8: 4.155 ms/op
+Iteration   9: 4.300 ms/op
+Iteration  10: 4.197 ms/op
+
+# Run progress: 23.61% complete, ETA 00:16:49
+# Fork: 2 of 2
+# Warmup Iteration   1: 4.731 ms/op
+# Warmup Iteration   2: 4.506 ms/op
+# Warmup Iteration   3: 4.235 ms/op
+# Warmup Iteration   4: 4.192 ms/op
+# Warmup Iteration   5: 4.306 ms/op
+Iteration   1: 4.230 ms/op
+Iteration   2: 4.203 ms/op
+Iteration   3: 4.243 ms/op
+Iteration   4: 4.235 ms/op
+Iteration   5: 4.252 ms/op
+Iteration   6: 4.197 ms/op
+Iteration   7: 4.183 ms/op
+Iteration   8: 4.196 ms/op
+Iteration   9: 4.218 ms/op
+Iteration  10: 4.216 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  4.232 ±(99.9%) 0.034 ms/op [Average]
+  (min, avg, max) = (4.155, 4.232, 4.300), stdev = 0.039
+  CI (99.9%): [4.198, 4.266] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = range, n = 250)
+
+# Run progress: 25.00% complete, ETA 00:16:25
+# Fork: 1 of 2
+# Warmup Iteration   1: 9.472 ms/op
+# Warmup Iteration   2: 8.917 ms/op
+# Warmup Iteration   3: 8.674 ms/op
+# Warmup Iteration   4: 8.416 ms/op
+# Warmup Iteration   5: 8.546 ms/op
+Iteration   1: 8.505 ms/op
+Iteration   2: 8.520 ms/op
+Iteration   3: 8.460 ms/op
+Iteration   4: 8.608 ms/op
+Iteration   5: 8.477 ms/op
+Iteration   6: 8.596 ms/op
+Iteration   7: 8.401 ms/op
+Iteration   8: 8.322 ms/op
+Iteration   9: 8.229 ms/op
+Iteration  10: 8.195 ms/op
+
+# Run progress: 26.39% complete, ETA 00:16:03
+# Fork: 2 of 2
+# Warmup Iteration   1: 9.103 ms/op
+# Warmup Iteration   2: 8.543 ms/op
+# Warmup Iteration   3: 8.148 ms/op
+# Warmup Iteration   4: 8.116 ms/op
+# Warmup Iteration   5: 8.193 ms/op
+Iteration   1: 8.228 ms/op
+Iteration   2: 8.118 ms/op
+Iteration   3: 8.073 ms/op
+Iteration   4: 8.212 ms/op
+Iteration   5: 8.158 ms/op
+Iteration   6: 8.266 ms/op
+Iteration   7: 8.080 ms/op
+Iteration   8: 8.087 ms/op
+Iteration   9: 8.069 ms/op
+Iteration  10: 8.303 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  8.295 ±(99.9%) 0.157 ms/op [Average]
+  (min, avg, max) = (8.069, 8.295, 8.608), stdev = 0.181
+  CI (99.9%): [8.138, 8.452] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = range, n = 500)
+
+# Run progress: 27.78% complete, ETA 00:15:43
+# Fork: 1 of 2
+# Warmup Iteration   1: 17.097 ms/op
+# Warmup Iteration   2: 15.811 ms/op
+# Warmup Iteration   3: 15.406 ms/op
+# Warmup Iteration   4: 15.426 ms/op
+# Warmup Iteration   5: 15.081 ms/op
+Iteration   1: 15.505 ms/op
+Iteration   2: 15.283 ms/op
+Iteration   3: 15.275 ms/op
+Iteration   4: 14.892 ms/op
+Iteration   5: 15.148 ms/op
+Iteration   6: 15.243 ms/op
+Iteration   7: 15.136 ms/op
+Iteration   8: 15.294 ms/op
+Iteration   9: 14.925 ms/op
+Iteration  10: 15.288 ms/op
+
+# Run progress: 29.17% complete, ETA 00:15:26
+# Fork: 2 of 2
+# Warmup Iteration   1: 16.832 ms/op
+# Warmup Iteration   2: 15.840 ms/op
+# Warmup Iteration   3: 15.425 ms/op
+# Warmup Iteration   4: 15.421 ms/op
+# Warmup Iteration   5: 15.204 ms/op
+Iteration   1: 14.922 ms/op
+Iteration   2: 15.163 ms/op
+Iteration   3: 15.240 ms/op
+Iteration   4: 15.468 ms/op
+Iteration   5: 15.330 ms/op
+Iteration   6: 15.227 ms/op
+Iteration   7: 15.356 ms/op
+Iteration   8: 15.286 ms/op
+Iteration   9: 15.326 ms/op
+Iteration  10: 15.024 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  15.217 ±(99.9%) 0.147 ms/op [Average]
+  (min, avg, max) = (14.892, 15.217, 15.505), stdev = 0.169
+  CI (99.9%): [15.070, 15.363] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime
+# Parameters: (kind = range, n = 1000)
+
+# Run progress: 30.56% complete, ETA 00:15:08
+# Fork: 1 of 2
+# Warmup Iteration   1: 33.184 ms/op
+# Warmup Iteration   2: 31.265 ms/op
+# Warmup Iteration   3: 30.600 ms/op
+# Warmup Iteration   4: 30.385 ms/op
+# Warmup Iteration   5: 30.201 ms/op
+Iteration   1: 30.105 ms/op
+Iteration   2: 30.095 ms/op
+Iteration   3: 30.569 ms/op
+Iteration   4: 30.081 ms/op
+Iteration   5: 30.117 ms/op
+Iteration   6: 30.246 ms/op
+Iteration   7: 30.418 ms/op
+Iteration   8: 30.078 ms/op
+Iteration   9: 30.305 ms/op
+Iteration  10: 30.274 ms/op
+
+# Run progress: 31.94% complete, ETA 00:14:57
+# Fork: 2 of 2
+# Warmup Iteration   1: 33.863 ms/op
+# Warmup Iteration   2: 31.244 ms/op
+# Warmup Iteration   3: 30.126 ms/op
+# Warmup Iteration   4: 29.967 ms/op
+# Warmup Iteration   5: 30.170 ms/op
+Iteration   1: 30.097 ms/op
+Iteration   2: 30.079 ms/op
+Iteration   3: 30.088 ms/op
+Iteration   4: 29.936 ms/op
+Iteration   5: 30.386 ms/op
+Iteration   6: 30.305 ms/op
+Iteration   7: 30.042 ms/op
+Iteration   8: 30.143 ms/op
+Iteration   9: 29.994 ms/op
+Iteration  10: 29.962 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime":
+  30.166 ±(99.9%) 0.143 ms/op [Average]
+  (min, avg, max) = (29.936, 30.166, 30.569), stdev = 0.165
+  CI (99.9%): [30.023, 30.309] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = time, n = 100)
+
+# Run progress: 33.33% complete, ETA 00:14:45
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.766 us/op
+# Warmup Iteration   2: 24.997 us/op
+# Warmup Iteration   3: 24.900 us/op
+# Warmup Iteration   4: 24.645 us/op
+# Warmup Iteration   5: 25.073 us/op
+Iteration   1: 24.758 us/op
+Iteration   2: 24.798 us/op
+Iteration   3: 24.772 us/op
+Iteration   4: 24.607 us/op
+Iteration   5: 25.054 us/op
+Iteration   6: 24.893 us/op
+Iteration   7: 24.765 us/op
+Iteration   8: 24.774 us/op
+Iteration   9: 24.615 us/op
+Iteration  10: 24.865 us/op
+
+# Run progress: 34.72% complete, ETA 00:14:22
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.455 us/op
+# Warmup Iteration   2: 25.077 us/op
+# Warmup Iteration   3: 24.721 us/op
+# Warmup Iteration   4: 24.960 us/op
+# Warmup Iteration   5: 24.718 us/op
+Iteration   1: 24.755 us/op
+Iteration   2: 25.008 us/op
+Iteration   3: 24.648 us/op
+Iteration   4: 24.800 us/op
+Iteration   5: 24.935 us/op
+Iteration   6: 24.652 us/op
+Iteration   7: 24.851 us/op
+Iteration   8: 24.854 us/op
+Iteration   9: 25.182 us/op
+Iteration  10: 24.884 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  24.824 ±(99.9%) 0.127 us/op [Average]
+  (min, avg, max) = (24.607, 24.824, 25.182), stdev = 0.147
+  CI (99.9%): [24.696, 24.951] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = time, n = 250)
+
+# Run progress: 36.11% complete, ETA 00:14:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.931 us/op
+# Warmup Iteration   2: 25.931 us/op
+# Warmup Iteration   3: 25.523 us/op
+# Warmup Iteration   4: 25.183 us/op
+# Warmup Iteration   5: 25.014 us/op
+Iteration   1: 25.050 us/op
+Iteration   2: 25.348 us/op
+Iteration   3: 25.305 us/op
+Iteration   4: 25.137 us/op
+Iteration   5: 25.566 us/op
+Iteration   6: 25.321 us/op
+Iteration   7: 25.520 us/op
+Iteration   8: 25.391 us/op
+Iteration   9: 25.092 us/op
+Iteration  10: 25.162 us/op
+
+# Run progress: 37.50% complete, ETA 00:13:40
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.929 us/op
+# Warmup Iteration   2: 25.697 us/op
+# Warmup Iteration   3: 25.231 us/op
+# Warmup Iteration   4: 25.107 us/op
+# Warmup Iteration   5: 25.279 us/op
+Iteration   1: 25.111 us/op
+Iteration   2: 25.342 us/op
+Iteration   3: 25.622 us/op
+Iteration   4: 25.455 us/op
+Iteration   5: 25.874 us/op
+Iteration   6: 25.549 us/op
+Iteration   7: 25.436 us/op
+Iteration   8: 25.597 us/op
+Iteration   9: 25.708 us/op
+Iteration  10: 25.414 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.400 ±(99.9%) 0.192 us/op [Average]
+  (min, avg, max) = (25.050, 25.400, 25.874), stdev = 0.221
+  CI (99.9%): [25.208, 25.592] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = time, n = 500)
+
+# Run progress: 38.89% complete, ETA 00:13:20
+# Fork: 1 of 2
+# Warmup Iteration   1: 26.295 us/op
+# Warmup Iteration   2: 26.105 us/op
+# Warmup Iteration   3: 25.478 us/op
+# Warmup Iteration   4: 25.183 us/op
+# Warmup Iteration   5: 25.468 us/op
+Iteration   1: 25.454 us/op
+Iteration   2: 25.381 us/op
+Iteration   3: 25.136 us/op
+Iteration   4: 25.349 us/op
+Iteration   5: 25.266 us/op
+Iteration   6: 25.255 us/op
+Iteration   7: 25.642 us/op
+Iteration   8: 25.243 us/op
+Iteration   9: 25.317 us/op
+Iteration  10: 25.606 us/op
+
+# Run progress: 40.28% complete, ETA 00:13:02
+# Fork: 2 of 2
+# Warmup Iteration   1: 26.452 us/op
+# Warmup Iteration   2: 25.887 us/op
+# Warmup Iteration   3: 25.236 us/op
+# Warmup Iteration   4: 25.438 us/op
+# Warmup Iteration   5: 25.359 us/op
+Iteration   1: 25.215 us/op
+Iteration   2: 25.190 us/op
+Iteration   3: 25.042 us/op
+Iteration   4: 25.267 us/op
+Iteration   5: 25.116 us/op
+Iteration   6: 25.748 us/op
+Iteration   7: 25.212 us/op
+Iteration   8: 25.121 us/op
+Iteration   9: 25.493 us/op
+Iteration  10: 25.292 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.317 ±(99.9%) 0.163 us/op [Average]
+  (min, avg, max) = (25.042, 25.317, 25.748), stdev = 0.188
+  CI (99.9%): [25.154, 25.480] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = time, n = 1000)
+
+# Run progress: 41.67% complete, ETA 00:12:44
+# Fork: 1 of 2
+# Warmup Iteration   1: 26.012 us/op
+# Warmup Iteration   2: 25.879 us/op
+# Warmup Iteration   3: 25.672 us/op
+# Warmup Iteration   4: 25.222 us/op
+# Warmup Iteration   5: 25.291 us/op
+Iteration   1: 25.331 us/op
+Iteration   2: 25.483 us/op
+Iteration   3: 25.536 us/op
+Iteration   4: 25.295 us/op
+Iteration   5: 25.311 us/op
+Iteration   6: 25.552 us/op
+Iteration   7: 25.276 us/op
+Iteration   8: 25.588 us/op
+Iteration   9: 25.452 us/op
+Iteration  10: 25.256 us/op
+
+# Run progress: 43.06% complete, ETA 00:12:29
+# Fork: 2 of 2
+# Warmup Iteration   1: 26.518 us/op
+# Warmup Iteration   2: 25.975 us/op
+# Warmup Iteration   3: 25.282 us/op
+# Warmup Iteration   4: 25.245 us/op
+# Warmup Iteration   5: 25.157 us/op
+Iteration   1: 25.178 us/op
+Iteration   2: 25.129 us/op
+Iteration   3: 25.076 us/op
+Iteration   4: 25.073 us/op
+Iteration   5: 25.397 us/op
+Iteration   6: 25.233 us/op
+Iteration   7: 25.402 us/op
+Iteration   8: 25.120 us/op
+Iteration   9: 25.151 us/op
+Iteration  10: 25.231 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.304 ±(99.9%) 0.140 us/op [Average]
+  (min, avg, max) = (25.073, 25.304, 25.588), stdev = 0.161
+  CI (99.9%): [25.164, 25.443] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = book, n = 100)
+
+# Run progress: 44.44% complete, ETA 00:12:15
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.070 us/op
+# Warmup Iteration   2: 24.768 us/op
+# Warmup Iteration   3: 24.527 us/op
+# Warmup Iteration   4: 24.624 us/op
+# Warmup Iteration   5: 24.254 us/op
+Iteration   1: 24.256 us/op
+Iteration   2: 24.211 us/op
+Iteration   3: 24.194 us/op
+Iteration   4: 24.189 us/op
+Iteration   5: 24.477 us/op
+Iteration   6: 24.492 us/op
+Iteration   7: 24.585 us/op
+Iteration   8: 24.323 us/op
+Iteration   9: 24.526 us/op
+Iteration  10: 24.576 us/op
+
+# Run progress: 45.83% complete, ETA 00:11:54
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.606 us/op
+# Warmup Iteration   2: 24.874 us/op
+# Warmup Iteration   3: 25.264 us/op
+# Warmup Iteration   4: 25.069 us/op
+# Warmup Iteration   5: 24.700 us/op
+Iteration   1: 24.847 us/op
+Iteration   2: 24.296 us/op
+Iteration   3: 24.052 us/op
+Iteration   4: 24.435 us/op
+Iteration   5: 24.109 us/op
+Iteration   6: 24.148 us/op
+Iteration   7: 24.087 us/op
+Iteration   8: 24.181 us/op
+Iteration   9: 24.298 us/op
+Iteration  10: 24.052 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  24.317 ±(99.9%) 0.185 us/op [Average]
+  (min, avg, max) = (24.052, 24.317, 24.847), stdev = 0.213
+  CI (99.9%): [24.131, 24.502] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = book, n = 250)
+
+# Run progress: 47.22% complete, ETA 00:11:33
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.821 us/op
+# Warmup Iteration   2: 25.321 us/op
+# Warmup Iteration   3: 25.495 us/op
+# Warmup Iteration   4: 24.765 us/op
+# Warmup Iteration   5: 25.075 us/op
+Iteration   1: 25.409 us/op
+Iteration   2: 24.729 us/op
+Iteration   3: 24.743 us/op
+Iteration   4: 24.713 us/op
+Iteration   5: 24.593 us/op
+Iteration   6: 24.461 us/op
+Iteration   7: 25.155 us/op
+Iteration   8: 25.066 us/op
+Iteration   9: 24.953 us/op
+Iteration  10: 25.160 us/op
+
+# Run progress: 48.61% complete, ETA 00:11:13
+# Fork: 2 of 2
+# Warmup Iteration   1: 26.178 us/op
+# Warmup Iteration   2: 26.339 us/op
+# Warmup Iteration   3: 25.755 us/op
+# Warmup Iteration   4: 26.176 us/op
+# Warmup Iteration   5: 26.175 us/op
+Iteration   1: 25.865 us/op
+Iteration   2: 25.703 us/op
+Iteration   3: 25.084 us/op
+Iteration   4: 25.407 us/op
+Iteration   5: 25.212 us/op
+Iteration   6: 25.373 us/op
+Iteration   7: 25.378 us/op
+Iteration   8: 25.614 us/op
+Iteration   9: 25.947 us/op
+Iteration  10: 25.314 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.194 ±(99.9%) 0.360 us/op [Average]
+  (min, avg, max) = (24.461, 25.194, 25.947), stdev = 0.414
+  CI (99.9%): [24.834, 25.554] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = book, n = 500)
+
+# Run progress: 50.00% complete, ETA 00:10:54
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.994 us/op
+# Warmup Iteration   2: 26.143 us/op
+# Warmup Iteration   3: 25.532 us/op
+# Warmup Iteration   4: 25.320 us/op
+# Warmup Iteration   5: 25.154 us/op
+Iteration   1: 25.230 us/op
+Iteration   2: 25.466 us/op
+Iteration   3: 24.954 us/op
+Iteration   4: 25.307 us/op
+Iteration   5: 25.624 us/op
+Iteration   6: 25.562 us/op
+Iteration   7: 25.209 us/op
+Iteration   8: 25.210 us/op
+Iteration   9: 24.807 us/op
+Iteration  10: 24.837 us/op
+
+# Run progress: 51.39% complete, ETA 00:10:36
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.794 us/op
+# Warmup Iteration   2: 25.307 us/op
+# Warmup Iteration   3: 25.098 us/op
+# Warmup Iteration   4: 24.902 us/op
+# Warmup Iteration   5: 24.821 us/op
+Iteration   1: 24.968 us/op
+Iteration   2: 24.870 us/op
+Iteration   3: 25.181 us/op
+Iteration   4: 24.945 us/op
+Iteration   5: 24.908 us/op
+Iteration   6: 25.105 us/op
+Iteration   7: 24.832 us/op
+Iteration   8: 24.898 us/op
+Iteration   9: 25.274 us/op
+Iteration  10: 25.109 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.115 ±(99.9%) 0.214 us/op [Average]
+  (min, avg, max) = (24.807, 25.115, 25.624), stdev = 0.247
+  CI (99.9%): [24.901, 25.329] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = book, n = 1000)
+
+# Run progress: 52.78% complete, ETA 00:10:17
+# Fork: 1 of 2
+# Warmup Iteration   1: 26.058 us/op
+# Warmup Iteration   2: 26.122 us/op
+# Warmup Iteration   3: 25.966 us/op
+# Warmup Iteration   4: 26.023 us/op
+# Warmup Iteration   5: 25.276 us/op
+Iteration   1: 25.530 us/op
+Iteration   2: 25.795 us/op
+Iteration   3: 25.861 us/op
+Iteration   4: 25.730 us/op
+Iteration   5: 26.724 us/op
+Iteration   6: 25.598 us/op
+Iteration   7: 25.069 us/op
+Iteration   8: 24.865 us/op
+Iteration   9: 25.202 us/op
+Iteration  10: 24.833 us/op
+
+# Run progress: 54.17% complete, ETA 00:10:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 26.152 us/op
+# Warmup Iteration   2: 25.957 us/op
+# Warmup Iteration   3: 26.394 us/op
+# Warmup Iteration   4: 25.896 us/op
+# Warmup Iteration   5: 25.540 us/op
+Iteration   1: 26.008 us/op
+Iteration   2: 26.137 us/op
+Iteration   3: 25.483 us/op
+Iteration   4: 25.068 us/op
+Iteration   5: 25.545 us/op
+Iteration   6: 25.212 us/op
+Iteration   7: 24.803 us/op
+Iteration   8: 25.151 us/op
+Iteration   9: 24.865 us/op
+Iteration  10: 24.781 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.413 ±(99.9%) 0.455 us/op [Average]
+  (min, avg, max) = (24.781, 25.413, 26.724), stdev = 0.524
+  CI (99.9%): [24.958, 25.868] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = range, n = 100)
+
+# Run progress: 55.56% complete, ETA 00:09:45
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.091 us/op
+# Warmup Iteration   2: 25.099 us/op
+# Warmup Iteration   3: 24.860 us/op
+# Warmup Iteration   4: 24.704 us/op
+# Warmup Iteration   5: 24.493 us/op
+Iteration   1: 24.368 us/op
+Iteration   2: 24.511 us/op
+Iteration   3: 24.448 us/op
+Iteration   4: 24.527 us/op
+Iteration   5: 24.642 us/op
+Iteration   6: 24.692 us/op
+Iteration   7: 24.520 us/op
+Iteration   8: 24.617 us/op
+Iteration   9: 24.713 us/op
+Iteration  10: 24.389 us/op
+
+# Run progress: 56.94% complete, ETA 00:09:25
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.105 us/op
+# Warmup Iteration   2: 25.420 us/op
+# Warmup Iteration   3: 25.047 us/op
+# Warmup Iteration   4: 24.499 us/op
+# Warmup Iteration   5: 24.750 us/op
+Iteration   1: 24.534 us/op
+Iteration   2: 24.565 us/op
+Iteration   3: 24.631 us/op
+Iteration   4: 24.730 us/op
+Iteration   5: 24.715 us/op
+Iteration   6: 24.434 us/op
+Iteration   7: 24.363 us/op
+Iteration   8: 24.494 us/op
+Iteration   9: 24.402 us/op
+Iteration  10: 24.640 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  24.547 ±(99.9%) 0.105 us/op [Average]
+  (min, avg, max) = (24.363, 24.547, 24.730), stdev = 0.121
+  CI (99.9%): [24.441, 24.652] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = range, n = 250)
+
+# Run progress: 58.33% complete, ETA 00:09:05
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.821 us/op
+# Warmup Iteration   2: 25.475 us/op
+# Warmup Iteration   3: 25.377 us/op
+# Warmup Iteration   4: 24.917 us/op
+# Warmup Iteration   5: 24.863 us/op
+Iteration   1: 25.014 us/op
+Iteration   2: 24.868 us/op
+Iteration   3: 24.962 us/op
+Iteration   4: 24.954 us/op
+Iteration   5: 24.830 us/op
+Iteration   6: 24.970 us/op
+Iteration   7: 25.281 us/op
+Iteration   8: 25.066 us/op
+Iteration   9: 25.131 us/op
+Iteration  10: 25.137 us/op
+
+# Run progress: 59.72% complete, ETA 00:08:46
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.463 us/op
+# Warmup Iteration   2: 25.343 us/op
+# Warmup Iteration   3: 25.042 us/op
+# Warmup Iteration   4: 24.927 us/op
+# Warmup Iteration   5: 25.109 us/op
+Iteration   1: 24.797 us/op
+Iteration   2: 24.876 us/op
+Iteration   3: 24.618 us/op
+Iteration   4: 24.872 us/op
+Iteration   5: 24.751 us/op
+Iteration   6: 24.865 us/op
+Iteration   7: 24.721 us/op
+Iteration   8: 24.866 us/op
+Iteration   9: 24.889 us/op
+Iteration  10: 24.849 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  24.916 ±(99.9%) 0.135 us/op [Average]
+  (min, avg, max) = (24.618, 24.916, 25.281), stdev = 0.155
+  CI (99.9%): [24.781, 25.051] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = range, n = 500)
+
+# Run progress: 61.11% complete, ETA 00:08:27
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.490 us/op
+# Warmup Iteration   2: 25.369 us/op
+# Warmup Iteration   3: 25.601 us/op
+# Warmup Iteration   4: 24.944 us/op
+# Warmup Iteration   5: 24.979 us/op
+Iteration   1: 25.054 us/op
+Iteration   2: 24.997 us/op
+Iteration   3: 25.276 us/op
+Iteration   4: 25.171 us/op
+Iteration   5: 24.869 us/op
+Iteration   6: 25.078 us/op
+Iteration   7: 25.117 us/op
+Iteration   8: 25.216 us/op
+Iteration   9: 24.942 us/op
+Iteration  10: 25.091 us/op
+
+# Run progress: 62.50% complete, ETA 00:08:09
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.475 us/op
+# Warmup Iteration   2: 25.742 us/op
+# Warmup Iteration   3: 25.178 us/op
+# Warmup Iteration   4: 25.088 us/op
+# Warmup Iteration   5: 25.065 us/op
+Iteration   1: 24.978 us/op
+Iteration   2: 25.075 us/op
+Iteration   3: 24.917 us/op
+Iteration   4: 24.846 us/op
+Iteration   5: 25.594 us/op
+Iteration   6: 24.875 us/op
+Iteration   7: 24.804 us/op
+Iteration   8: 25.045 us/op
+Iteration   9: 24.944 us/op
+Iteration  10: 25.237 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.056 ±(99.9%) 0.160 us/op [Average]
+  (min, avg, max) = (24.804, 25.056, 25.594), stdev = 0.184
+  CI (99.9%): [24.896, 25.216] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.lookupTime
+# Parameters: (kind = range, n = 1000)
+
+# Run progress: 63.89% complete, ETA 00:07:51
+# Fork: 1 of 2
+# Warmup Iteration   1: 25.358 us/op
+# Warmup Iteration   2: 25.583 us/op
+# Warmup Iteration   3: 25.034 us/op
+# Warmup Iteration   4: 25.376 us/op
+# Warmup Iteration   5: 24.905 us/op
+Iteration   1: 25.010 us/op
+Iteration   2: 25.336 us/op
+Iteration   3: 25.356 us/op
+Iteration   4: 25.147 us/op
+Iteration   5: 25.230 us/op
+Iteration   6: 25.265 us/op
+Iteration   7: 25.122 us/op
+Iteration   8: 25.067 us/op
+Iteration   9: 25.033 us/op
+Iteration  10: 24.958 us/op
+
+# Run progress: 65.28% complete, ETA 00:07:35
+# Fork: 2 of 2
+# Warmup Iteration   1: 25.653 us/op
+# Warmup Iteration   2: 25.632 us/op
+# Warmup Iteration   3: 25.159 us/op
+# Warmup Iteration   4: 25.146 us/op
+# Warmup Iteration   5: 25.000 us/op
+Iteration   1: 25.263 us/op
+Iteration   2: 25.210 us/op
+Iteration   3: 25.040 us/op
+Iteration   4: 24.934 us/op
+Iteration   5: 25.169 us/op
+Iteration   6: 25.315 us/op
+Iteration   7: 24.739 us/op
+Iteration   8: 25.067 us/op
+Iteration   9: 25.035 us/op
+Iteration  10: 25.159 us/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime":
+  25.123 ±(99.9%) 0.134 us/op [Average]
+  (min, avg, max) = (24.739, 25.123, 25.356), stdev = 0.154
+  CI (99.9%): [24.989, 25.257] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = time, n = 100)
+
+# Run progress: 66.67% complete, ETA 00:07:18
+# Fork: 1 of 2
+# Warmup Iteration   1: 748.067 ms/op
+# Warmup Iteration   2: 659.191 ms/op
+# Warmup Iteration   3: 658.551 ms/op
+# Warmup Iteration   4: 660.025 ms/op
+# Warmup Iteration   5: 654.023 ms/op
+Iteration   1: 663.523 ms/op
+Iteration   2: 662.872 ms/op
+Iteration   3: 656.098 ms/op
+Iteration   4: 651.681 ms/op
+Iteration   5: 640.165 ms/op
+Iteration   6: 655.721 ms/op
+Iteration   7: 644.282 ms/op
+Iteration   8: 645.947 ms/op
+Iteration   9: 650.780 ms/op
+Iteration  10: 644.448 ms/op
+
+# Run progress: 68.06% complete, ETA 00:07:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 744.647 ms/op
+# Warmup Iteration   2: 654.117 ms/op
+# Warmup Iteration   3: 649.945 ms/op
+# Warmup Iteration   4: 656.883 ms/op
+# Warmup Iteration   5: 649.039 ms/op
+Iteration   1: 649.489 ms/op
+Iteration   2: 648.662 ms/op
+Iteration   3: 656.034 ms/op
+Iteration   4: 642.238 ms/op
+Iteration   5: 644.329 ms/op
+Iteration   6: 637.433 ms/op
+Iteration   7: 630.901 ms/op
+Iteration   8: 638.009 ms/op
+Iteration   9: 643.162 ms/op
+Iteration  10: 640.152 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  647.296 ±(99.9%) 7.437 ms/op [Average]
+  (min, avg, max) = (630.901, 647.296, 663.523), stdev = 8.564
+  CI (99.9%): [639.860, 654.733] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = time, n = 250)
+
+# Run progress: 69.44% complete, ETA 00:06:43
+# Fork: 1 of 2
+# Warmup Iteration   1: 1711.990 ms/op
+# Warmup Iteration   2: 1546.892 ms/op
+# Warmup Iteration   3: 1528.899 ms/op
+# Warmup Iteration   4: 1537.505 ms/op
+# Warmup Iteration   5: 1550.659 ms/op
+Iteration   1: 1584.791 ms/op
+Iteration   2: 1547.737 ms/op
+Iteration   3: 1513.413 ms/op
+Iteration   4: 1526.522 ms/op
+Iteration   5: 1501.176 ms/op
+Iteration   6: 1504.654 ms/op
+Iteration   7: 1551.388 ms/op
+Iteration   8: 1516.868 ms/op
+Iteration   9: 1523.266 ms/op
+Iteration  10: 1515.709 ms/op
+
+# Run progress: 70.83% complete, ETA 00:06:27
+# Fork: 2 of 2
+# Warmup Iteration   1: 1805.553 ms/op
+# Warmup Iteration   2: 1569.023 ms/op
+# Warmup Iteration   3: 1505.428 ms/op
+# Warmup Iteration   4: 1568.603 ms/op
+# Warmup Iteration   5: 1518.330 ms/op
+Iteration   1: 1548.022 ms/op
+Iteration   2: 1542.880 ms/op
+Iteration   3: 1537.284 ms/op
+Iteration   4: 1508.414 ms/op
+Iteration   5: 1495.150 ms/op
+Iteration   6: 1514.487 ms/op
+Iteration   7: 1513.735 ms/op
+Iteration   8: 1500.474 ms/op
+Iteration   9: 1530.687 ms/op
+Iteration  10: 1490.965 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  1523.381 ±(99.9%) 20.125 ms/op [Average]
+  (min, avg, max) = (1490.965, 1523.381, 1584.791), stdev = 23.177
+  CI (99.9%): [1503.256, 1543.506] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = time, n = 500)
+
+# Run progress: 72.22% complete, ETA 00:06:11
+# Fork: 1 of 2
+# Warmup Iteration   1: 2905.033 ms/op
+# Warmup Iteration   2: 2758.200 ms/op
+# Warmup Iteration   3: 2729.180 ms/op
+# Warmup Iteration   4: 2710.723 ms/op
+# Warmup Iteration   5: 2637.831 ms/op
+Iteration   1: 2726.012 ms/op
+Iteration   2: 2718.818 ms/op
+Iteration   3: 2697.547 ms/op
+Iteration   4: 2582.890 ms/op
+Iteration   5: 2729.613 ms/op
+Iteration   6: 2757.023 ms/op
+Iteration   7: 2640.447 ms/op
+Iteration   8: 2723.367 ms/op
+Iteration   9: 2830.984 ms/op
+Iteration  10: 2610.887 ms/op
+
+# Run progress: 73.61% complete, ETA 00:06:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 3059.393 ms/op
+# Warmup Iteration   2: 2822.295 ms/op
+# Warmup Iteration   3: 2829.690 ms/op
+# Warmup Iteration   4: 2673.296 ms/op
+# Warmup Iteration   5: 2685.599 ms/op
+Iteration   1: 2706.814 ms/op
+Iteration   2: 2761.368 ms/op
+Iteration   3: 2720.539 ms/op
+Iteration   4: 2646.956 ms/op
+Iteration   5: 2654.441 ms/op
+Iteration   6: 2687.805 ms/op
+Iteration   7: 2631.598 ms/op
+Iteration   8: 2673.483 ms/op
+Iteration   9: 2659.529 ms/op
+Iteration  10: 2591.525 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  2687.582 ±(99.9%) 53.842 ms/op [Average]
+  (min, avg, max) = (2582.890, 2687.582, 2830.984), stdev = 62.004
+  CI (99.9%): [2633.741, 2741.424] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = time, n = 1000)
+
+# Run progress: 75.00% complete, ETA 00:05:50
+# Fork: 1 of 2
+# Warmup Iteration   1: 5770.695 ms/op
+# Warmup Iteration   2: 5561.655 ms/op
+# Warmup Iteration   3: 5372.288 ms/op
+# Warmup Iteration   4: 5326.249 ms/op
+# Warmup Iteration   5: 5369.962 ms/op
+Iteration   1: 5340.584 ms/op
+Iteration   2: 5316.598 ms/op
+Iteration   3: 5299.579 ms/op
+Iteration   4: 5270.774 ms/op
+Iteration   5: 5313.788 ms/op
+Iteration   6: 5307.708 ms/op
+Iteration   7: 5267.413 ms/op
+Iteration   8: 5268.831 ms/op
+Iteration   9: 5361.850 ms/op
+Iteration  10: 5305.118 ms/op
+
+# Run progress: 76.39% complete, ETA 00:05:50
+# Fork: 2 of 2
+# Warmup Iteration   1: 5663.502 ms/op
+# Warmup Iteration   2: 5445.955 ms/op
+# Warmup Iteration   3: 5327.799 ms/op
+# Warmup Iteration   4: 5342.148 ms/op
+# Warmup Iteration   5: 5309.001 ms/op
+Iteration   1: 5325.386 ms/op
+Iteration   2: 5341.575 ms/op
+Iteration   3: 5317.013 ms/op
+Iteration   4: 5306.382 ms/op
+Iteration   5: 5312.091 ms/op
+Iteration   6: 5275.684 ms/op
+Iteration   7: 5285.837 ms/op
+Iteration   8: 5294.054 ms/op
+Iteration   9: 5346.835 ms/op
+Iteration  10: 5319.502 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  5308.830 ±(99.9%) 23.234 ms/op [Average]
+  (min, avg, max) = (5267.413, 5308.830, 5361.850), stdev = 26.757
+  CI (99.9%): [5285.596, 5332.064] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = book, n = 100)
+
+# Run progress: 77.78% complete, ETA 00:05:47
+# Fork: 1 of 2
+# Warmup Iteration   1: 705.824 ms/op
+# Warmup Iteration   2: 615.975 ms/op
+# Warmup Iteration   3: 600.853 ms/op
+# Warmup Iteration   4: 608.164 ms/op
+# Warmup Iteration   5: 607.603 ms/op
+Iteration   1: 594.637 ms/op
+Iteration   2: 604.261 ms/op
+Iteration   3: 612.639 ms/op
+Iteration   4: 603.413 ms/op
+Iteration   5: 584.101 ms/op
+Iteration   6: 582.746 ms/op
+Iteration   7: 588.551 ms/op
+Iteration   8: 592.354 ms/op
+Iteration   9: 588.358 ms/op
+Iteration  10: 603.223 ms/op
+
+# Run progress: 79.17% complete, ETA 00:05:25
+# Fork: 2 of 2
+# Warmup Iteration   1: 700.342 ms/op
+# Warmup Iteration   2: 609.948 ms/op
+# Warmup Iteration   3: 604.412 ms/op
+# Warmup Iteration   4: 619.246 ms/op
+# Warmup Iteration   5: 618.752 ms/op
+Iteration   1: 620.120 ms/op
+Iteration   2: 622.017 ms/op
+Iteration   3: 607.280 ms/op
+Iteration   4: 604.981 ms/op
+Iteration   5: 593.729 ms/op
+Iteration   6: 597.263 ms/op
+Iteration   7: 606.467 ms/op
+Iteration   8: 582.091 ms/op
+Iteration   9: 611.089 ms/op
+Iteration  10: 597.214 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  599.827 ±(99.9%) 10.180 ms/op [Average]
+  (min, avg, max) = (582.091, 599.827, 622.017), stdev = 11.723
+  CI (99.9%): [589.647, 610.006] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = book, n = 250)
+
+# Run progress: 80.56% complete, ETA 00:05:03
+# Fork: 1 of 2
+# Warmup Iteration   1: 1573.452 ms/op
+# Warmup Iteration   2: 1377.696 ms/op
+# Warmup Iteration   3: 1379.292 ms/op
+# Warmup Iteration   4: 1385.345 ms/op
+# Warmup Iteration   5: 1419.324 ms/op
+Iteration   1: 1391.765 ms/op
+Iteration   2: 1383.508 ms/op
+Iteration   3: 1371.525 ms/op
+Iteration   4: 1374.226 ms/op
+Iteration   5: 1379.951 ms/op
+Iteration   6: 1387.887 ms/op
+Iteration   7: 1371.656 ms/op
+Iteration   8: 1389.654 ms/op
+Iteration   9: 1382.291 ms/op
+Iteration  10: 1350.022 ms/op
+
+# Run progress: 81.94% complete, ETA 00:04:41
+# Fork: 2 of 2
+# Warmup Iteration   1: 1559.897 ms/op
+# Warmup Iteration   2: 1423.525 ms/op
+# Warmup Iteration   3: 1399.246 ms/op
+# Warmup Iteration   4: 1383.799 ms/op
+# Warmup Iteration   5: 1385.321 ms/op
+Iteration   1: 1391.915 ms/op
+Iteration   2: 1405.159 ms/op
+Iteration   3: 1364.842 ms/op
+Iteration   4: 1357.115 ms/op
+Iteration   5: 1389.078 ms/op
+Iteration   6: 1358.164 ms/op
+Iteration   7: 1351.079 ms/op
+Iteration   8: 1379.333 ms/op
+Iteration   9: 1369.281 ms/op
+Iteration  10: 1367.138 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  1375.779 ±(99.9%) 12.962 ms/op [Average]
+  (min, avg, max) = (1350.022, 1375.779, 1405.159), stdev = 14.927
+  CI (99.9%): [1362.818, 1388.741] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = book, n = 500)
+
+# Run progress: 83.33% complete, ETA 00:04:20
+# Fork: 1 of 2
+# Warmup Iteration   1: 2595.957 ms/op
+# Warmup Iteration   2: 2441.171 ms/op
+# Warmup Iteration   3: 2436.553 ms/op
+# Warmup Iteration   4: 2391.035 ms/op
+# Warmup Iteration   5: 2371.384 ms/op
+Iteration   1: 2354.872 ms/op
+Iteration   2: 2350.477 ms/op
+Iteration   3: 2373.035 ms/op
+Iteration   4: 2313.101 ms/op
+Iteration   5: 2355.782 ms/op
+Iteration   6: 2336.120 ms/op
+Iteration   7: 2338.840 ms/op
+Iteration   8: 2323.892 ms/op
+Iteration   9: 2369.752 ms/op
+Iteration  10: 2350.170 ms/op
+
+# Run progress: 84.72% complete, ETA 00:04:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 2567.847 ms/op
+# Warmup Iteration   2: 2429.164 ms/op
+# Warmup Iteration   3: 2416.577 ms/op
+# Warmup Iteration   4: 2398.160 ms/op
+# Warmup Iteration   5: 2349.061 ms/op
+Iteration   1: 2366.373 ms/op
+Iteration   2: 2369.255 ms/op
+Iteration   3: 2363.130 ms/op
+Iteration   4: 2336.517 ms/op
+Iteration   5: 2330.574 ms/op
+Iteration   6: 2378.018 ms/op
+Iteration   7: 2325.415 ms/op
+Iteration   8: 2332.652 ms/op
+Iteration   9: 2350.562 ms/op
+Iteration  10: 2357.226 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  2348.788 ±(99.9%) 15.965 ms/op [Average]
+  (min, avg, max) = (2313.101, 2348.788, 2378.018), stdev = 18.386
+  CI (99.9%): [2332.823, 2364.753] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = book, n = 1000)
+
+# Run progress: 86.11% complete, ETA 00:03:41
+# Fork: 1 of 2
+# Warmup Iteration   1: 5073.884 ms/op
+# Warmup Iteration   2: 4897.264 ms/op
+# Warmup Iteration   3: 4792.335 ms/op
+# Warmup Iteration   4: 4794.327 ms/op
+# Warmup Iteration   5: 4817.637 ms/op
+Iteration   1: 4789.380 ms/op
+Iteration   2: 4774.581 ms/op
+Iteration   3: 4787.407 ms/op
+Iteration   4: 4804.861 ms/op
+Iteration   5: 4824.480 ms/op
+Iteration   6: 4849.670 ms/op
+Iteration   7: 4801.571 ms/op
+Iteration   8: 4781.204 ms/op
+Iteration   9: 4808.768 ms/op
+Iteration  10: 4796.633 ms/op
+
+# Run progress: 87.50% complete, ETA 00:03:27
+# Fork: 2 of 2
+# Warmup Iteration   1: 5081.913 ms/op
+# Warmup Iteration   2: 4911.799 ms/op
+# Warmup Iteration   3: 4826.131 ms/op
+# Warmup Iteration   4: 4755.491 ms/op
+# Warmup Iteration   5: 4751.050 ms/op
+Iteration   1: 4787.441 ms/op
+Iteration   2: 4801.719 ms/op
+Iteration   3: 4793.766 ms/op
+Iteration   4: 4798.284 ms/op
+Iteration   5: 4810.766 ms/op
+Iteration   6: 4799.132 ms/op
+Iteration   7: 4805.945 ms/op
+Iteration   8: 4739.923 ms/op
+Iteration   9: 4729.562 ms/op
+Iteration  10: 4759.477 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  4792.228 ±(99.9%) 23.412 ms/op [Average]
+  (min, avg, max) = (4729.562, 4792.228, 4849.670), stdev = 26.961
+  CI (99.9%): [4768.817, 4815.640] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = range, n = 100)
+
+# Run progress: 88.89% complete, ETA 00:03:11
+# Fork: 1 of 2
+# Warmup Iteration   1: 686.396 ms/op
+# Warmup Iteration   2: 601.158 ms/op
+# Warmup Iteration   3: 622.760 ms/op
+# Warmup Iteration   4: 624.177 ms/op
+# Warmup Iteration   5: 631.960 ms/op
+Iteration   1: 627.754 ms/op
+Iteration   2: 630.535 ms/op
+Iteration   3: 628.970 ms/op
+Iteration   4: 624.137 ms/op
+Iteration   5: 611.150 ms/op
+Iteration   6: 606.217 ms/op
+Iteration   7: 606.096 ms/op
+Iteration   8: 599.332 ms/op
+Iteration   9: 603.885 ms/op
+Iteration  10: 607.148 ms/op
+
+# Run progress: 90.28% complete, ETA 00:02:46
+# Fork: 2 of 2
+# Warmup Iteration   1: 715.820 ms/op
+# Warmup Iteration   2: 633.886 ms/op
+# Warmup Iteration   3: 628.354 ms/op
+# Warmup Iteration   4: 630.907 ms/op
+# Warmup Iteration   5: 635.534 ms/op
+Iteration   1: 633.213 ms/op
+Iteration   2: 629.039 ms/op
+Iteration   3: 625.263 ms/op
+Iteration   4: 630.683 ms/op
+Iteration   5: 624.749 ms/op
+Iteration   6: 610.080 ms/op
+Iteration   7: 614.320 ms/op
+Iteration   8: 612.752 ms/op
+Iteration   9: 615.389 ms/op
+Iteration  10: 606.438 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  617.357 ±(99.9%) 9.453 ms/op [Average]
+  (min, avg, max) = (599.332, 617.357, 633.213), stdev = 10.886
+  CI (99.9%): [607.904, 626.811] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = range, n = 250)
+
+# Run progress: 91.67% complete, ETA 00:02:22
+# Fork: 1 of 2
+# Warmup Iteration   1: 1638.382 ms/op
+# Warmup Iteration   2: 1485.547 ms/op
+# Warmup Iteration   3: 1480.294 ms/op
+# Warmup Iteration   4: 1457.721 ms/op
+# Warmup Iteration   5: 1466.591 ms/op
+Iteration   1: 1475.635 ms/op
+Iteration   2: 1481.571 ms/op
+Iteration   3: 1450.705 ms/op
+Iteration   4: 1427.103 ms/op
+Iteration   5: 1449.359 ms/op
+Iteration   6: 1448.010 ms/op
+Iteration   7: 1451.779 ms/op
+Iteration   8: 1439.996 ms/op
+Iteration   9: 1421.381 ms/op
+Iteration  10: 1454.368 ms/op
+
+# Run progress: 93.06% complete, ETA 00:01:58
+# Fork: 2 of 2
+# Warmup Iteration   1: 1654.633 ms/op
+# Warmup Iteration   2: 1462.313 ms/op
+# Warmup Iteration   3: 1466.697 ms/op
+# Warmup Iteration   4: 1481.762 ms/op
+# Warmup Iteration   5: 1517.364 ms/op
+Iteration   1: 1481.491 ms/op
+Iteration   2: 1526.506 ms/op
+Iteration   3: 1485.370 ms/op
+Iteration   4: 1463.679 ms/op
+Iteration   5: 1461.289 ms/op
+Iteration   6: 1457.408 ms/op
+Iteration   7: 1454.693 ms/op
+Iteration   8: 1482.525 ms/op
+Iteration   9: 1467.945 ms/op
+Iteration  10: 1461.911 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  1462.136 ±(99.9%) 20.108 ms/op [Average]
+  (min, avg, max) = (1421.381, 1462.136, 1526.506), stdev = 23.156
+  CI (99.9%): [1442.029, 1482.244] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = range, n = 500)
+
+# Run progress: 94.44% complete, ETA 00:01:34
+# Fork: 1 of 2
+# Warmup Iteration   1: 2818.170 ms/op
+# Warmup Iteration   2: 2580.578 ms/op
+# Warmup Iteration   3: 2616.954 ms/op
+# Warmup Iteration   4: 2602.937 ms/op
+# Warmup Iteration   5: 2503.187 ms/op
+Iteration   1: 2509.335 ms/op
+Iteration   2: 2525.305 ms/op
+Iteration   3: 2531.509 ms/op
+Iteration   4: 2498.231 ms/op
+Iteration   5: 2503.030 ms/op
+Iteration   6: 2519.924 ms/op
+Iteration   7: 2527.476 ms/op
+Iteration   8: 2487.751 ms/op
+Iteration   9: 2511.763 ms/op
+Iteration  10: 2540.389 ms/op
+
+# Run progress: 95.83% complete, ETA 00:01:11
+# Fork: 2 of 2
+# Warmup Iteration   1: 2748.659 ms/op
+# Warmup Iteration   2: 2600.655 ms/op
+# Warmup Iteration   3: 2594.706 ms/op
+# Warmup Iteration   4: 2595.110 ms/op
+# Warmup Iteration   5: 2531.954 ms/op
+Iteration   1: 2506.683 ms/op
+Iteration   2: 2536.738 ms/op
+Iteration   3: 2543.143 ms/op
+Iteration   4: 2533.545 ms/op
+Iteration   5: 2508.100 ms/op
+Iteration   6: 2542.550 ms/op
+Iteration   7: 2512.295 ms/op
+Iteration   8: 2530.407 ms/op
+Iteration   9: 2527.783 ms/op
+Iteration  10: 2559.887 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  2522.792 ±(99.9%) 15.566 ms/op [Average]
+  (min, avg, max) = (2487.751, 2522.792, 2559.887), stdev = 17.926
+  CI (99.9%): [2507.226, 2538.358] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput
+# Parameters: (kind = range, n = 1000)
+
+# Run progress: 97.22% complete, ETA 00:00:48
+# Fork: 1 of 2
+# Warmup Iteration   1: 5485.205 ms/op
+# Warmup Iteration   2: 5318.204 ms/op
+# Warmup Iteration   3: 5157.641 ms/op
+# Warmup Iteration   4: 5204.640 ms/op
+# Warmup Iteration   5: 5183.952 ms/op
+Iteration   1: 5226.161 ms/op
+Iteration   2: 5206.018 ms/op
+Iteration   3: 5207.519 ms/op
+Iteration   4: 5261.284 ms/op
+Iteration   5: 5349.549 ms/op
+Iteration   6: 5295.297 ms/op
+Iteration   7: 5361.120 ms/op
+Iteration   8: 5250.870 ms/op
+Iteration   9: 5181.594 ms/op
+Iteration  10: 5147.075 ms/op
+
+# Run progress: 98.61% complete, ETA 00:00:25
+# Fork: 2 of 2
+# Warmup Iteration   1: 5460.212 ms/op
+# Warmup Iteration   2: 5307.865 ms/op
+# Warmup Iteration   3: 5250.728 ms/op
+# Warmup Iteration   4: 5254.200 ms/op
+# Warmup Iteration   5: 5259.379 ms/op
+Iteration   1: 5254.608 ms/op
+Iteration   2: 5200.790 ms/op
+Iteration   3: 5233.376 ms/op
+Iteration   4: 5196.197 ms/op
+Iteration   5: 5179.629 ms/op
+Iteration   6: 5169.821 ms/op
+Iteration   7: 5149.391 ms/op
+Iteration   8: 5130.815 ms/op
+Iteration   9: 5166.389 ms/op
+Iteration  10: 5153.201 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput":
+  5216.035 ±(99.9%) 55.861 ms/op [Average]
+  (min, avg, max) = (5130.815, 5216.035, 5361.120), stdev = 64.330
+  CI (99.9%): [5160.174, 5271.896] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:30:57
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                            (kind)   (n)  Mode  Cnt     Score    Error  Units
+DatalakeBench.incrementalDetectTime    time   100  avgt   20     4.222 ±  0.055  ms/op
+DatalakeBench.incrementalDetectTime    time   250  avgt   20     8.637 ±  0.206  ms/op
+DatalakeBench.incrementalDetectTime    time   500  avgt   20    15.655 ±  0.331  ms/op
+DatalakeBench.incrementalDetectTime    time  1000  avgt   20    29.588 ±  0.755  ms/op
+DatalakeBench.incrementalDetectTime    book   100  avgt   20     3.875 ±  0.038  ms/op
+DatalakeBench.incrementalDetectTime    book   250  avgt   20     8.268 ±  0.334  ms/op
+DatalakeBench.incrementalDetectTime    book   500  avgt   20    15.345 ±  0.416  ms/op
+DatalakeBench.incrementalDetectTime    book  1000  avgt   20    29.837 ±  0.707  ms/op
+DatalakeBench.incrementalDetectTime   range   100  avgt   20     4.232 ±  0.034  ms/op
+DatalakeBench.incrementalDetectTime   range   250  avgt   20     8.295 ±  0.157  ms/op
+DatalakeBench.incrementalDetectTime   range   500  avgt   20    15.217 ±  0.147  ms/op
+DatalakeBench.incrementalDetectTime   range  1000  avgt   20    30.166 ±  0.143  ms/op
+DatalakeBench.lookupTime               time   100  avgt   20    24.824 ±  0.127  us/op
+DatalakeBench.lookupTime               time   250  avgt   20    25.400 ±  0.192  us/op
+DatalakeBench.lookupTime               time   500  avgt   20    25.317 ±  0.163  us/op
+DatalakeBench.lookupTime               time  1000  avgt   20    25.304 ±  0.140  us/op
+DatalakeBench.lookupTime               book   100  avgt   20    24.317 ±  0.185  us/op
+DatalakeBench.lookupTime               book   250  avgt   20    25.194 ±  0.360  us/op
+DatalakeBench.lookupTime               book   500  avgt   20    25.115 ±  0.214  us/op
+DatalakeBench.lookupTime               book  1000  avgt   20    25.413 ±  0.455  us/op
+DatalakeBench.lookupTime              range   100  avgt   20    24.547 ±  0.105  us/op
+DatalakeBench.lookupTime              range   250  avgt   20    24.916 ±  0.135  us/op
+DatalakeBench.lookupTime              range   500  avgt   20    25.056 ±  0.160  us/op
+DatalakeBench.lookupTime              range  1000  avgt   20    25.123 ±  0.134  us/op
+DatalakeBench.writeThroughput          time   100  avgt   20   647.296 ±  7.437  ms/op
+DatalakeBench.writeThroughput          time   250  avgt   20  1523.381 ± 20.125  ms/op
+DatalakeBench.writeThroughput          time   500  avgt   20  2687.582 ± 53.842  ms/op
+DatalakeBench.writeThroughput          time  1000  avgt   20  5308.830 ± 23.234  ms/op
+DatalakeBench.writeThroughput          book   100  avgt   20   599.827 ± 10.180  ms/op
+DatalakeBench.writeThroughput          book   250  avgt   20  1375.779 ± 12.962  ms/op
+DatalakeBench.writeThroughput          book   500  avgt   20  2348.788 ± 15.965  ms/op
+DatalakeBench.writeThroughput          book  1000  avgt   20  4792.228 ± 23.412  ms/op
+DatalakeBench.writeThroughput         range   100  avgt   20   617.357 ±  9.453  ms/op
+DatalakeBench.writeThroughput         range   250  avgt   20  1462.136 ± 20.108  ms/op
+DatalakeBench.writeThroughput         range   500  avgt   20  2522.792 ± 15.566  ms/op
+DatalakeBench.writeThroughput         range  1000  avgt   20  5216.035 ± 55.861  ms/op
+
+Benchmark result is saved to C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_datalake.json
+[BENCH] JMH metadata -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_metadata.json
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime
+# Parameters: (n = 100)
+
+# Run progress: 0.00% complete, ETA 00:06:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 2.068 ms/op
+# Warmup Iteration   2: 1.932 ms/op
+# Warmup Iteration   3: 1.879 ms/op
+# Warmup Iteration   4: 1.956 ms/op
+# Warmup Iteration   5: 1.791 ms/op
+Iteration   1: 1.754 ms/op
+Iteration   2: 1.771 ms/op
+Iteration   3: 1.749 ms/op
+Iteration   4: 1.811 ms/op
+Iteration   5: 1.744 ms/op
+Iteration   6: 1.849 ms/op
+Iteration   7: 1.753 ms/op
+Iteration   8: 1.824 ms/op
+Iteration   9: 1.742 ms/op
+Iteration  10: 1.715 ms/op
+
+# Run progress: 4.17% complete, ETA 00:08:02
+# Fork: 2 of 2
+# Warmup Iteration   1: 2.035 ms/op
+# Warmup Iteration   2: 1.992 ms/op
+# Warmup Iteration   3: 1.849 ms/op
+# Warmup Iteration   4: 1.793 ms/op
+# Warmup Iteration   5: 1.798 ms/op
+Iteration   1: 1.849 ms/op
+Iteration   2: 1.831 ms/op
+Iteration   3: 1.872 ms/op
+Iteration   4: 1.710 ms/op
+Iteration   5: 1.762 ms/op
+Iteration   6: 1.729 ms/op
+Iteration   7: 1.768 ms/op
+Iteration   8: 1.875 ms/op
+Iteration   9: 1.784 ms/op
+Iteration  10: 1.759 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime":
+  1.783 ±(99.9%) 0.045 ms/op [Average]
+  (min, avg, max) = (1.710, 1.783, 1.875), stdev = 0.051
+  CI (99.9%): [1.738, 1.827] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime
+# Parameters: (n = 250)
+
+# Run progress: 8.33% complete, ETA 00:06:40
+# Fork: 1 of 2
+# Warmup Iteration   1: 2.402 ms/op
+# Warmup Iteration   2: 2.154 ms/op
+# Warmup Iteration   3: 2.177 ms/op
+# Warmup Iteration   4: 2.109 ms/op
+# Warmup Iteration   5: 2.136 ms/op
+Iteration   1: 2.107 ms/op
+Iteration   2: 2.172 ms/op
+Iteration   3: 2.127 ms/op
+Iteration   4: 2.268 ms/op
+Iteration   5: 2.143 ms/op
+Iteration   6: 2.074 ms/op
+Iteration   7: 2.143 ms/op
+Iteration   8: 2.145 ms/op
+Iteration   9: 2.128 ms/op
+Iteration  10: 2.082 ms/op
+
+# Run progress: 12.50% complete, ETA 00:06:03
+# Fork: 2 of 2
+# Warmup Iteration   1: 2.359 ms/op
+# Warmup Iteration   2: 2.171 ms/op
+# Warmup Iteration   3: 2.206 ms/op
+# Warmup Iteration   4: 2.083 ms/op
+# Warmup Iteration   5: 2.096 ms/op
+Iteration   1: 2.102 ms/op
+Iteration   2: 2.120 ms/op
+Iteration   3: 2.090 ms/op
+Iteration   4: 2.059 ms/op
+Iteration   5: 2.177 ms/op
+Iteration   6: 2.174 ms/op
+Iteration   7: 2.122 ms/op
+Iteration   8: 2.089 ms/op
+Iteration   9: 2.081 ms/op
+Iteration  10: 2.328 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime":
+  2.137 ±(99.9%) 0.057 ms/op [Average]
+  (min, avg, max) = (2.059, 2.137, 2.328), stdev = 0.066
+  CI (99.9%): [2.080, 2.194] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime
+# Parameters: (n = 500)
+
+# Run progress: 16.67% complete, ETA 00:05:36
+# Fork: 1 of 2
+# Warmup Iteration   1: 3.354 ms/op
+# Warmup Iteration   2: 3.113 ms/op
+# Warmup Iteration   3: 3.020 ms/op
+# Warmup Iteration   4: 3.073 ms/op
+# Warmup Iteration   5: 3.735 ms/op
+Iteration   1: 3.307 ms/op
+Iteration   2: 3.100 ms/op
+Iteration   3: 3.203 ms/op
+Iteration   4: 3.045 ms/op
+Iteration   5: 3.055 ms/op
+Iteration   6: 2.930 ms/op
+Iteration   7: 2.902 ms/op
+Iteration   8: 2.943 ms/op
+Iteration   9: 3.096 ms/op
+Iteration  10: 2.926 ms/op
+
+# Run progress: 20.83% complete, ETA 00:05:14
+# Fork: 2 of 2
+# Warmup Iteration   1: 3.408 ms/op
+# Warmup Iteration   2: 3.189 ms/op
+# Warmup Iteration   3: 3.700 ms/op
+# Warmup Iteration   4: 3.114 ms/op
+# Warmup Iteration   5: 3.099 ms/op
+Iteration   1: 3.157 ms/op
+Iteration   2: 3.129 ms/op
+Iteration   3: 3.610 ms/op
+Iteration   4: 3.704 ms/op
+Iteration   5: 3.613 ms/op
+Iteration   6: 3.311 ms/op
+Iteration   7: 3.289 ms/op
+Iteration   8: 2.971 ms/op
+Iteration   9: 3.037 ms/op
+Iteration  10: 3.411 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime":
+  3.187 ±(99.9%) 0.211 ms/op [Average]
+  (min, avg, max) = (2.902, 3.187, 3.704), stdev = 0.243
+  CI (99.9%): [2.976, 3.398] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime
+# Parameters: (n = 1000)
+
+# Run progress: 25.00% complete, ETA 00:04:54
+# Fork: 1 of 2
+# Warmup Iteration   1: 5.765 ms/op
+# Warmup Iteration   2: 5.494 ms/op
+# Warmup Iteration   3: 4.840 ms/op
+# Warmup Iteration   4: 5.181 ms/op
+# Warmup Iteration   5: 5.893 ms/op
+Iteration   1: 4.458 ms/op
+Iteration   2: 4.188 ms/op
+Iteration   3: 4.235 ms/op
+Iteration   4: 3.971 ms/op
+Iteration   5: 4.135 ms/op
+Iteration   6: 4.034 ms/op
+Iteration   7: 3.973 ms/op
+Iteration   8: 4.082 ms/op
+Iteration   9: 4.132 ms/op
+Iteration  10: 3.958 ms/op
+
+# Run progress: 29.17% complete, ETA 00:04:36
+# Fork: 2 of 2
+# Warmup Iteration   1: 5.676 ms/op
+# Warmup Iteration   2: 5.010 ms/op
+# Warmup Iteration   3: 4.952 ms/op
+# Warmup Iteration   4: 4.820 ms/op
+# Warmup Iteration   5: 4.667 ms/op
+Iteration   1: 4.411 ms/op
+Iteration   2: 4.166 ms/op
+Iteration   3: 3.951 ms/op
+Iteration   4: 4.114 ms/op
+Iteration   5: 4.056 ms/op
+Iteration   6: 4.075 ms/op
+Iteration   7: 4.068 ms/op
+Iteration   8: 4.057 ms/op
+Iteration   9: 3.887 ms/op
+Iteration  10: 4.046 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataInsertTime":
+  4.100 ±(99.9%) 0.125 ms/op [Average]
+  (min, avg, max) = (3.887, 4.100, 4.458), stdev = 0.144
+  CI (99.9%): [3.975, 4.224] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor
+# Parameters: (n = 100)
+
+# Run progress: 33.33% complete, ETA 00:04:18
+# Fork: 1 of 2
+# Warmup Iteration   1: 31.807 us/op
+# Warmup Iteration   2: 30.815 us/op
+# Warmup Iteration   3: 30.226 us/op
+# Warmup Iteration   4: 30.091 us/op
+# Warmup Iteration   5: 29.584 us/op
+Iteration   1: 29.643 us/op
+Iteration   2: 29.751 us/op
+Iteration   3: 29.739 us/op
+Iteration   4: 29.827 us/op
+Iteration   5: 29.697 us/op
+Iteration   6: 29.814 us/op
+Iteration   7: 29.671 us/op
+Iteration   8: 29.582 us/op
+Iteration   9: 30.074 us/op
+Iteration  10: 29.821 us/op
+
+# Run progress: 37.50% complete, ETA 00:04:01
+# Fork: 2 of 2
+# Warmup Iteration   1: 31.712 us/op
+# Warmup Iteration   2: 30.810 us/op
+# Warmup Iteration   3: 30.402 us/op
+# Warmup Iteration   4: 29.703 us/op
+# Warmup Iteration   5: 29.944 us/op
+Iteration   1: 29.636 us/op
+Iteration   2: 29.701 us/op
+Iteration   3: 29.732 us/op
+Iteration   4: 29.972 us/op
+Iteration   5: 30.554 us/op
+Iteration   6: 29.932 us/op
+Iteration   7: 29.775 us/op
+Iteration   8: 29.614 us/op
+Iteration   9: 30.078 us/op
+Iteration  10: 29.901 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor":
+  29.826 ±(99.9%) 0.194 us/op [Average]
+  (min, avg, max) = (29.582, 29.826, 30.554), stdev = 0.223
+  CI (99.9%): [29.632, 30.020] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor
+# Parameters: (n = 250)
+
+# Run progress: 41.67% complete, ETA 00:03:44
+# Fork: 1 of 2
+# Warmup Iteration   1: 31.690 us/op
+# Warmup Iteration   2: 30.880 us/op
+# Warmup Iteration   3: 30.306 us/op
+# Warmup Iteration   4: 30.150 us/op
+# Warmup Iteration   5: 29.805 us/op
+Iteration   1: 29.742 us/op
+Iteration   2: 29.854 us/op
+Iteration   3: 29.824 us/op
+Iteration   4: 29.721 us/op
+Iteration   5: 29.622 us/op
+Iteration   6: 29.982 us/op
+Iteration   7: 29.738 us/op
+Iteration   8: 29.808 us/op
+Iteration   9: 29.982 us/op
+Iteration  10: 30.256 us/op
+
+# Run progress: 45.83% complete, ETA 00:03:28
+# Fork: 2 of 2
+# Warmup Iteration   1: 31.903 us/op
+# Warmup Iteration   2: 30.866 us/op
+# Warmup Iteration   3: 30.375 us/op
+# Warmup Iteration   4: 29.972 us/op
+# Warmup Iteration   5: 29.686 us/op
+Iteration   1: 29.776 us/op
+Iteration   2: 29.744 us/op
+Iteration   3: 29.701 us/op
+Iteration   4: 29.962 us/op
+Iteration   5: 30.141 us/op
+Iteration   6: 29.659 us/op
+Iteration   7: 29.749 us/op
+Iteration   8: 30.209 us/op
+Iteration   9: 29.746 us/op
+Iteration  10: 29.826 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor":
+  29.852 ±(99.9%) 0.157 us/op [Average]
+  (min, avg, max) = (29.622, 29.852, 30.256), stdev = 0.180
+  CI (99.9%): [29.695, 30.009] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor
+# Parameters: (n = 500)
+
+# Run progress: 50.00% complete, ETA 00:03:11
+# Fork: 1 of 2
+# Warmup Iteration   1: 34.450 us/op
+# Warmup Iteration   2: 33.560 us/op
+# Warmup Iteration   3: 32.859 us/op
+# Warmup Iteration   4: 32.558 us/op
+# Warmup Iteration   5: 32.307 us/op
+Iteration   1: 32.241 us/op
+Iteration   2: 32.608 us/op
+Iteration   3: 32.496 us/op
+Iteration   4: 32.338 us/op
+Iteration   5: 32.370 us/op
+Iteration   6: 32.613 us/op
+Iteration   7: 32.777 us/op
+Iteration   8: 32.458 us/op
+Iteration   9: 32.547 us/op
+Iteration  10: 32.852 us/op
+
+# Run progress: 54.17% complete, ETA 00:02:55
+# Fork: 2 of 2
+# Warmup Iteration   1: 34.595 us/op
+# Warmup Iteration   2: 33.964 us/op
+# Warmup Iteration   3: 33.113 us/op
+# Warmup Iteration   4: 32.645 us/op
+# Warmup Iteration   5: 32.174 us/op
+Iteration   1: 32.231 us/op
+Iteration   2: 32.052 us/op
+Iteration   3: 32.577 us/op
+Iteration   4: 32.466 us/op
+Iteration   5: 32.823 us/op
+Iteration   6: 32.031 us/op
+Iteration   7: 32.694 us/op
+Iteration   8: 32.278 us/op
+Iteration   9: 32.393 us/op
+Iteration  10: 32.344 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor":
+  32.459 ±(99.9%) 0.202 us/op [Average]
+  (min, avg, max) = (32.031, 32.459, 32.852), stdev = 0.233
+  CI (99.9%): [32.257, 32.662] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor
+# Parameters: (n = 1000)
+
+# Run progress: 58.33% complete, ETA 00:02:39
+# Fork: 1 of 2
+# Warmup Iteration   1: 35.938 us/op
+# Warmup Iteration   2: 34.530 us/op
+# Warmup Iteration   3: 33.871 us/op
+# Warmup Iteration   4: 34.056 us/op
+# Warmup Iteration   5: 33.888 us/op
+Iteration   1: 33.732 us/op
+Iteration   2: 33.832 us/op
+Iteration   3: 34.186 us/op
+Iteration   4: 33.420 us/op
+Iteration   5: 33.939 us/op
+Iteration   6: 33.961 us/op
+Iteration   7: 34.093 us/op
+Iteration   8: 33.905 us/op
+Iteration   9: 34.283 us/op
+Iteration  10: 34.292 us/op
+
+# Run progress: 62.50% complete, ETA 00:02:23
+# Fork: 2 of 2
+# Warmup Iteration   1: 37.143 us/op
+# Warmup Iteration   2: 34.878 us/op
+# Warmup Iteration   3: 33.988 us/op
+# Warmup Iteration   4: 33.694 us/op
+# Warmup Iteration   5: 33.753 us/op
+Iteration   1: 33.995 us/op
+Iteration   2: 34.205 us/op
+Iteration   3: 33.996 us/op
+Iteration   4: 34.341 us/op
+Iteration   5: 33.832 us/op
+Iteration   6: 34.390 us/op
+Iteration   7: 34.312 us/op
+Iteration   8: 34.260 us/op
+Iteration   9: 34.046 us/op
+Iteration  10: 34.231 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeAuthor":
+  34.063 ±(99.9%) 0.213 us/op [Average]
+  (min, avg, max) = (33.420, 34.063, 34.390), stdev = 0.245
+  CI (99.9%): [33.850, 34.275] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId
+# Parameters: (n = 100)
+
+# Run progress: 66.67% complete, ETA 00:02:07
+# Fork: 1 of 2
+# Warmup Iteration   1: 28.260 us/op
+# Warmup Iteration   2: 27.080 us/op
+# Warmup Iteration   3: 26.744 us/op
+# Warmup Iteration   4: 26.957 us/op
+# Warmup Iteration   5: 26.764 us/op
+Iteration   1: 26.715 us/op
+Iteration   2: 26.786 us/op
+Iteration   3: 26.621 us/op
+Iteration   4: 26.744 us/op
+Iteration   5: 26.843 us/op
+Iteration   6: 26.456 us/op
+Iteration   7: 26.544 us/op
+Iteration   8: 26.605 us/op
+Iteration   9: 26.887 us/op
+Iteration  10: 26.668 us/op
+
+# Run progress: 70.83% complete, ETA 00:01:50
+# Fork: 2 of 2
+# Warmup Iteration   1: 27.843 us/op
+# Warmup Iteration   2: 26.680 us/op
+# Warmup Iteration   3: 26.530 us/op
+# Warmup Iteration   4: 26.200 us/op
+# Warmup Iteration   5: 26.169 us/op
+Iteration   1: 26.324 us/op
+Iteration   2: 26.463 us/op
+Iteration   3: 26.259 us/op
+Iteration   4: 26.415 us/op
+Iteration   5: 26.359 us/op
+Iteration   6: 26.305 us/op
+Iteration   7: 26.312 us/op
+Iteration   8: 26.184 us/op
+Iteration   9: 26.390 us/op
+Iteration  10: 26.400 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId":
+  26.514 ±(99.9%) 0.181 us/op [Average]
+  (min, avg, max) = (26.184, 26.514, 26.887), stdev = 0.208
+  CI (99.9%): [26.333, 26.695] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId
+# Parameters: (n = 250)
+
+# Run progress: 75.00% complete, ETA 00:01:34
+# Fork: 1 of 2
+# Warmup Iteration   1: 28.066 us/op
+# Warmup Iteration   2: 26.730 us/op
+# Warmup Iteration   3: 26.583 us/op
+# Warmup Iteration   4: 26.692 us/op
+# Warmup Iteration   5: 26.390 us/op
+Iteration   1: 26.420 us/op
+Iteration   2: 26.343 us/op
+Iteration   3: 26.525 us/op
+Iteration   4: 26.517 us/op
+Iteration   5: 26.262 us/op
+Iteration   6: 26.250 us/op
+Iteration   7: 26.248 us/op
+Iteration   8: 26.133 us/op
+Iteration   9: 26.506 us/op
+Iteration  10: 26.226 us/op
+
+# Run progress: 79.17% complete, ETA 00:01:19
+# Fork: 2 of 2
+# Warmup Iteration   1: 28.032 us/op
+# Warmup Iteration   2: 26.482 us/op
+# Warmup Iteration   3: 26.431 us/op
+# Warmup Iteration   4: 26.489 us/op
+# Warmup Iteration   5: 26.128 us/op
+Iteration   1: 26.235 us/op
+Iteration   2: 26.134 us/op
+Iteration   3: 26.363 us/op
+Iteration   4: 26.616 us/op
+Iteration   5: 26.125 us/op
+Iteration   6: 26.244 us/op
+Iteration   7: 25.932 us/op
+Iteration   8: 26.059 us/op
+Iteration   9: 26.455 us/op
+Iteration  10: 26.341 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId":
+  26.297 ±(99.9%) 0.152 us/op [Average]
+  (min, avg, max) = (25.932, 26.297, 26.616), stdev = 0.175
+  CI (99.9%): [26.144, 26.449] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId
+# Parameters: (n = 500)
+
+# Run progress: 83.33% complete, ETA 00:01:03
+# Fork: 1 of 2
+# Warmup Iteration   1: 27.941 us/op
+# Warmup Iteration   2: 27.080 us/op
+# Warmup Iteration   3: 27.446 us/op
+# Warmup Iteration   4: 26.652 us/op
+# Warmup Iteration   5: 26.737 us/op
+Iteration   1: 26.390 us/op
+Iteration   2: 26.230 us/op
+Iteration   3: 26.614 us/op
+Iteration   4: 26.213 us/op
+Iteration   5: 26.374 us/op
+Iteration   6: 26.490 us/op
+Iteration   7: 26.351 us/op
+Iteration   8: 26.833 us/op
+Iteration   9: 26.491 us/op
+Iteration  10: 26.443 us/op
+
+# Run progress: 87.50% complete, ETA 00:00:47
+# Fork: 2 of 2
+# Warmup Iteration   1: 27.689 us/op
+# Warmup Iteration   2: 26.788 us/op
+# Warmup Iteration   3: 26.910 us/op
+# Warmup Iteration   4: 26.672 us/op
+# Warmup Iteration   5: 26.426 us/op
+Iteration   1: 26.531 us/op
+Iteration   2: 26.251 us/op
+Iteration   3: 26.652 us/op
+Iteration   4: 26.238 us/op
+Iteration   5: 26.134 us/op
+Iteration   6: 26.209 us/op
+Iteration   7: 26.295 us/op
+Iteration   8: 26.646 us/op
+Iteration   9: 26.435 us/op
+Iteration  10: 26.279 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId":
+  26.405 ±(99.9%) 0.160 us/op [Average]
+  (min, avg, max) = (26.134, 26.405, 26.833), stdev = 0.184
+  CI (99.9%): [26.245, 26.565] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId
+# Parameters: (n = 1000)
+
+# Run progress: 91.67% complete, ETA 00:00:31
+# Fork: 1 of 2
+# Warmup Iteration   1: 28.030 us/op
+# Warmup Iteration   2: 27.085 us/op
+# Warmup Iteration   3: 26.845 us/op
+# Warmup Iteration   4: 26.475 us/op
+# Warmup Iteration   5: 26.368 us/op
+Iteration   1: 26.211 us/op
+Iteration   2: 26.523 us/op
+Iteration   3: 26.362 us/op
+Iteration   4: 26.256 us/op
+Iteration   5: 26.211 us/op
+Iteration   6: 26.370 us/op
+Iteration   7: 26.320 us/op
+Iteration   8: 26.578 us/op
+Iteration   9: 26.429 us/op
+Iteration  10: 26.407 us/op
+
+# Run progress: 95.83% complete, ETA 00:00:15
+# Fork: 2 of 2
+# Warmup Iteration   1: 27.761 us/op
+# Warmup Iteration   2: 27.122 us/op
+# Warmup Iteration   3: 26.656 us/op
+# Warmup Iteration   4: 26.564 us/op
+# Warmup Iteration   5: 26.367 us/op
+Iteration   1: 26.705 us/op
+Iteration   2: 26.235 us/op
+Iteration   3: 26.576 us/op
+Iteration   4: 26.569 us/op
+Iteration   5: 26.347 us/op
+Iteration   6: 26.289 us/op
+Iteration   7: 26.565 us/op
+Iteration   8: 26.422 us/op
+Iteration   9: 26.186 us/op
+Iteration  10: 26.290 us/op
+
+
+Result "es.ulpgc.bigdata.bench.MetadataBench.metadataQueryTimeId":
+  26.393 ±(99.9%) 0.130 us/op [Average]
+  (min, avg, max) = (26.186, 26.393, 26.705), stdev = 0.150
+  CI (99.9%): [26.262, 26.523] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:06:18
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                               (n)  Mode  Cnt   Score   Error  Units
+MetadataBench.metadataInsertTime        100  avgt   20   1.783 ± 0.045  ms/op
+MetadataBench.metadataInsertTime        250  avgt   20   2.137 ± 0.057  ms/op
+MetadataBench.metadataInsertTime        500  avgt   20   3.187 ± 0.211  ms/op
+MetadataBench.metadataInsertTime       1000  avgt   20   4.100 ± 0.125  ms/op
+MetadataBench.metadataQueryTimeAuthor   100  avgt   20  29.826 ± 0.194  us/op
+MetadataBench.metadataQueryTimeAuthor   250  avgt   20  29.852 ± 0.157  us/op
+MetadataBench.metadataQueryTimeAuthor   500  avgt   20  32.459 ± 0.202  us/op
+MetadataBench.metadataQueryTimeAuthor  1000  avgt   20  34.063 ± 0.213  us/op
+MetadataBench.metadataQueryTimeId       100  avgt   20  26.514 ± 0.181  us/op
+MetadataBench.metadataQueryTimeId       250  avgt   20  26.297 ± 0.152  us/op
+MetadataBench.metadataQueryTimeId       500  avgt   20  26.405 ± 0.160  us/op
+MetadataBench.metadataQueryTimeId      1000  avgt   20  26.393 ± 0.130  us/op
+
+Benchmark result is saved to C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_metadata.json
+[BENCH] JMH index -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index.json
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = json, n = 100)
+
+# Run progress: 0.00% complete, ETA 00:12:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 669.653 ms/op
+# Warmup Iteration   2: 629.556 ms/op
+# Warmup Iteration   3: 627.732 ms/op
+# Warmup Iteration   4: 612.261 ms/op
+# Warmup Iteration   5: 649.609 ms/op
+Iteration   1: 621.867 ms/op
+Iteration   2: 620.660 ms/op
+Iteration   3: 608.385 ms/op
+Iteration   4: 612.441 ms/op
+Iteration   5: 613.235 ms/op
+Iteration   6: 622.382 ms/op
+Iteration   7: 608.401 ms/op
+Iteration   8: 617.214 ms/op
+Iteration   9: 608.276 ms/op
+Iteration  10: 615.038 ms/op
+
+# Run progress: 2.08% complete, ETA 00:14:48
+# Fork: 2 of 2
+# Warmup Iteration   1: 665.808 ms/op
+# Warmup Iteration   2: 621.634 ms/op
+# Warmup Iteration   3: 619.529 ms/op
+# Warmup Iteration   4: 614.454 ms/op
+# Warmup Iteration   5: 600.849 ms/op
+Iteration   1: 602.771 ms/op
+Iteration   2: 601.313 ms/op
+Iteration   3: 597.122 ms/op
+Iteration   4: 595.805 ms/op
+Iteration   5: 599.817 ms/op
+Iteration   6: 603.141 ms/op
+Iteration   7: 599.064 ms/op
+Iteration   8: 600.253 ms/op
+Iteration   9: 597.872 ms/op
+Iteration  10: 597.936 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  607.150 ±(99.9%) 7.716 ms/op [Average]
+  (min, avg, max) = (595.805, 607.150, 622.382), stdev = 8.886
+  CI (99.9%): [599.433, 614.866] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = json, n = 250)
+
+# Run progress: 4.17% complete, ETA 00:14:20
+# Fork: 1 of 2
+# Warmup Iteration   1: 1535.064 ms/op
+# Warmup Iteration   2: 1480.974 ms/op
+# Warmup Iteration   3: 1480.564 ms/op
+# Warmup Iteration   4: 1454.969 ms/op
+# Warmup Iteration   5: 1433.505 ms/op
+Iteration   1: 1435.952 ms/op
+Iteration   2: 1424.776 ms/op
+Iteration   3: 1446.105 ms/op
+Iteration   4: 1417.091 ms/op
+Iteration   5: 1426.356 ms/op
+Iteration   6: 1456.258 ms/op
+Iteration   7: 1408.476 ms/op
+Iteration   8: 1454.988 ms/op
+Iteration   9: 1446.125 ms/op
+Iteration  10: 1431.510 ms/op
+
+# Run progress: 6.25% complete, ETA 00:14:50
+# Fork: 2 of 2
+# Warmup Iteration   1: 1524.081 ms/op
+# Warmup Iteration   2: 1435.459 ms/op
+# Warmup Iteration   3: 1485.024 ms/op
+# Warmup Iteration   4: 1449.436 ms/op
+# Warmup Iteration   5: 1454.093 ms/op
+Iteration   1: 1435.572 ms/op
+Iteration   2: 1433.145 ms/op
+Iteration   3: 1440.000 ms/op
+Iteration   4: 1410.566 ms/op
+Iteration   5: 1395.869 ms/op
+Iteration   6: 1448.062 ms/op
+Iteration   7: 1443.058 ms/op
+Iteration   8: 1417.537 ms/op
+Iteration   9: 1410.974 ms/op
+Iteration  10: 1398.809 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  1429.061 ±(99.9%) 15.679 ms/op [Average]
+  (min, avg, max) = (1395.869, 1429.061, 1456.258), stdev = 18.056
+  CI (99.9%): [1413.382, 1444.740] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = json, n = 500)
+
+# Run progress: 8.33% complete, ETA 00:14:53
+# Fork: 1 of 2
+# Warmup Iteration   1: 2538.309 ms/op
+# Warmup Iteration   2: 2439.245 ms/op
+# Warmup Iteration   3: 2423.833 ms/op
+# Warmup Iteration   4: 2408.466 ms/op
+# Warmup Iteration   5: 2414.426 ms/op
+Iteration   1: 2445.126 ms/op
+Iteration   2: 2412.158 ms/op
+Iteration   3: 2466.689 ms/op
+Iteration   4: 2381.135 ms/op
+Iteration   5: 2409.398 ms/op
+Iteration   6: 2395.417 ms/op
+Iteration   7: 2388.838 ms/op
+Iteration   8: 2393.309 ms/op
+Iteration   9: 2393.331 ms/op
+Iteration  10: 2466.768 ms/op
+
+# Run progress: 10.42% complete, ETA 00:16:53
+# Fork: 2 of 2
+# Warmup Iteration   1: 2565.929 ms/op
+# Warmup Iteration   2: 2447.755 ms/op
+# Warmup Iteration   3: 2437.766 ms/op
+# Warmup Iteration   4: 2417.396 ms/op
+# Warmup Iteration   5: 2433.478 ms/op
+Iteration   1: 2410.055 ms/op
+Iteration   2: 2417.321 ms/op
+Iteration   3: 2432.321 ms/op
+Iteration   4: 2410.937 ms/op
+Iteration   5: 2388.081 ms/op
+Iteration   6: 2444.608 ms/op
+Iteration   7: 2409.458 ms/op
+Iteration   8: 2402.367 ms/op
+Iteration   9: 2398.864 ms/op
+Iteration  10: 2421.986 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  2414.408 ±(99.9%) 21.726 ms/op [Average]
+  (min, avg, max) = (2381.135, 2414.408, 2466.768), stdev = 25.020
+  CI (99.9%): [2392.682, 2436.134] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = json, n = 1000)
+
+# Run progress: 12.50% complete, ETA 00:18:01
+# Fork: 1 of 2
+# Warmup Iteration   1: 5193.775 ms/op
+# Warmup Iteration   2: 5009.868 ms/op
+# Warmup Iteration   3: 5025.869 ms/op
+# Warmup Iteration   4: 4952.707 ms/op
+# Warmup Iteration   5: 4940.598 ms/op
+Iteration   1: 4954.675 ms/op
+Iteration   2: 4941.372 ms/op
+Iteration   3: 5153.920 ms/op
+Iteration   4: 5221.768 ms/op
+Iteration   5: 5196.571 ms/op
+Iteration   6: 5111.002 ms/op
+Iteration   7: 5176.195 ms/op
+Iteration   8: 5052.688 ms/op
+Iteration   9: 5053.244 ms/op
+Iteration  10: 5188.678 ms/op
+
+# Run progress: 14.58% complete, ETA 00:22:32
+# Fork: 2 of 2
+# Warmup Iteration   1: 5254.500 ms/op
+# Warmup Iteration   2: 5122.943 ms/op
+# Warmup Iteration   3: 5016.911 ms/op
+# Warmup Iteration   4: 4992.329 ms/op
+# Warmup Iteration   5: 4930.114 ms/op
+Iteration   1: 4960.537 ms/op
+Iteration   2: 4946.268 ms/op
+Iteration   3: 5099.860 ms/op
+Iteration   4: 5153.141 ms/op
+Iteration   5: 5181.797 ms/op
+Iteration   6: 5152.768 ms/op
+Iteration   7: 5084.316 ms/op
+Iteration   8: 5217.734 ms/op
+Iteration   9: 5214.527 ms/op
+Iteration  10: 5203.095 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  5113.208 ±(99.9%) 84.825 ms/op [Average]
+  (min, avg, max) = (4941.372, 5113.208, 5221.768), stdev = 97.685
+  CI (99.9%): [5028.382, 5198.033] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = mongo, n = 100)
+
+# Run progress: 16.67% complete, ETA 00:25:38
+# Fork: 1 of 2
+# Warmup Iteration   1: 4703.104 ms/op
+# Warmup Iteration   2: 4437.462 ms/op
+# Warmup Iteration   3: 4354.833 ms/op
+# Warmup Iteration   4: 4358.613 ms/op
+# Warmup Iteration   5: 4342.192 ms/op
+Iteration   1: 4376.308 ms/op
+Iteration   2: 4318.344 ms/op
+Iteration   3: 4359.957 ms/op
+Iteration   4: 4361.571 ms/op
+Iteration   5: 4401.759 ms/op
+Iteration   6: 4334.366 ms/op
+Iteration   7: 4506.398 ms/op
+Iteration   8: 4409.313 ms/op
+Iteration   9: 4371.026 ms/op
+Iteration  10: 4355.877 ms/op
+
+# Run progress: 18.75% complete, ETA 00:27:02
+# Fork: 2 of 2
+# Warmup Iteration   1: 4743.480 ms/op
+# Warmup Iteration   2: 4455.756 ms/op
+# Warmup Iteration   3: 4432.669 ms/op
+# Warmup Iteration   4: 4394.034 ms/op
+# Warmup Iteration   5: 4489.213 ms/op
+Iteration   1: 4401.894 ms/op
+Iteration   2: 4375.115 ms/op
+Iteration   3: 4416.886 ms/op
+Iteration   4: 4448.606 ms/op
+Iteration   5: 4479.118 ms/op
+Iteration   6: 4476.020 ms/op
+Iteration   7: 4442.949 ms/op
+Iteration   8: 4400.778 ms/op
+Iteration   9: 4363.706 ms/op
+Iteration  10: 4346.809 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  4397.340 ±(99.9%) 44.534 ms/op [Average]
+  (min, avg, max) = (4318.344, 4397.340, 4506.398), stdev = 51.285
+  CI (99.9%): [4352.806, 4441.874] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = mongo, n = 250)
+
+# Run progress: 20.83% complete, ETA 00:27:57
+# Fork: 1 of 2
+# Warmup Iteration   1: 8262.368 ms/op
+# Warmup Iteration   2: 8175.077 ms/op
+# Warmup Iteration   3: 8175.552 ms/op
+# Warmup Iteration   4: 7994.719 ms/op
+# Warmup Iteration   5: 8109.506 ms/op
+Iteration   1: 8186.246 ms/op
+Iteration   2: 8119.471 ms/op
+Iteration   3: 8116.129 ms/op
+Iteration   4: 8102.289 ms/op
+Iteration   5: 8177.339 ms/op
+Iteration   6: 8138.446 ms/op
+Iteration   7: 8135.578 ms/op
+Iteration   8: 8078.047 ms/op
+Iteration   9: 8113.443 ms/op
+Iteration  10: 7965.011 ms/op
+
+# Run progress: 22.92% complete, ETA 00:31:36
+# Fork: 2 of 2
+# Warmup Iteration   1: 8503.596 ms/op
+# Warmup Iteration   2: 8346.525 ms/op
+# Warmup Iteration   3: 8272.323 ms/op
+# Warmup Iteration   4: 8195.429 ms/op
+# Warmup Iteration   5: 8212.344 ms/op
+Iteration   1: 8243.486 ms/op
+Iteration   2: 8094.279 ms/op
+Iteration   3: 8056.255 ms/op
+Iteration   4: 8064.969 ms/op
+Iteration   5: 8121.036 ms/op
+Iteration   6: 8100.764 ms/op
+Iteration   7: 8134.238 ms/op
+Iteration   8: 8052.197 ms/op
+Iteration   9: 8318.395 ms/op
+Iteration  10: 8203.111 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  8126.036 ±(99.9%) 65.506 ms/op [Average]
+  (min, avg, max) = (7965.011, 8126.036, 8318.395), stdev = 75.437
+  CI (99.9%): [8060.530, 8191.543] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = mongo, n = 500)
+
+# Run progress: 25.00% complete, ETA 00:34:22
+# Fork: 1 of 2
+# Warmup Iteration   1: 11249.646 ms/op
+# Warmup Iteration   2: 11282.317 ms/op
+# Warmup Iteration   3: 11069.061 ms/op
+# Warmup Iteration   4: 10824.793 ms/op
+# Warmup Iteration   5: 10947.242 ms/op
+Iteration   1: 10991.946 ms/op
+Iteration   2: 10917.487 ms/op
+Iteration   3: 10754.436 ms/op
+Iteration   4: 10853.244 ms/op
+Iteration   5: 10692.729 ms/op
+Iteration   6: 10665.808 ms/op
+Iteration   7: 10779.097 ms/op
+Iteration   8: 10853.138 ms/op
+Iteration   9: 10918.209 ms/op
+Iteration  10: 10799.595 ms/op
+
+# Run progress: 27.08% complete, ETA 00:38:12
+# Fork: 2 of 2
+# Warmup Iteration   1: 11118.675 ms/op
+# Warmup Iteration   2: 11185.390 ms/op
+# Warmup Iteration   3: 10944.766 ms/op
+# Warmup Iteration   4: 10771.347 ms/op
+# Warmup Iteration   5: 10886.867 ms/op
+Iteration   1: 10952.203 ms/op
+Iteration   2: 10900.863 ms/op
+Iteration   3: 11053.200 ms/op
+Iteration   4: 10829.433 ms/op
+Iteration   5: 10957.378 ms/op
+Iteration   6: 11002.909 ms/op
+Iteration   7: 10679.891 ms/op
+Iteration   8: 10831.625 ms/op
+Iteration   9: 10893.117 ms/op
+Iteration  10: 10873.795 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  10860.005 ±(99.9%) 94.305 ms/op [Average]
+  (min, avg, max) = (10665.808, 10860.005, 11053.200), stdev = 108.602
+  CI (99.9%): [10765.700, 10954.310] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = mongo, n = 1000)
+
+# Run progress: 29.17% complete, ETA 00:41:07
+# Fork: 1 of 2
+# Warmup Iteration   1: 20192.367 ms/op
+# Warmup Iteration   2: 19842.823 ms/op
+# Warmup Iteration   3: 19853.235 ms/op
+# Warmup Iteration   4: 19963.148 ms/op
+# Warmup Iteration   5: 19848.643 ms/op
+Iteration   1: 20149.779 ms/op
+Iteration   2: 19769.354 ms/op
+Iteration   3: 19979.720 ms/op
+Iteration   4: 20004.536 ms/op
+Iteration   5: 19957.396 ms/op
+Iteration   6: 19686.507 ms/op
+Iteration   7: 19929.058 ms/op
+Iteration   8: 19973.159 ms/op
+Iteration   9: 19848.440 ms/op
+Iteration  10: 19940.494 ms/op
+
+# Run progress: 31.25% complete, ETA 00:48:13
+# Fork: 2 of 2
+# Warmup Iteration   1: 20449.272 ms/op
+# Warmup Iteration   2: 19866.263 ms/op
+# Warmup Iteration   3: 19856.500 ms/op
+# Warmup Iteration   4: 19703.545 ms/op
+# Warmup Iteration   5: 19841.218 ms/op
+Iteration   1: 20145.491 ms/op
+Iteration   2: 19916.378 ms/op
+Iteration   3: 19953.069 ms/op
+Iteration   4: 19827.910 ms/op
+Iteration   5: 20191.817 ms/op
+Iteration   6: 19856.771 ms/op
+Iteration   7: 20008.566 ms/op
+Iteration   8: 20119.690 ms/op
+Iteration   9: 19981.402 ms/op
+Iteration  10: 19914.641 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  19957.709 ±(99.9%) 111.269 ms/op [Average]
+  (min, avg, max) = (19686.507, 19957.709, 20191.817), stdev = 128.138
+  CI (99.9%): [19846.440, 20068.978] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = json, n = 100)
+
+# Run progress: 33.33% complete, ETA 00:53:51
+# Fork: 1 of 2
+# Warmup Iteration   1: 0.345 us/op
+# Warmup Iteration   2: 0.331 us/op
+# Warmup Iteration   3: 0.323 us/op
+# Warmup Iteration   4: 0.323 us/op
+# Warmup Iteration   5: 0.321 us/op
+Iteration   1: 0.321 us/op
+Iteration   2: 0.322 us/op
+Iteration   3: 0.323 us/op
+Iteration   4: 0.321 us/op
+Iteration   5: 0.323 us/op
+Iteration   6: 0.323 us/op
+Iteration   7: 0.327 us/op
+Iteration   8: 0.329 us/op
+Iteration   9: 0.323 us/op
+Iteration  10: 0.323 us/op
+
+# Run progress: 35.42% complete, ETA 00:49:35
+# Fork: 2 of 2
+# Warmup Iteration   1: 0.350 us/op
+# Warmup Iteration   2: 0.333 us/op
+# Warmup Iteration   3: 0.328 us/op
+# Warmup Iteration   4: 0.331 us/op
+# Warmup Iteration   5: 0.330 us/op
+Iteration   1: 0.327 us/op
+Iteration   2: 0.328 us/op
+Iteration   3: 0.330 us/op
+Iteration   4: 0.326 us/op
+Iteration   5: 0.326 us/op
+Iteration   6: 0.326 us/op
+Iteration   7: 0.325 us/op
+Iteration   8: 0.325 us/op
+Iteration   9: 0.327 us/op
+Iteration  10: 0.327 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  0.325 ±(99.9%) 0.002 us/op [Average]
+  (min, avg, max) = (0.321, 0.325, 0.330), stdev = 0.003
+  CI (99.9%): [0.323, 0.327] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = json, n = 250)
+
+# Run progress: 37.50% complete, ETA 00:45:46
+# Fork: 1 of 2
+# Warmup Iteration   1: 0.532 us/op
+# Warmup Iteration   2: 0.519 us/op
+# Warmup Iteration   3: 0.509 us/op
+# Warmup Iteration   4: 0.517 us/op
+# Warmup Iteration   5: 0.512 us/op
+Iteration   1: 0.513 us/op
+Iteration   2: 0.513 us/op
+Iteration   3: 0.514 us/op
+Iteration   4: 0.515 us/op
+Iteration   5: 0.509 us/op
+Iteration   6: 0.513 us/op
+Iteration   7: 0.509 us/op
+Iteration   8: 0.511 us/op
+Iteration   9: 0.509 us/op
+Iteration  10: 0.509 us/op
+
+# Run progress: 39.58% complete, ETA 00:42:20
+# Fork: 2 of 2
+# Warmup Iteration   1: 0.539 us/op
+# Warmup Iteration   2: 0.525 us/op
+# Warmup Iteration   3: 0.504 us/op
+# Warmup Iteration   4: 0.502 us/op
+# Warmup Iteration   5: 0.503 us/op
+Iteration   1: 0.507 us/op
+Iteration   2: 0.503 us/op
+Iteration   3: 0.503 us/op
+Iteration   4: 0.501 us/op
+Iteration   5: 0.503 us/op
+Iteration   6: 0.507 us/op
+Iteration   7: 0.505 us/op
+Iteration   8: 0.507 us/op
+Iteration   9: 0.504 us/op
+Iteration  10: 0.511 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  0.508 ±(99.9%) 0.004 us/op [Average]
+  (min, avg, max) = (0.501, 0.508, 0.515), stdev = 0.004
+  CI (99.9%): [0.505, 0.512] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = json, n = 500)
+
+# Run progress: 41.67% complete, ETA 00:39:14
+# Fork: 1 of 2
+# Warmup Iteration   1: 0.848 us/op
+# Warmup Iteration   2: 0.832 us/op
+# Warmup Iteration   3: 0.804 us/op
+# Warmup Iteration   4: 0.808 us/op
+# Warmup Iteration   5: 0.797 us/op
+Iteration   1: 0.788 us/op
+Iteration   2: 0.794 us/op
+Iteration   3: 0.795 us/op
+Iteration   4: 0.790 us/op
+Iteration   5: 0.788 us/op
+Iteration   6: 0.785 us/op
+Iteration   7: 0.780 us/op
+Iteration   8: 0.784 us/op
+Iteration   9: 0.797 us/op
+Iteration  10: 0.790 us/op
+
+# Run progress: 43.75% complete, ETA 00:36:25
+# Fork: 2 of 2
+# Warmup Iteration   1: 0.925 us/op
+# Warmup Iteration   2: 0.874 us/op
+# Warmup Iteration   3: 0.880 us/op
+# Warmup Iteration   4: 0.881 us/op
+# Warmup Iteration   5: 0.871 us/op
+Iteration   1: 0.868 us/op
+Iteration   2: 0.881 us/op
+Iteration   3: 0.876 us/op
+Iteration   4: 0.867 us/op
+Iteration   5: 0.871 us/op
+Iteration   6: 0.863 us/op
+Iteration   7: 0.858 us/op
+Iteration   8: 0.869 us/op
+Iteration   9: 0.865 us/op
+Iteration  10: 0.872 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  0.829 ±(99.9%) 0.036 us/op [Average]
+  (min, avg, max) = (0.780, 0.829, 0.881), stdev = 0.041
+  CI (99.9%): [0.793, 0.865] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = json, n = 1000)
+
+# Run progress: 45.83% complete, ETA 00:33:49
+# Fork: 1 of 2
+# Warmup Iteration   1: 1.761 us/op
+# Warmup Iteration   2: 1.711 us/op
+# Warmup Iteration   3: 1.691 us/op
+# Warmup Iteration   4: 1.704 us/op
+# Warmup Iteration   5: 1.707 us/op
+Iteration   1: 1.705 us/op
+Iteration   2: 1.702 us/op
+Iteration   3: 1.719 us/op
+Iteration   4: 1.704 us/op
+Iteration   5: 1.686 us/op
+Iteration   6: 1.712 us/op
+Iteration   7: 1.710 us/op
+Iteration   8: 1.697 us/op
+Iteration   9: 1.694 us/op
+Iteration  10: 1.694 us/op
+
+# Run progress: 47.92% complete, ETA 00:31:29
+# Fork: 2 of 2
+# Warmup Iteration   1: 1.715 us/op
+# Warmup Iteration   2: 1.648 us/op
+# Warmup Iteration   3: 1.626 us/op
+# Warmup Iteration   4: 1.629 us/op
+# Warmup Iteration   5: 1.626 us/op
+Iteration   1: 1.633 us/op
+Iteration   2: 1.641 us/op
+Iteration   3: 1.634 us/op
+Iteration   4: 1.624 us/op
+Iteration   5: 1.649 us/op
+Iteration   6: 1.584 us/op
+Iteration   7: 1.585 us/op
+Iteration   8: 1.616 us/op
+Iteration   9: 1.593 us/op
+Iteration  10: 1.596 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  1.659 ±(99.9%) 0.042 us/op [Average]
+  (min, avg, max) = (1.584, 1.659, 1.719), stdev = 0.048
+  CI (99.9%): [1.617, 1.701] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = mongo, n = 100)
+
+# Run progress: 50.00% complete, ETA 00:29:18
+# Fork: 1 of 2
+# Warmup Iteration   1: 238.872 us/op
+# Warmup Iteration   2: 170.340 us/op
+# Warmup Iteration   3: 141.368 us/op
+# Warmup Iteration   4: 144.672 us/op
+# Warmup Iteration   5: 146.752 us/op
+Iteration   1: 149.291 us/op
+Iteration   2: 142.263 us/op
+Iteration   3: 142.334 us/op
+Iteration   4: 143.152 us/op
+Iteration   5: 144.797 us/op
+Iteration   6: 144.868 us/op
+Iteration   7: 141.784 us/op
+Iteration   8: 141.579 us/op
+Iteration   9: 141.678 us/op
+Iteration  10: 145.398 us/op
+
+# Run progress: 52.08% complete, ETA 00:27:16
+# Fork: 2 of 2
+# Warmup Iteration   1: 232.248 us/op
+# Warmup Iteration   2: 165.260 us/op
+# Warmup Iteration   3: 142.895 us/op
+# Warmup Iteration   4: 139.781 us/op
+# Warmup Iteration   5: 144.450 us/op
+Iteration   1: 141.323 us/op
+Iteration   2: 141.132 us/op
+Iteration   3: 143.150 us/op
+Iteration   4: 141.187 us/op
+Iteration   5: 145.382 us/op
+Iteration   6: 140.355 us/op
+Iteration   7: 141.761 us/op
+Iteration   8: 141.727 us/op
+Iteration   9: 140.978 us/op
+Iteration  10: 145.943 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  143.004 ±(99.9%) 1.957 us/op [Average]
+  (min, avg, max) = (140.355, 143.004, 149.291), stdev = 2.254
+  CI (99.9%): [141.047, 144.961] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = mongo, n = 250)
+
+# Run progress: 54.17% complete, ETA 00:25:22
+# Fork: 1 of 2
+# Warmup Iteration   1: 232.796 us/op
+# Warmup Iteration   2: 187.087 us/op
+# Warmup Iteration   3: 149.941 us/op
+# Warmup Iteration   4: 152.545 us/op
+# Warmup Iteration   5: 155.631 us/op
+Iteration   1: 152.251 us/op
+Iteration   2: 155.539 us/op
+Iteration   3: 150.205 us/op
+Iteration   4: 151.140 us/op
+Iteration   5: 150.364 us/op
+Iteration   6: 150.439 us/op
+Iteration   7: 158.764 us/op
+Iteration   8: 151.063 us/op
+Iteration   9: 151.807 us/op
+Iteration  10: 153.208 us/op
+
+# Run progress: 56.25% complete, ETA 00:23:37
+# Fork: 2 of 2
+# Warmup Iteration   1: 238.594 us/op
+# Warmup Iteration   2: 166.316 us/op
+# Warmup Iteration   3: 152.310 us/op
+# Warmup Iteration   4: 149.825 us/op
+# Warmup Iteration   5: 149.175 us/op
+Iteration   1: 147.974 us/op
+Iteration   2: 145.202 us/op
+Iteration   3: 147.880 us/op
+Iteration   4: 146.913 us/op
+Iteration   5: 145.048 us/op
+Iteration   6: 144.446 us/op
+Iteration   7: 145.145 us/op
+Iteration   8: 148.284 us/op
+Iteration   9: 146.664 us/op
+Iteration  10: 146.378 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  149.436 ±(99.9%) 3.272 us/op [Average]
+  (min, avg, max) = (144.446, 149.436, 158.764), stdev = 3.768
+  CI (99.9%): [146.163, 152.708] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = mongo, n = 500)
+
+# Run progress: 58.33% complete, ETA 00:21:58
+# Fork: 1 of 2
+# Warmup Iteration   1: 248.781 us/op
+# Warmup Iteration   2: 189.717 us/op
+# Warmup Iteration   3: 158.326 us/op
+# Warmup Iteration   4: 155.325 us/op
+# Warmup Iteration   5: 154.936 us/op
+Iteration   1: 167.031 us/op
+Iteration   2: 159.404 us/op
+Iteration   3: 168.422 us/op
+Iteration   4: 177.152 us/op
+Iteration   5: 154.528 us/op
+Iteration   6: 158.292 us/op
+Iteration   7: 158.082 us/op
+Iteration   8: 151.642 us/op
+Iteration   9: 150.646 us/op
+Iteration  10: 153.645 us/op
+
+# Run progress: 60.42% complete, ETA 00:20:27
+# Fork: 2 of 2
+# Warmup Iteration   1: 255.297 us/op
+# Warmup Iteration   2: 177.456 us/op
+# Warmup Iteration   3: 156.699 us/op
+# Warmup Iteration   4: 157.864 us/op
+# Warmup Iteration   5: 164.957 us/op
+Iteration   1: 157.874 us/op
+Iteration   2: 156.871 us/op
+Iteration   3: 151.233 us/op
+Iteration   4: 152.840 us/op
+Iteration   5: 157.408 us/op
+Iteration   6: 150.441 us/op
+Iteration   7: 150.552 us/op
+Iteration   8: 150.993 us/op
+Iteration   9: 150.753 us/op
+Iteration  10: 153.122 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  156.546 ±(99.9%) 6.154 us/op [Average]
+  (min, avg, max) = (150.441, 156.546, 177.152), stdev = 7.087
+  CI (99.9%): [150.392, 162.701] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = mongo, n = 1000)
+
+# Run progress: 62.50% complete, ETA 00:18:59
+# Fork: 1 of 2
+# Warmup Iteration   1: 263.676 us/op
+# Warmup Iteration   2: 203.036 us/op
+# Warmup Iteration   3: 172.783 us/op
+# Warmup Iteration   4: 167.819 us/op
+# Warmup Iteration   5: 162.982 us/op
+Iteration   1: 161.974 us/op
+Iteration   2: 166.059 us/op
+Iteration   3: 164.026 us/op
+Iteration   4: 168.408 us/op
+Iteration   5: 170.357 us/op
+Iteration   6: 163.895 us/op
+Iteration   7: 162.731 us/op
+Iteration   8: 166.922 us/op
+Iteration   9: 173.567 us/op
+Iteration  10: 165.535 us/op
+
+# Run progress: 64.58% complete, ETA 00:17:41
+# Fork: 2 of 2
+# Warmup Iteration   1: 277.178 us/op
+# Warmup Iteration   2: 203.903 us/op
+# Warmup Iteration   3: 184.744 us/op
+# Warmup Iteration   4: 170.576 us/op
+# Warmup Iteration   5: 164.920 us/op
+Iteration   1: 165.837 us/op
+Iteration   2: 177.928 us/op
+Iteration   3: 180.443 us/op
+Iteration   4: 171.830 us/op
+Iteration   5: 175.196 us/op
+Iteration   6: 172.459 us/op
+Iteration   7: 172.598 us/op
+Iteration   8: 170.030 us/op
+Iteration   9: 169.547 us/op
+Iteration  10: 169.326 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  169.433 ±(99.9%) 4.352 us/op [Average]
+  (min, avg, max) = (161.974, 169.433, 180.443), stdev = 5.011
+  CI (99.9%): [165.082, 173.785] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = json, n = 100)
+
+# Run progress: 66.67% complete, ETA 00:16:25
+# Fork: 1 of 2
+# Warmup Iteration   1: 382.968 ms/op
+# Warmup Iteration   2: 364.887 ms/op
+# Warmup Iteration   3: 376.223 ms/op
+# Warmup Iteration   4: 371.267 ms/op
+# Warmup Iteration   5: 367.663 ms/op
+Iteration   1: 370.454 ms/op
+Iteration   2: 373.012 ms/op
+Iteration   3: 367.932 ms/op
+Iteration   4: 371.878 ms/op
+Iteration   5: 371.726 ms/op
+Iteration   6: 373.072 ms/op
+Iteration   7: 376.146 ms/op
+Iteration   8: 375.412 ms/op
+Iteration   9: 374.919 ms/op
+Iteration  10: 371.970 ms/op
+
+# Run progress: 68.75% complete, ETA 00:15:06
+# Fork: 2 of 2
+# Warmup Iteration   1: 382.256 ms/op
+# Warmup Iteration   2: 373.915 ms/op
+# Warmup Iteration   3: 368.976 ms/op
+# Warmup Iteration   4: 385.417 ms/op
+# Warmup Iteration   5: 361.244 ms/op
+Iteration   1: 365.811 ms/op
+Iteration   2: 371.256 ms/op
+Iteration   3: 373.147 ms/op
+Iteration   4: 376.725 ms/op
+Iteration   5: 362.934 ms/op
+Iteration   6: 369.493 ms/op
+Iteration   7: 365.968 ms/op
+Iteration   8: 369.916 ms/op
+Iteration   9: 378.294 ms/op
+Iteration  10: 361.119 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  371.059 ±(99.9%) 3.937 ms/op [Average]
+  (min, avg, max) = (361.119, 371.059, 378.294), stdev = 4.534
+  CI (99.9%): [367.122, 374.996] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = json, n = 250)
+
+# Run progress: 70.83% complete, ETA 00:13:50
+# Fork: 1 of 2
+# Warmup Iteration   1: 385.931 ms/op
+# Warmup Iteration   2: 334.755 ms/op
+# Warmup Iteration   3: 352.835 ms/op
+# Warmup Iteration   4: 353.598 ms/op
+# Warmup Iteration   5: 334.076 ms/op
+Iteration   1: 326.417 ms/op
+Iteration   2: 328.878 ms/op
+Iteration   3: 356.722 ms/op
+Iteration   4: 357.548 ms/op
+Iteration   5: 330.348 ms/op
+Iteration   6: 354.634 ms/op
+Iteration   7: 352.720 ms/op
+Iteration   8: 342.307 ms/op
+Iteration   9: 353.077 ms/op
+Iteration  10: 341.993 ms/op
+
+# Run progress: 72.92% complete, ETA 00:12:36
+# Fork: 2 of 2
+# Warmup Iteration   1: 367.654 ms/op
+# Warmup Iteration   2: 350.096 ms/op
+# Warmup Iteration   3: 336.122 ms/op
+# Warmup Iteration   4: 342.887 ms/op
+# Warmup Iteration   5: 364.914 ms/op
+Iteration   1: 356.775 ms/op
+Iteration   2: 363.688 ms/op
+Iteration   3: 358.757 ms/op
+Iteration   4: 330.349 ms/op
+Iteration   5: 360.134 ms/op
+Iteration   6: 358.942 ms/op
+Iteration   7: 336.540 ms/op
+Iteration   8: 354.620 ms/op
+Iteration   9: 352.027 ms/op
+Iteration  10: 340.484 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  347.848 ±(99.9%) 10.419 ms/op [Average]
+  (min, avg, max) = (326.417, 347.848, 363.688), stdev = 11.999
+  CI (99.9%): [337.429, 358.267] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = json, n = 500)
+
+# Run progress: 75.00% complete, ETA 00:11:25
+# Fork: 1 of 2
+# Warmup Iteration   1: 626.776 ms/op
+# Warmup Iteration   2: 549.497 ms/op
+# Warmup Iteration   3: 565.565 ms/op
+# Warmup Iteration   4: 519.724 ms/op
+# Warmup Iteration   5: 546.726 ms/op
+Iteration   1: 557.850 ms/op
+Iteration   2: 517.650 ms/op
+Iteration   3: 535.012 ms/op
+Iteration   4: 527.359 ms/op
+Iteration   5: 523.142 ms/op
+Iteration   6: 499.105 ms/op
+Iteration   7: 552.341 ms/op
+Iteration   8: 566.145 ms/op
+Iteration   9: 521.803 ms/op
+Iteration  10: 558.884 ms/op
+
+# Run progress: 77.08% complete, ETA 00:10:19
+# Fork: 2 of 2
+# Warmup Iteration   1: 539.423 ms/op
+# Warmup Iteration   2: 517.326 ms/op
+# Warmup Iteration   3: 544.976 ms/op
+# Warmup Iteration   4: 561.958 ms/op
+# Warmup Iteration   5: 516.880 ms/op
+Iteration   1: 510.644 ms/op
+Iteration   2: 558.565 ms/op
+Iteration   3: 559.031 ms/op
+Iteration   4: 549.721 ms/op
+Iteration   5: 530.754 ms/op
+Iteration   6: 562.657 ms/op
+Iteration   7: 540.855 ms/op
+Iteration   8: 559.314 ms/op
+Iteration   9: 556.330 ms/op
+Iteration  10: 539.470 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  541.332 ±(99.9%) 17.079 ms/op [Average]
+  (min, avg, max) = (499.105, 541.332, 566.145), stdev = 19.669
+  CI (99.9%): [524.252, 558.411] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = json, n = 1000)
+
+# Run progress: 79.17% complete, ETA 00:09:16
+# Fork: 1 of 2
+# Warmup Iteration   1: 683.453 ms/op
+# Warmup Iteration   2: 662.718 ms/op
+# Warmup Iteration   3: 656.546 ms/op
+# Warmup Iteration   4: 646.445 ms/op
+# Warmup Iteration   5: 666.445 ms/op
+Iteration   1: 626.461 ms/op
+Iteration   2: 652.383 ms/op
+Iteration   3: 685.669 ms/op
+Iteration   4: 627.325 ms/op
+Iteration   5: 639.269 ms/op
+Iteration   6: 665.290 ms/op
+Iteration   7: 677.858 ms/op
+Iteration   8: 660.762 ms/op
+Iteration   9: 650.976 ms/op
+Iteration  10: 641.124 ms/op
+
+# Run progress: 81.25% complete, ETA 00:08:13
+# Fork: 2 of 2
+# Warmup Iteration   1: 675.554 ms/op
+# Warmup Iteration   2: 644.504 ms/op
+# Warmup Iteration   3: 683.267 ms/op
+# Warmup Iteration   4: 636.388 ms/op
+# Warmup Iteration   5: 708.855 ms/op
+Iteration   1: 654.148 ms/op
+Iteration   2: 669.364 ms/op
+Iteration   3: 684.163 ms/op
+Iteration   4: 631.243 ms/op
+Iteration   5: 661.752 ms/op
+Iteration   6: 673.409 ms/op
+Iteration   7: 674.597 ms/op
+Iteration   8: 686.502 ms/op
+Iteration   9: 681.161 ms/op
+Iteration  10: 670.648 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  660.705 ±(99.9%) 17.029 ms/op [Average]
+  (min, avg, max) = (626.461, 660.705, 686.502), stdev = 19.610
+  CI (99.9%): [643.677, 677.734] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = mongo, n = 100)
+
+# Run progress: 83.33% complete, ETA 00:07:13
+# Fork: 1 of 2
+# Warmup Iteration   1: 2624.842 ms/op
+# Warmup Iteration   2: 2506.331 ms/op
+# Warmup Iteration   3: 2501.208 ms/op
+# Warmup Iteration   4: 2447.391 ms/op
+# Warmup Iteration   5: 2456.131 ms/op
+Iteration   1: 2550.746 ms/op
+Iteration   2: 2512.107 ms/op
+Iteration   3: 2493.549 ms/op
+Iteration   4: 2533.618 ms/op
+Iteration   5: 2582.918 ms/op
+Iteration   6: 2493.925 ms/op
+Iteration   7: 2520.448 ms/op
+Iteration   8: 2537.167 ms/op
+Iteration   9: 2504.597 ms/op
+Iteration  10: 2520.711 ms/op
+
+# Run progress: 85.42% complete, ETA 00:06:26
+# Fork: 2 of 2
+# Warmup Iteration   1: 2511.557 ms/op
+# Warmup Iteration   2: 2581.262 ms/op
+# Warmup Iteration   3: 2547.834 ms/op
+# Warmup Iteration   4: 2537.641 ms/op
+# Warmup Iteration   5: 2525.739 ms/op
+Iteration   1: 2499.757 ms/op
+Iteration   2: 2523.944 ms/op
+Iteration   3: 2471.328 ms/op
+Iteration   4: 2461.737 ms/op
+Iteration   5: 2515.855 ms/op
+Iteration   6: 2516.711 ms/op
+Iteration   7: 2545.341 ms/op
+Iteration   8: 2498.556 ms/op
+Iteration   9: 2495.361 ms/op
+Iteration  10: 2560.595 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  2516.949 ±(99.9%) 25.552 ms/op [Average]
+  (min, avg, max) = (2461.737, 2516.949, 2582.918), stdev = 29.426
+  CI (99.9%): [2491.396, 2542.501] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = mongo, n = 250)
+
+# Run progress: 87.50% complete, ETA 00:05:37
+# Fork: 1 of 2
+# Warmup Iteration   1: 2499.572 ms/op
+# Warmup Iteration   2: 2410.859 ms/op
+# Warmup Iteration   3: 2482.645 ms/op
+# Warmup Iteration   4: 2482.925 ms/op
+# Warmup Iteration   5: 2447.667 ms/op
+Iteration   1: 2474.076 ms/op
+Iteration   2: 2441.574 ms/op
+Iteration   3: 2459.852 ms/op
+Iteration   4: 2414.192 ms/op
+Iteration   5: 2447.748 ms/op
+Iteration   6: 2441.740 ms/op
+Iteration   7: 2448.996 ms/op
+Iteration   8: 2388.078 ms/op
+Iteration   9: 2364.929 ms/op
+Iteration  10: 2382.524 ms/op
+
+# Run progress: 89.58% complete, ETA 00:04:51
+# Fork: 2 of 2
+# Warmup Iteration   1: 2480.139 ms/op
+# Warmup Iteration   2: 2449.138 ms/op
+# Warmup Iteration   3: 2497.128 ms/op
+# Warmup Iteration   4: 2383.773 ms/op
+# Warmup Iteration   5: 2436.689 ms/op
+Iteration   1: 2409.924 ms/op
+Iteration   2: 2435.431 ms/op
+Iteration   3: 2444.891 ms/op
+Iteration   4: 2442.471 ms/op
+Iteration   5: 2480.073 ms/op
+Iteration   6: 2421.188 ms/op
+Iteration   7: 2418.742 ms/op
+Iteration   8: 2438.490 ms/op
+Iteration   9: 2426.607 ms/op
+Iteration  10: 2493.939 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  2433.773 ±(99.9%) 27.951 ms/op [Average]
+  (min, avg, max) = (2364.929, 2433.773, 2493.939), stdev = 32.188
+  CI (99.9%): [2405.822, 2461.724] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = mongo, n = 500)
+
+# Run progress: 91.67% complete, ETA 00:04:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 4237.228 ms/op
+# Warmup Iteration   2: 4199.758 ms/op
+# Warmup Iteration   3: 4125.047 ms/op
+# Warmup Iteration   4: 4139.149 ms/op
+# Warmup Iteration   5: 4209.956 ms/op
+Iteration   1: 4073.955 ms/op
+Iteration   2: 4104.459 ms/op
+Iteration   3: 4143.639 ms/op
+Iteration   4: 4186.207 ms/op
+Iteration   5: 4091.955 ms/op
+Iteration   6: 4079.252 ms/op
+Iteration   7: 4138.975 ms/op
+Iteration   8: 4132.158 ms/op
+Iteration   9: 4154.290 ms/op
+Iteration  10: 4174.131 ms/op
+
+# Run progress: 93.75% complete, ETA 00:03:09
+# Fork: 2 of 2
+# Warmup Iteration   1: 4261.996 ms/op
+# Warmup Iteration   2: 4161.553 ms/op
+# Warmup Iteration   3: 4175.987 ms/op
+# Warmup Iteration   4: 4250.545 ms/op
+# Warmup Iteration   5: 4132.866 ms/op
+Iteration   1: 4102.888 ms/op
+Iteration   2: 4074.008 ms/op
+Iteration   3: 4115.733 ms/op
+Iteration   4: 4086.921 ms/op
+Iteration   5: 4106.538 ms/op
+Iteration   6: 4111.895 ms/op
+Iteration   7: 4103.946 ms/op
+Iteration   8: 4114.627 ms/op
+Iteration   9: 4170.608 ms/op
+Iteration  10: 4150.883 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  4120.853 ±(99.9%) 29.494 ms/op [Average]
+  (min, avg, max) = (4073.955, 4120.853, 4186.207), stdev = 33.965
+  CI (99.9%): [4091.359, 4150.347] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = mongo, n = 1000)
+
+# Run progress: 95.83% complete, ETA 00:02:12
+# Fork: 1 of 2
+# Warmup Iteration   1: 4406.503 ms/op
+# Warmup Iteration   2: 4350.284 ms/op
+# Warmup Iteration   3: 4390.305 ms/op
+# Warmup Iteration   4: 4439.370 ms/op
+# Warmup Iteration   5: 4446.803 ms/op
+Iteration   1: 4393.784 ms/op
+Iteration   2: 4354.267 ms/op
+Iteration   3: 4384.646 ms/op
+Iteration   4: 4363.184 ms/op
+Iteration   5: 4368.449 ms/op
+Iteration   6: 4376.868 ms/op
+Iteration   7: 4385.875 ms/op
+Iteration   8: 4312.352 ms/op
+Iteration   9: 4358.625 ms/op
+Iteration  10: 4398.097 ms/op
+
+# Run progress: 97.92% complete, ETA 00:01:11
+# Fork: 2 of 2
+# Warmup Iteration   1: 4481.659 ms/op
+# Warmup Iteration   2: 4390.457 ms/op
+# Warmup Iteration   3: 4369.340 ms/op
+# Warmup Iteration   4: 4362.555 ms/op
+# Warmup Iteration   5: 4420.682 ms/op
+Iteration   1: 4380.940 ms/op
+Iteration   2: 4494.238 ms/op
+Iteration   3: 4353.508 ms/op
+Iteration   4: 4297.806 ms/op
+Iteration   5: 4402.237 ms/op
+Iteration   6: 4535.547 ms/op
+Iteration   7: 4442.325 ms/op
+Iteration   8: 4404.266 ms/op
+Iteration   9: 4450.212 ms/op
+Iteration  10: 4454.916 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  4395.607 ±(99.9%) 49.619 ms/op [Average]
+  (min, avg, max) = (4297.806, 4395.607, 4535.547), stdev = 57.141
+  CI (99.9%): [4345.988, 4445.226] (assumes normal distribution)
+
+
+# Run complete. Total time: 01:00:58
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                  (kind)   (n)  Mode  Cnt      Score     Error  Units
+IndexBench.indexBuildTime    json   100  avgt   20    607.150 ±   7.716  ms/op
+IndexBench.indexBuildTime    json   250  avgt   20   1429.061 ±  15.679  ms/op
+IndexBench.indexBuildTime    json   500  avgt   20   2414.408 ±  21.726  ms/op
+IndexBench.indexBuildTime    json  1000  avgt   20   5113.208 ±  84.825  ms/op
+IndexBench.indexBuildTime   mongo   100  avgt   20   4397.340 ±  44.534  ms/op
+IndexBench.indexBuildTime   mongo   250  avgt   20   8126.036 ±  65.506  ms/op
+IndexBench.indexBuildTime   mongo   500  avgt   20  10860.005 ±  94.305  ms/op
+IndexBench.indexBuildTime   mongo  1000  avgt   20  19957.709 ± 111.269  ms/op
+IndexBench.queryTime         json   100  avgt   20      0.325 ±   0.002  us/op
+IndexBench.queryTime         json   250  avgt   20      0.508 ±   0.004  us/op
+IndexBench.queryTime         json   500  avgt   20      0.829 ±   0.036  us/op
+IndexBench.queryTime         json  1000  avgt   20      1.659 ±   0.042  us/op
+IndexBench.queryTime        mongo   100  avgt   20    143.004 ±   1.957  us/op
+IndexBench.queryTime        mongo   250  avgt   20    149.436 ±   3.272  us/op
+IndexBench.queryTime        mongo   500  avgt   20    156.546 ±   6.154  us/op
+IndexBench.queryTime        mongo  1000  avgt   20    169.433 ±   4.352  us/op
+IndexBench.updateTime        json   100  avgt   20    371.059 ±   3.937  ms/op
+IndexBench.updateTime        json   250  avgt   20    347.848 ±  10.419  ms/op
+IndexBench.updateTime        json   500  avgt   20    541.332 ±  17.079  ms/op
+IndexBench.updateTime        json  1000  avgt   20    660.705 ±  17.029  ms/op
+IndexBench.updateTime       mongo   100  avgt   20   2516.949 ±  25.552  ms/op
+IndexBench.updateTime       mongo   250  avgt   20   2433.773 ±  27.951  ms/op
+IndexBench.updateTime       mongo   500  avgt   20   4120.853 ±  29.494  ms/op
+IndexBench.updateTime       mongo  1000  avgt   20   4395.607 ±  49.619  ms/op
+
+Benchmark result is saved to C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index.json
+[BENCH] JMH index_folders_query -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index_folders_query.json
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = folders, n = 100)
+
+# Run progress: 0.00% complete, ETA 00:02:00
+# Fork: 1 of 2
+# Warmup Iteration   1: 169.722 us/op
+# Warmup Iteration   2: 140.413 us/op
+# Warmup Iteration   3: 139.304 us/op
+# Warmup Iteration   4: 139.568 us/op
+# Warmup Iteration   5: 142.535 us/op
+Iteration   1: 140.518 us/op
+Iteration   2: 136.832 us/op
+Iteration   3: 140.100 us/op
+Iteration   4: 138.824 us/op
+Iteration   5: 138.428 us/op
+Iteration   6: 136.117 us/op
+Iteration   7: 136.459 us/op
+Iteration   8: 136.766 us/op
+Iteration   9: 136.070 us/op
+Iteration  10: 137.729 us/op
+
+# Run progress: 12.50% complete, ETA 00:08:52
+# Fork: 2 of 2
+# Warmup Iteration   1: 166.936 us/op
+# Warmup Iteration   2: 146.007 us/op
+# Warmup Iteration   3: 150.614 us/op
+# Warmup Iteration   4: 145.954 us/op
+# Warmup Iteration   5: 144.294 us/op
+Iteration   1: 142.676 us/op
+Iteration   2: 149.653 us/op
+Iteration   3: 148.742 us/op
+Iteration   4: 149.611 us/op
+Iteration   5: 140.632 us/op
+Iteration   6: 138.907 us/op
+Iteration   7: 140.385 us/op
+Iteration   8: 141.120 us/op
+Iteration   9: 137.728 us/op
+Iteration  10: 138.395 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  140.285 ±(99.9%) 3.733 us/op [Average]
+  (min, avg, max) = (136.070, 140.285, 149.653), stdev = 4.299
+  CI (99.9%): [136.552, 144.017] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = folders, n = 250)
+
+# Run progress: 25.00% complete, ETA 00:07:39
+# Fork: 1 of 2
+# Warmup Iteration   1: 170.834 us/op
+# Warmup Iteration   2: 156.424 us/op
+# Warmup Iteration   3: 146.421 us/op
+# Warmup Iteration   4: 151.472 us/op
+# Warmup Iteration   5: 148.891 us/op
+Iteration   1: 147.805 us/op
+Iteration   2: 149.885 us/op
+Iteration   3: 148.054 us/op
+Iteration   4: 149.716 us/op
+Iteration   5: 150.233 us/op
+Iteration   6: 153.770 us/op
+Iteration   7: 151.265 us/op
+Iteration   8: 150.242 us/op
+Iteration   9: 148.709 us/op
+Iteration  10: 146.689 us/op
+
+# Run progress: 37.50% complete, ETA 00:07:40
+# Fork: 2 of 2
+# Warmup Iteration   1: 169.388 us/op
+# Warmup Iteration   2: 151.635 us/op
+# Warmup Iteration   3: 147.776 us/op
+# Warmup Iteration   4: 148.664 us/op
+# Warmup Iteration   5: 147.457 us/op
+Iteration   1: 148.836 us/op
+Iteration   2: 148.282 us/op
+Iteration   3: 146.897 us/op
+Iteration   4: 147.971 us/op
+Iteration   5: 148.289 us/op
+Iteration   6: 144.832 us/op
+Iteration   7: 142.920 us/op
+Iteration   8: 146.728 us/op
+Iteration   9: 145.690 us/op
+Iteration  10: 148.346 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  148.258 ±(99.9%) 2.055 us/op [Average]
+  (min, avg, max) = (142.920, 148.258, 153.770), stdev = 2.366
+  CI (99.9%): [146.203, 150.313] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = folders, n = 500)
+
+# Run progress: 50.00% complete, ETA 00:06:54
+# Fork: 1 of 2
+# Warmup Iteration   1: 188.225 us/op
+# Warmup Iteration   2: 165.739 us/op
+# Warmup Iteration   3: 162.070 us/op
+# Warmup Iteration   4: 156.122 us/op
+# Warmup Iteration   5: 158.480 us/op
+Iteration   1: 156.389 us/op
+Iteration   2: 156.906 us/op
+Iteration   3: 159.646 us/op
+Iteration   4: 155.796 us/op
+Iteration   5: 157.555 us/op
+Iteration   6: 154.901 us/op
+Iteration   7: 151.465 us/op
+Iteration   8: 156.622 us/op
+Iteration   9: 154.737 us/op
+Iteration  10: 153.475 us/op
+
+# Run progress: 62.50% complete, ETA 00:05:43
+# Fork: 2 of 2
+# Warmup Iteration   1: 176.079 us/op
+# Warmup Iteration   2: 160.365 us/op
+# Warmup Iteration   3: 163.390 us/op
+# Warmup Iteration   4: 164.502 us/op
+# Warmup Iteration   5: 158.910 us/op
+Iteration   1: 160.390 us/op
+Iteration   2: 170.217 us/op
+Iteration   3: 167.656 us/op
+Iteration   4: 171.485 us/op
+Iteration   5: 157.492 us/op
+Iteration   6: 153.158 us/op
+Iteration   7: 154.318 us/op
+Iteration   8: 157.501 us/op
+Iteration   9: 154.912 us/op
+Iteration  10: 153.439 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  157.903 ±(99.9%) 4.858 us/op [Average]
+  (min, avg, max) = (151.465, 157.903, 171.485), stdev = 5.594
+  CI (99.9%): [153.045, 162.761] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 5 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.queryTime
+# Parameters: (kind = folders, n = 1000)
+
+# Run progress: 75.00% complete, ETA 00:04:05
+# Fork: 1 of 2
+# Warmup Iteration   1: 201.976 us/op
+# Warmup Iteration   2: 185.029 us/op
+# Warmup Iteration   3: 179.881 us/op
+# Warmup Iteration   4: 173.593 us/op
+# Warmup Iteration   5: 171.896 us/op
+Iteration   1: 175.414 us/op
+Iteration   2: 178.637 us/op
+Iteration   3: 179.359 us/op
+Iteration   4: 176.138 us/op
+Iteration   5: 177.269 us/op
+Iteration   6: 176.631 us/op
+Iteration   7: 181.135 us/op
+Iteration   8: 180.395 us/op
+Iteration   9: 178.086 us/op
+Iteration  10: 173.900 us/op
+
+# Run progress: 87.50% complete, ETA 00:02:20
+# Fork: 2 of 2
+# Warmup Iteration   1: 211.619 us/op
+# Warmup Iteration   2: 191.474 us/op
+# Warmup Iteration   3: 188.579 us/op
+# Warmup Iteration   4: 173.776 us/op
+# Warmup Iteration   5: 174.662 us/op
+Iteration   1: 177.270 us/op
+Iteration   2: 173.230 us/op
+Iteration   3: 176.421 us/op
+Iteration   4: 179.447 us/op
+Iteration   5: 181.496 us/op
+Iteration   6: 173.755 us/op
+Iteration   7: 178.526 us/op
+Iteration   8: 185.022 us/op
+Iteration   9: 181.099 us/op
+Iteration  10: 189.861 us/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.queryTime":
+  178.655 ±(99.9%) 3.431 us/op [Average]
+  (min, avg, max) = (173.230, 178.655, 189.861), stdev = 3.951
+  CI (99.9%): [175.224, 182.085] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:20:29
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark              (kind)   (n)  Mode  Cnt    Score   Error  Units
+IndexBench.queryTime  folders   100  avgt   20  140.285 ± 3.733  us/op
+IndexBench.queryTime  folders   250  avgt   20  148.258 ± 2.055  us/op
+IndexBench.queryTime  folders   500  avgt   20  157.903 ± 4.858  us/op
+IndexBench.queryTime  folders  1000  avgt   20  178.655 ± 3.431  us/op
+
+Benchmark result is saved to C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index_folders_query.json
+[BENCH] JMH index_folders_reduced -> C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index_folders_reduced.json
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = folders, n = 100)
+
+# Run progress: 0.00% complete, ETA 00:00:32
+# Fork: 1 of 1
+# Warmup Iteration   1: 52463.154 ms/op
+Iteration   1: 58483.285 ms/op
+Iteration   2: 53429.039 ms/op
+Iteration   3: 52723.780 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  54878.702 ±(99.9%) 57312.926 ms/op [Average]
+  (min, avg, max) = (52723.780, 54878.702, 58483.285), stdev = 3141.515
+  CI (99.9%): [≈ 0, 112191.628] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = folders, n = 250)
+
+# Run progress: 12.50% complete, ETA 00:29:39
+# Fork: 1 of 1
+# Warmup Iteration   1: 93615.910 ms/op
+Iteration   1: 93305.848 ms/op
+Iteration   2: 91630.461 ms/op
+Iteration   3: 92841.157 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  92592.489 ±(99.9%) 15779.581 ms/op [Average]
+  (min, avg, max) = (91630.461, 92592.489, 93305.848), stdev = 864.932
+  CI (99.9%): [76812.907, 108372.070] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = folders, n = 500)
+
+# Run progress: 25.00% complete, ETA 00:34:38
+# Fork: 1 of 1
+# Warmup Iteration   1: 110721.335 ms/op
+Iteration   1: 112466.203 ms/op
+Iteration   2: 110710.963 ms/op
+Iteration   3: 111032.321 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  111403.162 ±(99.9%) 17049.433 ms/op [Average]
+  (min, avg, max) = (110710.963, 111403.162, 112466.203), stdev = 934.537
+  CI (99.9%): [94353.729, 128452.596] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.indexBuildTime
+# Parameters: (kind = folders, n = 1000)
+
+# Run progress: 37.50% complete, ETA 00:33:52
+# Fork: 1 of 1
+# Warmup Iteration   1: 245178.367 ms/op
+Iteration   1: 192637.994 ms/op
+Iteration   2: 192805.121 ms/op
+Iteration   3: 191616.047 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.indexBuildTime":
+  192353.054 ±(99.9%) 11743.737 ms/op [Average]
+  (min, avg, max) = (191616.047, 192353.054, 192805.121), stdev = 643.714
+  CI (99.9%): [180609.317, 204096.790] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = folders, n = 100)
+
+# Run progress: 50.00% complete, ETA 00:36:29
+# Fork: 1 of 1
+# Warmup Iteration   1: 33200.784 ms/op
+Iteration   1: 33356.211 ms/op
+Iteration   2: 33641.769 ms/op
+Iteration   3: 33514.444 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  33504.141 ±(99.9%) 2609.906 ms/op [Average]
+  (min, avg, max) = (33356.211, 33504.141, 33641.769), stdev = 143.058
+  CI (99.9%): [30894.235, 36114.047] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = folders, n = 250)
+
+# Run progress: 62.50% complete, ETA 00:24:07
+# Fork: 1 of 1
+# Warmup Iteration   1: 29641.251 ms/op
+Iteration   1: 29871.621 ms/op
+Iteration   2: 29992.683 ms/op
+Iteration   3: 29873.743 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  29912.682 ±(99.9%) 1264.120 ms/op [Average]
+  (min, avg, max) = (29871.621, 29912.682, 29992.683), stdev = 69.291
+  CI (99.9%): [28648.562, 31176.802] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = folders, n = 500)
+
+# Run progress: 75.00% complete, ETA 00:14:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 46819.790 ms/op
+Iteration   1: 46347.305 ms/op
+Iteration   2: 46399.364 ms/op
+Iteration   3: 49754.910 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  47500.526 ±(99.9%) 35621.361 ms/op [Average]
+  (min, avg, max) = (46347.305, 47500.526, 49754.910), stdev = 1952.527
+  CI (99.9%): [11879.166, 83121.887] (assumes normal distribution)
+
+
+# JMH version: 1.35
+# VM version: JDK 21.0.7, Java HotSpot(TM) 64-Bit Server VM, 21.0.7+8-LTS-245
+# VM invoker: C:\Program Files\Java\jdk-21\bin\java.exe
+# VM options: -Dstage1.root=C:\Users\hugoa\Documents\Stage1\stage_1 -Dstage1.sizes=100,250,500,1000 -Dstage1.mongo=mongodb://localhost:27017
+# Blackhole mode: compiler (auto-detected, use -Djmh.blackhole.autoDetect=false to disable)
+# Warmup: 1 iterations, 1 s each
+# Measurement: 3 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: es.ulpgc.bigdata.bench.IndexBench.updateTime
+# Parameters: (kind = folders, n = 1000)
+
+# Run progress: 87.50% complete, ETA 00:07:12
+# Fork: 1 of 1
+# Warmup Iteration   1: 37703.299 ms/op
+Iteration   1: 37217.888 ms/op
+Iteration   2: 37977.310 ms/op
+Iteration   3: 38401.085 ms/op
+
+
+Result "es.ulpgc.bigdata.bench.IndexBench.updateTime":
+  37865.427 ±(99.9%) 10936.763 ms/op [Average]
+  (min, avg, max) = (37217.888, 37865.427, 38401.085), stdev = 599.481
+  CI (99.9%): [26928.664, 48802.191] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:57:22
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+NOTE: Current JVM experimentally supports Compiler Blackholes, and they are in use. Please exercise
+extra caution when trusting the results, look into the generated code to check the benchmark still
+works, and factor in a small probability of new VM bugs. Additionally, while comparisons between
+different JVMs are already problematic, the performance difference caused by different Blackhole
+modes can be very significant. Please make sure you use the consistent Blackhole mode for comparisons.
+
+Benchmark                   (kind)   (n)  Mode  Cnt       Score       Error  Units
+IndexBench.indexBuildTime  folders   100  avgt    3   54878.702 ± 57312.926  ms/op
+IndexBench.indexBuildTime  folders   250  avgt    3   92592.489 ± 15779.581  ms/op
+IndexBench.indexBuildTime  folders   500  avgt    3  111403.162 ± 17049.433  ms/op
+IndexBench.indexBuildTime  folders  1000  avgt    3  192353.054 ± 11743.737  ms/op
+IndexBench.updateTime      folders   100  avgt    3   33504.141 ±  2609.906  ms/op
+IndexBench.updateTime      folders   250  avgt    3   29912.682 ±  1264.120  ms/op
+IndexBench.updateTime      folders   500  avgt    3   47500.526 ± 35621.361  ms/op
+IndexBench.updateTime      folders  1000  avgt    3   37865.427 ± 10936.763  ms/op
+
+Benchmark result is saved to C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\raw\java\jmh_index_folders_reduced.json
+[SCRIPT] storage time n=100: 202 ficheros, 4 carpetas, 58605186 bytes
+[SCRIPT] storage time n=250: 502 ficheros, 4 carpetas, 133349297 bytes
+[SCRIPT] storage time n=500: 1002 ficheros, 4 carpetas, 222900536 bytes
+[SCRIPT] storage time n=1000: 2002 ficheros, 4 carpetas, 456580568 bytes
+[SCRIPT] storage book n=100: 201 ficheros, 102 carpetas, 58603691 bytes
+[SCRIPT] storage book n=250: 501 ficheros, 252 carpetas, 133345402 bytes
+[SCRIPT] storage book n=500: 1001 ficheros, 502 carpetas, 222892641 bytes
+[SCRIPT] storage book n=1000: 2001 ficheros, 1002 carpetas, 456564610 bytes
+[SCRIPT] storage range n=100: 201 ficheros, 3 carpetas, 58603691 bytes
+[SCRIPT] storage range n=250: 501 ficheros, 3 carpetas, 133345402 bytes
+[SCRIPT] storage range n=500: 1001 ficheros, 3 carpetas, 222892641 bytes
+[SCRIPT] storage range n=1000: 2001 ficheros, 4 carpetas, 456564610 bytes
+[SCRIPT] recovery time n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=4: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] footprint json n=100 rep=1: 418.0 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=2: 412.6 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=3: 413.5 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=4: 410.0 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=5: 415.3 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=250 rep=1: 554.6 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=2: 582.2 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=3: 556.6 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=4: 555.6 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=5: 556.5 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=500 rep=1: 975.6 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=2: 1049.1 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=3: 1038.1 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=4: 1018.0 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=5: 1042.9 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=1000 rep=1: 1323.7 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=2: 1340.9 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=3: 1366.2 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=4: 1459.9 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=5: 1404.8 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint folders n=100 rep=1: 392.1 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=2: 390.9 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=3: 399.0 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=250 rep=1: 546.4 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=2: 542.2 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=3: 542.3 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=500 rep=1: 1292.4 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=2: 1202.0 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=3: 1223.4 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=1: 1470.8 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=2: 1372.9 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=3: 1442.6 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=1: 785.4 MB de pico (PeakWorkingSetSize), 5271552 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=2: 818.1 MB de pico (PeakWorkingSetSize), 6365184 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=3: 812.0 MB de pico (PeakWorkingSetSize), 5275648 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=4: 809.7 MB de pico (PeakWorkingSetSize), 5271552 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=5: 811.1 MB de pico (PeakWorkingSetSize), 5287936 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=1: 1060.0 MB de pico (PeakWorkingSetSize), 12582912 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=2: 1036.3 MB de pico (PeakWorkingSetSize), 12591104 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=3: 1063.9 MB de pico (PeakWorkingSetSize), 12578816 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=4: 1054.3 MB de pico (PeakWorkingSetSize), 12587008 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=5: 1082.1 MB de pico (PeakWorkingSetSize), 13959168 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=1: 2142.9 MB de pico (PeakWorkingSetSize), 22831104 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=2: 2013.4 MB de pico (PeakWorkingSetSize), 22798336 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=3: 1992.5 MB de pico (PeakWorkingSetSize), 22810624 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=4: 1953.3 MB de pico (PeakWorkingSetSize), 22794240 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=5: 2074.5 MB de pico (PeakWorkingSetSize), 24838144 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=1: 2439.1 MB de pico (PeakWorkingSetSize), 49274880 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=2: 2615.8 MB de pico (PeakWorkingSetSize), 49311744 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=3: 2404.7 MB de pico (PeakWorkingSetSize), 51965952 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=4: 2561.4 MB de pico (PeakWorkingSetSize), 49328128 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=5: 2525.6 MB de pico (PeakWorkingSetSize), 49319936 bytes en disco
+[SCRIPT] download book rep=1: 49 libros, 0.658 libros/s
+[SCRIPT] download book rep=2: 49 libros, 0.661 libros/s
+[SCRIPT] download book rep=3: 49 libros, 0.663 libros/s
+[SCRIPT] download book rep=4: 49 libros, 0.668 libros/s
+[SCRIPT] download book rep=5: 49 libros, 0.647 libros/s
+[BENCH] 145 filas actualizadas en C:\Users\hugoa\Documents\Stage1\stage_1\benchmarks\results\java.csv

@@ -1,0 +1,124 @@
+[SCRIPT] storage time n=100: 202 ficheros, 4 carpetas, 58605186 bytes
+[SCRIPT] storage time n=250: 502 ficheros, 4 carpetas, 133349297 bytes
+[SCRIPT] storage time n=500: 1002 ficheros, 4 carpetas, 222900536 bytes
+[SCRIPT] storage time n=1000: 2002 ficheros, 4 carpetas, 456580568 bytes
+[SCRIPT] storage book n=100: 201 ficheros, 102 carpetas, 58603691 bytes
+[SCRIPT] storage book n=250: 501 ficheros, 252 carpetas, 133345402 bytes
+[SCRIPT] storage book n=500: 1001 ficheros, 502 carpetas, 222892641 bytes
+[SCRIPT] storage book n=1000: 2001 ficheros, 1002 carpetas, 456564610 bytes
+[SCRIPT] storage range n=100: 201 ficheros, 3 carpetas, 58603691 bytes
+[SCRIPT] storage range n=250: 501 ficheros, 3 carpetas, 133345402 bytes
+[SCRIPT] storage range n=500: 1001 ficheros, 3 carpetas, 222892641 bytes
+[SCRIPT] storage range n=1000: 2001 ficheros, 4 carpetas, 456564610 bytes
+[SCRIPT] recovery time n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery time n=1000 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=500 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=2: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=4: 1 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery book n=1000 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=100 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=250 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=1: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=3: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=500 rep=5: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=1: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=2: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=3: 2 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=4: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] recovery range n=1000 rep=5: 3 cortes, sin duplicados ni pérdidas
+[SCRIPT] footprint json n=100 rep=1: 119.9 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=2: 119.7 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=3: 122.6 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=4: 122.4 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=100 rep=5: 119.9 MB de pico (PeakWorkingSetSize), 3317205 bytes en disco
+[SCRIPT] footprint json n=250 rep=1: 152.0 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=2: 151.9 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=3: 152.0 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=4: 151.9 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=250 rep=5: 151.9 MB de pico (PeakWorkingSetSize), 8143150 bytes en disco
+[SCRIPT] footprint json n=500 rep=1: 202.7 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=2: 202.6 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=3: 200.8 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=4: 200.8 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=500 rep=5: 200.8 MB de pico (PeakWorkingSetSize), 14457473 bytes en disco
+[SCRIPT] footprint json n=1000 rep=1: 355.3 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=2: 352.5 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=3: 354.4 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=4: 355.1 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint json n=1000 rep=5: 352.5 MB de pico (PeakWorkingSetSize), 30120707 bytes en disco
+[SCRIPT] footprint folders n=100 rep=1: 122.6 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=2: 119.8 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=100 rep=3: 119.9 MB de pico (PeakWorkingSetSize), 1937429 bytes en disco
+[SCRIPT] footprint folders n=250 rep=1: 152.0 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=2: 152.0 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=250 rep=3: 151.1 MB de pico (PeakWorkingSetSize), 5769801 bytes en disco
+[SCRIPT] footprint folders n=500 rep=1: 151.9 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=2: 152.0 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=500 rep=3: 151.9 MB de pico (PeakWorkingSetSize), 11599677 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=1: 184.7 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=2: 186.6 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint folders n=1000 rep=3: 184.9 MB de pico (PeakWorkingSetSize), 25291125 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=1: 249.0 MB de pico (PeakWorkingSetSize), 4390912 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=2: 249.0 MB de pico (PeakWorkingSetSize), 4386816 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=3: 249.0 MB de pico (PeakWorkingSetSize), 4390912 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=4: 248.8 MB de pico (PeakWorkingSetSize), 4390912 bytes en disco
+[SCRIPT] footprint mongo n=100 rep=5: 249.3 MB de pico (PeakWorkingSetSize), 5283840 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=1: 390.4 MB de pico (PeakWorkingSetSize), 11075584 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=2: 390.7 MB de pico (PeakWorkingSetSize), 11100160 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=3: 391.9 MB de pico (PeakWorkingSetSize), 11096064 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=4: 391.2 MB de pico (PeakWorkingSetSize), 11104256 bytes en disco
+[SCRIPT] footprint mongo n=250 rep=5: 391.2 MB de pico (PeakWorkingSetSize), 11014144 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=1: 461.2 MB de pico (PeakWorkingSetSize), 21458944 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=2: 461.0 MB de pico (PeakWorkingSetSize), 21463040 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=3: 460.5 MB de pico (PeakWorkingSetSize), 21463040 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=4: 461.1 MB de pico (PeakWorkingSetSize), 21454848 bytes en disco
+[SCRIPT] footprint mongo n=500 rep=5: 461.9 MB de pico (PeakWorkingSetSize), 21458944 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=1: 749.9 MB de pico (PeakWorkingSetSize), 45813760 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=2: 749.8 MB de pico (PeakWorkingSetSize), 45793280 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=3: 749.3 MB de pico (PeakWorkingSetSize), 45809664 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=4: 749.7 MB de pico (PeakWorkingSetSize), 45826048 bytes en disco
+[SCRIPT] footprint mongo n=1000 rep=5: 749.5 MB de pico (PeakWorkingSetSize), 46706688 bytes en disco

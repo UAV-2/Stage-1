@@ -1,0 +1,2704 @@
+[
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 4.221669442164628,
+            "scoreError" : 0.05532817011945614,
+            "scoreConfidence" : [
+                4.166341272045171,
+                4.2769976122840845
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4.141781818181818,
+                "50.0" : 4.21330808173753,
+                "90.0" : 4.32268795973667,
+                "95.0" : 4.3935333457734655,
+                "99.0" : 4.397017391304348,
+                "99.9" : 4.397017391304348,
+                "99.99" : 4.397017391304348,
+                "99.999" : 4.397017391304348,
+                "99.9999" : 4.397017391304348,
+                "100.0" : 4.397017391304348
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    4.259108786610879,
+                    4.2178476987447695,
+                    4.280851271186441,
+                    4.182292946058091,
+                    4.218728571428572,
+                    4.147319753086419,
+                    4.208768464730291,
+                    4.147602459016394,
+                    4.150162962962963,
+                    4.206698755186722
+                ],
+                [
+                    4.2375975,
+                    4.20178125,
+                    4.247943277310925,
+                    4.397017391304348,
+                    4.141781818181818,
+                    4.219801680672269,
+                    4.204095435684647,
+                    4.172660743801653,
+                    4.263991596638656,
+                    4.327336480686696
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 8.636829274917291,
+            "scoreError" : 0.20612576759546358,
+            "scoreConfidence" : [
+                8.430703507321828,
+                8.842955042512754
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8.263844715447155,
+                "50.0" : 8.625755413500876,
+                "90.0" : 8.958144335506908,
+                "95.0" : 9.283075652654865,
+                "99.0" : 9.299525,
+                "99.9" : 9.299525,
+                "99.99" : 9.299525,
+                "99.999" : 9.299525,
+                "99.9999" : 9.299525,
+                "100.0" : 9.299525
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    8.73924695652174,
+                    8.662138793103448,
+                    8.700118965517241,
+                    8.71652,
+                    8.589372033898306,
+                    8.491134453781513,
+                    8.774653043478262,
+                    8.720339316239317,
+                    8.970538053097345,
+                    8.768008695652174
+                ],
+                [
+                    8.846600877192982,
+                    8.5063525,
+                    9.299525,
+                    8.446715,
+                    8.5012,
+                    8.390880991735537,
+                    8.380423140495868,
+                    8.4366175,
+                    8.532355462184874,
+                    8.263844715447155
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 15.654867287249346,
+            "scoreError" : 0.3309481962131595,
+            "scoreConfidence" : [
+                15.323919091036187,
+                15.985815483462504
+            ],
+            "scorePercentiles" : {
+                "0.0" : 14.959486764705883,
+                "50.0" : 15.609389975961538,
+                "90.0" : 16.17441888888889,
+                "95.0" : 16.436709605734766,
+                "99.0" : 16.450158064516128,
+                "99.9" : 16.450158064516128,
+                "99.99" : 16.450158064516128,
+                "99.999" : 16.450158064516128,
+                "99.9999" : 16.450158064516128,
+                "100.0" : 16.450158064516128
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    15.80649076923077,
+                    16.113488888888888,
+                    15.9985625,
+                    15.8939125,
+                    16.18118888888889,
+                    15.8904359375,
+                    15.993146031746031,
+                    16.450158064516128,
+                    15.681196875,
+                    15.68628
+                ],
+                [
+                    15.537583076923077,
+                    15.380274242424242,
+                    15.316468181818182,
+                    15.468895454545455,
+                    15.114529850746269,
+                    15.466904615384616,
+                    15.375560606060606,
+                    15.345855223880598,
+                    15.436927272727273,
+                    14.959486764705883
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 29.587736498824903,
+            "scoreError" : 0.7546751938938399,
+            "scoreConfidence" : [
+                28.833061304931064,
+                30.34241169271874
+            ],
+            "scorePercentiles" : {
+                "0.0" : 28.654969444444443,
+                "50.0" : 29.354932857142856,
+                "90.0" : 31.254441844919786,
+                "95.0" : 31.426768745265154,
+                "99.0" : 31.431040625,
+                "99.9" : 31.431040625,
+                "99.99" : 31.431040625,
+                "99.999" : 31.431040625,
+                "99.9999" : 31.431040625,
+                "100.0" : 31.431040625
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    29.557394285714285,
+                    30.151135294117648,
+                    29.74694705882353,
+                    29.85443823529412,
+                    30.252332352941178,
+                    30.274402941176472,
+                    31.34560303030303,
+                    31.431040625,
+                    30.433991176470588,
+                    30.078885294117647
+                ],
+                [
+                    28.69716,
+                    28.850162857142855,
+                    29.152471428571427,
+                    28.660208333333333,
+                    29.040188571428573,
+                    28.769433333333332,
+                    28.654969444444443,
+                    28.71774,
+                    29.066585714285715,
+                    29.01964
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 3.874753054739061,
+            "scoreError" : 0.038131510548906504,
+            "scoreConfidence" : [
+                3.8366215441901543,
+                3.9128845652879676
+            ],
+            "scorePercentiles" : {
+                "0.0" : 3.8036093984962407,
+                "50.0" : 3.862276193493874,
+                "90.0" : 3.953926380097429,
+                "95.0" : 3.9682463541439734,
+                "99.0" : 3.9689620553359686,
+                "99.9" : 3.9689620553359686,
+                "99.99" : 3.9689620553359686,
+                "99.999" : 3.9689620553359686,
+                "99.9999" : 3.9689620553359686,
+                "100.0" : 3.9689620553359686
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    3.848546183206107,
+                    3.8451526717557254,
+                    3.861463498098859,
+                    3.863088888888889,
+                    3.8577540229885057,
+                    3.8926320463320465,
+                    3.838486692015209,
+                    3.8613103053435114,
+                    3.860499239543726,
+                    3.846831939163498
+                ],
+                [
+                    3.899793410852713,
+                    3.954648031496063,
+                    3.9474315175097274,
+                    3.9689620553359686,
+                    3.902455,
+                    3.89106833976834,
+                    3.872675954198473,
+                    3.8085255639097744,
+                    3.8036093984962407,
+                    3.870126335877863
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 8.268213385939992,
+            "scoreError" : 0.334123989835571,
+            "scoreConfidence" : [
+                7.934089396104421,
+                8.602337375775564
+            ],
+            "scorePercentiles" : {
+                "0.0" : 7.766531297709924,
+                "50.0" : 8.333690904471545,
+                "90.0" : 8.781281631184408,
+                "95.0" : 8.878153189655173,
+                "99.0" : 8.883092105263158,
+                "99.9" : 8.883092105263158,
+                "99.99" : 8.883092105263158,
+                "99.999" : 8.883092105263158,
+                "99.9999" : 8.883092105263158,
+                "100.0" : 8.883092105263158
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    8.25809430894309,
+                    8.023669047619048,
+                    8.00007874015748,
+                    8.156054032258064,
+                    7.835524031007752,
+                    7.772490769230769,
+                    7.766531297709924,
+                    7.834773076923077,
+                    7.794141538461538,
+                    7.837394615384615
+                ],
+                [
+                    8.4092875,
+                    8.449373949579831,
+                    8.597819491525424,
+                    8.666016239316239,
+                    8.479466386554622,
+                    8.56935462184874,
+                    8.883092105263158,
+                    8.4928,
+                    8.784313793103449,
+                    8.753992173913044
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 15.344625855032671,
+            "scoreError" : 0.41631726666038565,
+            "scoreConfidence" : [
+                14.928308588372285,
+                15.760943121693057
+            ],
+            "scorePercentiles" : {
+                "0.0" : 14.888722058823529,
+                "50.0" : 15.071271323529412,
+                "90.0" : 16.216648253968252,
+                "95.0" : 16.524830805360395,
+                "99.0" : 16.539881967213116,
+                "99.9" : 16.539881967213116,
+                "99.99" : 16.539881967213116,
+                "99.999" : 16.539881967213116,
+                "99.9999" : 16.539881967213116,
+                "100.0" : 16.539881967213116
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    16.23885873015873,
+                    15.964325,
+                    16.539881967213116,
+                    16.01675396825397,
+                    15.582053846153846,
+                    15.403043939393939,
+                    15.399604545454546,
+                    15.39274696969697,
+                    15.009035294117647,
+                    14.995689705882352
+                ],
+                [
+                    15.036759701492537,
+                    14.888722058823529,
+                    15.00039552238806,
+                    15.166756716417911,
+                    15.040975,
+                    15.074898529411765,
+                    15.049161194029852,
+                    14.985654411764706,
+                    15.06764411764706,
+                    15.039555882352941
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 29.83717051123631,
+            "scoreError" : 0.7074354045075556,
+            "scoreConfidence" : [
+                29.129735106728752,
+                30.544605915743865
+            ],
+            "scorePercentiles" : {
+                "0.0" : 28.886577142857142,
+                "50.0" : 29.63413,
+                "90.0" : 31.23173,
+                "95.0" : 31.681849412878787,
+                "99.0" : 31.7030375,
+                "99.9" : 31.7030375,
+                "99.99" : 31.7030375,
+                "99.999" : 31.7030375,
+                "99.9999" : 31.7030375,
+                "100.0" : 31.7030375
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    29.422751428571427,
+                    29.812897142857143,
+                    29.391542857142856,
+                    29.880370588235294,
+                    30.248591176470587,
+                    29.74288,
+                    28.912794285714284,
+                    29.107225714285715,
+                    28.967585714285715,
+                    30.442966666666667
+                ],
+                [
+                    31.279275757575757,
+                    31.7030375,
+                    30.797760606060606,
+                    30.803818181818183,
+                    30.065941176470588,
+                    29.412057142857144,
+                    29.227534285714285,
+                    28.886577142857142,
+                    29.52538,
+                    29.112422857142857
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 4.23174395393196,
+            "scoreError" : 0.03395116835335108,
+            "scoreConfidence" : [
+                4.197792785578609,
+                4.265695122285311
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4.155040909090909,
+                "50.0" : 4.232572594142259,
+                "90.0" : 4.296746791052919,
+                "95.0" : 4.2997405651821134,
+                "99.0" : 4.299897033898305,
+                "99.9" : 4.299897033898305,
+                "99.99" : 4.299897033898305,
+                "99.999" : 4.299897033898305,
+                "99.9999" : 4.299897033898305,
+                "100.0" : 4.299897033898305
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    4.296558974358974,
+                    4.261430508474576,
+                    4.246337238493724,
+                    4.253282203389831,
+                    4.296767659574468,
+                    4.210357676348548,
+                    4.245359832635983,
+                    4.155040909090909,
+                    4.299897033898305,
+                    4.1973377593361
+                ],
+                [
+                    4.230351464435146,
+                    4.203075732217573,
+                    4.243049789029536,
+                    4.234793723849372,
+                    4.251816806722689,
+                    4.19651125,
+                    4.182827800829876,
+                    4.196189166666667,
+                    4.21811512605042,
+                    4.2157784232365145
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 8.295287391904527,
+            "scoreError" : 0.15708374568254346,
+            "scoreConfidence" : [
+                8.138203646221983,
+                8.45237113758707
+            ],
+            "scorePercentiles" : {
+                "0.0" : 8.0688112,
+                "50.0" : 8.247276422764227,
+                "90.0" : 8.588240601163541,
+                "95.0" : 8.60703153049399,
+                "99.0" : 8.607622033898306,
+                "99.9" : 8.607622033898306,
+                "99.99" : 8.607622033898306,
+                "99.999" : 8.607622033898306,
+                "99.9999" : 8.607622033898306,
+                "100.0" : 8.607622033898306
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    8.50463025210084,
+                    8.520098319327731,
+                    8.459921008403361,
+                    8.607622033898306,
+                    8.477019166666667,
+                    8.595811965811965,
+                    8.401495041322313,
+                    8.321770491803278,
+                    8.228518699186992,
+                    8.195081300813008
+                ],
+                [
+                    8.227586065573771,
+                    8.11805564516129,
+                    8.0733912,
+                    8.21214435483871,
+                    8.157959677419354,
+                    8.266034146341463,
+                    8.0801568,
+                    8.0869008,
+                    8.0688112,
+                    8.302739669421488
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 15.216526977198026,
+            "scoreError" : 0.14691464564981982,
+            "scoreConfidence" : [
+                15.069612331548205,
+                15.363441622847846
+            ],
+            "scorePercentiles" : {
+                "0.0" : 14.892197058823529,
+                "50.0" : 15.258935639981908,
+                "90.0" : 15.456508787878787,
+                "95.0" : 15.503150265734266,
+                "99.0" : 15.505018461538462,
+                "99.9" : 15.505018461538462,
+                "99.99" : 15.505018461538462,
+                "99.999" : 15.505018461538462,
+                "99.9999" : 15.505018461538462,
+                "100.0" : 15.505018461538462
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    15.505018461538462,
+                    15.282821212121211,
+                    15.27509552238806,
+                    14.892197058823529,
+                    15.147908955223881,
+                    15.242775757575757,
+                    15.135697014925373,
+                    15.294265151515152,
+                    14.925295588235294,
+                    15.288301515151515
+                ],
+                [
+                    14.921820588235294,
+                    15.163132835820896,
+                    15.240216417910448,
+                    15.467654545454545,
+                    15.330233333333334,
+                    15.226538805970149,
+                    15.35619696969697,
+                    15.285577272727272,
+                    15.325855223880597,
+                    15.023937313432835
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.incrementalDetectTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 30.165970155971472,
+            "scoreError" : 0.14298178753549967,
+            "scoreConfidence" : [
+                30.02298836843597,
+                30.308951943506973
+            ],
+            "scorePercentiles" : {
+                "0.0" : 29.936220588235294,
+                "50.0" : 30.10109705882353,
+                "90.0" : 30.41471371657754,
+                "95.0" : 30.561309393939393,
+                "99.0" : 30.568854545454546,
+                "99.9" : 30.568854545454546,
+                "99.99" : 30.568854545454546,
+                "99.999" : 30.568854545454546,
+                "99.9999" : 30.568854545454546,
+                "100.0" : 30.568854545454546
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    30.105020588235295,
+                    30.094679411764705,
+                    30.568854545454546,
+                    30.080873529411765,
+                    30.117138235294117,
+                    30.24608529411765,
+                    30.417951515151515,
+                    30.07780588235294,
+                    30.304973529411765,
+                    30.274120588235295
+                ],
+                [
+                    30.097173529411766,
+                    30.07880882352941,
+                    30.088191176470588,
+                    29.936220588235294,
+                    30.385573529411765,
+                    30.30460588235294,
+                    30.042029411764705,
+                    30.14335294117647,
+                    29.9941,
+                    29.961844117647058
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 24.823577274220717,
+            "scoreError" : 0.12743518786286046,
+            "scoreConfidence" : [
+                24.696142086357856,
+                24.95101246208358
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.606686597637452,
+                "50.0" : 24.798959185228597,
+                "90.0" : 25.049335503298778,
+                "95.0" : 25.175450812598257,
+                "99.0" : 25.181848407579622,
+                "99.9" : 25.181848407579622,
+                "99.99" : 25.181848407579622,
+                "99.999" : 25.181848407579622,
+                "99.9999" : 25.181848407579622,
+                "100.0" : 25.181848407579622
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    24.758264716726067,
+                    24.79835442417108,
+                    24.771955856211733,
+                    24.606686597637452,
+                    25.05389650795231,
+                    24.89300773360918,
+                    24.765428557297593,
+                    24.774397352301918,
+                    24.6153900450286,
+                    24.865190296016024
+                ],
+                [
+                    24.75459410585993,
+                    25.00828646141701,
+                    24.648220540328705,
+                    24.79956394628611,
+                    24.935280292909802,
+                    24.651937717115473,
+                    24.85128268316124,
+                    24.853768733470467,
+                    25.181848407579622,
+                    24.88419050933406
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 25.400021419201845,
+            "scoreError" : 0.19163312055618226,
+            "scoreConfidence" : [
+                25.208388298645662,
+                25.59165453975803
+            ],
+            "scorePercentiles" : {
+                "0.0" : 25.050172477974936,
+                "50.0" : 25.40244661028212,
+                "90.0" : 25.699345479345048,
+                "95.0" : 25.865809537979274,
+                "99.0" : 25.87412111648602,
+                "99.9" : 25.87412111648602,
+                "99.99" : 25.87412111648602,
+                "99.999" : 25.87412111648602,
+                "99.9999" : 25.87412111648602,
+                "100.0" : 25.87412111648602
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.050172477974936,
+                    25.347691294546745,
+                    25.30520396636124,
+                    25.136823420585515,
+                    25.56589218618204,
+                    25.320911413969334,
+                    25.520082638381496,
+                    25.390893726509095,
+                    25.09156536654486,
+                    25.161683861736577
+                ],
+                [
+                    25.110775862068966,
+                    25.342240684793556,
+                    25.622448876290747,
+                    25.455200122056656,
+                    25.87412111648602,
+                    25.549193609259028,
+                    25.436461166515564,
+                    25.597177553368272,
+                    25.707889546351083,
+                    25.413999494055147
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.317235966570408,
+            "scoreError" : 0.16296756178597793,
+            "scoreConfidence" : [
+                25.15426840478443,
+                25.480203528356387
+            ],
+            "scorePercentiles" : {
+                "0.0" : 25.0420800119943,
+                "50.0" : 25.266674067195556,
+                "90.0" : 25.63870855379567,
+                "95.0" : 25.742253636745687,
+                "99.0" : 25.747510661254687,
+                "99.9" : 25.747510661254687,
+                "99.99" : 25.747510661254687,
+                "99.999" : 25.747510661254687,
+                "99.9999" : 25.747510661254687,
+                "100.0" : 25.747510661254687
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.453826872927056,
+                    25.38050230496007,
+                    25.13616304320695,
+                    25.348823676323676,
+                    25.266401876229384,
+                    25.25525008779411,
+                    25.642370171074674,
+                    25.243034956962532,
+                    25.31739380741408,
+                    25.605753998284648
+                ],
+                [
+                    25.215118342455824,
+                    25.189655085914964,
+                    25.0420800119943,
+                    25.266946258161727,
+                    25.11581432334377,
+                    25.747510661254687,
+                    25.21171664167916,
+                    25.121154709079125,
+                    25.49330154348099,
+                    25.291900958866385
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 25.303533728026757,
+            "scoreError" : 0.13962797021665355,
+            "scoreConfidence" : [
+                25.163905757810102,
+                25.44316169824341
+            ],
+            "scorePercentiles" : {
+                "0.0" : 25.073301573122922,
+                "50.0" : 25.28541699635265,
+                "90.0" : 25.55009883432228,
+                "95.0" : 25.58661797092399,
+                "99.0" : 25.588455227083386,
+                "99.9" : 25.588455227083386,
+                "99.99" : 25.588455227083386,
+                "99.999" : 25.588455227083386,
+                "99.9999" : 25.588455227083386,
+                "100.0" : 25.588455227083386
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.331349593495936,
+                    25.482675126903555,
+                    25.53559740816378,
+                    25.294915890657855,
+                    25.31080057562675,
+                    25.55171010389545,
+                    25.27591810204745,
+                    25.588455227083386,
+                    25.451959618450015,
+                    25.256325927410266
+                ],
+                [
+                    25.178223617026575,
+                    25.128923761213425,
+                    25.076492107241293,
+                    25.073301573122922,
+                    25.397092246831455,
+                    25.23328392332236,
+                    25.402370228719523,
+                    25.119869739478958,
+                    25.150610559824916,
+                    25.23079923001925
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 24.316717025562507,
+            "scoreError" : 0.1852476069434366,
+            "scoreConfidence" : [
+                24.13146941861907,
+                24.501964632505945
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.05183618534897,
+                "50.0" : 24.27605923500844,
+                "90.0" : 24.583904692515194,
+                "95.0" : 24.833847529533923,
+                "99.0" : 24.84695645770949,
+                "99.9" : 24.84695645770949,
+                "99.99" : 24.84695645770949,
+                "99.999" : 24.84695645770949,
+                "99.9999" : 24.84695645770949,
+                "100.0" : 24.84695645770949
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    24.25568075567596,
+                    24.210710848012322,
+                    24.19396160895148,
+                    24.188971885802694,
+                    24.47719400237386,
+                    24.492455202766426,
+                    24.5847778941982,
+                    24.323198171098543,
+                    24.525929699439633,
+                    24.576045877368138
+                ],
+                [
+                    24.84695645770949,
+                    24.296437714340918,
+                    24.05183618534897,
+                    24.434970511457024,
+                    24.108885771352483,
+                    24.147638481181833,
+                    24.087200421385305,
+                    24.181410041640742,
+                    24.297850757776548,
+                    24.05222822336958
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 25.193966550125484,
+            "scoreError" : 0.35992269870157007,
+            "scoreConfidence" : [
+                24.834043851423914,
+                25.553889248827055
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.460773132082796,
+                "50.0" : 25.18607616058457,
+                "90.0" : 25.848991979337608,
+                "95.0" : 25.94320161337553,
+                "99.0" : 25.94730437024623,
+                "99.9" : 25.94730437024623,
+                "99.99" : 25.94730437024623,
+                "99.999" : 25.94730437024623,
+                "99.9999" : 25.94730437024623,
+                "100.0" : 25.94730437024623
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.409350257634788,
+                    24.729325577970844,
+                    24.742833325160593,
+                    24.713070325900514,
+                    24.592698104035,
+                    24.460773132082796,
+                    25.154556524764534,
+                    25.066479859894923,
+                    24.953148783763616,
+                    25.16045835942392
+                ],
+                [
+                    25.865249232832202,
+                    25.70267669788628,
+                    25.084348235061142,
+                    25.40745662980623,
+                    25.21169396174522,
+                    25.372838482793266,
+                    25.377543718187773,
+                    25.61377532883043,
+                    25.94730437024623,
+                    25.31375009448938
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.114859839818493,
+            "scoreError" : 0.21433664732464322,
+            "scoreConfidence" : [
+                24.90052319249385,
+                25.329196487143136
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.807470799970616,
+                "50.0" : 25.10697045786625,
+                "90.0" : 25.55235772073373,
+                "95.0" : 25.620501288795545,
+                "99.0" : 25.623583422107238,
+                "99.9" : 25.623583422107238,
+                "99.99" : 25.623583422107238,
+                "99.999" : 25.623583422107238,
+                "99.9999" : 25.623583422107238,
+                "100.0" : 25.623583422107238
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.22989331864169,
+                    25.46611040447723,
+                    24.954441303377475,
+                    25.30687648037091,
+                    25.623583422107238,
+                    25.56194075587334,
+                    25.209297091845666,
+                    25.210374022610686,
+                    24.807470799970616,
+                    24.836981561125118
+                ],
+                [
+                    24.968497210599722,
+                    24.869793542339853,
+                    25.181184955950986,
+                    24.944867970117606,
+                    24.90849753392388,
+                    25.104632564127957,
+                    24.83177972391272,
+                    24.8979196999235,
+                    25.273746083469106,
+                    25.109308351604543
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 25.412982326841988,
+            "scoreError" : 0.4549058290764359,
+            "scoreConfidence" : [
+                24.958076497765553,
+                25.867888155918422
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.781223051716065,
+                "50.0" : 25.347464936126016,
+                "90.0" : 26.124032739119244,
+                "95.0" : 26.69499647752665,
+                "99.0" : 26.724371362981156,
+                "99.9" : 26.724371362981156,
+                "99.99" : 26.724371362981156,
+                "99.999" : 26.724371362981156,
+                "99.9999" : 26.724371362981156,
+                "100.0" : 26.724371362981156
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.529731023019192,
+                    25.79470666872333,
+                    25.86050359896514,
+                    25.729894421602964,
+                    26.724371362981156,
+                    25.59835634451019,
+                    25.06880019893075,
+                    24.865426072304682,
+                    25.201887216355875,
+                    24.832721366343456
+                ],
+                [
+                    26.00846450617284,
+                    26.136873653891065,
+                    25.48339574576487,
+                    25.067594660314626,
+                    25.544686711039706,
+                    25.211534126487162,
+                    24.80303785597947,
+                    25.151476803801426,
+                    24.86496114793575,
+                    24.781223051716065
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 24.54679657635442,
+            "scoreError" : 0.10548442116509596,
+            "scoreConfidence" : [
+                24.441312155189326,
+                24.652280997519515
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.36333091436865,
+                "50.0" : 24.530377859165835,
+                "90.0" : 24.714610623703827,
+                "95.0" : 24.729704554402566,
+                "99.0" : 24.730489175585202,
+                "99.9" : 24.730489175585202,
+                "99.99" : 24.730489175585202,
+                "99.999" : 24.730489175585202,
+                "99.9999" : 24.730489175585202,
+                "100.0" : 24.730489175585202
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    24.368168438465467,
+                    24.510893997135714,
+                    24.448022325851113,
+                    24.52706796402049,
+                    24.641586509043737,
+                    24.692372214296256,
+                    24.52042345750873,
+                    24.61734013721708,
+                    24.712935469645746,
+                    24.3887011257717
+                ],
+                [
+                    24.53368775431118,
+                    24.565474743546112,
+                    24.63130657557643,
+                    24.730489175585202,
+                    24.714796751932504,
+                    24.433826220980638,
+                    24.36333091436865,
+                    24.49383157127233,
+                    24.401717980889874,
+                    24.639958199669486
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 24.915905701983036,
+            "scoreError" : 0.1349145250822654,
+            "scoreConfidence" : [
+                24.78099117690077,
+                25.0508202270653
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.617933552391385,
+                "50.0" : 24.874131607304975,
+                "90.0" : 25.136813994613394,
+                "95.0" : 25.27363703813813,
+                "99.0" : 25.28080599198043,
+                "99.9" : 25.28080599198043,
+                "99.99" : 25.28080599198043,
+                "99.999" : 25.28080599198043,
+                "99.9999" : 25.28080599198043,
+                "100.0" : 25.28080599198043
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.01431985065339,
+                    24.8683481071551,
+                    24.962109008252213,
+                    24.9542859981619,
+                    24.82956863132423,
+                    24.96966384257994,
+                    25.28080599198043,
+                    25.065737802459342,
+                    25.131297709923665,
+                    25.137426915134476
+                ],
+                [
+                    24.797180584423522,
+                    24.87644641398262,
+                    24.617933552391385,
+                    24.87181680062733,
+                    24.751353009003704,
+                    24.864860973187685,
+                    24.72130997903047,
+                    24.865785879255967,
+                    24.889153608095494,
+                    24.848709382037764
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 25.056332672618574,
+            "scoreError" : 0.15998233179294577,
+            "scoreConfidence" : [
+                24.896350340825627,
+                25.21631500441152
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.80408630754452,
+                "50.0" : 25.04946668314701,
+                "90.0" : 25.27167951521646,
+                "95.0" : 25.578017572345146,
+                "99.0" : 25.593939088342072,
+                "99.9" : 25.593939088342072,
+                "99.99" : 25.593939088342072,
+                "99.999" : 25.593939088342072,
+                "99.9999" : 25.593939088342072,
+                "100.0" : 25.593939088342072
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.054145759848975,
+                    24.99687840920361,
+                    25.275508768403597,
+                    25.170793435371586,
+                    24.869218358279344,
+                    25.077959750862306,
+                    25.117471509794672,
+                    25.21618550987505,
+                    24.942319617034997,
+                    25.091050699474152
+                ],
+                [
+                    24.977945484335436,
+                    25.0751548656186,
+                    24.917473218502224,
+                    24.845669232863827,
+                    25.593939088342072,
+                    24.87452536339365,
+                    24.80408630754452,
+                    25.044787606445045,
+                    24.944324230645442,
+                    25.2372162365322
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.lookupTime",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 25.12284245752642,
+            "scoreError" : 0.1338755812664149,
+            "scoreConfidence" : [
+                24.988966876260005,
+                25.256718038792837
+            ],
+            "scorePercentiles" : {
+                "0.0" : 24.73892141908183,
+                "50.0" : 25.13460559057293,
+                "90.0" : 25.334040461957898,
+                "95.0" : 25.354629031133573,
+                "99.0" : 25.35560399452527,
+                "99.9" : 25.35560399452527,
+                "99.99" : 25.35560399452527,
+                "99.999" : 25.35560399452527,
+                "99.9999" : 25.35560399452527,
+                "100.0" : 25.35560399452527
+            },
+            "scoreUnit" : "us/op",
+            "rawData" : [
+                [
+                    25.009768236517605,
+                    25.336104726691318,
+                    25.35560399452527,
+                    25.146773673373193,
+                    25.230233665947953,
+                    25.264944649446495,
+                    25.122437507772666,
+                    25.067492058727897,
+                    25.033493832369512,
+                    24.957637228562273
+                ],
+                [
+                    25.263227760252366,
+                    25.210307549861113,
+                    25.040224271118863,
+                    24.9344064984274,
+                    25.169126378286684,
+                    25.315462079357108,
+                    24.73892141908183,
+                    25.0666675005003,
+                    25.034952319778647,
+                    25.159063799929836
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 647.2963775000001,
+            "scoreError" : 7.436507641490578,
+            "scoreConfidence" : [
+                639.8598698585095,
+                654.7328851414907
+            ],
+            "scorePercentiles" : {
+                "0.0" : 630.90065,
+                "50.0" : 645.1976500000001,
+                "90.0" : 662.1943200000001,
+                "95.0" : 663.4903400000001,
+                "99.0" : 663.5229,
+                "99.9" : 663.5229,
+                "99.99" : 663.5229,
+                "99.999" : 663.5229,
+                "99.9999" : 663.5229,
+                "100.0" : 663.5229
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    663.5229,
+                    662.8717,
+                    656.0979,
+                    651.6813,
+                    640.1651,
+                    655.72105,
+                    644.2822,
+                    645.9471,
+                    650.7803,
+                    644.4482
+                ],
+                [
+                    649.48895,
+                    648.66225,
+                    656.0339,
+                    642.2384,
+                    644.32935,
+                    637.43305,
+                    630.90065,
+                    638.00945,
+                    643.16205,
+                    640.15175
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 1523.3810100000003,
+            "scoreError" : 20.125470980540193,
+            "scoreConfidence" : [
+                1503.25553901946,
+                1543.5064809805406
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1490.9651,
+                "50.0" : 1516.2883,
+                "90.0" : 1551.05178,
+                "95.0" : 1583.1212500000001,
+                "99.0" : 1584.7914,
+                "99.9" : 1584.7914,
+                "99.99" : 1584.7914,
+                "99.999" : 1584.7914,
+                "99.9999" : 1584.7914,
+                "100.0" : 1584.7914
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    1584.7914,
+                    1547.7365,
+                    1513.4133,
+                    1526.5215,
+                    1501.1755,
+                    1504.6538,
+                    1551.3884,
+                    1516.868,
+                    1523.2655,
+                    1515.7086
+                ],
+                [
+                    1548.0222,
+                    1542.8799,
+                    1537.2835,
+                    1508.4144,
+                    1495.1499,
+                    1514.4867,
+                    1513.735,
+                    1500.474,
+                    1530.687,
+                    1490.9651
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2687.5822200000002,
+            "scoreError" : 53.841545908053796,
+            "scoreConfidence" : [
+                2633.7406740919464,
+                2741.423765908054
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2582.8896,
+                "50.0" : 2692.67595,
+                "90.0" : 2760.9335,
+                "95.0" : 2827.502725,
+                "99.0" : 2830.9835,
+                "99.9" : 2830.9835,
+                "99.99" : 2830.9835,
+                "99.999" : 2830.9835,
+                "99.9999" : 2830.9835,
+                "100.0" : 2830.9835
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    2726.0121,
+                    2718.8182,
+                    2697.5469,
+                    2582.8896,
+                    2729.6125,
+                    2757.023,
+                    2640.4473,
+                    2723.3669,
+                    2830.9835,
+                    2610.8866
+                ],
+                [
+                    2706.8135,
+                    2761.368,
+                    2720.5385,
+                    2646.9561,
+                    2654.4411,
+                    2687.805,
+                    2631.5984,
+                    2673.4833,
+                    2659.5288,
+                    2591.5251
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "time",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 5308.83008,
+            "scoreError" : 23.234331104140086,
+            "scoreConfidence" : [
+                5285.595748895859,
+                5332.06441110414
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5267.4131,
+                "50.0" : 5309.8997,
+                "90.0" : 5346.3093,
+                "95.0" : 5361.09955,
+                "99.0" : 5361.8503,
+                "99.9" : 5361.8503,
+                "99.99" : 5361.8503,
+                "99.999" : 5361.8503,
+                "99.9999" : 5361.8503,
+                "100.0" : 5361.8503
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    5340.5838,
+                    5316.5976,
+                    5299.5792,
+                    5270.7738,
+                    5313.7882,
+                    5307.7082,
+                    5267.4131,
+                    5268.8305,
+                    5361.8503,
+                    5305.1179
+                ],
+                [
+                    5325.3857,
+                    5341.5753,
+                    5317.0131,
+                    5306.382,
+                    5312.0912,
+                    5275.6836,
+                    5285.8373,
+                    5294.0539,
+                    5346.8353,
+                    5319.5016
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 599.8265974999999,
+            "scoreError" : 10.179653013126359,
+            "scoreConfidence" : [
+                589.6469444868736,
+                610.0062505131262
+            ],
+            "scorePercentiles" : {
+                "0.0" : 582.09075,
+                "50.0" : 600.243075,
+                "90.0" : 619.371765,
+                "95.0" : 621.9218125,
+                "99.0" : 622.01665,
+                "99.9" : 622.01665,
+                "99.99" : 622.01665,
+                "99.999" : 622.01665,
+                "99.9999" : 622.01665,
+                "100.0" : 622.01665
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    594.6366,
+                    604.2614,
+                    612.63855,
+                    603.41305,
+                    584.1005,
+                    582.746,
+                    588.5505,
+                    592.35395,
+                    588.35835,
+                    603.223
+                ],
+                [
+                    620.1199,
+                    622.01665,
+                    607.27955,
+                    604.98075,
+                    593.7294,
+                    597.26315,
+                    606.46665,
+                    582.09075,
+                    611.0888,
+                    597.21445
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 1375.7794849999998,
+            "scoreError" : 12.961915967026062,
+            "scoreConfidence" : [
+                1362.8175690329738,
+                1388.7414009670258
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1350.0222,
+                "50.0" : 1376.7797,
+                "90.0" : 1391.9000999999998,
+                "95.0" : 1404.497185,
+                "99.0" : 1405.1594,
+                "99.9" : 1405.1594,
+                "99.99" : 1405.1594,
+                "99.999" : 1405.1594,
+                "99.9999" : 1405.1594,
+                "100.0" : 1405.1594
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    1391.7651,
+                    1383.5079,
+                    1371.5252,
+                    1374.2261,
+                    1379.9511,
+                    1387.8872,
+                    1371.656,
+                    1389.6544,
+                    1382.2905,
+                    1350.0222
+                ],
+                [
+                    1391.9151,
+                    1405.1594,
+                    1364.8416,
+                    1357.1153,
+                    1389.0777,
+                    1358.1637,
+                    1351.0788,
+                    1379.3333,
+                    1369.2811,
+                    1367.138
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2348.7879600000006,
+            "scoreError" : 15.965228378964566,
+            "scoreConfidence" : [
+                2332.822731621036,
+                2364.753188378965
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2313.1006,
+                "50.0" : 2350.51945,
+                "90.0" : 2372.70669,
+                "95.0" : 2377.76923,
+                "99.0" : 2378.0184,
+                "99.9" : 2378.0184,
+                "99.99" : 2378.0184,
+                "99.999" : 2378.0184,
+                "99.9999" : 2378.0184,
+                "100.0" : 2378.0184
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    2354.8717,
+                    2350.4772,
+                    2373.035,
+                    2313.1006,
+                    2355.7821,
+                    2336.1196,
+                    2338.8395,
+                    2323.8921,
+                    2369.7519,
+                    2350.1696
+                ],
+                [
+                    2366.3725,
+                    2369.2549,
+                    2363.1302,
+                    2336.5165,
+                    2330.5739,
+                    2378.0184,
+                    2325.4145,
+                    2332.6516,
+                    2350.5617,
+                    2357.2257
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "book",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 4792.228415,
+            "scoreError" : 23.411633026912988,
+            "scoreConfidence" : [
+                4768.816781973087,
+                4815.640048026912
+            ],
+            "scorePercentiles" : {
+                "0.0" : 4729.5623,
+                "50.0" : 4797.45865,
+                "90.0" : 4823.10848,
+                "95.0" : 4848.41002,
+                "99.0" : 4849.6695,
+                "99.9" : 4849.6695,
+                "99.99" : 4849.6695,
+                "99.999" : 4849.6695,
+                "99.9999" : 4849.6695,
+                "100.0" : 4849.6695
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    4789.3804,
+                    4774.5807,
+                    4787.4067,
+                    4804.8613,
+                    4824.4799,
+                    4849.6695,
+                    4801.5705,
+                    4781.2038,
+                    4808.7677,
+                    4796.6329
+                ],
+                [
+                    4787.4414,
+                    4801.7192,
+                    4793.7657,
+                    4798.2844,
+                    4810.7657,
+                    4799.1319,
+                    4805.9451,
+                    4739.9225,
+                    4729.5623,
+                    4759.4767
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 617.3574550000001,
+            "scoreError" : 9.453344576982909,
+            "scoreConfidence" : [
+                607.9041104230172,
+                626.810799576983
+            ],
+            "scorePercentiles" : {
+                "0.0" : 599.33155,
+                "50.0" : 614.8540250000001,
+                "90.0" : 630.6680200000001,
+                "95.0" : 633.0862500000001,
+                "99.0" : 633.21275,
+                "99.9" : 633.21275,
+                "99.99" : 633.21275,
+                "99.999" : 633.21275,
+                "99.9999" : 633.21275,
+                "100.0" : 633.21275
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    627.75445,
+                    630.53545,
+                    628.9697,
+                    624.13705,
+                    611.15035,
+                    606.2168,
+                    606.0958,
+                    599.33155,
+                    603.8848,
+                    607.14775
+                ],
+                [
+                    633.21275,
+                    629.03945,
+                    625.2633,
+                    630.68275,
+                    624.74925,
+                    610.07955,
+                    614.31955,
+                    612.7524,
+                    615.3885,
+                    606.4379
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "250"
+        },
+        "primaryMetric" : {
+            "score" : 1462.1361250000002,
+            "scoreError" : 20.10757242156388,
+            "scoreConfidence" : [
+                1442.0285525784363,
+                1482.243697421564
+            ],
+            "scorePercentiles" : {
+                "0.0" : 1421.3811,
+                "50.0" : 1459.3485,
+                "90.0" : 1485.08555,
+                "95.0" : 1524.44911,
+                "99.0" : 1526.5059,
+                "99.9" : 1526.5059,
+                "99.99" : 1526.5059,
+                "99.999" : 1526.5059,
+                "99.9999" : 1526.5059,
+                "100.0" : 1526.5059
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    1475.6346,
+                    1481.5714,
+                    1450.705,
+                    1427.1034,
+                    1449.359,
+                    1448.0097,
+                    1451.7786,
+                    1439.9957,
+                    1421.3811,
+                    1454.3678
+                ],
+                [
+                    1481.4909,
+                    1526.5059,
+                    1485.3701,
+                    1463.679,
+                    1461.2889,
+                    1457.4081,
+                    1454.6934,
+                    1482.5246,
+                    1467.9447,
+                    1461.9106
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "500"
+        },
+        "primaryMetric" : {
+            "score" : 2522.7921749999996,
+            "scoreError" : 15.566318183388272,
+            "scoreConfidence" : [
+                2507.225856816611,
+                2538.358493183388
+            ],
+            "scorePercentiles" : {
+                "0.0" : 2487.7512,
+                "50.0" : 2526.39005,
+                "90.0" : 2543.08374,
+                "95.0" : 2559.04942,
+                "99.0" : 2559.8866,
+                "99.9" : 2559.8866,
+                "99.99" : 2559.8866,
+                "99.999" : 2559.8866,
+                "99.9999" : 2559.8866,
+                "100.0" : 2559.8866
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    2509.3351,
+                    2525.3046,
+                    2531.5087,
+                    2498.2308,
+                    2503.0301,
+                    2519.924,
+                    2527.4755,
+                    2487.7512,
+                    2511.763,
+                    2540.3891
+                ],
+                [
+                    2506.6833,
+                    2536.7381,
+                    2543.143,
+                    2533.5453,
+                    2508.1,
+                    2542.5504,
+                    2512.2945,
+                    2530.4073,
+                    2527.7829,
+                    2559.8866
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.35",
+        "benchmark" : "es.ulpgc.bigdata.bench.DatalakeBench.writeThroughput",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 2,
+        "jvm" : "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
+        "jvmArgs" : [
+            "-Dstage1.root=C:\\Users\\hugoa\\Documents\\Stage1\\stage_1",
+            "-Dstage1.sizes=100,250,500,1000",
+            "-Dstage1.mongo=mongodb://localhost:27017"
+        ],
+        "jdkVersion" : "21.0.7",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "21.0.7+8-LTS-245",
+        "warmupIterations" : 5,
+        "warmupTime" : "1 s",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "1 s",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "kind" : "range",
+            "n" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 5216.035030000001,
+            "scoreError" : 55.86133151971033,
+            "scoreConfidence" : [
+                5160.173698480291,
+                5271.896361519711
+            ],
+            "scorePercentiles" : {
+                "0.0" : 5130.8149,
+                "50.0" : 5203.403850000001,
+                "90.0" : 5344.12351,
+                "95.0" : 5360.54153,
+                "99.0" : 5361.1201,
+                "99.9" : 5361.1201,
+                "99.99" : 5361.1201,
+                "99.999" : 5361.1201,
+                "99.9999" : 5361.1201,
+                "100.0" : 5361.1201
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    5226.1612,
+                    5206.0177,
+                    5207.5189,
+                    5261.2839,
+                    5349.5487,
+                    5295.2968,
+                    5361.1201,
+                    5250.8695,
+                    5181.5937,
+                    5147.0752
+                ],
+                [
+                    5254.6083,
+                    5200.79,
+                    5233.3756,
+                    5196.1971,
+                    5179.6285,
+                    5169.8205,
+                    5149.3905,
+                    5130.8149,
+                    5166.3888,
+                    5153.2007
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
