@@ -68,6 +68,11 @@ public class JsonIndex implements InvertedIndex {
     }
 
     @Override
+    public long diskUsage() throws IOException {
+        return Files.exists(path) ? Files.size(path) : 0;
+    }
+
+    @Override
     public void reset() throws IOException {
         Files.deleteIfExists(path);
         postings = new TreeMap<>();

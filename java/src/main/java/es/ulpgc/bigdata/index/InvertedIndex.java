@@ -24,6 +24,9 @@ public interface InvertedIndex extends AutoCloseable {
 
     boolean isEmpty() throws IOException;
 
+    /** Bytes que ocupa el índice. */
+    long diskUsage() throws IOException;
+
     /** Borra el índice para reconstruirlo desde cero. */
     void reset() throws IOException;
 

@@ -120,6 +120,23 @@ public class MongoIndex implements InvertedIndex {
         }
     }
 
+    /**
+     * storageSize de la colección: los datos comprimidos en el servidor, sin el índice
+     * sobre term. Antes se fuerza un checkpoint, porque WiredTiger tarda hasta un minuto
+     * en volcar a disco lo último escrito.
+     */
+    @Override
+    public long diskUsage() throws IOException {
+        try {
+            client.getDatabase("admin").runCommand(new Document("fsync", 1));
+            Document stats = client.getDatabase(DATABASE)
+                    .runCommand(new Document("collStats", collection.getNamespace().getCollectionName()));
+            return ((Number) stats.get("storageSize")).longValue();
+        } catch (MongoException e) {
+            throw new IOException(e.getMessage(), e);
+        }
+    }
+
     @Override
     public void reset() throws IOException {
         try {

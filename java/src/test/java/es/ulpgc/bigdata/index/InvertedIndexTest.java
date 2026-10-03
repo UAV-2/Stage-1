@@ -53,6 +53,7 @@ class InvertedIndexTest {
             assertEquals(List.of(), Postings.search(idx, "whale island", stop));
             assertEquals(List.of(), Postings.search(idx, "island missing", stop));
             assertEquals(List.of(), Postings.search(idx, "the", stop));
+            assertTrue(idx.diskUsage() > 0);
 
             // Todas las variantes dan el mismo dump canónico.
             Path dump = dir.resolve("index.tsv");

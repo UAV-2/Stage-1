@@ -115,6 +115,24 @@ public class FolderIndex implements InvertedIndex {
         }
     }
 
+    /**
+     * Suma el tamaño de los ficheros; el espacio real es mayor, porque cada fichero ocupa
+     * al menos un bloque del sistema de ficheros.
+     */
+    @Override
+    public long diskUsage() throws IOException {
+        if (!Files.isDirectory(root)) {
+            return 0;
+        }
+        try (Stream<Path> files = Files.walk(root)) {
+            long total = 0;
+            for (Path file : (Iterable<Path>) files.filter(Files::isRegularFile)::iterator) {
+                total += Files.size(file);
+            }
+            return total;
+        }
+    }
+
     @Override
     public void reset() throws IOException {
         FileUtils.deleteRecursively(root);
