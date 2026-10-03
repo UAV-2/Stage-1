@@ -1,5 +1,6 @@
 """Obtiene el texto crudo de los libros y lo separa en cabecera y cuerpo (SPEC §4)."""
 
+import gzip
 import re
 import time
 import urllib.error
@@ -72,9 +73,10 @@ class GutenbergSource:
     """Descarga de la red. Espera ``delay`` segundos entre peticiones para no
     saturar el servidor y deja una copia cruda en cache_dir."""
 
-    def __init__(self, cache_dir: Path, delay: float):
+    def __init__(self, cache_dir: Path, delay: float, url_template: str = URL_TEMPLATE):
         self.cache_dir = cache_dir
         self.delay = delay
+        self.url_template = url_template
         self._last_request: float | None = None
 
     def fetch(self, book_id: int) -> str:
@@ -89,12 +91,17 @@ class GutenbergSource:
         atomic_write(cache_path(self.cache_dir, book_id), content)
         return decode(content)
 
-    @staticmethod
-    def _download(book_id: int) -> bytes:
-        url = URL_TEMPLATE.format(id=book_id)
+    def _download(self, book_id: int) -> bytes:
+        # Gutenberg sirve algunos libros solo comprimidos (negociación de
+        # contenido de Apache): si no se acepta gzip responde 406. Se pide gzip
+        # y se descomprime, como hace el cliente HTTP de Go.
+        request = urllib.request.Request(self.url_template.format(id=book_id), headers={"Accept-Encoding": "gzip"})
         try:
-            with urllib.request.urlopen(url, timeout=60) as response:
-                return response.read()
+            with urllib.request.urlopen(request, timeout=60) as response:
+                content = response.read()
+                if response.headers.get("Content-Encoding", "").lower() == "gzip":
+                    content = gzip.decompress(content)
+                return content
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 raise BookUnavailable(f"el libro {book_id} no existe") from None

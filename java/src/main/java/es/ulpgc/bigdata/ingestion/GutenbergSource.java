@@ -2,6 +2,7 @@ package es.ulpgc.bigdata.ingestion;
 
 import es.ulpgc.bigdata.util.FileUtils;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -11,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Duration;
+import java.util.zip.GZIPInputStream;
 
 /**
  * Descarga de Project Gutenberg. Espera {@code delay} entre peticiones para no saturar
@@ -22,6 +24,7 @@ public class GutenbergSource implements BookSource {
 
     private final Path cacheDir;
     private final Duration delay;
+    private final String urlTemplate;
     private final HttpClient client = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.NORMAL)
             .connectTimeout(Duration.ofSeconds(60))
@@ -29,8 +32,14 @@ public class GutenbergSource implements BookSource {
     private long lastRequest = -1;
 
     public GutenbergSource(Path cacheDir, Duration delay) {
+        this(cacheDir, delay, URL_TEMPLATE);
+    }
+
+    /** urlTemplate lleva dos %d con el ID del libro (los tests usan un servidor local). */
+    GutenbergSource(Path cacheDir, Duration delay, String urlTemplate) {
         this.cacheDir = cacheDir;
         this.delay = delay;
+        this.urlTemplate = urlTemplate;
     }
 
     @Override
@@ -49,8 +58,12 @@ public class GutenbergSource implements BookSource {
     }
 
     private String download(int id) throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder(URI.create(String.format(URL_TEMPLATE, id, id)))
+        // Gutenberg sirve algunos libros solo comprimidos (negociación de contenido de
+        // Apache) y los envía con Content-Encoding: gzip. Se acepta gzip y se descomprime,
+        // como hace el cliente HTTP de Go.
+        HttpRequest request = HttpRequest.newBuilder(URI.create(String.format(urlTemplate, id, id)))
                 .timeout(Duration.ofSeconds(60))
+                .header("Accept-Encoding", "gzip")
                 .GET()
                 .build();
         HttpResponse<byte[]> response = client.send(request, HttpResponse.BodyHandlers.ofByteArray());
@@ -63,6 +76,11 @@ public class GutenbergSource implements BookSource {
         }
 
         byte[] content = response.body();
+        if (response.headers().firstValue("Content-Encoding").orElse("").equalsIgnoreCase("gzip")) {
+            try (GZIPInputStream gzip = new GZIPInputStream(new ByteArrayInputStream(content))) {
+                content = gzip.readAllBytes();
+            }
+        }
         Files.createDirectories(cacheDir);
         FileUtils.atomicWrite(CacheSource.cachePath(cacheDir, id), content);
         return new String(content, StandardCharsets.UTF_8);
