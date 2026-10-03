@@ -53,6 +53,9 @@ type options struct {
 	reps      int
 	downloads int
 	datalake  string
+	// Con N >= reduceFrom, construir y actualizar folders y medir su memoria
+	// usa 1 + 3 iteraciones (0 = nunca).
+	reduceFrom int
 
 	// Modo hijo: el propio programa se relanza para medir en un proceso nuevo.
 	child string
@@ -72,6 +75,7 @@ func main() {
 	flag.IntVar(&opts.reps, "reps", 5, "repeticiones de las métricas de script")
 	flag.IntVar(&opts.downloads, "download-books", 50, "libros del throughput de descarga")
 	flag.StringVar(&opts.datalake, "datalake", "book", "datalake del throughput de descarga")
+	flag.IntVar(&opts.reduceFrom, "reduce-folders-from", 0, "con N >= este valor, folders usa 1 + 3 iteraciones al construir, actualizar y medir memoria")
 	flag.StringVar(&opts.child, "child", "", "uso interno")
 	flag.StringVar(&opts.kind, "kind", "", "uso interno")
 	flag.StringVar(&opts.out, "out", "", "uso interno")
@@ -279,12 +283,31 @@ var microMetrics = map[string]microMetric{
 	"UpdateTime":              {"index", "update_time", "ms", perUnit(1e6)},
 }
 
+// microGroup es una ejecución de go test: qué benchmarks, cuánto dura cada
+// iteración, cuántas iteraciones (las warmup primeras se descartan) y las
+// variables de entorno que eligen los sub-benchmarks.
+type microGroup struct {
+	name, pattern, benchtime string
+	warmup, count            int
+	env                      []string
+}
+
 // Las medidas pesadas (segundos por operación, con preparación costosa) se
 // hacen con una operación por iteración; las ligeras dejan que Go ajuste b.N
-// durante el segundo que dura cada iteración.
-var microGroups = []struct{ name, pattern, benchtime string }{
-	{"heavy", "^Benchmark(WriteThroughput|IndexBuildTime|UpdateTime)$", "1x"},
-	{"light", "^Benchmark(LookupTime|IncrementalDetectTime|MetadataInsertTime|MetadataQueryTimeAuthor|MetadataQueryTimeID|QueryTime)$", "1s"},
+// durante el segundo que dura cada iteración. Con --reduce-folders-from, la
+// construcción y la actualización de folders con N grande van aparte con 1 + 3.
+func microGroups(opts options) []microGroup {
+	groups := []microGroup{
+		{"heavy", "^Benchmark(WriteThroughput|IndexBuildTime|UpdateTime)$", "1x", opts.warmup, opts.count, nil},
+		{"light", "^Benchmark(LookupTime|IncrementalDetectTime|MetadataInsertTime|MetadataQueryTimeAuthor|MetadataQueryTimeID|QueryTime)$", "1s", opts.warmup, opts.count, nil},
+	}
+	if opts.reduceFrom > 0 {
+		from := fmt.Sprintf("STAGE1_FOLDERS_FROM=%d", opts.reduceFrom)
+		groups[0].env = []string{from, "STAGE1_FOLDERS=skip"}
+		groups = append(groups, microGroup{"heavy_folders", "^Benchmark(IndexBuildTime|UpdateTime)$", "1x", 1, 3,
+			[]string{from, "STAGE1_FOLDERS=only"}})
+	}
+	return groups
 }
 
 var benchLine = regexp.MustCompile(`^Benchmark(\w+)/(\w+)/n=(\d+)(?:-\d+)?\s+\d+\s+([0-9.e+]+) ns/op`)
@@ -292,7 +315,8 @@ var benchLine = regexp.MustCompile(`^Benchmark(\w+)/(\w+)/n=(\d+)(?:-\d+)?\s+\d+
 func microBenchmarks(opts options, rawDir string) ([]row, error) {
 	series := make(map[string]*row)
 	var order []string
-	for _, group := range microGroups {
+	warmup := make(map[string]int)
+	for _, group := range microGroups(opts) {
 		rawPath := filepath.Join(rawDir, "micro_"+group.name+".txt")
 		fmt.Printf("[BENCH] go test %s -> %s\n", group.pattern, rawPath)
 		raw, err := os.Create(rawPath)
@@ -300,7 +324,8 @@ func microBenchmarks(opts options, rawDir string) ([]row, error) {
 			return nil, err
 		}
 		cmd := exec.Command("go", "test", "-run=^$", "-bench="+group.pattern, "-benchmem",
-			"-benchtime="+group.benchtime, fmt.Sprintf("-count=%d", opts.warmup+opts.count), "-timeout=0", ".")
+			"-benchtime="+group.benchtime, fmt.Sprintf("-count=%d", group.warmup+group.count), "-timeout=0", ".")
+		cmd.Env = append(os.Environ(), group.env...)
 		cmd.Stderr = os.Stderr
 		stdout, err := cmd.StdoutPipe()
 		if err != nil {
@@ -329,6 +354,7 @@ func microBenchmarks(opts options, rawDir string) ([]row, error) {
 			if series[key] == nil {
 				series[key] = &row{component: metric.component, structure: match[2], n: n, metric: metric.metric, unit: metric.unit}
 				order = append(order, key)
+				warmup[key] = group.warmup
 			}
 			series[key].values = append(series[key].values, metric.convert(ns, n))
 		}
@@ -341,11 +367,11 @@ func microBenchmarks(opts options, rawDir string) ([]row, error) {
 	var rows []row
 	for _, key := range order {
 		r := *series[key]
-		if len(r.values) <= opts.warmup {
+		if len(r.values) <= warmup[key] {
 			fmt.Printf("[AVISO] %s: solo %d iteraciones, no se guarda\n", key, len(r.values))
 			continue
 		}
-		r.values = r.values[opts.warmup:]
+		r.values = r.values[warmup[key]:]
 		rows = append(rows, r)
 	}
 	return rows, nil
@@ -528,8 +554,12 @@ func (s *script) indexFootprint() ([]row, error) {
 			idx.Close()
 		}
 		for _, n := range s.env.Sizes {
+			reps := s.opts.reps
+			if kind == "folders" && s.opts.reduceFrom > 0 && n >= s.opts.reduceFrom {
+				reps = 3
+			}
 			var memory, disk []float64
-			for rep := 0; rep < s.opts.reps; rep++ {
+			for rep := 0; rep < reps; rep++ {
 				output, err := s.child("index", kind, filepath.Join(s.env.Work, "footprint"), n).Output()
 				if err != nil {
 					return nil, fmt.Errorf("índice %s n=%d: %w", kind, n, err)
@@ -645,10 +675,14 @@ func runChild(opts options) error {
 }
 
 // peakMemory devuelve el pico de memoria residente del proceso (VmHWM), que
-// es lo que miden los tres lenguajes (SPEC §11). Fuera de Linux no existe
-// /proc y se usa la memoria pedida por el runtime de Go, que se anota en la
-// salida cruda para no mezclarla con la otra.
+// es lo que miden los tres lenguajes (SPEC §11). En Windows no existe /proc y
+// se usa su equivalente, el pico del working set. En otro sistema se usa la
+// memoria pedida por el runtime de Go, que se anota en la salida cruda para no
+// mezclarla con la otra.
 func peakMemory() (int64, string) {
+	if peak, ok := peakWorkingSet(); ok {
+		return peak, "PeakWorkingSetSize"
+	}
 	if data, err := os.ReadFile("/proc/self/status"); err == nil {
 		for _, line := range strings.Split(string(data), "\n") {
 			if value, ok := strings.CutPrefix(line, "VmHWM:"); ok {
@@ -686,8 +720,15 @@ func writeEnvironment(path string, opts options) error {
 	if data, err := os.ReadFile("/proc/meminfo"); err == nil {
 		fmt.Fprintf(&sb, "ram: %s\n", strings.TrimSpace(strings.TrimPrefix(strings.SplitN(string(data), "\n", 2)[0], "MemTotal:")))
 	}
-	fmt.Fprintf(&sb, "tamaños: %s\nmedidas: %s\niteraciones: %d de calentamiento + %d medidas\nrepeticiones de script: %d\nmongo: %s\n",
-		opts.sizes, opts.only, opts.warmup, opts.count, opts.reps, opts.mongo)
+	if cpu, ram, ok := windowsMachine(); ok {
+		fmt.Fprintf(&sb, "cpu: %s\nram: %d kB\n", cpu, ram/1024)
+	}
+	reduced := ""
+	if opts.reduceFrom > 0 {
+		reduced = fmt.Sprintf(" (folders con N >= %d: construcción, actualización y memoria con 1 + 3)", opts.reduceFrom)
+	}
+	fmt.Fprintf(&sb, "tamaños: %s\nmedidas: %s\niteraciones: %d de calentamiento + %d medidas%s\nrepeticiones de script: %d\nmongo: %s\n",
+		opts.sizes, opts.only, opts.warmup, opts.count, reduced, opts.reps, opts.mongo)
 	fmt.Fprintln(&sb, "disco: anotar a mano (SSD/HDD) y el sistema de ficheros")
 
 	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)

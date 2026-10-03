@@ -101,11 +101,14 @@ Los micro-benchmarks usan el paquete estándar `testing` (`bench_test.go`). Las 
 go run ./cmd/bench                     # todo menos la descarga, N ∈ {100, 250, 500, 1000}
 go run ./cmd/bench --only=download     # throughput de descarga: 5 × 50 libros desde la red
 go run ./cmd/bench --sizes=100,250     # solo algunos tamaños
+go run ./cmd/bench --reduce-folders-from=100   # folders con 1 + 3 iteraciones (ver abajo)
 ```
 
 Necesita en `cache/` los N+50 primeros libros de `shared/book_ids.txt` para el mayor N (`go run . download --n=1050` los descarga) y, para las medidas de `mongo`, MongoDB levantado (si no responde, esas medidas se omiten). Cada ejecución actualiza en el CSV las filas que mide y conserva las demás. La salida cruda queda en `benchmarks/raw/go/`, junto a `environment.txt` con la máquina y la configuración.
 
-Con N=100 y 250 tarda unos 40 minutos en un portátil con un i5 de 13.ª generación; con los cuatro tamaños, calcula entre 2 y 3 horas. Lo que más tarda es el índice `folders`, que escribe un fichero por término. Conviene lanzarla con el portátil enchufado y sin otros programas abiertos.
+Con N=100 y 250 tarda unos 40 minutos en un portátil con un i5 de 13.ª generación; con los cuatro tamaños, calcula entre 2 y 3 horas. Lo que más tarda es el índice `folders`, que escribe un fichero por término. Conviene lanzarla con el portátil enchufado y sin otros programas abiertos. Para los tres lenguajes a la vez: `python ../benchmarks/run_all.py`.
+
+En Windows, con el antivirus activo, escribir ficheros pequeños es unas 12 veces más lento (construir `folders` con N=1000 tarda unos 5 minutos). `--reduce-folders-from=N` mide la construcción y la actualización de `folders` con N libros o más con 1 + 3 iteraciones, y su memoria con 3 repeticiones; la columna `iterations` del CSV lo refleja.
 
 | Métrica | Cómo se mide |
 |---|---|
@@ -123,12 +126,12 @@ Con N=100 y 250 tarda unos 40 minutos en un portátil con un i5 de 13.ª generac
 | `peak_memory` | Pico de memoria residente (`VmHWM`) de un proceso nuevo que construye el índice (MB) |
 | `download_throughput` | Descargar 50 libros de Gutenberg con 1 s entre peticiones (libros/s) |
 
-Las definiciones exactas, comunes a los tres lenguajes, están en `SPEC.md` §11. Configuración: 5 iteraciones de calentamiento que se descartan y 10 medidas (`-count=15`), y 5 repeticiones en las métricas de script. Las medidas que tardan segundos se hacen con una operación por iteración (`-benchtime=1x`); el resto, con el segundo por iteración que usa Go por defecto. Lo que no forma parte de la medida (borrar la salida anterior, preparar el datalake o el índice de partida) queda fuera del cronómetro con `b.StopTimer()`.
+Las definiciones exactas, comunes a los tres lenguajes, están en `SPEC.md` §11. Configuración: 5 iteraciones de calentamiento que se descartan y 10 medidas (`-count=15`), y 5 repeticiones en las métricas de script. Las medidas que tardan segundos se hacen con una operación por iteración (`-benchtime=1x`); el resto, con el segundo por iteración que usa Go por defecto. Lo que no forma parte de la medida (borrar la salida anterior, preparar el datalake o el índice de partida) queda fuera del cronómetro con `b.StopTimer()`. En `update_time`, el índice `folders` vuelve a los N primeros libros deshaciendo la actualización anterior en vez de reconstruirse entero (minutos); el estado lógico es el mismo, y Python y Java lo hacen igual.
 
 Al interpretar los resultados hay que tener en cuenta:
 
 - `disk_usage` suma el tamaño de los ficheros. En `folders` el espacio real en disco es bastante mayor, porque cada término ocupa al menos un bloque del sistema de ficheros.
-- `peak_memory` es el pico de memoria residente del proceso de Go, que se lee de `/proc`, así que la medida es válida en Linux (en otro sistema se usa la memoria del runtime y la salida cruda lo indica). En `mongo` no incluye la del servidor.
+- `peak_memory` es el pico de memoria residente del proceso de Go: `VmHWM` de `/proc` en Linux y, en Windows, su equivalente, el pico del working set (en otro sistema se usa la memoria del runtime y la salida cruda lo indica). En `mongo` no incluye la del servidor.
 - `metadata_query_time` se reporta en dos filas, por autor y por ID, porque el SPEC pide medir los dos casos.
 
 ## Tests

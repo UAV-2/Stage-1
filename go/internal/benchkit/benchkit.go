@@ -4,7 +4,9 @@
 package benchkit
 
 import (
+	"errors"
 	"fmt"
+	"io/fs"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -201,8 +203,13 @@ func (e *Env) Records(store datalake.Store, ids []int) ([]metadata.Book, error) 
 		if err != nil {
 			return nil, err
 		}
+		// Relativa a output/<lang>/, como la guarda el pipeline.
+		bodyPath, err := filepath.Rel(filepath.Dir(store.Root()), loc.Body)
+		if err != nil {
+			return nil, err
+		}
 		book := metadata.Extract(id, string(header))
-		book.BodyPath = filepath.ToSlash(loc.Body)
+		book.BodyPath = filepath.ToSlash(bodyPath)
 		books = append(books, book)
 	}
 	return books, nil
@@ -212,6 +219,32 @@ func (e *Env) Records(store datalake.Store, ids []int) ([]metadata.Book, error) 
 // usa una colección propia para no tocar la del pipeline.
 func (e *Env) OpenIndex(kind, datamarts string) (index.Index, error) {
 	return index.New(kind, index.Config{Datamarts: datamarts, MongoURI: e.MongoURI, Lang: benchLang})
+}
+
+// UndoFolders deja el índice por carpetas de root como estaba antes de añadir
+// added: cada término afectado recupera sus postings de base o desaparece. Es
+// el setup de update_time; reconstruir el índice entero tarda minutos en
+// folders.
+func UndoFolders(root string, base, added map[string][]int) error {
+	for term := range added {
+		path := filepath.Join(root, strings.ToUpper(term[:1]), term+".txt")
+		ids, ok := base[term]
+		if !ok {
+			if err := os.Remove(path); err != nil && !errors.Is(err, fs.ErrNotExist) {
+				return err
+			}
+			continue
+		}
+		var content []byte
+		for _, id := range ids {
+			content = strconv.AppendInt(content, int64(id), 10)
+			content = append(content, '\n')
+		}
+		if err := os.WriteFile(path, content, 0644); err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 // Sample elige Samples elementos al azar (con repetición) con la semilla

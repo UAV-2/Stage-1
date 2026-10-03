@@ -107,7 +107,8 @@ java/src/main/java/es/ulpgc/bigdata/
 ├── control/                   capa de control
 │   ├── ControlPipeline.java, ControlState.java, BookList.java
 │   ├── BookIds.java, RecoveryReport.java, Summary.java
-└── util/                      FileUtils (escritura atómica), Text (trim/lower como Go)
+├── util/                      FileUtils (escritura atómica), Text (trim/lower como Go)
+└── bench/                     benchmarks: JMH (DatalakeBench, MetadataBench, IndexBench) y BenchMain
 ```
 
 Tests: `mvn test`. El de MongoDB solo se ejecuta si está definida `MONGO_URI`.
@@ -171,5 +172,38 @@ python benchmarks/check_equivalence.py --sample      # ejecuta los tres lenguaje
 
 ## Benchmarks
 
-Pendientes: se harán con **JMH** (`jmh-core` + `jmh-generator-annprocess` 1.35) siguiendo las
-definiciones del SPEC §11, una vez confirmada la equivalencia de los dumps.
+Los micro-benchmarks usan **JMH** 1.35 (`jmh-core` + `jmh-generator-annprocess`, paquete
+`es.ulpgc.bigdata.bench`): `DatalakeBench`, `MetadataBench` e `IndexBench`, con
+`@Warmup(iterations = 5)`, `@Measurement(iterations = 10)`, `@Fork(2)`, `Mode.AverageTime`,
+`@Param` para la estructura y para N ∈ {100, 250, 500, 1000}, estado compartido en
+`@State(Scope.Benchmark)` + `@Setup(Level.Trial)` y lo que no se mide en
+`@Setup(Level.Invocation)`. `mvn package` genera `target/benchmarks.jar`:
+
+```bash
+cd java
+mvn -q package -DskipTests
+java -jar target/benchmarks.jar -wi 5 -i 10 -f 2 -rf json      # JMH tal cual (SPEC §11)
+java -cp target/benchmarks.jar es.ulpgc.bigdata.bench.BenchMain                    # JMH + métricas de script -> CSV
+java -cp target/benchmarks.jar es.ulpgc.bigdata.bench.BenchMain --only=download    # throughput de descarga
+java -cp target/benchmarks.jar es.ulpgc.bigdata.bench.BenchMain --sizes=100,250 --reduce-folders-from=100
+```
+
+`BenchMain` lanza JMH por grupos, convierte cada iteración medida en la métrica del SPEC (por
+ejemplo, `write_throughput` = N / segundos), calcula media, desviación, mínimo, máximo e
+intervalo de confianza al 99,9 % y actualiza `benchmarks/results/java.csv`. También mide lo que no
+encaja en JMH (`recovery_ok`, `files_count`/`dirs_count`, `disk_usage`, `peak_memory` y
+`download_throughput`, 5 repeticiones) con procesos hijo de la misma JVM. La salida cruda (JSON de
+JMH y registros) queda en `benchmarks/raw/java/`. Para los tres lenguajes a la vez:
+`python ../benchmarks/run_all.py`.
+
+Las métricas y su definición exacta son las del SPEC §11, iguales en los tres lenguajes (tabla
+en el README de Python). Notas:
+
+- `--reduce-folders-from=N` mide la construcción y la actualización del índice `folders` con N
+  libros o más con 1 + 3 iteraciones en un fork, y su memoria con 3 repeticiones; sirve en
+  máquinas donde escribir cientos de miles de ficheros pequeños es muy lento.
+- En el setup de `updateTime`, el índice `folders` vuelve a los N primeros libros deshaciendo la
+  actualización anterior, en vez de reconstruirlo entero (minutos); el estado lógico es el mismo.
+- `peak_memory` es `VmHWM` en Linux y, en Windows, el pico del working set (con JNA).
+- Las iteraciones son de 1 s (`time = 1`): las operaciones largas hacen una invocación por
+  iteración y las cortas, las que quepan.

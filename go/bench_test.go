@@ -11,13 +11,16 @@ package main
 //
 // La configuración va en variables de entorno: STAGE1_ROOT (raíz del
 // repositorio, por defecto ..), STAGE1_SIZES (por defecto 100,250,500,1000) y
-// STAGE1_MONGO (por defecto mongodb://localhost:27017).
+// STAGE1_MONGO (por defecto mongodb://localhost:27017). cmd/bench usa además
+// STAGE1_FOLDERS_FROM=N y STAGE1_FOLDERS=skip|only para medir aparte, con
+// menos iteraciones, la construcción y la actualización de folders con N grande.
 
 import (
 	"fmt"
 	"os"
 	"path/filepath"
 	"slices"
+	"strconv"
 	"testing"
 
 	"stage1_go/internal/benchkit"
@@ -36,6 +39,9 @@ var (
 
 func TestMain(m *testing.M) {
 	code := m.Run()
+	if env != nil {
+		prepare("fin") // suelta lo último preparado (y vacía su índice)
+	}
 	// cmd/bench reutiliza la carpeta de trabajo entre ejecuciones y la borra
 	// él al terminar.
 	if env != nil && os.Getenv("STAGE1_KEEP_WORK") == "" {
@@ -99,9 +105,29 @@ func benchIndex(b *testing.B, kind string) index.Index {
 func each(b *testing.B, kinds []string, run func(b *testing.B, kind string, n int)) {
 	for _, kind := range kinds {
 		for _, n := range benchEnv(b).Sizes {
+			if !selected(kind, n) {
+				continue
+			}
 			b.Run(fmt.Sprintf("%s/n=%d", kind, n), func(b *testing.B) { run(b, kind, n) })
 		}
 	}
+}
+
+// selected aplica STAGE1_FOLDERS: "skip" omite folders con N >= STAGE1_FOLDERS_FROM
+// y "only" deja solo esos.
+func selected(kind string, n int) bool {
+	from, err := strconv.Atoi(os.Getenv("STAGE1_FOLDERS_FROM"))
+	if err != nil || from <= 0 {
+		return true
+	}
+	large := kind == "folders" && n >= from
+	switch os.Getenv("STAGE1_FOLDERS") {
+	case "skip":
+		return !large
+	case "only":
+		return large
+	}
+	return true
 }
 
 // Go vuelve a llamar a cada sub-benchmark varias veces (una por -count y por
@@ -113,6 +139,7 @@ var fixture struct {
 	idx      index.Index
 	db       *metadata.DB
 	postings map[string][]int
+	added    map[string][]int // lo último que añadió update_time
 }
 
 // prepare devuelve true si hay que construir la preparación de key.
@@ -127,7 +154,7 @@ func prepare(key string) bool {
 	if fixture.db != nil {
 		fixture.db.Close()
 	}
-	fixture.lake, fixture.idx, fixture.db, fixture.postings = nil, nil, nil, nil
+	fixture.lake, fixture.idx, fixture.db, fixture.postings, fixture.added = nil, nil, nil, nil, nil
 	os.RemoveAll(filepath.Join(env.Work, "fixture"))
 	fixture.key = key
 	return true
@@ -147,17 +174,6 @@ func lake(b *testing.B, kind string, n int) datalake.Store {
 		check(b, err)
 	}
 	return fixture.lake
-}
-
-// basePostings devuelve el contenido del índice para los n primeros libros.
-func basePostings(b *testing.B, n int) map[string][]int {
-	b.Helper()
-	if prepare(fmt.Sprintf("postings/%d", n)) {
-		var err error
-		fixture.postings, err = benchEnv(b).Postings(source(b), benchBooks(b, n))
-		check(b, err)
-	}
-	return fixture.postings
 }
 
 // ---------------------------------------------------------------- datalake
@@ -349,18 +365,30 @@ func BenchmarkQueryTime(b *testing.B) {
 
 // update_time: añadir 50 libros a un índice que ya tiene N. El índice se
 // abre de cero dentro de la medida, así que el JSON paga la carga del fichero.
+// Fuera de la medida, el índice vuelve a tener los N primeros: en folders se
+// deshace la actualización anterior, porque reconstruirlo tarda minutos.
 func BenchmarkUpdateTime(b *testing.B) {
 	each(b, indexKinds, func(b *testing.B, kind string, n int) {
 		e := benchEnv(b)
 		benchIndex(b, kind).Close() // si no hay MongoDB, se salta antes de preparar nada
 		store := source(b)
 		added := benchBooks(b, n+benchkit.Extra)[n:]
-		base := basePostings(b, n)
+		if prepare(fmt.Sprintf("update/%s/%d", kind, n)) {
+			var err error
+			fixture.postings, err = e.Postings(store, benchBooks(b, n))
+			check(b, err)
+			fixture.idx = benchIndex(b, kind) // para vaciarlo al cambiar de tamaño
+		}
+		folders := filepath.Join(e.Work, "datamarts", "inverted_index")
 		for i := 0; i < b.N; i++ {
 			b.StopTimer()
 			idx := benchIndex(b, kind)
-			check(b, idx.Reset())
-			check(b, idx.Add(base))
+			if kind == "folders" && fixture.added != nil {
+				check(b, benchkit.UndoFolders(folders, fixture.postings, fixture.added))
+			} else {
+				check(b, idx.Reset())
+				check(b, idx.Add(fixture.postings))
+			}
 			check(b, idx.Close())
 			b.StartTimer()
 
@@ -370,9 +398,7 @@ func BenchmarkUpdateTime(b *testing.B) {
 			check(b, idx.Add(postings))
 
 			b.StopTimer()
-			if i == b.N-1 {
-				check(b, idx.Reset())
-			}
+			fixture.added = postings
 			check(b, idx.Close())
 		}
 	})
